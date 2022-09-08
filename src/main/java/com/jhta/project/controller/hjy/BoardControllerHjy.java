@@ -226,7 +226,7 @@ public class BoardControllerHjy {
 		model.addAttribute("cnt", cnt);
 		model.addAttribute("nextVo", nextVo);
 		model.addAttribute("prevVo", prevVo);
-		return "user/hjy/board/boardDetail";
+		return "user/board/boardDetail";
 	}
 	
 	/**
