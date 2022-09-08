@@ -192,7 +192,7 @@ public class BoardControllerHjy {
 		map.put("startRow", pu.getStartRow());
 		map.put("endRow", pu.getEndRow());
 		List<BoardVo> list = boardService.list(map);
-		ModelAndView mv=new ModelAndView("user/hjy/board/board_matching");
+		ModelAndView mv=new ModelAndView("user/board/board_matching");
 		mv.addObject("list", list);
 		mv.addObject("pu", pu);
 		mv.addObject("field", field);
