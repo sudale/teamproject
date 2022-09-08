@@ -485,7 +485,7 @@
 	</div>
 </div>
 <div class="footer">
-	<jsp:include page="/WEB-INF/views/user/jhr/footer.jsp"/>
+	<jsp:include page="/WEB-INF/views/user/includes/footer.jsp"/>
 </div>
 <script defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCIFdez0Bx1XuNNQ0eIa12BjxqJ0gFO6eA&callback=initMap&region=kr"></script>
 <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>

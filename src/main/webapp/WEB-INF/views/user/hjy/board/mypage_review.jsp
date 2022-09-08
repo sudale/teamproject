@@ -136,7 +136,7 @@
 		</div>
 		</div>
 	<div class="footer">
-		<jsp:include page="../../jhr/footer.jsp" flush="true"/>
+		<jsp:include page="../../includes/footer.jsp" flush="true"/>
 	</div>
 </body>
 </html>

@@ -27,7 +27,7 @@
 	</table>
 		</div>
 	<div class="footer" style="clear:both;">
-		<jsp:include page="../jhr/footer.jsp" flush="true"/>
+		<jsp:include page="../includes/footer.jsp" flush="true"/>
 	</div>
 </body>
 <script type="text/javascript">

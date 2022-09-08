@@ -144,7 +144,7 @@ $(function(){
    </div>
 </div>
 <div class="footer">
-   <jsp:include page="/WEB-INF/views/user/jhr/footer.jsp" flush="true"/>
+   <jsp:include page="/WEB-INF/views/user/includes/footer.jsp" flush="true"/>
 </div>
 </body>
 <script type="text/javascript">

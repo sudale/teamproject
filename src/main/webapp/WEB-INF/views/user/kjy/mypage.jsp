@@ -72,7 +72,7 @@
 </div>
 
 <div class="footer">
-	<jsp:include page="/WEB-INF/views/user/jhr/footer.jsp"/>
+	<jsp:include page="/WEB-INF/views/user/includes/footer.jsp"/>
 </div>
 </body>
 <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
