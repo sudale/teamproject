@@ -1,4 +1,4 @@
-package com.jhta.project.vo.cjy;
+package com.jhta.project.vo;
 
 import java.util.Date;
 

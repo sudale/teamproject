@@ -12,8 +12,8 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.jhta.project.service.admin.Admin_UserQnaServiceCjy;
-import com.jhta.project.vo.cjy.ReservationVo;
-import com.jhta.project.vo.cjy.UserqnaVo;
+import com.jhta.project.vo.ReservationVo;
+import com.jhta.project.vo.UserqnaVo;
 
 @RestController
 public class Admin_UserQnaControllerCjy {

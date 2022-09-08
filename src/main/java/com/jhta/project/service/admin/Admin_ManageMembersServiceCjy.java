@@ -7,7 +7,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import com.jhta.mybatis.mapper.cjy.Admin_ManageMembersMapperCjy;
-import com.jhta.project.vo.cjy.Admin_ManageMemVo;
+import com.jhta.project.vo.Admin_ManageMemVo;
 
 @Service
 public class Admin_ManageMembersServiceCjy {

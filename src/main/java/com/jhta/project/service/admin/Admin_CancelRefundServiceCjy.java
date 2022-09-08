@@ -7,8 +7,8 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import com.jhta.mybatis.mapper.cjy.Admin_CancelRefundMapperCjy;
-import com.jhta.project.vo.cjy.ReservationVo;
-import com.jhta.project.vo.cjy.RsvPaymentVo;
+import com.jhta.project.vo.ReservationVo;
+import com.jhta.project.vo.RsvPaymentVo;
 
 @Service
 public class Admin_CancelRefundServiceCjy {

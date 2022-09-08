@@ -1,5 +1,10 @@
-package com.jhta.project.vo.cjy;
+package com.jhta.project.vo;
 
+import java.util.Date;
+
+import org.springframework.format.annotation.DateTimeFormat;
+
+import com.fasterxml.jackson.annotation.JsonFormat;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
@@ -8,7 +13,8 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 @AllArgsConstructor
 @Data
-public class ReservationVo {
+
+public class RsvPaymentVo {
 	private int rid;
 	private int rordernum;
 	private int ramount;
@@ -23,6 +29,10 @@ public class ReservationVo {
 	private String rcancel;
 	private String mid;
 	private int riid;
-	//추가
-	
+	private String pmethod;
+	//@DateTimeFormat(pattern="yyyy-MM-dd")
+	@JsonFormat(pattern = "yyyy-MM-dd", timezone = "Asia/Seoul")
+	private Date pdate;
+	private int ptotal;
+	private String prefund;
 }

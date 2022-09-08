@@ -6,8 +6,8 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import com.jhta.mybatis.mapper.cjy.Admin_UserQnaMapperCjy;
-import com.jhta.project.vo.cjy.Admin_ManageMemVo;
-import com.jhta.project.vo.cjy.UserqnaVo;
+import com.jhta.project.vo.Admin_ManageMemVo;
+import com.jhta.project.vo.UserqnaVo;
 
 @Service
 public class Admin_UserQnaServiceCjy {
