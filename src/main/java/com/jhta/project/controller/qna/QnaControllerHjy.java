@@ -22,7 +22,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.multipart.MultipartFile;
 
-import com.jhta.project.serviceqna.UserqnaServiceHjy;
+import com.jhta.project.service.qna.UserqnaServiceHjy;
 import com.jhta.project.vo.hjy.UserqnaVo;
 import com.jhta.util.PageUtil;
 

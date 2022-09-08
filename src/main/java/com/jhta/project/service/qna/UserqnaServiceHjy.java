@@ -1,4 +1,4 @@
-package com.jhta.project.serviceqna;
+package com.jhta.project.service.qna;
 
 import java.util.HashMap;
 import java.util.List;
