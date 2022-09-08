@@ -149,7 +149,7 @@ public class BoardControllerHjy {
 		map.put("endRow", pu.getEndRow());
 		List<BoardVo> list = boardService.list(map);
 		System.out.println(list);
-		ModelAndView mv=new ModelAndView("user/hjy/board/board_all");
+		ModelAndView mv=new ModelAndView("user/board/board_all");
 		mv.addObject("list", list);
 		mv.addObject("pu", pu);
 		mv.addObject("field", field);
