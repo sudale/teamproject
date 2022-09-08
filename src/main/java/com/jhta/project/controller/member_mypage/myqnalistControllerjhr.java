@@ -16,7 +16,7 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 
-import com.jhta.project.service.jhr.UserqnaService;
+import com.jhta.project.serviceqna.UserqnaService;
 import com.jhta.project.vo.jhr.UserqnaVo;
 
 @Controller

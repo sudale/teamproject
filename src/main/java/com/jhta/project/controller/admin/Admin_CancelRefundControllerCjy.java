@@ -16,9 +16,9 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.jhta.project.refund.PayRefund;
-import com.jhta.project.service.cjy.Admin_CancelRefundServiceCjy;
-import com.jhta.project.service.hjy.PaymentServiceHjy;
-import com.jhta.project.service.hjy.ReservationServiceHjy;
+import com.jhta.project.service.admin.Admin_CancelRefundServiceCjy;
+import com.jhta.project.service.payment.PaymentServiceHjy;
+import com.jhta.project.service.reservation.ReservationServiceHjy;
 import com.jhta.project.vo.cjy.Admin_ManageMemVo;
 import com.jhta.project.vo.cjy.ReservationVo;
 import com.jhta.project.vo.cjy.RsvPaymentVo;

@@ -11,7 +11,7 @@ import org.springframework.http.MediaType;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.jhta.project.service.cjy.Admin_UserQnaServiceCjy;
+import com.jhta.project.service.admin.Admin_UserQnaServiceCjy;
 import com.jhta.project.vo.cjy.ReservationVo;
 import com.jhta.project.vo.cjy.UserqnaVo;
 

@@ -28,8 +28,8 @@ import org.springframework.web.multipart.MultipartFile;
 import org.springframework.web.multipart.MultipartHttpServletRequest;
 import org.springframework.web.servlet.ModelAndView;
 
-import com.jhta.project.service.hjy.BoardServiceHjy;
-import com.jhta.project.service.hjy.CommentsServiceHjy;
+import com.jhta.project.service.CommentsServiceHjy;
+import com.jhta.project.service.board.BoardServiceHjy;
 import com.jhta.project.service.phj.BoardService_phj;
 import com.jhta.project.vo.hjy.AccommodationsVo;
 import com.jhta.project.vo.hjy.Additional_feeVo;

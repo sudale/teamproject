@@ -11,8 +11,8 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.jhta.mybatis.mapper.hjy.chat.ChatBuddyMapperHjy;
-import com.jhta.project.service.hjy.ChatAddServiceHjy;
-import com.jhta.project.service.hjy.ChatMembersServiceHjy;
+import com.jhta.project.service.chat.ChatAddServiceHjy;
+import com.jhta.project.service.chat.ChatMembersServiceHjy;
 import com.jhta.project.vo.hjy.ChatAddVo;
 import com.jhta.project.vo.hjy.ChatBuddyVo;
 

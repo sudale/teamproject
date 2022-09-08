@@ -8,7 +8,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.jhta.project.service.hjy.HeadadminServiceHjy;
+import com.jhta.project.service.admin.HeadadminServiceHjy;
 import com.jhta.project.vo.hjy.HeadadminVo;
 
 @RestController

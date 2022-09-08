@@ -8,7 +8,7 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 
-import com.jhta.project.service.jhr.MembersService;
+import com.jhta.project.service.member_user.MembersService;
 import com.jhta.project.vo.jhr.MembersVo;
 
 @Controller

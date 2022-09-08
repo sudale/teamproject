@@ -20,9 +20,9 @@ public class RootConfig {
 	public BasicDataSource dataSource() {
 		BasicDataSource datasource = new BasicDataSource();
 		datasource.setDriverClassName("oracle.jdbc.OracleDriver");
-		datasource.setUrl("jdbc:oracle:thin:@localhost:1521:XE");
-		datasource.setUsername("system");
-		datasource.setPassword("oracle");
+		datasource.setUrl("jdbc:oracle:thin:@database-1.c2zevchycd6p.ap-northeast-2.rds.amazonaws.com:1521:DATABASE");
+		datasource.setUsername("admin");
+		datasource.setPassword("rhrlrhrl7578");
 		return datasource;
 	}
 	@Bean

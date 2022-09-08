@@ -8,8 +8,8 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.jhta.project.service.hjy.MembersServiceHjy;
-import com.jhta.project.service.hjy.PaymentServiceHjy;
+import com.jhta.project.service.member_user.MembersServiceHjy;
+import com.jhta.project.service.payment.PaymentServiceHjy;
 import com.jhta.project.vo.hjy.PaymentVo;
 
 @RestController

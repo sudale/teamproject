@@ -17,7 +17,7 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.servlet.ModelAndView;
 
-import com.jhta.project.service.kjy.AccommodationsService_kjy;
+import com.jhta.project.service.hotelmanage.AccommodationsService_kjy;
 import com.jhta.project.service.kjy.PeriodService_kjy;
 import com.jhta.project.service.kjy.Room_infoService_kjy;
 import com.jhta.project.vo.kjy.AccommodationsVo_kjy;
