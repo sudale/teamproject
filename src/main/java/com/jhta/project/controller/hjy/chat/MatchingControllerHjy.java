@@ -10,12 +10,12 @@ public class MatchingControllerHjy {
 	@GetMapping(value="hjy/chatinto")
 	public String getid(HttpSession session) {
 		session.setAttribute("chatid", "user1");
-		return "user/chat/chatadd";
+		return "user/chat/chatfriendadd";
 	}
 	@GetMapping(value="hjy/chatinto2")
 	public String getid2(HttpSession session) {
 		session.setAttribute("chatid", "user2");
-		return "user/chat/chatadd";
+		return "user/chat/chatfriendadd";
 	}
 	@GetMapping(value="hjy/reqtest")
 	public String reqtest(HttpSession session) {

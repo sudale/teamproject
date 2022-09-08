@@ -48,7 +48,7 @@ public class myqnalistControllerjhr {
 		System.out.println(qid);
 		int vo=service.update(map);
 		if(vo>0) {
-			return "redirect:/user/kjy/mypage";
+			return "redirect:/user/member_mypage/mypage";
 		} else {
 			model.addAttribute("errMsg", "문의를 수정할 수 없습니다.");
 			return "user/member_mypage/myqnaUpdate";
@@ -57,7 +57,7 @@ public class myqnalistControllerjhr {
 	@GetMapping("/jhr/myqnaDelete")
 	public String delete(UserqnaVo qid) {
 		service.delete(qid);
-		return "redirect:/user/kjy/mypage";
+		return "redirect:/user/member_mypage/mypage";
 	}
 	
 }
