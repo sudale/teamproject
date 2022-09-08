@@ -1,4 +1,4 @@
-package com.jhta.project.service.lhj;
+package com.jhta.project.service.hotelmanage;
 
 import java.util.HashMap;
 import java.util.List;

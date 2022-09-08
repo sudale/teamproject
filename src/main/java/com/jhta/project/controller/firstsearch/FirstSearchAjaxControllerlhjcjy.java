@@ -13,7 +13,7 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.jhta.project.service.lhjcjy.FirstSearchServicelhjcjy;
+import com.jhta.project.service.firstsearch.FirstSearchServicelhjcjy;
 import com.jhta.project.vo.lhjcjy.AccommodationsVolhjcjy;
 
 @RestController

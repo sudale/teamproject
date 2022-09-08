@@ -18,7 +18,7 @@ import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.multipart.MultipartFile;
 import org.springframework.web.multipart.MultipartHttpServletRequest;
 
-import com.jhta.project.service.lhj.AccommodationsServicelhj;
+import com.jhta.project.service.hotelmanage.AccommodationsServicelhj;
 import com.jhta.project.vo.lhj.AccommodationsVo;
 import com.jhta.project.vo.lhj.Room_infoVo;
 

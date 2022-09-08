@@ -1,4 +1,4 @@
-package com.jhta.project.service.kjy;
+package com.jhta.project.service.board;
 
 import java.util.HashMap;
 import java.util.List;

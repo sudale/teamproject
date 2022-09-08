@@ -8,7 +8,7 @@ import org.springframework.http.MediaType;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.jhta.project.service.lhj.PaymentServicelhj;
+import com.jhta.project.service.payment.PaymentServicelhj;
 import com.jhta.project.vo.lhj.PaymentVo;
 
 @RestController

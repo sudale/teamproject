@@ -9,7 +9,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.jhta.project.service.lhjcjy.SearchByGradeServicelhjcjy;
+import com.jhta.project.service.firstsearch.SearchByGradeServicelhjcjy;
 import com.jhta.project.vo.lhjcjy.SearchVolhjcjy;
 
 

@@ -30,7 +30,7 @@ import org.springframework.web.servlet.ModelAndView;
 
 import com.jhta.project.service.CommentsServiceHjy;
 import com.jhta.project.service.board.BoardServiceHjy;
-import com.jhta.project.service.phj.BoardService_phj;
+import com.jhta.project.service.board.BoardService_phj;
 import com.jhta.project.vo.hjy.AccommodationsVo;
 import com.jhta.project.vo.hjy.Additional_feeVo;
 import com.jhta.project.vo.hjy.BoardVo;

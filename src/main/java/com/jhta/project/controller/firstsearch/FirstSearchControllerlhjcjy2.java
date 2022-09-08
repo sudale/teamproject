@@ -18,9 +18,9 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.servlet.ModelAndView;
 
-import com.jhta.project.service.lhjcjy.FirstSearchServicelhjcjy;
-import com.jhta.project.service.lhjcjy.GetPriceServicelhjcjy;
-import com.jhta.project.service.lhjcjy.PeriodServicelhjcjy;
+import com.jhta.project.service.firstsearch.FirstSearchServicelhjcjy;
+import com.jhta.project.service.hotelmanage.PeriodServicelhjcjy;
+import com.jhta.project.service.payment.GetPriceServicelhjcjy;
 import com.jhta.project.vo.lhjcjy.AccommodationsVo2lhjcjy;
 import com.jhta.project.vo.lhjcjy.AccommodationsVolhjcjy;
 import com.jhta.project.vo.lhjcjy.RangeSlider_GetMinMaxVolhjcjy;

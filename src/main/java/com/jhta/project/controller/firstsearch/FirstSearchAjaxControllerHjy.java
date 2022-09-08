@@ -23,9 +23,9 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.jhta.project.service.firstsearch.FirstSearchServiceHjy;
-import com.jhta.project.service.lhjcjy.SearchByStarServicelhjcjy;
-import com.jhta.project.service.lhjcjy.SortByPriceServicelhycjy;
-import com.jhta.project.service.lhjcjyhjy.GetPriceServicelhjcjyhjy;
+import com.jhta.project.service.firstsearch.GetPriceServicelhjcjyhjy;
+import com.jhta.project.service.firstsearch.SearchByStarServicelhjcjy;
+import com.jhta.project.service.firstsearch.SortByPriceServicelhycjy;
 import com.jhta.project.service.member_mypage.FavoriteServiceHjy;
 import com.jhta.project.vo.lhjcjy.AccommodationsVo2lhjcjy;
 import com.jhta.project.vo.lhjcjy.AccommodationsVolhjcjy;

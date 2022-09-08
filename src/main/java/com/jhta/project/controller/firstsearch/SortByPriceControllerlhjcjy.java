@@ -12,7 +12,7 @@ import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.servlet.ModelAndView;
 
-import com.jhta.project.service.lhjcjy.SortByPriceServicelhycjy;
+import com.jhta.project.service.firstsearch.SortByPriceServicelhycjy;
 import com.jhta.project.vo.lhjcjy.AccommodationsVo2lhjcjy;
 
 
