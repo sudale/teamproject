@@ -28,7 +28,7 @@ public class UpdateControllerjhr {
 	@Autowired private ServletContext sc;
 	@GetMapping("/jhr/mypageUpdate")
 	public String updateForm(String mid,Model model) {
-		return "user/jhr/mypageUpdate";
+		return "user/member_mypage/mypageUpdate";
 	}
 	@RequestMapping(value="/mypageupdate/{mid}",produces = {MediaType.APPLICATION_JSON_VALUE})
 	public @ResponseBody MembersVo checkId(@PathVariable("mid")String mid){

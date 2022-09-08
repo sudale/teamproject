@@ -53,7 +53,7 @@
     	</ul>
 	    <div class="tabcontent">
 		    <div id="tab01">
-		    	<jsp:include page="/WEB-INF/views/user/jhr/mypageUpdate.jsp"/>
+		    	<jsp:include page="/WEB-INF/views/user/member_mypage/mypageUpdate.jsp"/>
 		    </div>
 		    <div id="tab02">
 		    	<jsp:include page="/WEB-INF/views/user/kjy/mypage_preferences.jsp"/>
@@ -62,7 +62,7 @@
 		    	<jsp:include page="/WEB-INF/views/user/kjy/mypage_reservation.jsp"/>
 			</div>
 			<div id="tab04">
-		    	<jsp:include page="/WEB-INF/views/user/jhr/mypageQnalist.jsp"/>
+		    	<jsp:include page="/WEB-INF/views/user/member_mypage/mypageQnalist.jsp"/>
 			</div>
 			<div id="tab05">
 		    	<jsp:include page="/WEB-INF/views/user/kjy/mypage_accountdelete.jsp"/>

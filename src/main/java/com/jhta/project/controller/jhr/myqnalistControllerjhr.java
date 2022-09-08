@@ -25,7 +25,7 @@ public class myqnalistControllerjhr {
 	@Autowired private ServletContext sc;
 	@GetMapping("/jhr/mypageQnalist")
 	public String listForm(String mid,Model model) {
-		return "user/jhr/mypageQnalist";
+		return "user/member_mypage/mypageQnalist";
 	}
 	@GetMapping("/jhr/myqnaUpdate")
 	public String updateForm(String mid, String qid, Model model) {
@@ -34,7 +34,7 @@ public class myqnalistControllerjhr {
 		map.put("qid",qid);
 		UserqnaVo vo=service.detail(map);
 		model.addAttribute("vo",vo);
-		return "user/jhr/myqnaUpdate";
+		return "user/member_mypage/myqnaUpdate";
 	}
 	@PostMapping("/jhr/myqnaUpdate")
 	public String update(String mid, String qid, String qcate, String qtitle, String qcontent, Model model) {
@@ -51,7 +51,7 @@ public class myqnalistControllerjhr {
 			return "redirect:/user/kjy/mypage";
 		} else {
 			model.addAttribute("errMsg", "문의를 수정할 수 없습니다.");
-			return "user/jhr/myqnaUpdate";
+			return "user/member_mypage/myqnaUpdate";
 		}
 	}
 	@GetMapping("/jhr/myqnaDelete")
