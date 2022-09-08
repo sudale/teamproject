@@ -61,7 +61,7 @@ public class JoinControllerjhr {
 			vo3.setCmbirth(vo.getMbirth());
 			vo3.setCmprofile(vo.getMprofile());
 			service.insert3(vo3);
-			return "redirect:/member_user/login";
+			return "redirect:/jhr/login";
 		} catch(Exception e) {
 			e.printStackTrace();
 			return "user/member_user/login";

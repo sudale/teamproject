@@ -41,7 +41,7 @@ public class ResetPwControllerjhr {
 	public String resetpw(MembersVo vo, Model model) {
 		try {
 			service.resetPw(vo);
-			return "redirect:/member_user/login";
+			return "redirect:/jhr/login";
 		} catch(Exception e) {
 			e.printStackTrace();
 			return "user/member_user/resetpw";
@@ -57,7 +57,7 @@ public class ResetPwControllerjhr {
 		try {
 			service.resetPw(vo);
 			session.invalidate();
-			return "redirect:/member_user/login";
+			return "redirect:/jhr/login";
 		} catch(Exception e) {
 			e.printStackTrace();
 			return "user/member_mypage/mypageResetpw";
