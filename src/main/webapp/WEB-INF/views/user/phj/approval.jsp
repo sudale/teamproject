@@ -10,7 +10,7 @@
 </head>
 <body >
 	<div class="header">
-		<jsp:include page="../jhr/header.jsp" flush="true"/>
+		<jsp:include page="../includes/header.jsp" flush="true"/>
 	</div>
 	<div style="text-align: center;">
 	<br>

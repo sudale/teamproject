@@ -386,7 +386,7 @@
 
 </style>
 <div class="header">
-	<jsp:include page="/WEB-INF/views/user/jhr/header.jsp"/>
+	<jsp:include page="/WEB-INF/views/user/includes/header.jsp"/>
 </div>
 <!-- 이미지 크게 일단 하나 -->
 <div id="content">

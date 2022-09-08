@@ -33,7 +33,7 @@
 </head>
 <body>
 <div class="header">
-	<jsp:include page="../jhr/header.jsp" flush="true"/>
+	<jsp:include page="../includes/header.jsp" flush="true"/>
 </div>
 <form method="post" action="${pageContext.request.contextPath }/phj/payOk">
 <div class="paybox" style="width:700px;text-align: center;margin-left: 30%;">

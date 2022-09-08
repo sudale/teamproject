@@ -874,7 +874,7 @@ function outMoveAfter(){ //버튼 클릭시 다음날로 이동
 </head>
 <body>
 	<div class="header">
-		<jsp:include page="/WEB-INF/views/user/jhr/header.jsp" flush="true"/>
+		<jsp:include page="/WEB-INF/views/user/includes/header.jsp" flush="true"/>
 	</div>
 	<!--filter section-->
 	<div style='position: absolute; left: 50%; margin-left: -765px;'>

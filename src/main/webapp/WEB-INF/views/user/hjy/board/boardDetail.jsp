@@ -36,7 +36,7 @@ element.style {
 </head>
 <body>
 	<div class="header">
-		<jsp:include page="/WEB-INF/views/user/jhr/header.jsp" flush="true"/>
+		<jsp:include page="/WEB-INF/views/user/includes/header.jsp" flush="true"/>
 	</div>
 	<div class="board_header">
 		<jsp:include page="board_header.jsp" flush="true"/>

@@ -58,7 +58,7 @@ $(function(){
 })
 </script>
 <div class="header">
-   <jsp:include page="/WEB-INF/views/user/jhr/header.jsp" flush="true"/>
+   <jsp:include page="/WEB-INF/views/user/includes/header.jsp" flush="true"/>
 </div>
 <div class="board_header">
    <ul class="ulcss">

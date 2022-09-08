@@ -65,7 +65,7 @@
 </head>
 <body>
 	<div class="header">
-		<jsp:include page="../../jhr/header.jsp" flush="true"/>
+		<jsp:include page="../../includes/header.jsp" flush="true"/>
 	</div>
 	<div class="board_header">
 		<ul class="ulcss">

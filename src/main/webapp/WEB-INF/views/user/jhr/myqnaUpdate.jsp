@@ -13,7 +13,7 @@
 </head>
 <body>
 <div class="header">
-	<jsp:include page="/WEB-INF/views/user/jhr/header.jsp"/>
+	<jsp:include page="/WEB-INF/views/user/includes/header.jsp"/>
 </div>
 <div class="myqnaupdate">
 	<div class="qnaupdate">
