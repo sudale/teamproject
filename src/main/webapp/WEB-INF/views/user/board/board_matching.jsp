@@ -25,7 +25,7 @@
 </head>
 <body>
 	<div class="header">
-		<jsp:include page="../../includes/header.jsp" flush="true"/>
+		<jsp:include page="../includes/header.jsp" flush="true"/>
 	</div>
 	<div class="board_header">
 		<ul class="ulcss">
@@ -69,7 +69,7 @@
 		</div>
 	</div>
 	<div class="footer">
-		<jsp:include page="../../includes/footer.jsp" flush="true"/>
+		<jsp:include page="../includes/footer.jsp" flush="true"/>
 	</div>
 </body>
 <script type="text/javascript">
