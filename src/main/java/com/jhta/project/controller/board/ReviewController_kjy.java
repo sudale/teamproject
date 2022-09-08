@@ -1,4 +1,4 @@
-package com.jhta.project.controller.kjy;
+package com.jhta.project.controller.board;
 
 import java.io.FileOutputStream;
 import java.io.InputStream;

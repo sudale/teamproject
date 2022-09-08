@@ -1,4 +1,4 @@
-package com.jhta.project.controller.kjy;
+package com.jhta.project.controller.hotelmanage;
 
 
 import java.util.ArrayList;

@@ -1,4 +1,4 @@
-package com.jhta.project.controller.kjy;
+package com.jhta.project.controller.member_mypage;
 
 import java.util.Date;
 import java.util.HashMap;

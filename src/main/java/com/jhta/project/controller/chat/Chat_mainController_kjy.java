@@ -1,4 +1,4 @@
-package com.jhta.project.controller.kjy;
+package com.jhta.project.controller.chat;
 
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;

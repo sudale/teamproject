@@ -1,4 +1,4 @@
-package com.jhta.project.controller.kjy;
+package com.jhta.project.controller.firstsearch;
 
 import java.util.HashMap;
 import java.util.Iterator;
