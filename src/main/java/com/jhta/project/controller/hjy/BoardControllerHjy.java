@@ -60,7 +60,7 @@ public class BoardControllerHjy {
 	public String updateForm(int bid,Model model) {
 		BoardVo_phj vo=boardService.detail(bid);
 		model.addAttribute("vo",vo);
-		return "user/hjy/board/mypage_update";
+		return "user/board/mypage_update";
 	}
 	@PostMapping("phj/board/update")
 	public String update(Model model,BoardVo_phj vo,MultipartHttpServletRequest mtfRequest) {
@@ -171,7 +171,7 @@ public class BoardControllerHjy {
 		map.put("endRow", pu.getEndRow());
 		List<BoardVo> list = boardService.list(map);
 		System.out.println(list);
-		ModelAndView mv=new ModelAndView("user/hjy/board/board_review");
+		ModelAndView mv=new ModelAndView("user/board/board_review");
 		mv.addObject("list", list);
 		mv.addObject("pu", pu);
 		mv.addObject("field", field);
@@ -239,7 +239,7 @@ public class BoardControllerHjy {
 	public ModelAndView newPost(HttpServletRequest req,String bcate) {
 		HttpSession session=req.getSession();
 		String mid=(String)session.getAttribute("mid");
-		ModelAndView mv=new ModelAndView("user/hjy/board/boardinsert");
+		ModelAndView mv=new ModelAndView("user/board/boardinsert");
 		mv.addObject("bcate",bcate);
 		System.out.println("카테고리:"+bcate);
 		mv.addObject("mid",mid);
@@ -302,7 +302,7 @@ public class BoardControllerHjy {
 		map.put("startRow", pu.getStartRow());
 		map.put("endRow", pu.getEndRow());
 		List<BoardVo_phj> list = boardService_phj.selectBoardMine(map);
-		ModelAndView mv=new ModelAndView("user/hjy/board/boardMain");
+		ModelAndView mv=new ModelAndView("user/board/boardMain");
 		mv.addObject("list", list);
 		mv.addObject("pu", pu);
 		mv.addObject("field", field);
@@ -327,7 +327,7 @@ public class BoardControllerHjy {
 		map.put("startRow", pu.getStartRow());
 		map.put("endRow", pu.getEndRow());
 		List<BoardVo_phj> list = boardService_phj.selectBoardcate(map);
-		ModelAndView mv=new ModelAndView("user/hjy/board/mypage_all");
+		ModelAndView mv=new ModelAndView("user/board/mypage_all");
 		mv.addObject("list", list);
 		mv.addObject("pu", pu);
 		mv.addObject("field", field);
@@ -353,7 +353,7 @@ public class BoardControllerHjy {
 		map.put("startRow", pu.getStartRow());
 		map.put("endRow", pu.getEndRow());
 		List<BoardVo_phj> list = boardService_phj.selectBoardcate(map);
-		ModelAndView mv=new ModelAndView("user/hjy/board/mypage_review");
+		ModelAndView mv=new ModelAndView("user/board/mypage_review");
 		mv.addObject("list", list);
 		mv.addObject("pu", pu);
 		mv.addObject("field", field);
@@ -379,7 +379,7 @@ public class BoardControllerHjy {
 		map.put("startRow", pu.getStartRow());
 		map.put("endRow", pu.getEndRow());
 		List<BoardVo_phj> list = boardService_phj.selectBoardcate(map);
-		ModelAndView mv=new ModelAndView("user/hjy/board/mypage_matching");
+		ModelAndView mv=new ModelAndView("user/board/mypage_matching");
 		mv.addObject("list", list);
 		mv.addObject("pu", pu);
 		mv.addObject("field", field);

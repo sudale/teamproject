@@ -6,13 +6,13 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>자유게시판</title>
+<title>Mypage</title>
 <link rel="stylesheet" href="${pageContext.request.contextPath}/resources/css/board_all.css">
 <link rel="stylesheet" href="${pageContext.request.contextPath}/resources/css/board_header.css">
 <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
 <style type="text/css">
-#page-wrapper {
+ #page-wrapper {
     padding-left: 250px;
   }
   
@@ -65,7 +65,7 @@
 </head>
 <body>
 	<div class="header">
-		<jsp:include page="../../includes/header.jsp" flush="true"/>
+		<jsp:include page="../includes/header.jsp" flush="true"/>
 	</div>
 	<div class="board_header">
 		<ul class="ulcss">
@@ -97,7 +97,7 @@
 			</tr>
 			<c:forEach var="vo" items="${list }">
 				<tr class="table_content">
-					<td class="tdalign">리뷰게시글</td>
+					<td class="tdalign">자유게시글</td>
 					<td><a href="/project/hjy/board/detail?bid=${vo.bid }">${vo.btitle }</a></td>
 					<fmt:formatDate value="${vo.brdate }" pattern="YY-MM-dd" var="brdate"/>
 					<td class="tdalign">${brdate }</td>
@@ -110,12 +110,12 @@
 				<c:forEach var="i" begin="${pu.startPageNum }" end="${pu.endPageNum }">
 					<c:choose>
 						<c:when test="${pu.pageNum==i }"><!-- 현재페이지 -->
-							<a href="/project/phj/mypage/review?pageNum=${i }&field=${field}&keyword=${keyword}">
+							<a href="/project/phj/mypage/all?pageNum=${i }&field=${field}&keyword=${keyword}">
 							<span style='color:blue;font-weight: bold'>[${i }]</span>
 							</a>
 						</c:when>
 						<c:otherwise>
-							<a href="/project/phj/mypage/review?pageNum=${i }&field=${field}&keyword=${keyword}">
+							<a href="/project/phj/mypage/all?pageNum=${i }&field=${field}&keyword=${keyword}">
 							<span style='color:gray;'>[${i }]</span>
 							</a>
 						</c:otherwise>
@@ -124,7 +124,7 @@
 			</div>
 		</div>
 		<div>
-			<form action="${pageContext.request.contextPath }/phj/mypage/review" class="searchbox">
+			<form action="${pageContext.request.contextPath }/phj/mypage/all" class="searchbox">
 				<select name = "field" class="box_margin">
 					<option value="btitle" <c:if test="${field=='btitle' }">selected</c:if>>제목</option>
 					<option value="mid" <c:if test="${field=='mid' }">selected</c:if>>글쓴이</option>
@@ -136,7 +136,7 @@
 		</div>
 		</div>
 	<div class="footer">
-		<jsp:include page="../../includes/footer.jsp" flush="true"/>
+		<jsp:include page="../includes/footer.jsp" flush="true"/>
 	</div>
 </body>
 </html>
