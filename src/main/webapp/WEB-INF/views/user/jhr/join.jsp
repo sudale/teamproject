@@ -148,7 +148,7 @@
 </div>
 
 <div class="footer">
-	<jsp:include page="footer.jsp" flush="true"/>
+	<jsp:include page="../includes/footer.jsp" flush="true"/>
 </div>
 
 <script type="text/javascript">
