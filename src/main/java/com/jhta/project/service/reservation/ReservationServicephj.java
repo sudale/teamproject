@@ -1,4 +1,4 @@
-package com.jhta.project.service.phj;
+package com.jhta.project.service.reservation;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
