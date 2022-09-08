@@ -5,7 +5,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import com.jhta.mybatis.mapper.hjy.Additional_feeMapperHjy;
-import com.jhta.project.vo.hjy.Additional_feeVo;
+import com.jhta.project.vo.Additional_feeVo;
 @Service
 public class Additional_feeService_hjy {
 	@Autowired Additional_feeMapperHjy mapper;

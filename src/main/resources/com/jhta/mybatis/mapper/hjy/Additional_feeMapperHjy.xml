@@ -6,7 +6,7 @@
 	<select id="seq" resultType="int">
 		select seq_additional_fee.currval from dual
 	</select>
-	<insert id="insert" parameterType="com.jhta.project.vo.hjy.Additional_feeVo">
+	<insert id="insert" parameterType="com.jhta.project.vo.Additional_feeVo">
 		insert into additional_fee values(seq_additional_fee.nextval,#{afpersonnel},#{afbreakfast},#{afbed},#{riid})
 	</insert>
 </mapper>
