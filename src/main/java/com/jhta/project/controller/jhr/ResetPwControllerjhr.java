@@ -16,7 +16,7 @@ import com.jhta.project.vo.jhr.MembersVo;
 @Controller
 public class ResetPwControllerjhr {
 	@Autowired private MembersService service;
-	@GetMapping("/jhr/checkpw")
+	@GetMapping("/member_user/checkpw")
 	public String loginForm() {
 		return "user/jhr/checkpw";
 	}
@@ -31,36 +31,36 @@ public class ResetPwControllerjhr {
 		MembersVo vo=service.checkPw(map);
 		if(vo!=null) { 
 			//model.addAttribute("mid",mid);
-			return "user/jhr/resetpw";
+			return "user/member_user/resetpw";
 		} else {
 			model.addAttribute("errMsg", "입력하신 정보와 일치하는 계정이 없습니다.");
-			return "user/jhr/checkpw";
+			return "user/member_user/checkpw";
 		}
 	}
 	@PostMapping("/jhr/resetpw")
 	public String resetpw(MembersVo vo, Model model) {
 		try {
 			service.resetPw(vo);
-			return "redirect:/jhr/login";
+			return "redirect:/member_user/login";
 		} catch(Exception e) {
 			e.printStackTrace();
-			return "user/jhr/resetpw";
+			return "user/member_user/resetpw";
 		}
 	}
 	
 	@GetMapping("/jhr/mypageResetpw")
 	public String updateForm() {
-		return "user/jhr/mypageResetpw";
+		return "user/member_mypage/mypageResetpw";
 	}
 	@PostMapping("/jhr/mypageResetpw")
 	public String mypageResetpw(MembersVo vo,Model model, HttpSession session) {
 		try {
 			service.resetPw(vo);
 			session.invalidate();
-			return "redirect:/jhr/login";
+			return "redirect:/member_user/login";
 		} catch(Exception e) {
 			e.printStackTrace();
-			return "user/jhr/mypageResetpw";
+			return "user/member_mypage/mypageResetpw";
 		}
 	}
 }

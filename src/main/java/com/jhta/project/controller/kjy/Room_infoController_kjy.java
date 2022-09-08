@@ -34,7 +34,7 @@ public class Room_infoController_kjy {
 			@RequestParam("roomnum")String roomnum, @RequestParam("startday")String startday,  
 			@RequestParam("endday")String endday,@RequestParam("riid")String riid,
 			HttpServletRequest request) {
-		ModelAndView mv=new ModelAndView("user/kjy/room_info");
+		ModelAndView mv=new ModelAndView("user/reservation/room_info");
 		try {
 			
 			//객실세부정보
@@ -53,7 +53,7 @@ public class Room_infoController_kjy {
 			System.out.println(alllist);
 			//list가 비었을경우 result 페이지로 이동
 			if(alllist.isEmpty()) {
-				ModelAndView mv1=new ModelAndView("user/kjy/result");
+				ModelAndView mv1=new ModelAndView("user/reservation/result");
 				mv1.addObject("code", "입력하신 날짜는 예약이 모두 완료되었습니다.");
 				return mv1;
 			}
@@ -220,7 +220,7 @@ public class Room_infoController_kjy {
 
 				//예약이 꽉찼을경우 페이지이동
 				if(!days.equals(vo.getReday())) {
-					ModelAndView mv1=new ModelAndView("user/kjy/result");
+					ModelAndView mv1=new ModelAndView("user/reservation/result");
 					mv1.addObject("code", "입력하신 날짜는 예약이 모두 완료되었습니다.");
 					return mv1;
 				}

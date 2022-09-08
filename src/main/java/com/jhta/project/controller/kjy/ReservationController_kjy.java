@@ -39,7 +39,7 @@ public class ReservationController_kjy {
 	@RequestMapping(value="/user/kjy/reservation", method = RequestMethod.GET)
 	public ModelAndView ReservationForm(String riid, String startday, String endday, String ramount, String mid, 
 			String sum) {
-		ModelAndView mv=new ModelAndView("user/kjy/reservation");
+		ModelAndView mv=new ModelAndView("user/reservation.jsp/reservation");
 		mv.addObject("riid",riid);
 		mv.addObject("startday",startday);
 		mv.addObject("endday",endday);

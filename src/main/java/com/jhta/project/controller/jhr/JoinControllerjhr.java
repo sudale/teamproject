@@ -32,7 +32,7 @@ public class JoinControllerjhr {
 	@Autowired private MembersService service;
 	@GetMapping("/jhr/join")
 	public String insertForm() {
-		return "user/jhr/join";
+		return "user/member_user/join";
 	}
 	@PostMapping("/jhr/join")
 	//프로필사진 입력 선택사항
@@ -61,10 +61,10 @@ public class JoinControllerjhr {
 			vo3.setCmbirth(vo.getMbirth());
 			vo3.setCmprofile(vo.getMprofile());
 			service.insert3(vo3);
-			return "redirect:/jhr/login";
+			return "redirect:/member_user/login";
 		} catch(Exception e) {
 			e.printStackTrace();
-			return "user/jhr/login";
+			return "user/member_user/login";
 		}
 	}
 	

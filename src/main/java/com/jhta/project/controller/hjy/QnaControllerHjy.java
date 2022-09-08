@@ -70,7 +70,7 @@ public class QnaControllerHjy {
 		model.addAttribute("list", list);
 		model.addAttribute("field", field);
 		model.addAttribute("keyword", keyword);
-		return "user/hjy/qna/qnaMain";
+		return "user/qna/qnaMain";
 	}
 	
 	/**
@@ -103,7 +103,7 @@ public class QnaControllerHjy {
 		model.addAttribute("qcate", qcate);
 		model.addAttribute("nextVo", nextVo);
 		model.addAttribute("prevVo", prevVo);
-		return "user/hjy/qna/qnaDetail";
+		return "user/qna/qnaDetail";
 	}
 	/**
 	 * qna작성화면전환
@@ -114,7 +114,7 @@ public class QnaControllerHjy {
 	@GetMapping("hjy/qna/newQna")
 	public String qnaWriteForm(String qcate,Model model) {
 		model.addAttribute("qcate", qcate);
-		return "user/hjy/qna/qnaWriteForm";
+		return "user/qna/qnaWriteForm";
 	}
 	/**
 	 * qna작성 저장 후 메인화면 복귀
@@ -177,7 +177,7 @@ public class QnaControllerHjy {
 			e.printStackTrace();
 			model.addAttribute("code", "fail");
 		}
-		return "user/hjy/qna/qnaMain";
+		return "user/qna/qnaMain";
 	}
 	
 

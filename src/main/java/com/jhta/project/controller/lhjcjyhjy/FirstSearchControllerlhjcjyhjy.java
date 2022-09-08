@@ -30,7 +30,7 @@ public class FirstSearchControllerlhjcjyhjy {
 	//메인검색 완성하면 지우기
 	@GetMapping("lhjcjyhjy/firstsearch") //
 	public String searchForm() {
-		return "user/lhjcjyhjy/firstsearch";
+		return "user/firstsearch/firstsearch5";
 	}
 
 	@RequestMapping(value = "lhjcjyhjy/firstsearch", method = RequestMethod.POST)
@@ -72,7 +72,7 @@ public class FirstSearchControllerlhjcjyhjy {
 		}catch(Exception e) {
 			e.printStackTrace();
 		}
-		mv.setViewName("user/lhjcjyhjy/firstsearch2");
+		mv.setViewName("user/firstsearch/firstsearch6");
 		return mv;
 	}
 }

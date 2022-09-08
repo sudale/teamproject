@@ -34,7 +34,7 @@ public class MypageController_kjy {
 	
 	@RequestMapping(value="/user/kjy/mypage", method = RequestMethod.GET)
 	public ModelAndView MypageForm(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-		ModelAndView mv=new ModelAndView("/user/kjy/mypage");
+		ModelAndView mv=new ModelAndView("/user/member_mypage/mypage");
 		HttpSession session=req.getSession(true);
 		//ID세션에서 불러오기
 		String mid=(String)session.getAttribute("mid");

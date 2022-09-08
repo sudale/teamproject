@@ -30,21 +30,21 @@ public class PaymentController {
 	@Autowired private PaymentService_phj service;
 	@GetMapping("/pay")
 	public String reservationForm() {
-		return "user/phj/pay";
+		return "user/payment/pay";
 	}
 	@GetMapping("/approval")
 	public ModelAndView approval(String mid) {
-		ModelAndView mv=new ModelAndView("user/phj/approval");
+		ModelAndView mv=new ModelAndView("user/payment/approval");
 		mv.addObject("mid",mid);
 		return mv;
 	}
 	@GetMapping("/cancle")
 	public String cancle() {
-		return "user/phj/cancle";
+		return "user/payment/cancle";
 	}
 	@GetMapping("/fail")
 	public String fail() {
-		return "user/phj/fail";
+		return "user/payment/fail";
 	}
 	
 	@RequestMapping(value="phj/paymentInsertOk",produces = {MediaType.APPLICATION_JSON_VALUE})
@@ -98,7 +98,7 @@ public class PaymentController {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
-		return "user/phj/approval";
+		return "user/payment/approval";
 
 	}
 }

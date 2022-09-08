@@ -23,7 +23,7 @@ public class Chat_buddydelController {
 	
 	@RequestMapping(value="/user/jhr/buddyDel", method= RequestMethod.GET)
 	public ModelAndView buddyDelete (String cbbuid, String cmid, HttpServletRequest req, HttpServletResponse resp) {
-		ModelAndView mv=new ModelAndView("user/kjy/chat_main");
+		ModelAndView mv=new ModelAndView("user/chat/chat_main");
 		HashMap<String, Object> map=new HashMap<String, Object>();
 		map.put("cmid", cmid);
 		map.put("cbbuid", cbbuid);

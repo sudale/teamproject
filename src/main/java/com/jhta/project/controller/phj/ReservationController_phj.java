@@ -25,7 +25,7 @@ public class ReservationController_phj {
 	@Autowired private MembersService memberService;
 	@GetMapping("phj/pay")
 	public String payForm() {
-		return "user/phj/pay";
+		return "user/payment/pay";
 	}
 	
 	@RequestMapping(value="phj/checkReservation/{mid}",produces = {MediaType.APPLICATION_JSON_VALUE})
@@ -40,7 +40,7 @@ public class ReservationController_phj {
 	@RequestMapping(value="phj/reservation",method=RequestMethod.GET)
 	public ModelAndView ReservationInfo(String riid, String startday, String endday, String ramount, String mid, 
 			String sum,int aid,int roomnum) {
-		ModelAndView mv=new ModelAndView("user/phj/resinfo");
+		ModelAndView mv=new ModelAndView("user/payment/resinfo");
 		mv.addObject("riid",riid);
 		mv.addObject("startday",startday);
 		mv.addObject("endday",endday);
@@ -54,7 +54,7 @@ public class ReservationController_phj {
 	@RequestMapping(value="phj/reservationOk",method=RequestMethod.GET)
 	public ModelAndView ReservationInsert(ReservationVo vo,String sum,int rexperson,int rexbed,int rexbreaknum,
 			String breakfastfee,String bedfee,String personfee,String totalbedfee,String totalbreakfee) {
-		ModelAndView mv=new ModelAndView("user/phj/pay");
+		ModelAndView mv=new ModelAndView("user/payment/pay");
 		mv.addObject("sum", sum);
 		mv.addObject("rid", vo.getRid());
 		mv.addObject("rroomnum", vo.getRroomnum());

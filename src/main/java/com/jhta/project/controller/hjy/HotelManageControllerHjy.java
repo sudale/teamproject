@@ -70,7 +70,7 @@ public class HotelManageControllerHjy {
 
 	@GetMapping("hjy/hotelForm")
 	public String hotelInsertForm(String type) {
-		return "user/hjy/hotelManage/form";
+		return "user/hotelManage/form";
 	}
 
 	/**
@@ -168,7 +168,7 @@ public class HotelManageControllerHjy {
 		}
 		period_tempservice.delete(Integer.parseInt(aid));
 		model.addAttribute("result", "yes");
-		return "user/hjy/hotelManage/mailResult";
+		return "user/hotelManage/mailResult";
 	}
 
 	/**
@@ -225,7 +225,7 @@ public class HotelManageControllerHjy {
 		}
 		accommodations_tempservice.delete(Integer.parseInt(aid));
 		model.addAttribute("result", "no");
-		return "user/hjy/hotelManage/mailResult";
+		return "user/hotelManage/mailResult";
 	}
 
 	/**
@@ -360,7 +360,7 @@ public class HotelManageControllerHjy {
 		}
 
 		sendMail(accommodationsVo, additional_feeVoList, periodVoList, roomInfoVoList);
-		return "user/hjy/hotelManage/formResult";
+		return "user/hotelManage/formResult";
 	}
 
 	/**

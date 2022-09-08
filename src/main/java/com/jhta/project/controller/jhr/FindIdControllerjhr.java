@@ -16,7 +16,7 @@ public class FindIdControllerjhr {
 	@Autowired private MembersService service;
 	@GetMapping("/jhr/findid")
 	public String loginForm() {
-		return "user/jhr/findid";
+		return "user/member_user/findid";
 	}
 	@PostMapping("/jhr/findid")
 	public String findid(String mid, String mname, String memail, Model model) {
@@ -26,10 +26,10 @@ public class FindIdControllerjhr {
 		MembersVo vo=service.findId(map);
 		if(vo!=null) { 
 			model.addAttribute("findidResult", vo.getMid());
-			return "user/jhr/findidresult";
+			return "user/member_user/findidresult";
 		} else {
 			model.addAttribute("errMsg", "입력하신 정보와 일치하는 아이디가 없습니다.");
-			return "user/jhr/findid";
+			return "user/member_user/findid";
 		}
 	}
 }

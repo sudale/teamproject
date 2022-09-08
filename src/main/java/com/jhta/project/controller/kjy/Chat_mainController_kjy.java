@@ -34,7 +34,7 @@ public class Chat_mainController_kjy {
 	
 	@RequestMapping(value="/user/kjy/chat_main", method= RequestMethod.GET)
 	public ModelAndView chat_Form(HttpServletRequest req, HttpServletResponse resp) {
-		ModelAndView mv=new ModelAndView("user/kjy/chat_main");
+		ModelAndView mv=new ModelAndView("user/chat/chat_main");
 		HttpSession session=req.getSession();
 		String cmid=(String)session.getAttribute("mid");
 		//본인 프로필 불러오기
@@ -87,7 +87,7 @@ public class Chat_mainController_kjy {
 	@RequestMapping(value="/user/kjy/chating_check", method= RequestMethod.GET)
 	public ModelAndView chating_check(String cmid, String cbbuid, String cmprofile, String cmname) {
 		HashMap<String, Object> map=new HashMap<String, Object>();
-		ModelAndView mv=new ModelAndView("user/kjy/chat_room");
+		ModelAndView mv=new ModelAndView("user/chat/chat_room");
 		int cnt=0;
 		int crid=0;
 		boolean check=false; //방여부 체크
@@ -158,7 +158,7 @@ public class Chat_mainController_kjy {
 	
 	@RequestMapping(value="/user/kjy/chating_room", method= RequestMethod.GET)
 	public ModelAndView chating_room(String cmid, String crid, String cmprofile, String cmname) {
-		ModelAndView mv=new ModelAndView("user/kjy/chat_room");
+		ModelAndView mv=new ModelAndView("user/chat/chat_room");
 		mv.addObject("cmid",cmid);//본인아이디 전송
 		mv.addObject("cmprofile", cmprofile);//본인 프로필 전송
 		mv.addObject("cmname",cmname);//본인 이름 전송
@@ -204,7 +204,7 @@ public class Chat_mainController_kjy {
 	//채팅방 친구초대 페이지
 	@RequestMapping(value="/user/kjy/chat_add", method= RequestMethod.GET)
 	public @ResponseBody ModelAndView chat_add(String crid, String cmid, String cmname, String cmprofile){
-		ModelAndView mv=new ModelAndView("user/kjy/chat_add");
+		ModelAndView mv=new ModelAndView("user/chat/chat_add");
 		HashMap<String, Object> checkmap=new HashMap<String, Object>();
 		checkmap.put("cmid", cmid);
 		checkmap.put("crid", crid);
