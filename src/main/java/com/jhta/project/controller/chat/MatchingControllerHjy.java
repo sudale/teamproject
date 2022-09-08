@@ -1,4 +1,4 @@
-package com.jhta.project.controller.hjy.chat;
+package com.jhta.project.controller.chat;
 
 import javax.servlet.http.HttpSession;
 

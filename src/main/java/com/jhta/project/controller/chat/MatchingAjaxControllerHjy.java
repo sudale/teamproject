@@ -1,4 +1,4 @@
-package com.jhta.project.controller.hjy.chat;
+package com.jhta.project.controller.chat;
 
 import java.util.HashMap;
 import java.util.List;

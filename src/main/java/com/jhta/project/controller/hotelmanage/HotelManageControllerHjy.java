@@ -1,4 +1,4 @@
-package com.jhta.project.controller.hjy;
+package com.jhta.project.controller.hotelmanage;
 
 import java.io.File;
 import java.io.FileOutputStream;

@@ -1,4 +1,4 @@
-package com.jhta.project.controller.jhr;
+package com.jhta.project.controller.member_user;
 
 import java.util.HashMap;
 

@@ -1,4 +1,4 @@
-package com.jhta.project.controller.hjy;
+package com.jhta.project.controller.board;
 
 import java.util.HashMap;
 import java.util.List;

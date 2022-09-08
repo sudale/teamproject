@@ -12,7 +12,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.servlet.ModelAndView;
 
-import com.jhta.project.controller.hjy.FirstSearchControllerHjy;
+import com.jhta.project.controller.firstsearch.FirstSearchControllerHjy;
 import com.jhta.project.service.lhjcjy.FirstSearchServicelhjcjy;
 import com.jhta.project.service.lhjcjyhjy.GetPriceServicelhjcjyhjy;
 import com.jhta.project.vo.lhjcjy.AccommodationsVolhjcjy;

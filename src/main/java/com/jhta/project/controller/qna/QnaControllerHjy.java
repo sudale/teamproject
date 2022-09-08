@@ -1,4 +1,4 @@
-package com.jhta.project.controller.hjy;
+package com.jhta.project.controller.qna;
 
 
 import java.io.File;

@@ -1,4 +1,4 @@
-package com.jhta.project.controller.phj;
+package com.jhta.project.controller.payment;
 
 import java.util.HashMap;
 

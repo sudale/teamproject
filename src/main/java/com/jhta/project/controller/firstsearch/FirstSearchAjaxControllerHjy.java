@@ -1,4 +1,4 @@
-package com.jhta.project.controller.hjy;
+package com.jhta.project.controller.firstsearch;
 
 import java.text.DateFormat;
 import java.text.DecimalFormat;

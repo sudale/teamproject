@@ -1,4 +1,4 @@
-package com.jhta.project.controller.cjy;
+package com.jhta.project.controller.admin;
 
 import java.sql.Date;
 import java.text.ParseException;
