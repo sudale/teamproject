@@ -35,7 +35,7 @@ public class FirstSearchControllerlhjcjy2 {
 	
 	@GetMapping("lhjcjy/firstsearch3") //
 	public String searchForm() {
-		return "user/lhjcjy/firstsearch3";
+		return "user/firstsearch/firstsearch3";
 	}
 
 	@RequestMapping(value = "lhjcjy/firstsearch3", method = RequestMethod.POST)
@@ -74,7 +74,7 @@ public class FirstSearchControllerlhjcjy2 {
 		}catch(Exception e) {
 			e.printStackTrace();
 		}
-		mv.setViewName("user/lhjcjy/firstsearch2");
+		mv.setViewName("user/firstsearch/firstsearch2");
 		return mv;
 	}
 }
