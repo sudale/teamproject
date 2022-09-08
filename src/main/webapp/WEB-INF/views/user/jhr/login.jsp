@@ -15,7 +15,7 @@
 </head>
 <body>
 <div class="header">
-	<jsp:include page="header.jsp" flush="true"/>
+	<jsp:include page="../includes/header.jsp" flush="true"/>
 </div>
 
 <div id="login" class="login_container">
