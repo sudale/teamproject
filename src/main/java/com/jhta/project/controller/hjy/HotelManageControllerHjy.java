@@ -380,7 +380,7 @@ public class HotelManageControllerHjy {
 		String subject = "[숙소등록]";
 		String fromEmail = "hodob76@gmail.com";
 		String fromUsername = "J6 MANAGER";
-		String toEmail = "hodob76@gmail.com, wjdgh7578@naver.com" ; // 콤마(,)로 여러개 나열
+		String toEmail = "hodob76@gmail.com, wjdgh7578@naver.com, peekaboo2189@gmail.com" ; // 콤마(,)로 여러개 나열
 
 		final String username = "hodob76@gmail.com";
 		final String password = "qmkwmqhzkhdvblzx";
