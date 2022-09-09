@@ -1,0 +1,611 @@
+@charset "UTF-8";
+
+/*=========================== 회원가입, 아이디찾기, 비밀번호 찾기 공통 =============================*/
+
+/* 로그인 */
+.login_container {
+	width: 100%;
+	margin: 0 auto;
+	padding: 0;
+}
+
+.login_contents {
+	overflow: hidden;
+	position: relative;
+}
+
+.member_login_wrap {
+	min-width: 1024px;
+	display: block;
+	padding: 60px 0;
+	background-color: #FFF;
+}
+
+.login_inner {
+	width: 980px;
+	display: block;
+	position: relative;
+	margin: 0 auto;
+}
+
+.login_box {
+	width: 520px;
+	display: block;
+	box-sizing: border-box;
+	position: relative;
+	margin: 0 auto;
+	padding: 50px;
+	border: 1px solid #DDD;
+	border-radius: 4px;
+}
+
+.login_title {
+	
+}
+
+.login_title>h2 {
+	font-size: 20px;
+	font-weight: 600;
+	padding-bottom: 10px;
+}
+
+.login_title>h3 {
+	font-size: 17px;
+}
+
+.login_area {
+	padding: 40px 0 10px;
+}
+
+.llog {
+	width: 100%;
+	height: 45px;
+}
+
+.flied-input .login_id {
+	padding: 0 18px;
+	background-color: #fff;
+	font-size: 14px;
+	box-sizing: border-box;
+	border: 1px solid #DDD;
+	border-radius: 4px;
+}
+
+.flied-input .login_pwd {
+	display: block;
+	width: 100%;
+	height: 45px;
+	line-height: 40px;
+	padding: 0 18px;
+	background-color: #fff;
+	font-size: 14px;
+	box-sizing: border-box;
+	border: 1px solid #DDD;
+	border-radius: 4px;
+	margin-top: 10px;
+}
+
+.errmsg {
+	display: block;
+	box-sizing: border-box;
+	color: red;
+	font-size: 14px;
+	line-height: 24px;
+}
+
+.confirm-btn {
+	padding-top: 15px;
+}
+
+.confirm-btn .btn_login {
+	width: 100%;
+	color: #fff;
+	font-size: 16px;
+	border-radius: 4px;
+	background-color: #ff346e;
+	border: none;
+	cursor: pointer;
+}
+
+.confirm-btn .btn_join {
+	display: block;
+	width: 30%;
+	color: #fff;
+	font-size: 16px;
+	border-radius: 4px;
+	background-color: #ff346e;
+	border: none;
+	text-align: center;
+	margin: 0 auto;
+}
+
+.login_bot_wrap {
+	display: block;
+	margin: 15px 0 40px;
+}
+
+.login_menu {
+	display: block;
+	float: right;
+	font-size: 0;
+	line-height: 20px;
+}
+
+.login_menu a {
+	position: relative;
+	margin-left: 20px;
+	color: #666;
+	font-size: 12px;
+	text-decoration: none;
+	cursor: pointer;
+	letter-spacing: -0.03em;
+	line-height: 20px;
+}
+
+.login_menu a:first-child {
+	margin-left: 0;
+}
+
+.login_menu a:nth-child(2)::after {
+	content: '';
+	position: absolute;
+	left: -11px;
+	top: 50%;
+	margin-top: -5px;
+	width: 1px;
+	height: 10px;
+	background: #ddd;
+}
+
+.login_menu a:nth-child(3)::after {
+	content: '';
+	position: absolute;
+	left: -11px;
+	top: 50%;
+	margin-top: -5px;
+	width: 1px;
+	height: 10px;
+	background: #ddd;
+}
+
+/* 회원가입 */
+.membership {
+	display: block;
+	box-sizing: border-box;
+	marging: 0;
+	padding: 0;
+}
+
+.membership_container {
+	max-width: 1200px;
+	display: block;
+	box-sizing: border-box;
+	margin: 0 auto;
+	padding: 60px 0;
+}
+
+.mem_title {
+	font-size: 30px;
+	font-weight: 100;
+	padding: 8px 0;
+}
+
+.join_form, .reg_form {
+	margin-top: 60px;
+}
+
+.join1 {
+	max-width: 1000px;
+	margin: 0 auto;
+}
+
+.join_form h3 {
+	font-size: 17px;
+	font-weight: inherit;
+	letter-spacing: -0.05em;
+	color: #000;
+	display: block;
+	box-sizing: border-box;
+	padding-bottom: 5px;
+	border-bottom: 1px solid #000;
+	padding: 8px 0;
+}
+
+.point_color {
+	color: #ee1c25;
+	margin-right: 3px;
+}
+
+span.point_color.ex {
+	position: absolute;
+	bottom: -5px;
+	left: 13%;
+}
+
+.join_form h3 small {
+	display: inline-block;
+	box-sizing: border-box;
+	margin-left: 6px;
+}
+
+.join1 ul li {
+	position: relative;
+	width: 100%;
+	justify-content: flex-start;
+	padding: 20px 0;
+	margin: 10px auto;
+	display: flex;
+	align-items: center;
+}
+
+.join1 ul li label {
+	flex: 1;
+	max-width: 123px;
+	font-weight: 400;
+}
+
+.join1 ul li input {
+	display: block;
+	border: 1px solid #adadad;
+	padding: 10px;
+	color: #191919;
+	width: 100%;
+	height: 50px;
+	font-size: 14px;
+	flex: 2;
+}
+
+.join_col1 {
+	width: 160px;
+}
+
+.join_col_input {
+	display: table-cell;
+	box-sizing: border-box;
+	color: #8a8a8a;
+}
+
+.wrap_inner {
+	display: block;
+	box-sizing: border-box;
+	marging: 0;
+	padding: 0;
+}
+
+.ui_input {
+	width: 100%;
+	max-width: 462px;
+	display: inline-block;
+	margin: 0 6px 0 0;
+	padding: 0;
+	position: relative;
+}
+
+.input_space:focus {
+	opaticy: 1;
+}
+
+.input_space::placeholder {
+	font-size: 13.125px;
+	line-height: 34px;
+	color: #8a8a8a;
+	white-space: nowrap;
+	text-overflow: ellipsis;
+	overflow: hidden;
+}
+
+.ui_button {
+	min-width: 70px;
+	height: 50px;
+	color: #fff;
+	font-size: 13px;
+	background: #191919;
+	border: none;
+}
+
+.submit_container {
+	width: 100%;
+	display: block;
+	box-sizing: border-box;
+	marging: 0;
+	padding: 0;
+	text-align: center;
+}
+
+.submit_btn {
+	display: block;
+	width: 30%;
+	height: 45px;
+	color: #fff;
+	font-size: 16px;
+	border-radius: 4px;
+	background-color: #ff346e;
+	border: none;
+	text-align: center;
+	margin: 0 auto;
+}
+
+/*  파일첨부   */
+.filebox label {
+	display: block;
+	padding: 0.5em 0.75em;
+	color: #999;
+	font-size: inherit;
+	line-height: normal;
+	vertical-align: middle;
+	background-color: #fdfdfd;
+	border: 1px solid #adadad;
+	margin-left: 52px;
+	flex: initial !important;
+	display: block;
+	max-width: 100% !important;
+}
+
+
+
+.btn-upload {
+	width: 150px;
+	height: 30px;
+	font-size: 13px;
+	cursor: pointer;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.file {
+	display: none;
+}
+
+/*아이디 찾기 */
+.findid {
+	display: block;
+	box-sizing: border-box;
+	marging: 0;
+	padding: 0;
+}
+
+.findid_container {
+	max-width: 1000px;
+	display: block;
+	box-sizing: border-box;
+	margin: 0 auto;
+	padding: 100px 0;
+}
+
+.toparea {
+	display: block;
+	box-sizing: border-box;
+	padding: 0;
+	margin: 0;
+	margin-bottom: 65px;
+}
+
+.title {
+	font-size: 28px;
+	font-weight: 100;
+	line-height: 32px;
+	color: #000;
+	word-break: break-all;
+	margin-bottom: 38px;
+	padding: 8px 0;
+}
+
+.headline {
+	font-size: 23px;
+	font-weight: 100;
+	margin: 0 0 10px;
+}
+
+.find_id {
+	display: block;
+	box-sizing: border-box;
+	marging: 0;
+	padding: 0;
+}
+
+.find_id h3 {
+	font-size: 17px;
+	font-weight: normal;
+	color: #000;
+	padding-bottom: 5px;
+	border-bottom: 1px solid #000;
+}
+/* .findid1 {
+    width:100%;
+	display:table;
+	box-sizing:border-box;
+    table-layout:fixed;
+	padding:20px 0;
+    border-bottom:1px solid #d0d0d0;
+} */
+.findid_col1 {
+	width: 160px;
+	display: table-cell;
+	box-sizing: border-box;
+	vertical-align: top;
+	font-size: 15px;
+	line-height: 34px;
+	letter-spacing: -0.05em;
+	color: #8a8a8a;
+}
+
+.findid_col_input {
+	display: table-cell;
+	box-sizing: border-box;
+	color: #8a8a8a;
+}
+
+.input_wrap {
+	display: block;
+	box-sizing: border-box;
+	marging: 0;
+	padding: 0;
+}
+
+/* ================================ 숙소등록 ================================ */
+.hotel_reg_container {
+	max-width: 1200px;
+	display: block;
+	box-sizing: border-box;
+	margin: 0 auto;
+	padding: 60px 0;
+}
+
+
+
+.host_regform {
+	position: relative;
+}
+
+.room_title {
+	font-size: 25px;
+}
+
+.room_basic,.room_detail,.room_season{
+	background: transparent;
+	border-bottom: 1px solid #505050;
+	margin-bottom: 40px;
+}
+.collapse{
+	position:relative;
+	overflow:hidden;
+	transition: height .3s ease;
+}
+.collapse:not(.show) {
+    display: none;
+}
+
+.hotel_reg_container .join1 ul li{
+border-bottom: 1px solid #191919;
+}
+.hotel_reg_container .room_map{
+	display: block;
+}
+.hotel_reg_container .add_input {
+    display: flex;
+    align-items: center;
+}
+
+
+
+
+.hotel_reg_containerm .host_regform label {
+	display: block;
+	position: relative;
+	margin: 40px 0px;
+}
+
+.hotel_reg_container .host_regform .label-txt {
+	position: absolute;
+	top: -1.6em;
+	padding: 10px;
+	font-family: sans-serif;
+	font-size: .8em;
+	letter-spacing: 1px;
+	color: rgb(120, 120, 120);
+	transition: ease .3s;
+}
+
+.hotel_reg_container .host_regform .input {
+	width: 100%;
+	padding: 10px;
+	background: transparent;
+	border: none;
+	outline: none;
+}
+
+.hotel_reg_container .host_regform .line-box {
+	position: relative;
+	width: 100%;
+	height: 2px;
+	background: #BCBCBC;
+}
+
+.hotel_reg_container .host_regform .line {
+	position: absolute;
+	width: 0%;
+	height: 2px;
+	top: 0px;
+	left: 50%;
+	transform: translateX(-50%);
+	background: #8BC34A;
+	transition: ease .6s;
+}
+
+.hotel_reg_container .host_regform .input:focus+.line-box .line {
+	width: 100%;
+}
+
+.hotel_reg_container .host_regform .label-active {
+	top: -3em;
+}
+
+.hotel_reg_container .host_regform button {
+	display: inline-block;
+	padding: 12px 24px;
+	background: rgb(220, 220, 220);
+	font-weight: bold;
+	color: rgb(120, 120, 120);
+	border: none;
+	outline: none;
+	border-radius: 3px;
+	cursor: pointer;
+	transition: ease .3s;
+}
+
+.hotel_reg_container .host_regform button:hover {
+	background: #00AEF0;
+	color: #ffffff;
+}
+
+.hotel_reg_container .host_regform .button {
+	display: inline-block;
+	padding: 12px 24px;
+	background: rgb(220, 220, 220);
+	font-weight: bold;
+	color: rgb(120, 120, 120);
+	border: none;
+	outline: none;
+	border-radius: 3px;
+	cursor: pointer;
+	transition: ease .3s;
+}
+
+.hotel_reg_container .host_regform .button:hover {
+	background: #00AEF0;
+	color: #ffffff;
+}
+
+/*별점 칠하기 css*/
+.hotel_reg_container .host_regform .star-rating {
+	display: flex;
+	flex-direction: row-reverse;
+	font-size: 2.25rem;
+	line-height: 0px;
+	justify-content: space-around;
+	padding: 0 0.2em;
+	width: 100px;
+}
+
+/*기존 라디오 버튼 사라짐*/
+.hotel_reg_container .host_regform .star-rating input {
+	display: none;
+}
+
+.hotel_reg_container .host_regform .star-rating label {
+	-webkit-text-fill-color: transparent;
+	/* Will override color (regardless of order) */
+	-webkit-text-stroke-width: 2.3px;
+	-webkit-text-stroke-color: #00AEF0;
+	cursor: pointer;
+}
+/*클릭시 변경*/
+.hotel_reg_container .host_regform .star-rating :checked ~ label {
+	-webkit-text-fill-color: #00AEF0;
+}
+/*호버시 변경*/
+.hotel_reg_container .host_regform .star-rating label:hover,
+	.star-rating label:hover ~ label {
+	-webkit-text-fill-color: blue;
+}
