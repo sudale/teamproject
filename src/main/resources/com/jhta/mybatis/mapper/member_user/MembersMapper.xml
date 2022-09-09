@@ -2,7 +2,7 @@
 <!DOCTYPE mapper
   PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
   "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
-<mapper namespace="com.jhta.mybatis.mapper.jhr.MembersMapper">
+<mapper namespace="com.jhta.mybatis.mapper.member_user.MembersMapper">
 	<insert id="insert" parameterType="com.jhta.project.vo.MembersVo">
 		<if test="mprofile!=null">
 			insert into members values(#{mid},#{mpw},#{mname},#{mphone},#{memail},sysdate,#{mbirth},#{mprofile},null)

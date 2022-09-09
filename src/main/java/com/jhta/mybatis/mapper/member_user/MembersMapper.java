@@ -1,4 +1,4 @@
-package com.jhta.mybatis.mapper.jhr;
+package com.jhta.mybatis.mapper.member_user;
 
 import java.util.HashMap;
 

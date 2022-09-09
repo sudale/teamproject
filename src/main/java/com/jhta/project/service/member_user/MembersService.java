@@ -5,7 +5,7 @@ import java.util.HashMap;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import com.jhta.mybatis.mapper.jhr.MembersMapper;
+import com.jhta.mybatis.mapper.member_user.MembersMapper;
 import com.jhta.project.vo.Chat_membersVo;
 import com.jhta.project.vo.FavoriteVo_kjy;
 import com.jhta.project.vo.MembersVo;
