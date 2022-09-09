@@ -2,7 +2,7 @@
 <!DOCTYPE mapper
   PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
   "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
-<mapper namespace="com.jhta.mybatis.mapper.lhjcjy.GetPriceMapperlhjcjy">
+<mapper namespace="com.jhta.mybatis.mapper.firstsearch.GetPriceMapperlhjcjy">
 	<select id="getprice" parameterType="hashmap" resultType="com.jhta.project.vo.AccommodationsVolhjcjy">
 	<![CDATA[
 	        select * from (select fin.*, ROW_NUMBER() OVER(PARTITION BY aname ORDER BY aname, amountsum) rnum from(        

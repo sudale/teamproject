@@ -2,7 +2,7 @@
 <!DOCTYPE mapper
   PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
   "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
-<mapper namespace="com.jhta.mybatis.mapper.lhjcjy.SearchByGradeMapperlhjcjy">
+<mapper namespace="com.jhta.mybatis.mapper.firstsearch.SearchByGradeMapperlhjcjy">
   	<!-- 별점에 따른 검색작업 -->
   	<sql id="gradesection">
   		<if test="agrade != null and agrade != ''">
