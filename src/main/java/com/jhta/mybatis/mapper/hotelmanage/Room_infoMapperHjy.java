@@ -1,4 +1,4 @@
-package com.jhta.mybatis.mapper.hjy;
+package com.jhta.mybatis.mapper.hotelmanage;
 
 import com.jhta.project.vo.Room_InfoVo;
 

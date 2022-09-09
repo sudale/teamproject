@@ -3,7 +3,7 @@ package com.jhta.project.service.admin;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import com.jhta.mybatis.mapper.hjy.admin.AdminMapperHjy;
+import com.jhta.mybatis.mapper.admin.AdminMapperHjy;
 import com.jhta.project.vo.HeadadminVo;
 
 @Service

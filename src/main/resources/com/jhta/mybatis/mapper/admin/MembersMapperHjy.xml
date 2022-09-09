@@ -2,7 +2,7 @@
 <!DOCTYPE mapper
   PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
   "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
-<mapper namespace="com.jhta.mybatis.mapper.hjy.admin.MembersMapperHjy">
+<mapper namespace="com.jhta.mybatis.mapper.admin.MembersMapperHjy">
 	<select id="allMembers" resultType="int">
 		select count(*) cnt from members where mdrop is null
 	</select>

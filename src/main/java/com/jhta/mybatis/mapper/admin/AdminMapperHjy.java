@@ -1,4 +1,4 @@
-package com.jhta.mybatis.mapper.hjy.admin;
+package com.jhta.mybatis.mapper.admin;
 
 import com.jhta.project.vo.HeadadminVo;
 

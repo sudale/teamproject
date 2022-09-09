@@ -1,4 +1,4 @@
-package com.jhta.mybatis.mapper.hjy;
+package com.jhta.mybatis.mapper.hotelmanage;
 
 import java.util.ArrayList;
 import java.util.List;

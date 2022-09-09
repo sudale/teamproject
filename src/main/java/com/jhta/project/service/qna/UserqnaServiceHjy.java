@@ -6,7 +6,7 @@ import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import com.jhta.mybatis.mapper.hjy.UserqnaMapperHjy;
+import com.jhta.mybatis.mapper.qna.UserqnaMapperHjy;
 import com.jhta.project.vo.UserqnaVo2;
 
 @Service

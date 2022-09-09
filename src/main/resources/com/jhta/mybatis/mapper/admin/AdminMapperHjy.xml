@@ -2,7 +2,7 @@
 <!DOCTYPE mapper
   PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
   "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
-<mapper namespace="com.jhta.mybatis.mapper.hjy.admin.AdminMapperHjy">
+<mapper namespace="com.jhta.mybatis.mapper.admin.AdminMapperHjy">
 	<select id="login" parameterType="com.jhta.project.vo.HeadadminVo" resultType="com.jhta.project.vo.HeadadminVo">
 		select * from head_admin where aid=#{aid} and apw=#{apw}
 	</select>

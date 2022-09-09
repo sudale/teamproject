@@ -1,4 +1,4 @@
-package com.jhta.mybatis.mapper.hjy.admin;
+package com.jhta.mybatis.mapper.admin;
 
 public interface MembersMapperHjy {
 	public int allMembers();
