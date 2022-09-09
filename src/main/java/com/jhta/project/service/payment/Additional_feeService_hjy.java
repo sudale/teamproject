@@ -4,7 +4,7 @@ package com.jhta.project.service.payment;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import com.jhta.project.controller.payment.Additional_feeMapperHjy;
+import com.jhta.mybatis.mapper.payment.Additional_feeMapperHjy;
 import com.jhta.project.vo.Additional_feeVo;
 @Service
 public class Additional_feeService_hjy {

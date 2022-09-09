@@ -13,7 +13,7 @@ import com.jhta.project.vo.Admin_ManageMemVo;
 public class Admin_ManageMembersServiceCjy {
 	@Autowired Admin_ManageMembersMapperCjy mapper;
 	public List<Admin_ManageMemVo> list(){
-		System.out.println(mapper.list().get(0).getMrdate());
+		System.out.println("서비스 실행@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@");
 		return mapper.list();
 	}
 }
