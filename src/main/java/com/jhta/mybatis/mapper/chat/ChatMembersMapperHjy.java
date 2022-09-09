@@ -1,4 +1,4 @@
-package com.jhta.mybatis.mapper.hjy.chat;
+package com.jhta.mybatis.mapper.chat;
 
 import com.jhta.project.vo.Chat_membersVo_kjy;
 

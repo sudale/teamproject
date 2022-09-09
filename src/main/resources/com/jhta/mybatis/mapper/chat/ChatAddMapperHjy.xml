@@ -2,7 +2,7 @@
 <!DOCTYPE mapper
   PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
   "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
-  <mapper namespace="com.jhta.mybatis.mapper.hjy.chat.ChatAddMapperHjy">
+  <mapper namespace="com.jhta.mybatis.mapper.chat.ChatAddMapperHjy">
   	<insert id="friendReqInsert" parameterType="com.jhta.project.vo.ChatAddVo">
   		insert into chat_add values(seq_chat_add.nextval,#{caaddid},#{cmid})
   	</insert>

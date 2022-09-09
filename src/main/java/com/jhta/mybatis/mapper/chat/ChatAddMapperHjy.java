@@ -1,4 +1,4 @@
-package com.jhta.mybatis.mapper.hjy.chat;
+package com.jhta.mybatis.mapper.chat;
 
 import java.util.HashMap;
 import java.util.List;

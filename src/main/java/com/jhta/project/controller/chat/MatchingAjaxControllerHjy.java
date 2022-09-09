@@ -10,7 +10,7 @@ import org.springframework.http.MediaType;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.jhta.mybatis.mapper.hjy.chat.ChatBuddyMapperHjy;
+import com.jhta.mybatis.mapper.chat.ChatBuddyMapperHjy;
 import com.jhta.project.service.chat.ChatAddServiceHjy;
 import com.jhta.project.service.chat.ChatMembersServiceHjy;
 import com.jhta.project.vo.ChatAddVo;
