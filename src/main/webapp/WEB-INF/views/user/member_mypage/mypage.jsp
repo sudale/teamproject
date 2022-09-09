@@ -7,78 +7,71 @@
 <meta charset="UTF-8">
 <title>Insert title here</title>
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
-<link rel="stylesheet" href="${pageContext.request.contextPath }/resources/js/jquery-ui.css">
+<link rel="stylesheet" href="${pageContext.request.contextPath}/resources/js/jquery-ui.css">
 <link rel="stylesheet" href="${pageContext.request.contextPath}/resources/css/header.css">
 <link rel="stylesheet" href="${pageContext.request.contextPath}/resources/css/mypage.css">
-<link rel="stylesheet" href="${pageContext.request.contextPath}/resources/css/footer.css"> 
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Do+Hyeon&family=Hahmlet:wght@500;600;700&family=Nanum+Pen+Script&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="${pageContext.request.contextPath}/resources/css/footer.css">
 
 </head>
 <body>
 <div class="header">
-	<jsp:include page="/WEB-INF/views/user/includes/header.jsp"/>
-</div> 
+	<jsp:include page="../includes/header.jsp"/>
+</div>
 <div id="headbox">
-	
 	<div class="headbox_name">
-		<p class="name">${vo.mname }님</p>
+		<p class="name">${vo.mname}님</p>
 		<p class="memt">돌아오셔서 반갑습니다.</p>
 	</div>
-	
-	<div class="profile">
-      <c:choose>
-         <c:when test="${!empty vo.mprofile}">
-            <img src="${pageContext.request.contextPath }/resources/images/members/${vo.mprofile}" id="proimg" onerror="this.style.display='none'">
-            <!-- C:\jhta\final\.metadata\.plugins\org.eclipse.wst.server.core\tmp0\wtpwebapps\final_hotel1\resources\images\kjy\mypage -->
-            <p class="profiledel">&times;</p>
-            <img src="${pageContext.request.contextPath }/resources/images/members/profileup.jpg" id="profileup">            
-         </c:when>
-         <c:otherwise>
-            <p class=" initial">${initial }</p>
-            <img src="${pageContext.request.contextPath }/resources/images/members/profileup.jpg" id="profileup">
-         </c:otherwise>
-      </c:choose>
-      
-      <form id="fileForm" method="post" enctype="multipart/form-data" style="display: none;">
-          <input type="file" id="fileInput" name="filename">
-      </form>
-      
-   </div>
+		<div class="profile">
+		<c:choose>
+			<c:when test="${!empty vo.mprofile}">
+				<img src="${pageContext.request.contextPath }/resources/images/members/${vo.mprofile}" id="proimg" onerror="this.style.display='none'">
+				<!-- C:\jhta\final\.metadata\.plugins\org.eclipse.wst.server.core\tmp0\wtpwebapps\final_hotel1\resources\images\kjy\mypage -->
+				<p class="profiledel">&times;</p>
+				<img src="${pageContext.request.contextPath }/resources/images/members/profileup.jpg" id="profileup">				
+			</c:when>
+			<c:otherwise>
+				<p class=" initial">${initial }</p>
+				<img src="${pageContext.request.contextPath }/resources/images/members/profileup.jpg" id="profileup">
+			</c:otherwise>
+		</c:choose>
+		<form id="fileForm" method="post" enctype="multipart/form-data" style="display: none;">
+    		<input type="file" id="fileInput" name="filename">
+		</form>
+	</div>
 </div>
 <div id="contentbox">
 	<div class="tab">
     	<ul class="tabnav">
       		<li class="tabnav_li"><a href="#tab01">계정관리</a></li>
-      		<li class="tabnav_li"><a href="#tab02">환경설정</a></li>
-      		<li class="tabnav_li"><a href="#tab03">예약내역</a></li>
-      		<li class="tabnav_li"><a href="#tab04">문의내역</a></li>
+      		<!-- <li class="tabnav_li"><a href="#tab02">환경설정</a></li> -->
+      		<!-- <li class="tabnav_li"><a href="#tab03">예약내역</a></li> -->
+      		<!-- <li class="tabnav_li"><a href="#tab04">문의내역</a></li> -->
       		<li class="tabnav_li"><a href="#tab05">회원탈퇴</a></li>
     	</ul>
 	    <div class="tabcontent">
 		    <div id="tab01">
-		    	<jsp:include page="/WEB-INF/views/user/member_mypage/mypageUpdate.jsp"/>
+		    	<jsp:include page="./mypageUpdate.jsp"/>
 		    </div>
-		    <div id="tab02">
-		    	<jsp:include page="/WEB-INF/views/user/member_mypage/mypage_preferences.jsp"/>
-			</div>
-			<div id="tab03">
-		    	<jsp:include page="/WEB-INF/views/user/member_mypage/mypage_reservation.jsp"/>
-			</div>
-			<div id="tab04">
-		    	<jsp:include page="/WEB-INF/views/user/member_mypage/mypageQnalist.jsp"/>
-			</div>
+		    <%-- <div id="tab02">
+		    	<jsp:include page="./mypage_preferences.jsp"/>
+			</div> --%>
+			<%-- <div id="tab03">
+		    	<jsp:include page="./mypage_reservation.jsp"/>
+			</div> --%>
+			<%-- <div id="tab04">
+		    	<jsp:include page="./mypageQnalist.jsp"/>
+			</div> --%>
 			<div id="tab05">
-		    	<jsp:include page="/WEB-INF/views/user/member_mypage/mypage_accountdelete.jsp"/>
+		    	<jsp:include page="./mypage_accountdelete.jsp"/>
 			</div>
 	  	</div>
 	</div>
 </div>
 
-<%-- <div class="footer">
-	<jsp:include page="/WEB-INF/views/user/includes/footer.jsp"/>
-</div> --%>
+<div class="footer">
+	<jsp:include page="../includes/footer.jsp"/>
+</div>
 </body>
 <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
 <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
