@@ -127,8 +127,8 @@ input[type=search] {
     outline:none;
 }
 
-
-input[type="file"] {  /* 파일 필드 숨기기 */
+/* 
+input[type="file"] {  파일 필드 숨기기
   position: absolute;
   width: 1px;
   height: 1px;
@@ -138,7 +138,7 @@ input[type="file"] {  /* 파일 필드 숨기기 */
   clip:rect(0,0,0,0);
   border: 0;
 }
-
+ */
 
 
 input::placeholder {

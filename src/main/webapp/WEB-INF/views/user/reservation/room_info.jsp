@@ -11,6 +11,10 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Do+Hyeon&family=Hahmlet:wght@500;600;700&family=Nanum+Pen+Script&display=swap" rel="stylesheet">
+<script type="text/javascript"
+   src="https://openapi.map.naver.com/openapi/v3/maps.js?ncpClientId=83bfuniegk&submodules=geocoder"></script>
+   
+   
 </head>
 <style>
 * {
@@ -388,6 +392,11 @@
 <div class="header">
 	<jsp:include page="/WEB-INF/views/user/includes/header.jsp"/>
 </div>
+
+<div id="map" style="width: 50%; height: 400px;">
+            <input type="text" name="aycoordi" id="${accvo.axcoordi}"> 
+            <input type="text" name="axcoordi" id="${accvo.aycoordi}">
+   </div>
 <!-- 이미지 크게 일단 하나 -->
 <div id="content">
 	<div id="largeimgbox">
@@ -445,11 +454,14 @@
 		<c:if test="${riid ne vo.riid}">
 		<p class='room_title'>객실정보</p>
 		<div id="room_info">
+			
 			<div id="imgbox">
 				<img src="${pageContext.request.contextPath }/resources/images/room_info/${vo.rimainimg }" id="smallimg1">
 				<img src="${pageContext.request.contextPath }/resources/images/room_info/${vo.riextraimg1}" id="smallimg2">
 				<img src="${pageContext.request.contextPath }/resources/images/room_info/${vo.riextraimg2}" id="smallimg3">			
 			</div>
+			
+			
 			<div id="romm_name">
 				<h2 class="name">${vo.riroomtype}</h2>
 				<p class="serv">부가서비스</p>
@@ -648,5 +660,14 @@
 		location.href='${pageContext.request.contextPath }/jhr/login';
 	}
 	
+</script>
+
+
+<script>
+var map = new naver.maps.Map("map");
+var marker = new naver.maps.Marker({
+    position: new naver.maps.LatLng(${accvo.axcoordi}, ${accvo.aycoordi}),
+    map: map
+});
 </script>
 </html>
