@@ -21,7 +21,7 @@ import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.multipart.MultipartFile;
 
 import com.jhta.mybatis.mapper.board.ReviewMapperkjy;
-import com.jhta.project.util.kjy.PageUtil_kjy;
+import com.jhta.project.util.PageUtil_kjy;
 import com.jhta.project.vo.ReviewVo_kjy;
 
 @Controller

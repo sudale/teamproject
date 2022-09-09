@@ -1,4 +1,4 @@
-package com.jhta.project.util.kjy;
+package com.jhta.project.util;
 
 import lombok.Getter;
 import lombok.NoArgsConstructor;
