@@ -2,7 +2,7 @@ package com.jhta.mybatis.mapper.kjy;
 
 import java.util.HashMap;
 
-import com.jhta.project.vo.kjy.FavoriteVo_kjy;
+import com.jhta.project.vo.FavoriteVo_kjy;
 
 public interface FavoriteMapperkjy {
 	FavoriteVo_kjy list(String mid);

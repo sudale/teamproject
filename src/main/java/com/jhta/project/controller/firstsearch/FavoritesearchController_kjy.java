@@ -18,8 +18,8 @@ import org.springframework.web.bind.annotation.ResponseBody;
 
 import com.jhta.mybatis.mapper.kjy.FavoriteMapperkjy;
 import com.jhta.mybatis.mapper.kjy.FavoritesearchMapperkjy;
-import com.jhta.project.vo.kjy.FavoriteVo_kjy;
-import com.jhta.project.vo.kjy.FavoritesearchVo_kjy;
+import com.jhta.project.vo.FavoriteVo_kjy;
+import com.jhta.project.vo.FavoritesearchVo_kjy;
 
 @Controller
 public class FavoritesearchController_kjy {

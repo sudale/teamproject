@@ -19,8 +19,8 @@ import org.springframework.web.servlet.ModelAndView;
 
 import com.jhta.mybatis.mapper.kjy.AccommodationsMapperkjy;
 import com.jhta.mybatis.mapper.kjy.ReservationMapperkjy;
-import com.jhta.project.vo.kjy.FavoriteVo_kjy;
-import com.jhta.project.vo.kjy.ReservationVo_kjy;
+import com.jhta.project.vo.FavoriteVo_kjy;
+import com.jhta.project.vo.ReservationVo_kjy;
 
 
 @Controller

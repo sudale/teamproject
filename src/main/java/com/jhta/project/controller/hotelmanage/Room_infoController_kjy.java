@@ -20,8 +20,8 @@ import org.springframework.web.servlet.ModelAndView;
 import com.jhta.project.service.board.Room_infoService_kjy;
 import com.jhta.project.service.hotelmanage.AccommodationsService_kjy;
 import com.jhta.project.service.hotelmanage.PeriodService_kjy;
-import com.jhta.project.vo.kjy.AccommodationsVo_kjy;
-import com.jhta.project.vo.kjy.Room_infoVo_kjy;
+import com.jhta.project.vo.AccommodationsVo_kjy;
+import com.jhta.project.vo.Room_infoVo_kjy;
 
 @Controller
 public class Room_infoController_kjy {

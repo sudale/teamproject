@@ -6,7 +6,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import com.jhta.mybatis.mapper.kjy.MypageMapperkjy;
-import com.jhta.project.vo.kjy.MypageVo_kjy;
+import com.jhta.project.vo.MypageVo_kjy;
 
 @Service
 public class MypageService_kjy {

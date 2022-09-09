@@ -7,7 +7,7 @@ import org.springframework.stereotype.Service;
 
 import com.jhta.mybatis.mapper.kjy.FavoriteMapperkjy;
 import com.jhta.mybatis.mapper.kjy.FavoritesearchMapperkjy;
-import com.jhta.project.vo.kjy.FavoriteVo_kjy;
+import com.jhta.project.vo.FavoriteVo_kjy;
 
 @Service
 public class FavoriteService_kjy {

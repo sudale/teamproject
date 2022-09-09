@@ -15,7 +15,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 
 import com.jhta.mybatis.mapper.kjy.FavoriteMapperkjy;
-import com.jhta.project.vo.kjy.FavoriteVo_kjy;
+import com.jhta.project.vo.FavoriteVo_kjy;
 
 @Controller
 public class FavoriteController_kjy {

@@ -25,7 +25,7 @@ import org.springframework.web.multipart.MultipartFile;
 import org.springframework.web.servlet.ModelAndView;
 
 import com.jhta.mybatis.mapper.kjy.MypageMapperkjy;
-import com.jhta.project.vo.kjy.MypageVo_kjy;
+import com.jhta.project.vo.MypageVo_kjy;
 
 @Controller
 public class MypageController_kjy {

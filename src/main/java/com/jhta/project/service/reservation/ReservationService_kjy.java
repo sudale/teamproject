@@ -8,9 +8,9 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import com.jhta.mybatis.mapper.kjy.ReservationMapperkjy;
-import com.jhta.project.vo.kjy.AccommodationsVo_kjy;
-import com.jhta.project.vo.kjy.PayMentVo_kjy;
-import com.jhta.project.vo.kjy.ReservationVo_kjy;
+import com.jhta.project.vo.AccommodationsVo_kjy;
+import com.jhta.project.vo.PayMentVo_kjy;
+import com.jhta.project.vo.ReservationVo_kjy;
 
 @Service
 public class ReservationService_kjy {

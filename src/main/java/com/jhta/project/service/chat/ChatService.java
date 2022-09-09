@@ -7,9 +7,9 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import com.jhta.mybatis.mapper.kjy.ChatMapperkjy;
-import com.jhta.project.vo.kjy.Chat_membersVo_kjy;
-import com.jhta.project.vo.kjy.Chat_messageVo_kjy;
-import com.jhta.project.vo.kjy.Chat_roomjoinVo_kjy;
+import com.jhta.project.vo.Chat_membersVo_kjy;
+import com.jhta.project.vo.Chat_messageVo_kjy;
+import com.jhta.project.vo.Chat_roomjoinVo_kjy;
 
 @Service
 public class ChatService {

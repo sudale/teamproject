@@ -22,7 +22,7 @@ import org.springframework.web.multipart.MultipartFile;
 
 import com.jhta.mybatis.mapper.kjy.ReviewMapperkjy;
 import com.jhta.project.util.kjy.PageUtil_kjy;
-import com.jhta.project.vo.kjy.ReviewVo_kjy;
+import com.jhta.project.vo.ReviewVo_kjy;
 
 @Controller
 public class ReviewController_kjy {

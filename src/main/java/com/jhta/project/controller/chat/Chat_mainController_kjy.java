@@ -23,9 +23,9 @@ import org.springframework.web.socket.WebSocketSession;
 
 import com.jhta.mybatis.mapper.kjy.ChatMapperkjy;
 import com.jhta.project.handler.SocketHandler;
-import com.jhta.project.vo.kjy.Chat_membersVo_kjy;
-import com.jhta.project.vo.kjy.Chat_messageVo_kjy;
-import com.jhta.project.vo.kjy.Chat_roomjoinVo_kjy;
+import com.jhta.project.vo.Chat_membersVo_kjy;
+import com.jhta.project.vo.Chat_messageVo_kjy;
+import com.jhta.project.vo.Chat_roomjoinVo_kjy;
 
 @Controller
 public class Chat_mainController_kjy {

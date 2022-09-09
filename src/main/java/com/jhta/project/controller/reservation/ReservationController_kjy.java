@@ -27,9 +27,9 @@ import com.jhta.mybatis.mapper.kjy.MypageMapperkjy;
 import com.jhta.mybatis.mapper.kjy.ReservationMapperkjy;
 import com.jhta.mybatis.mapper.kjy.ReviewMapperkjy;
 import com.jhta.project.util.kjy.PageUtil_kjy;
-import com.jhta.project.vo.kjy.MypageVo_kjy;
-import com.jhta.project.vo.kjy.PayMentVo_kjy;
-import com.jhta.project.vo.kjy.ReservationVo_kjy;
+import com.jhta.project.vo.MypageVo_kjy;
+import com.jhta.project.vo.PayMentVo_kjy;
+import com.jhta.project.vo.ReservationVo_kjy;
 
 @Controller
 public class ReservationController_kjy {
