@@ -14,7 +14,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 
-import com.jhta.mybatis.mapper.kjy.FavoriteMapperkjy;
+import com.jhta.mybatis.mapper.firstsearch.FavoriteMapperkjy;
 import com.jhta.project.vo.FavoriteVo_kjy;
 
 @Controller

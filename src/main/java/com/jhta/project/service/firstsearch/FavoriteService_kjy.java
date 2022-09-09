@@ -5,8 +5,8 @@ import java.util.HashMap;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import com.jhta.mybatis.mapper.kjy.FavoriteMapperkjy;
-import com.jhta.mybatis.mapper.kjy.FavoritesearchMapperkjy;
+import com.jhta.mybatis.mapper.firstsearch.FavoriteMapperkjy;
+import com.jhta.mybatis.mapper.firstsearch.FavoritesearchMapperkjy;
 import com.jhta.project.vo.FavoriteVo_kjy;
 
 @Service

@@ -7,7 +7,7 @@ import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import com.jhta.mybatis.mapper.kjy.ReservationMapperkjy;
+import com.jhta.mybatis.mapper.reservation.ReservationMapperkjy;
 import com.jhta.project.vo.AccommodationsVo_kjy;
 import com.jhta.project.vo.PayMentVo_kjy;
 import com.jhta.project.vo.ReservationVo_kjy;

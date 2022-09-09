@@ -6,7 +6,7 @@ import java.util.HashMap;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import com.jhta.mybatis.mapper.kjy.PeriodMapperkjy;
+import com.jhta.mybatis.mapper.hotelmanage.PeriodMapperkjy;
 
 @Service
 public class PeriodService_kjy {

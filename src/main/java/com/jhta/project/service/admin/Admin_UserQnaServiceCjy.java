@@ -5,7 +5,7 @@ import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import com.jhta.mybatis.mapper.cjy.Admin_UserQnaMapperCjy;
+import com.jhta.mybatis.mapper.admin.Admin_UserQnaMapperCjy;
 import com.jhta.project.vo.Admin_ManageMemVo;
 import com.jhta.project.vo.UserqnaVo;
 

@@ -22,8 +22,8 @@ import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.servlet.ModelAndView;
 
 import com.jhta.project.service.payment.PaymentService_phj;
-import com.jhta.project.vo.phj.PaymentVo_phj;
-import com.jhta.project.vo.phj.ReservationVo;
+import com.jhta.project.vo.PaymentVo_phj;
+import com.jhta.project.vo.ReservationVo2;
 
 @Controller
 public class PaymentController {

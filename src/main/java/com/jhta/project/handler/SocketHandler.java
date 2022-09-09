@@ -14,7 +14,7 @@ import org.springframework.web.socket.TextMessage;
 import org.springframework.web.socket.WebSocketSession;
 import org.springframework.web.socket.handler.TextWebSocketHandler;
 
-import com.jhta.mybatis.mapper.kjy.ChatMapperkjy;
+import com.jhta.mybatis.mapper.chat.ChatMapperkjy;
 import com.jhta.project.vo.Chat_messageVo_kjy;
 
 @Component

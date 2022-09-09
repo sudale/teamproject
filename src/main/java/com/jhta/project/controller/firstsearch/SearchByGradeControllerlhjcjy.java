@@ -10,7 +10,7 @@ import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.jhta.project.service.firstsearch.SearchByGradeServicelhjcjy;
-import com.jhta.project.vo.lhjcjy.SearchVolhjcjy;
+import com.jhta.project.vo.SearchVolhjcjy;
 
 
 

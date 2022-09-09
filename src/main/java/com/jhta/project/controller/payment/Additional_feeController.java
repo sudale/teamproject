@@ -10,7 +10,7 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.ResponseBody;
 
 import com.jhta.project.service.hotelmanage.Additional_feeService_phj;
-import com.jhta.project.vo.phj.Additional_FeeVo_phj;
+import com.jhta.project.vo.Additional_FeeVo_phj;
 
 @Controller
 public class Additional_feeController {

@@ -17,8 +17,8 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.servlet.ModelAndView;
 
-import com.jhta.mybatis.mapper.kjy.AccommodationsMapperkjy;
-import com.jhta.mybatis.mapper.kjy.ReservationMapperkjy;
+import com.jhta.mybatis.mapper.hotelmanage.AccommodationsMapperkjy;
+import com.jhta.mybatis.mapper.reservation.ReservationMapperkjy;
 import com.jhta.project.vo.FavoriteVo_kjy;
 import com.jhta.project.vo.ReservationVo_kjy;
 

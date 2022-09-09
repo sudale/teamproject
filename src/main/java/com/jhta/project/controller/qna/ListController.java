@@ -14,7 +14,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
 
-import com.jhta.mybatis.mapper.jhr.UserqnaMapper;
+import com.jhta.mybatis.mapper.qna.UserqnaMapper;
 import com.jhta.project.vo.UserqnaVo3;
 import com.jhta.util.PageUtil;
 

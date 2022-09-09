@@ -4,7 +4,7 @@ package com.jhta.project.service.hotelmanage;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import com.jhta.mybatis.mapper.hjy.AccommodationsMapperHjy;
+import com.jhta.mybatis.mapper.hotelmanage.AccommodationsMapperHjy;
 import com.jhta.project.vo.AccommodationsVo;
 
 

@@ -13,7 +13,7 @@ import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.servlet.ModelAndView;
 
 import com.jhta.project.service.firstsearch.SortByPriceServicelhycjy;
-import com.jhta.project.vo.lhjcjy.AccommodationsVo2lhjcjy;
+import com.jhta.project.vo.AccommodationsVo2lhjcjy;
 
 
 @RestController

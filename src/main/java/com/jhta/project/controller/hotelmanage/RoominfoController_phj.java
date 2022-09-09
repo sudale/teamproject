@@ -10,7 +10,7 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.ResponseBody;
 
 import com.jhta.project.service.hotelmanage.RoominfoService_phj;
-import com.jhta.project.vo.phj.RoominfoVo_phj;
+import com.jhta.project.vo.RoominfoVo_phj;
 
 @Controller
 public class RoominfoController_phj {

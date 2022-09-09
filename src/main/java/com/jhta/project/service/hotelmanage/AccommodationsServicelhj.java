@@ -6,9 +6,9 @@ import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import com.jhta.mybatis.mapper.lhj.Admin_AccommodationsMapperlhj;
-import com.jhta.project.vo.lhj.AccommodationsVo;
-import com.jhta.project.vo.lhj.Room_infoVo;
+import com.jhta.mybatis.mapper.hotelmanage.Admin_AccommodationsMapperlhj;
+import com.jhta.project.vo.AccommodationsVo2;
+import com.jhta.project.vo.Room_infoVo2;
 
 
 @Service
@@ -18,22 +18,22 @@ public class AccommodationsServicelhj {
 	public int count(HashMap<String, Object> map) {
 		return mapper.count(map);
 	}
-	public List<AccommodationsVo> accommlist(){
+	public List<AccommodationsVo2> accommlist(){
 		return mapper.accommlist();
 	}
-	public AccommodationsVo detail(int aid){
+	public AccommodationsVo2 detail(int aid){
 		return mapper.detail(aid);
 	}
-	public List<Room_infoVo> roomlist(int aid){
+	public List<Room_infoVo2> roomlist(int aid){
 		return mapper.roomlist(aid);
 	}
-	public Room_infoVo roomDetail(int riid){
+	public Room_infoVo2 roomDetail(int riid){
 		return mapper.roomDetail(riid);
 	}
-	public int accommUpdate(AccommodationsVo vo) {
+	public int accommUpdate(AccommodationsVo2 vo) {
 		return mapper.accommUpdate(vo);
 	}
-	public int roomUpdate(Room_infoVo vo) {
+	public int roomUpdate(Room_infoVo2 vo) {
 		return mapper.roomUpdate(vo);
 	}
 	public int delupdate(HashMap<String, Object> map) {

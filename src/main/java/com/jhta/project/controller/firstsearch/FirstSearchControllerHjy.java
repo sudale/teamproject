@@ -23,8 +23,8 @@ import com.jhta.project.service.firstsearch.FirstSearchServicelhjcjy;
 import com.jhta.project.service.hotelmanage.PeriodServicelhjcjy;
 import com.jhta.project.service.payment.GetPriceServiceHjy;
 import com.jhta.project.service.payment.GetPriceServicelhjcjy;
-import com.jhta.project.vo.lhjcjy.AccommodationsVolhjcjy;
-import com.jhta.project.vo.lhjcjy.SearchVolhjcjy;
+import com.jhta.project.vo.AccommodationsVolhjcjy;
+import com.jhta.project.vo.SearchVolhjcjy;
 
 
 

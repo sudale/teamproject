@@ -27,9 +27,9 @@ import com.jhta.project.service.firstsearch.GetPriceServicelhjcjyhjy;
 import com.jhta.project.service.firstsearch.SearchByStarServicelhjcjy;
 import com.jhta.project.service.firstsearch.SortByPriceServicelhycjy;
 import com.jhta.project.service.member_mypage.FavoriteServiceHjy;
-import com.jhta.project.vo.lhjcjy.AccommodationsVo2lhjcjy;
-import com.jhta.project.vo.lhjcjy.AccommodationsVolhjcjy;
-import com.jhta.project.vo.lhjcjy.SearchVolhjcjy;
+import com.jhta.project.vo.AccommodationsVo2lhjcjy;
+import com.jhta.project.vo.AccommodationsVolhjcjy;
+import com.jhta.project.vo.SearchVolhjcjy;
 
 @RestController
 public class FirstSearchAjaxControllerHjy {

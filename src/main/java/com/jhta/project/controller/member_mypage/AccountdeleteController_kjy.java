@@ -28,7 +28,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 
-import com.jhta.mybatis.mapper.kjy.AccountdeleteMapperkjy;
+import com.jhta.mybatis.mapper.hotelmanage.AccountdeleteMapperkjy;
 import com.jhta.project.service.member_user.MembersService;
 import com.jhta.project.vo.MembersVo;
 

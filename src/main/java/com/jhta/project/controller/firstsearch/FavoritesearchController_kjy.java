@@ -16,8 +16,8 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 
-import com.jhta.mybatis.mapper.kjy.FavoriteMapperkjy;
-import com.jhta.mybatis.mapper.kjy.FavoritesearchMapperkjy;
+import com.jhta.mybatis.mapper.firstsearch.FavoriteMapperkjy;
+import com.jhta.mybatis.mapper.firstsearch.FavoritesearchMapperkjy;
 import com.jhta.project.vo.FavoriteVo_kjy;
 import com.jhta.project.vo.FavoritesearchVo_kjy;
 
