@@ -3,7 +3,7 @@ package com.jhta.mybatis.mapper.hjy;
 import java.util.HashMap;
 import java.util.List;
 
-import com.jhta.project.vo.hjy.BoardVo;
+import com.jhta.project.vo.BoardVo;
 import com.jhta.project.vo.phj.BoardVo_phj;
 
 public interface BoardMapperHjy {

@@ -3,7 +3,7 @@
   PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
   "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.jhta.mybatis.mapper.kjy.Room_infoMapperkjy">
-	<select id="list" resultType="com.jhta.project.vo.kjy.Room_infoVo_kjy" parameterType="hashmap">
+	<select id="list" resultType="com.jhta.project.vo.Room_infoVo_kjy" parameterType="hashmap">
 		<!-- 
 		SELECT f.* FROM(
             SELECT e.*, DENSE_RANK() OVER(ORDER BY length(e.reday) desc) AS rank  FROM(

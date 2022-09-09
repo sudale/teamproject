@@ -6,7 +6,7 @@
 	<select id="seq" resultType="int">
 		select seq_room_info.currval from dual
 	</select>
-	<insert id="insert" parameterType="com.jhta.project.vo.hjy.Room_InfoVo">
+	<insert id="insert" parameterType="com.jhta.project.vo.Room_InfoVo">
 		insert into room_info values(seq_room_info.nextval,#{riroomtype},#{riroom},#{riservice},#{risize},#{riminper},#{rimaxper}
 		,#{ripeak},#{risemipeak},#{rioff},#{rimainimg},#{riextraimg1},#{riextraimg2},#{aid})
 	</insert>

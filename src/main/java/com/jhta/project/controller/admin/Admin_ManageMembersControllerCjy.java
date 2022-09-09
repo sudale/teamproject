@@ -10,8 +10,8 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.jhta.project.service.cjy.Admin_ManageMembersServiceCjy;
-import com.jhta.project.vo.cjy.Admin_ManageMemVo;
+import com.jhta.project.service.admin.Admin_ManageMembersServiceCjy;
+import com.jhta.project.vo.Admin_ManageMemVo;
 import com.jhta.util.PageUtil;
 
 @RestController

@@ -5,8 +5,8 @@ import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
 
-import com.jhta.project.vo.cjy.ReservationVo;
-import com.jhta.project.vo.cjy.RsvPaymentVo;
+import com.jhta.project.vo.ReservationVo;
+import com.jhta.project.vo.RsvPaymentVo;
 
 public interface Admin_CancelRefundMapperCjy {
 	public List<RsvPaymentVo> list();

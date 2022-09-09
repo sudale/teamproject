@@ -1,6 +1,6 @@
 package com.jhta.mybatis.mapper.hjy;
 
-import com.jhta.project.vo.hjy.AccommodationsVo;
+import com.jhta.project.vo.AccommodationsVo;
 
 public interface Accommodations_tempMapperHjy {
 	public int seq();

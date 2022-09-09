@@ -2,9 +2,9 @@ package com.jhta.mybatis.mapper.jhr;
 
 import java.util.HashMap;
 
-import com.jhta.project.vo.jhr.Chat_membersVo;
-import com.jhta.project.vo.jhr.MembersVo;
-import com.jhta.project.vo.kjy.FavoriteVo_kjy;
+import com.jhta.project.vo.Chat_membersVo;
+import com.jhta.project.vo.FavoriteVo_kjy;
+import com.jhta.project.vo.MembersVo;
 
 public interface MembersMapper {
 	int insert(MembersVo vo);

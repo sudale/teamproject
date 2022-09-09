@@ -6,7 +6,7 @@
 	<select id="seq" resultType="int">
 		select seq_period.currval from dual
 	</select>
-	<insert id="insert" parameterType="com.jhta.project.vo.hjy.PeriodVo">
+	<insert id="insert" parameterType="com.jhta.project.vo.PeriodVo">
 		insert into period values(
 			seq_period.nextval,#{peseason},#{pestart},#{peend},#{aid}
 		)

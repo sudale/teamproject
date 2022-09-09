@@ -6,10 +6,10 @@
 	<select id="seq" resultType="int">
 		select seq_period_temp.currval from dual
 	</select>
-	<select id="find" resultType="com.jhta.project.vo.hjy.PeriodVo" parameterType="int">
+	<select id="find" resultType="com.jhta.project.vo.PeriodVo" parameterType="int">
 		select * from period_temp where aid = #{aid}
 	</select>
-	<insert id="insert" parameterType="com.jhta.project.vo.hjy.PeriodVo">
+	<insert id="insert" parameterType="com.jhta.project.vo.PeriodVo">
 		insert into period_temp values(
 			seq_period_temp.nextval,#{peseason},#{pestart},#{peend},#{aid}
 		)

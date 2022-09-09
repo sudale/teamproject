@@ -2,7 +2,7 @@ package com.jhta.mybatis.mapper.kjy;
 
 import java.util.HashMap;
 
-import com.jhta.project.vo.kjy.MypageVo_kjy;
+import com.jhta.project.vo.MypageVo_kjy;
 
 public interface MypageMapperkjy {
 	MypageVo_kjy list(String mid);

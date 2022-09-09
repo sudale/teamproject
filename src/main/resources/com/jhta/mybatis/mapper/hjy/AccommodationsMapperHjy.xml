@@ -6,7 +6,7 @@
   	<select id="seq" resultType="int">
 		select seq_accommodations.currval from dual
 	</select>
-  	<insert id="insert" parameterType="com.jhta.project.vo.hjy.AccommodationsVo">
+  	<insert id="insert" parameterType="com.jhta.project.vo.AccommodationsVo">
   	insert into accommodations (aid,acate,aname,aaddress,aphone,axcoordi,aycoordi,atotalroom,agrade,adetail,amainimg,aregdate,aisdel) 
   		values(seq_accommodations.nextval,#{acate},#{aname},#{aaddress},#{aphone},#{axcoordi},#{aycoordi},#{atotalroom},#{agrade},#{adetail},#{amainimg},sysdate,null)
   	</insert>

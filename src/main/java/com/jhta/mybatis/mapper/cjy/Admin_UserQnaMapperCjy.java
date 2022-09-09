@@ -2,7 +2,7 @@ package com.jhta.mybatis.mapper.cjy;
 
 import java.util.List;
 
-import com.jhta.project.vo.cjy.UserqnaVo;
+import com.jhta.project.vo.UserqnaVo;
 
 public interface Admin_UserQnaMapperCjy {
 	public List<UserqnaVo> list();
