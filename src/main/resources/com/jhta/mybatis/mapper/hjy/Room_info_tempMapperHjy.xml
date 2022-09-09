@@ -6,10 +6,10 @@
 	<select id="seq" resultType="int">
 		select seq_room_info_temp.currval from dual
 	</select>
-	<select id="find" resultType="com.jhta.project.vo.hjy.Room_InfoVo" parameterType="int">
+	<select id="find" resultType="com.jhta.project.vo.Room_InfoVo" parameterType="int">
 		select * from room_info_temp where aid = #{aid}
 	</select>
-	<insert id="insert" parameterType="com.jhta.project.vo.hjy.Room_InfoVo">
+	<insert id="insert" parameterType="com.jhta.project.vo.Room_InfoVo">
 		insert into room_info_temp values(seq_room_info_temp.nextval,#{riroomtype},#{riroom},#{riservice},#{risize},#{riminper},#{rimaxper}
 		,#{ripeak},#{risemipeak},#{rioff},#{rimainimg},#{riextraimg1},#{riextraimg2},#{aid})
 	</insert>

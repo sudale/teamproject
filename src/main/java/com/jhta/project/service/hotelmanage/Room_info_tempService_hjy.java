@@ -7,7 +7,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import com.jhta.mybatis.mapper.hjy.Room_info_tempMapperHjy;
-import com.jhta.project.vo.hjy.Room_InfoVo;
+import com.jhta.project.vo.Room_InfoVo;
 
 
 @Service

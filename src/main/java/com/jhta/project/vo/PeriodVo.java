@@ -1,4 +1,4 @@
-package com.jhta.project.vo.hjy;
+package com.jhta.project.vo;
 
 import java.sql.Date;
 import java.util.List;

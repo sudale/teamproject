@@ -8,7 +8,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.jhta.project.service.reservation.ReservationServiceHjy;
-import com.jhta.project.vo.hjy.ReservationRateVo;
+import com.jhta.project.vo.ReservationRateVo;
 
 @RestController
 public class AdminReservationAjaxRateControllerHjy {

@@ -3,7 +3,7 @@ package com.jhta.mybatis.mapper.hjy.admin;
 import java.util.HashMap;
 import java.util.List;
 
-import com.jhta.project.vo.hjy.PaymentVo;
+import com.jhta.project.vo.PaymentVo;
 
 public interface PaymentMapperHjy {
 	public int monthlySales();

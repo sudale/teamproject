@@ -3,7 +3,7 @@ package com.jhta.mybatis.mapper.hjy;
 import java.util.HashMap;
 import java.util.List;
 
-import com.jhta.project.vo.hjy.CommentsVo;
+import com.jhta.project.vo.CommentsVo;
 
 public interface CommentsMapperHjy {
 	public List<CommentsVo> list(int bid);

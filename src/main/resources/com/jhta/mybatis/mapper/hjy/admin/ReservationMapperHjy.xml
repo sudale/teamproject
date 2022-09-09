@@ -3,7 +3,7 @@
   PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
   "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.jhta.mybatis.mapper.hjy.admin.ReservationMapperHjy">
-	<select id="hotelReserRate" resultType="com.jhta.project.vo.hjy.ReservationRateVo" parameterType="string">
+	<select id="hotelReserRate" resultType="com.jhta.project.vo.ReservationRateVo" parameterType="string">
 	  select fin.aname,TO_CHAR(round((fin.cnt/(ac.atotalroom*(LAST_DAY(sysdate)-ADD_MONTHS(TRUNC(sysdate,'MM'), 
 	  -#{time}
 	  )))*100),3),'FM9990.999')||'%' per ,fin.cnt,ac.atotalroom
@@ -16,7 +16,7 @@
       )fin, accommodations ac where fin.aid=ac.aid 
 	</select>
 	
-	<select id="roomReserRate" resultType="com.jhta.project.vo.hjy.ReservationRateVo" parameterType="string">      
+	<select id="roomReserRate" resultType="com.jhta.project.vo.ReservationRateVo" parameterType="string">      
       select aname,riroomtype,TO_CHAR(round((fin.cnt/(ac.atotalroom*(LAST_DAY(sysdate)-ADD_MONTHS(TRUNC(sysdate,'MM'), 
       -#{time}
       )))*100),3),'FM9990.999')||'%' per

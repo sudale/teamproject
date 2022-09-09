@@ -8,7 +8,7 @@ import org.springframework.stereotype.Service;
 
 import com.jhta.mybatis.mapper.hjy.PeriodMapperHjy;
 import com.jhta.mybatis.mapper.lhjcjy.PeriodMapperlhjcjy;
-import com.jhta.project.vo.hjy.PeriodVo;
+import com.jhta.project.vo.PeriodVo;
 
 @Service
 public class PeriodService_hjy {

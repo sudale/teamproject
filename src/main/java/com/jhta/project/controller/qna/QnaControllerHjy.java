@@ -23,7 +23,7 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.multipart.MultipartFile;
 
 import com.jhta.project.service.qna.UserqnaServiceHjy;
-import com.jhta.project.vo.hjy.UserqnaVo;
+import com.jhta.project.vo.UserqnaVo2;
 import com.jhta.util.PageUtil;
 
 @Controller
@@ -42,7 +42,7 @@ public class QnaControllerHjy {
 	 */
 	@RequestMapping("hjy/qna")
 	public String qnaForm(@RequestParam(value = "pageNum", defaultValue = "1")int pageNum,
-			String field, String keyword,UserqnaVo vo,String qcate,Model model) {
+			String field, String keyword,UserqnaVo2 vo,String qcate,Model model) {
 		HashMap<String, Object> map = new HashMap<String, Object>();
 		map.put("field", field);
 		map.put("keyword", keyword);
@@ -64,7 +64,7 @@ public class QnaControllerHjy {
 		System.out.println("field"+field);
 		System.out.println("keyword"+keyword);
 		System.out.println("pu"+pu);
-		List<UserqnaVo> list = userqnaService.qnalist(map);
+		List<UserqnaVo2> list = userqnaService.qnalist(map);
 		model.addAttribute("qcate", qcate);
 		model.addAttribute("pu", pu);
 		model.addAttribute("list", list);
@@ -93,9 +93,9 @@ public class QnaControllerHjy {
 		}else if(qcate.equals("기타")){
 			qcate="enc";
 		}
-		UserqnaVo vo = userqnaService.qnaDetail(qid);
-		UserqnaVo nextVo = userqnaService.next(qid);
-		UserqnaVo prevVo = userqnaService.prev(qid);
+		UserqnaVo2 vo = userqnaService.qnaDetail(qid);
+		UserqnaVo2 nextVo = userqnaService.next(qid);
+		UserqnaVo2 prevVo = userqnaService.prev(qid);
 		System.out.println(vo.getQref());
 		String ans = userqnaService.qnaAns(vo.getQref());
 		model.addAttribute("vo", vo);
@@ -150,14 +150,14 @@ public class QnaControllerHjy {
 			//2. 업로드된 파일정보 DB에 저장하기
 			String mid=(String)session.getAttribute("mid");
 			int qref=userqnaService.getQref();
-			UserqnaVo vo=new UserqnaVo(0,qcate,qpw,qtitle,qcontent,savefilename,null,null,(qref+1),0,mid);
+			UserqnaVo2 vo=new UserqnaVo2(0,qcate,qpw,qtitle,qcontent,savefilename,null,null,(qref+1),0,mid);
 			int n=userqnaService.qnawrite(vo);	
 			HashMap<String, Object> map = new HashMap<String, Object>();
 			PageUtil pu = new PageUtil(pageNum, 10, 5, userqnaService.qnacount(map));
 			map.put("startRow", pu.getStartRow());
 			map.put("endRow", pu.getEndRow());
 			map.put("qcate", qcate);
-			List<UserqnaVo> list = userqnaService.qnalist(map);
+			List<UserqnaVo2> list = userqnaService.qnalist(map);
 			if(qcate==null) {
 				qcate="all";
 			}else if(qcate.equals("상품")){

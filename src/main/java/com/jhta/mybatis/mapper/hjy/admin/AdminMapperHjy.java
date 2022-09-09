@@ -1,6 +1,6 @@
 package com.jhta.mybatis.mapper.hjy.admin;
 
-import com.jhta.project.vo.hjy.HeadadminVo;
+import com.jhta.project.vo.HeadadminVo;
 
 public interface AdminMapperHjy {
 	public HeadadminVo login(HeadadminVo vo);

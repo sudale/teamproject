@@ -20,10 +20,10 @@ import com.jhta.project.service.admin.Admin_CancelRefundServiceCjy;
 import com.jhta.project.service.payment.PaymentServiceHjy;
 import com.jhta.project.service.reservation.ReservationServiceHjy;
 import com.jhta.project.vo.Admin_ManageMemVo;
+import com.jhta.project.vo.PaymentVo;
+import com.jhta.project.vo.ReservationRateVo;
 import com.jhta.project.vo.ReservationVo;
 import com.jhta.project.vo.RsvPaymentVo;
-import com.jhta.project.vo.hjy.PaymentVo;
-import com.jhta.project.vo.hjy.ReservationRateVo;
 import com.jhta.util.PageUtil;
 
 import lombok.Data;

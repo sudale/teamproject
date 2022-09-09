@@ -1,14 +1,14 @@
-package com.jhta.project.vo.hjy;
+package com.jhta.project.vo;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
+
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
-public class ChatAddVo {
-	private int caid;
-	private String caaddid;
+public class ChatBuddyVo {
+	private int cbid;
+	private String cbbuid;
 	private String cmid;
-	private String cmprofile;
 }

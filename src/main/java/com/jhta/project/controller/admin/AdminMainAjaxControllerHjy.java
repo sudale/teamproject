@@ -10,7 +10,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 import com.jhta.project.service.member_user.MembersServiceHjy;
 import com.jhta.project.service.payment.PaymentServiceHjy;
-import com.jhta.project.vo.hjy.PaymentVo;
+import com.jhta.project.vo.PaymentVo;
 
 @RestController
 public class AdminMainAjaxControllerHjy {

@@ -13,7 +13,7 @@
 			and ${field} like '%'||#{keyword}||'%'
 		</if>
 	</sql>
-	<select id="qnalist" resultType="com.jhta.project.vo.hjy.UserqnaVo" parameterType="hashmap">
+	<select id="qnalist" resultType="com.jhta.project.vo.UserqnaVo2" parameterType="hashmap">
 		<choose>
 			<when test="qcate==null or qcate=='all'">
 				select * from (select aa.*,rownum rnum from 
@@ -43,14 +43,14 @@
 			</otherwise>
 		</choose>
 	</select>
-	<select id="qnaDetail" parameterType="int" resultType="com.jhta.project.vo.hjy.UserqnaVo">
+	<select id="qnaDetail" parameterType="int" resultType="com.jhta.project.vo.UserqnaVo2">
 		select * from userqna where qid = #{qid}
 	</select>
 	<select id="qnaAns" parameterType="int" resultType="string">
 		select qcontent from userqna where qstep = 1 and qref=#{qref}
 	</select>
 	
-	<select id="prev" parameterType="int" resultType="com.jhta.project.vo.hjy.UserqnaVo">
+	<select id="prev" parameterType="int" resultType="com.jhta.project.vo.UserqnaVo2">
 		<![CDATA[
 		select * from
 		(
@@ -58,7 +58,7 @@
 		)where rownum=1
 		]]>
 	</select>
-	<select id="next" parameterType="int" resultType="com.jhta.project.vo.hjy.UserqnaVo">
+	<select id="next" parameterType="int" resultType="com.jhta.project.vo.UserqnaVo2">
 		<![CDATA[
 		select * from
 		(
@@ -66,7 +66,7 @@
 		)where rownum=1
 		]]>
 	</select>
-	<insert id="qnawrite" parameterType="com.jhta.project.vo.hjy.UserqnaVo">
+	<insert id="qnawrite" parameterType="com.jhta.project.vo.UserqnaVo2">
 		insert into userqna values(seq_userqna.nextval,#{qcate},#{qpw},#{qtitle},#{qcontent},#{qfile, jdbcType=VARCHAR},sysdate,null,#{qref},0,#{mid})
 	</insert>
 	<select id="getQref" resultType="int">

@@ -13,8 +13,8 @@ import org.springframework.web.bind.annotation.RestController;
 import com.jhta.mybatis.mapper.hjy.chat.ChatBuddyMapperHjy;
 import com.jhta.project.service.chat.ChatAddServiceHjy;
 import com.jhta.project.service.chat.ChatMembersServiceHjy;
-import com.jhta.project.vo.hjy.ChatAddVo;
-import com.jhta.project.vo.hjy.ChatBuddyVo;
+import com.jhta.project.vo.ChatAddVo;
+import com.jhta.project.vo.ChatBuddyVo;
 
 @RestController
 public class MatchingAjaxControllerHjy {

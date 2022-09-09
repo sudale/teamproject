@@ -3,7 +3,7 @@ package com.jhta.mybatis.mapper.hjy;
 import java.util.ArrayList;
 import java.util.List;
 
-import com.jhta.project.vo.hjy.PeriodVo;
+import com.jhta.project.vo.PeriodVo;
 
 public interface Period_tempMapperHjy {
 	public int seq();

@@ -7,7 +7,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import com.jhta.mybatis.mapper.hjy.CommentsMapperHjy;
-import com.jhta.project.vo.hjy.CommentsVo;
+import com.jhta.project.vo.CommentsVo;
 
 @Service
 public class CommentsServiceHjy {

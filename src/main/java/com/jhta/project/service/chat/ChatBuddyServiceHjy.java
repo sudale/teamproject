@@ -6,7 +6,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import com.jhta.mybatis.mapper.hjy.chat.ChatBuddyMapperHjy;
-import com.jhta.project.vo.hjy.ChatBuddyVo;
+import com.jhta.project.vo.ChatBuddyVo;
 
 @Service
 public class ChatBuddyServiceHjy {

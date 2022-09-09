@@ -9,7 +9,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.jhta.project.service.admin.HeadadminServiceHjy;
-import com.jhta.project.vo.hjy.HeadadminVo;
+import com.jhta.project.vo.HeadadminVo;
 
 @RestController
 public class AdminLoginAjaxController {

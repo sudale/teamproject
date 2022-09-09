@@ -1,4 +1,4 @@
-package com.jhta.project.vo.hjy;
+package com.jhta.project.vo;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
@@ -8,7 +8,7 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 @NoArgsConstructor
 
-public class ChatMembersVo {
+public class ChatMembersVo_DUMMY {
 	private String cmid;
 	private String cmname;
 	private String cmbirth;

@@ -3,7 +3,7 @@ package com.jhta.mybatis.mapper.hjy.chat;
 import java.util.HashMap;
 import java.util.List;
 
-import com.jhta.project.vo.hjy.ChatAddVo;
+import com.jhta.project.vo.ChatAddVo;
 
 public interface ChatAddMapperHjy {
 	public int friendReqInsert(ChatAddVo vo);

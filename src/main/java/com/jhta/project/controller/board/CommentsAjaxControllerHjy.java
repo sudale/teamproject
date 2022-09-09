@@ -14,7 +14,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.jhta.project.service.CommentsServiceHjy;
-import com.jhta.project.vo.hjy.CommentsVo;
+import com.jhta.project.vo.CommentsVo;
 
 @RestController
 public class CommentsAjaxControllerHjy {

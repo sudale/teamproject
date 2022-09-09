@@ -44,8 +44,8 @@ import com.jhta.project.service.payment.Additional_feeService_hjy;
 import com.jhta.project.service.payment.Additional_fee_tempService_hjy;
 import com.jhta.project.vo.AccommodationsVo;
 import com.jhta.project.vo.Additional_feeVo;
-import com.jhta.project.vo.hjy.PeriodVo;
-import com.jhta.project.vo.hjy.Room_InfoVo;
+import com.jhta.project.vo.PeriodVo;
+import com.jhta.project.vo.Room_InfoVo;
 
 @Controller
 public class HotelManageControllerHjy {

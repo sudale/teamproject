@@ -7,30 +7,30 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import com.jhta.mybatis.mapper.hjy.UserqnaMapperHjy;
-import com.jhta.project.vo.hjy.UserqnaVo;
+import com.jhta.project.vo.UserqnaVo2;
 
 @Service
 public class UserqnaServiceHjy {
 	@Autowired UserqnaMapperHjy mapper;
-	public List<UserqnaVo> qnalist(HashMap<String, Object> map) {
+	public List<UserqnaVo2> qnalist(HashMap<String, Object> map) {
 		return mapper.qnalist(map);
 	};
 	public int qnacount(HashMap<String, Object> map) {
 		return mapper.qnacount(map);
 	};
-	public UserqnaVo qnaDetail(int qid){
+	public UserqnaVo2 qnaDetail(int qid){
 		return mapper.qnaDetail(qid);
 	};
-	public UserqnaVo prev(int qid) {
+	public UserqnaVo2 prev(int qid) {
 		return mapper.prev(qid);
 	};
-	public UserqnaVo next(int qid) {
+	public UserqnaVo2 next(int qid) {
 		return mapper.next(qid);
 	};
 	public String qnaAns(int qid) {
 		return mapper.qnaAns(qid);
 	};
-	public int qnawrite(UserqnaVo vo) {
+	public int qnawrite(UserqnaVo2 vo) {
 		return mapper.qnawrite(vo);
 	};
 	public int getQref() {

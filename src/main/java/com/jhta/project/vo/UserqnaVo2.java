@@ -1,4 +1,4 @@
-package com.jhta.project.vo.hjy;
+package com.jhta.project.vo;
 
 import java.sql.Date;
 
@@ -9,7 +9,7 @@ import lombok.NoArgsConstructor;
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
-public class UserqnaVo {
+public class UserqnaVo2 {
 	private int qid;
 	private String qcate;
 	private String qpw;
