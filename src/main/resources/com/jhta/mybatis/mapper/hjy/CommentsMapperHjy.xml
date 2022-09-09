@@ -2,7 +2,7 @@
 <!DOCTYPE mapper
   PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
   "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
-  <mapper namespace="com.jhta.mybatis.mapper.hjy.CommentsMapperHjy">
+  <mapper namespace="com.jhta.mybatis.mapper.board.CommentsMapperHjy">
   	<select id="list" resultType="com.jhta.project.vo.CommentsVo" parameterType="int">
   		select c.*,rownum rnum from 
 		(select * from comments where bid = #{bid} order by cref asc,cstep asc) c

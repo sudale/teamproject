@@ -1,4 +1,4 @@
-package com.jhta.mybatis.mapper.hjy;
+package com.jhta.mybatis.mapper.payment;
 
 
 import com.jhta.project.vo.Additional_feeVo;
