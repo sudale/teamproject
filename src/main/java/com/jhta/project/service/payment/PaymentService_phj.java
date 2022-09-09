@@ -3,7 +3,7 @@ package com.jhta.project.service.payment;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import com.jhta.mybatis.mapper.phj.PaymentMapper_phj;
+import com.jhta.mybatis.mapper.payment.PaymentMapper_phj;
 import com.jhta.project.vo.PaymentVo_phj;
 
 @Service

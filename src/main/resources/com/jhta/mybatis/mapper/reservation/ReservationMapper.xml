@@ -2,7 +2,7 @@
 <!DOCTYPE mapper
   PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
   "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
-<mapper namespace="com.jhta.mybatis.mapper.phj.ReservationMapper">
+<mapper namespace="com.jhta.mybatis.mapper.reservation.ReservationMapper">
 	<insert id="insertRes" parameterType="com.jhta.project.vo.ReservationVo2">
 		insert into reservation 
 		values(seq_reservation.nextval,#{rordernum},#{ramount},#{rroomnum},#{rcheckin},#{rcheckout},

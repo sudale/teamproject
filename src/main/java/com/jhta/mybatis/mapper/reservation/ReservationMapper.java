@@ -1,4 +1,4 @@
-package com.jhta.mybatis.mapper.phj;
+package com.jhta.mybatis.mapper.reservation;
 
 import com.jhta.project.vo.ReservationVo2;
 

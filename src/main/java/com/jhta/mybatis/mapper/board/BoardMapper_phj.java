@@ -1,4 +1,4 @@
-package com.jhta.mybatis.mapper.phj;
+package com.jhta.mybatis.mapper.board;
 
 import java.util.HashMap;
 import java.util.List;

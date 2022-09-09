@@ -1,4 +1,4 @@
-package com.jhta.project.controller.hotelmanage;
+package com.jhta.mybatis.mapper.hotelmanage;
 
 import com.jhta.project.vo.Additional_FeeVo_phj;
 

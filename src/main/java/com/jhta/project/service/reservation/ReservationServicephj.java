@@ -3,7 +3,7 @@ package com.jhta.project.service.reservation;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import com.jhta.mybatis.mapper.phj.ReservationMapper;
+import com.jhta.mybatis.mapper.reservation.ReservationMapper;
 import com.jhta.project.vo.ReservationVo2;
 
 @Service

@@ -3,7 +3,7 @@ package com.jhta.project.service.hotelmanage;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import com.jhta.project.controller.hotelmanage.Additional_feeMapper_phj;
+import com.jhta.mybatis.mapper.hotelmanage.Additional_feeMapper_phj;
 import com.jhta.project.vo.Additional_FeeVo_phj;
 
 @Service

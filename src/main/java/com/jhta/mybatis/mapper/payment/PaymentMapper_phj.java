@@ -1,4 +1,4 @@
-package com.jhta.mybatis.mapper.phj;
+package com.jhta.mybatis.mapper.payment;
 
 import com.jhta.project.vo.PaymentVo_phj;
 
