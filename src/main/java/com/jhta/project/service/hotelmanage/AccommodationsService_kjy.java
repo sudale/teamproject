@@ -5,7 +5,7 @@ import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import com.jhta.mybatis.mapper.kjy.AccommodationsMapperkjy;
+import com.jhta.mybatis.mapper.hotelmanage.AccommodationsMapperkjy;
 import com.jhta.project.vo.AccommodationsVo_kjy;
 
 @Service

@@ -2,7 +2,7 @@
 <!DOCTYPE mapper
   PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
   "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
-<mapper namespace="com.jhta.mybatis.mapper.kjy.ChatMapperkjy">
+<mapper namespace="com.jhta.mybatis.mapper.chat.ChatMapperkjy">
 	<select id="member" parameterType="string" resultType="com.jhta.project.vo.Chat_membersVo_kjy">
 		select * from chat_members where cmid=#{cmid}
 	</select>

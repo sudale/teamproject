@@ -13,7 +13,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.servlet.ModelAndView;
 
-import com.jhta.mybatis.mapper.kjy.ChatMapperkjy;
+import com.jhta.mybatis.mapper.chat.ChatMapperkjy;
 import com.jhta.project.vo.Chat_membersVo_kjy;
 
 @Controller

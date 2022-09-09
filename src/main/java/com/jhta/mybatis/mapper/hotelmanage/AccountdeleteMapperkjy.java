@@ -1,4 +1,4 @@
-package com.jhta.mybatis.mapper.kjy;
+package com.jhta.mybatis.mapper.hotelmanage;
 
 public interface AccountdeleteMapperkjy {
 	String mpwcheck(String mid);

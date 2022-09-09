@@ -2,7 +2,7 @@
 <!DOCTYPE mapper
   PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
   "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
-<mapper namespace="com.jhta.mybatis.mapper.kjy.FavoritesearchMapperkjy">
+<mapper namespace="com.jhta.mybatis.mapper.firstsearch.FavoritesearchMapperkjy">
 	<select id="hotelsearch" resultType="com.jhta.project.vo.FavoritesearchVo_kjy" parameterType="string">
 		select * from hotelchain where krchainname like '%'||#{hotel}||'%' or engchainname like '%'||#{hotel}||'%'
 	</select>
