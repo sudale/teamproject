@@ -5,7 +5,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import com.jhta.mybatis.mapper.phj.RoominfoMapper_phj;
-import com.jhta.project.vo.phj.RoominfoVo_phj;
+import com.jhta.project.vo.RoominfoVo_phj;
 @Service
 public class RoominfoService_phj {
 @Autowired private RoominfoMapper_phj mapper;

@@ -1,4 +1,4 @@
-package com.jhta.project.vo.lhjcjy;
+package com.jhta.project.vo;
 
 import java.util.Date;
 
@@ -9,7 +9,7 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 @AllArgsConstructor
 @Data
-public class PeriodVolhjcjy {
+public class PeriodVolhjcjy_DUMMY {
 	private int peid;
 	private String peseason;
 	private Date pestart;

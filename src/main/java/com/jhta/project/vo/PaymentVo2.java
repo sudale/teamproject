@@ -1,4 +1,4 @@
-package com.jhta.project.vo.lhj;
+package com.jhta.project.vo;
 
 import java.sql.Date;
 
@@ -25,7 +25,7 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 @NoArgsConstructor
 @Data
-public class PaymentVo {
+public class PaymentVo2 {
 	private int pid;
 	private String pmethod;
 	private String pdate;

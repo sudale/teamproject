@@ -7,7 +7,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import com.jhta.mybatis.mapper.phj.BoardMapper_phj;
-import com.jhta.project.vo.phj.BoardVo_phj;
+import com.jhta.project.vo.BoardVo_phj;
 @Service
 public class BoardService_phj {
 	@Autowired private BoardMapper_phj mapper;

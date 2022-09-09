@@ -3,7 +3,7 @@
   PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
   "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.jhta.mybatis.mapper.lhjcjy.GetPriceMapperlhjcjy">
-	<select id="getprice" parameterType="hashmap" resultType="com.jhta.project.vo.lhjcjy.AccommodationsVolhjcjy">
+	<select id="getprice" parameterType="hashmap" resultType="com.jhta.project.vo.AccommodationsVolhjcjy">
 	<![CDATA[
 	        select * from (select fin.*, ROW_NUMBER() OVER(PARTITION BY aname ORDER BY aname, amountsum) rnum from(        
 			select (amountSum+addfee.exper)amountsum,star restar, ri.riid, ri.riroom,ri.RISERVICE,ri.RISIZE,ri.RIMINPER,ri.RIMAXPER,ri.RIMAINIMG,ri.RIEXTRAIMG1,ri.RIEXTRAIMG2,ri.aid,ac.aname,ac.aaddress,ac.axcoordi,ac.aycoordi,ac.amainimg, ac.aphone from (

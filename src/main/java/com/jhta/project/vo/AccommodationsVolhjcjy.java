@@ -1,4 +1,4 @@
-package com.jhta.project.vo.lhjcjy;
+package com.jhta.project.vo;
 /*
  * CREATE TABLE ACCOMMODATIONS
 (
@@ -28,9 +28,8 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 @AllArgsConstructor
 @Data
-public class AccommodationsVo2lhjcjy {
+public class AccommodationsVolhjcjy {
 	private int aid;
-	private int riid;
 	private String acate;
 	private String aname;
 	private String aaddress;
@@ -44,7 +43,8 @@ public class AccommodationsVo2lhjcjy {
 	private Date aregdate;
 	private String aisdel;
 	
+	private int riid;
 	private String amountsum; //전체금액
 	private int restar;
-	private int star;
+	
 }

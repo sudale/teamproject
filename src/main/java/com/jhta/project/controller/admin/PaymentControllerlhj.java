@@ -9,7 +9,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.jhta.project.service.payment.PaymentServicelhj;
-import com.jhta.project.vo.lhj.PaymentVo;
+import com.jhta.project.vo.PaymentVo2;
 
 @RestController
 public class PaymentControllerlhj {
@@ -18,7 +18,7 @@ public class PaymentControllerlhj {
 	@RequestMapping(value = "admin/lhj/paymentlist", produces = {MediaType.APPLICATION_JSON_VALUE}) //숙소 목록 불러오기
 	public HashMap<String, Object> paymentlist() {
 		HashMap<String, Object> map = new HashMap<String, Object>();
-		List<PaymentVo> list = pmservice.paymentlist();
+		List<PaymentVo2> list = pmservice.paymentlist();
 		String pdate1 = list.get(0).getPdate().substring(0,10);
 		for(int i=0; i<list.size() ;i++) {
 			list.get(i).setPdate(pdate1);

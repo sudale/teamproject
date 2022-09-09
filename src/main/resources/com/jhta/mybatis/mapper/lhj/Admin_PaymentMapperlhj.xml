@@ -13,7 +13,7 @@
 		select NVL(count(*),0) cnt from accommodations
 		<include refid="search"/>
 	</select>
-	<select id="paymentlist" resultType="com.jhta.project.vo.lhj.PaymentVo">
+	<select id="paymentlist" resultType="com.jhta.project.vo.PaymentVo2">
 		select * from payment where prefund is null order by pid desc
 	</select>
 </mapper>

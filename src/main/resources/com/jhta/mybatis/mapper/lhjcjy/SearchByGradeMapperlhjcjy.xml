@@ -9,7 +9,7 @@
   			where agrade >= #{agrade}
   		</if>
   	</sql>
-  	<select id="getGradeSec" parameterType="hashmap" resultType="com.jhta.project.vo.lhjcjy.SearchVolhjcjy">
+  	<select id="getGradeSec" parameterType="hashmap" resultType="com.jhta.project.vo.SearchVolhjcjy">
   		<![CDATA[ select * from (select finfinfin.*, row_number() over(partition by aname order by aname, amountsum) rnum from (  
         select amountSum, nvl(star,0) restar, ri.riid, ri.riroom, ri.aid, ac.aname, ac.aaddress, ac.amainimg, ac.agrade from (
         select riid, sum(amount) amountsum from (

@@ -3,7 +3,7 @@
   PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
   "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.jhta.mybatis.mapper.lhjcjy.SearchByStarMapperlhjcjy">
-	<select id="getStarList" parameterType="hashmap" resultType="com.jhta.project.vo.lhjcjy.SearchVolhjcjy">
+	<select id="getStarList" parameterType="hashmap" resultType="com.jhta.project.vo.SearchVolhjcjy">
   		<![CDATA[ select * from (select fin.*, ROW_NUMBER() OVER(PARTITION BY aname ORDER BY aname, amountsum) rnum from(
 select (amountSum+GREATEST(addfee.exper,0))amountsum,nvl(star,0) restar,ac.amainimg,ac.aname,ac.aaddress,ac.aid,ac.agrade,ac.axcoordi,ac.aycoordi,ri.RISERVICE,ri.riid from (
 select riid, sum(amount) amountsum from(

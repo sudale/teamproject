@@ -1,4 +1,4 @@
-package com.jhta.project.vo.phj;
+package com.jhta.project.vo;
 
 
 import lombok.AllArgsConstructor;
@@ -8,7 +8,7 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 @AllArgsConstructor
 @Data
-public class ReservationVo {
+public class ReservationVo2 {
 	private int rid;
 	private int rordernum;
 	private int ramount;

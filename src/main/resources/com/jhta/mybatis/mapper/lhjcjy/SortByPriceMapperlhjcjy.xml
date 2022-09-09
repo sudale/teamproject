@@ -3,7 +3,7 @@
   PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
   "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.jhta.mybatis.mapper.lhjcjy.SortByPriceMapperlhjcjy">
-	<select id="sortPrice_low" resultType="com.jhta.project.vo.lhjcjy.AccommodationsVo2lhjcjy" parameterType="hashmap">
+	<select id="sortPrice_low" resultType="com.jhta.project.vo.AccommodationsVo2lhjcjy" parameterType="hashmap">
 		<![CDATA[
 		        select * from (select fin.*, ROW_NUMBER() OVER(PARTITION BY aname ORDER BY aname, amountsum) rnum from(
 select (amountSum+GREATEST(addfee.exper,0))amountsum,star restar,ac.amainimg,ac.aname,ac.aaddress,ac.aid,ac.agrade,ac.axcoordi,ac.aycoordi,ri.RISERVICE,ri.riid from (
@@ -57,7 +57,7 @@ and ri.rimaxper>=#{rimaxper} and (ac.aaddress like '%'||#{aaddress}||'%' or ac.a
 	</select>
 
 		<select id="sortPrice_high"
-		resultType="com.jhta.project.vo.lhjcjy.AccommodationsVo2lhjcjy"
+		resultType="com.jhta.project.vo.AccommodationsVo2lhjcjy"
 		parameterType="hashmap">
 		<![CDATA[
 		        select * from (select fin.*, ROW_NUMBER() OVER(PARTITION BY aname ORDER BY aname, amountsum) rnum from(        
@@ -110,7 +110,7 @@ select (amountSum+GREATEST(addfee.exper,0))amountsum,star restar ,ac.amainimg,ac
             and NVL(agrade,0)>=#{agrade}
 		</if>
 	</select>
-	<select id="rangeSlider_price" resultType="com.jhta.project.vo.lhjcjy.AccommodationsVo2lhjcjy" parameterType="hashmap">
+	<select id="rangeSlider_price" resultType="com.jhta.project.vo.AccommodationsVo2lhjcjy" parameterType="hashmap">
 		<![CDATA[
 		        select * from (select fin.*, ROW_NUMBER() OVER(PARTITION BY aname ORDER BY aname, amountsum) rnum from(        
 select (amountSum+addfee.exper)amountsum,star restar, ac.amainimg,ac.aname,ac.aaddress,ac.aid,ac.agrade,ac.axcoordi,ac.aycoordi,ri.RISERVICE,ri.riid from (

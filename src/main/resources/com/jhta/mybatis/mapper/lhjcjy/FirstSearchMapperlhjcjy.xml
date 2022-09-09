@@ -3,7 +3,7 @@
   PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
   "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.jhta.mybatis.mapper.lhjcjy.FirstSearchMapperlhjcjy">
-	<select id="searchDefault" parameterType="hashmap" resultType="com.jhta.project.vo.lhjcjy.AccommodationsVo2lhjcjy">
+	<select id="searchDefault" parameterType="hashmap" resultType="com.jhta.project.vo.AccommodationsVo2lhjcjy">
   		<![CDATA[
 		    select * from (select fin.*, ROW_NUMBER() OVER(PARTITION BY aname ORDER BY aname, amountsum) rnum from(        
 			select (amountSum+addfee.exper)amountsum,star restar, ri.riid, ri.riroom,ri.RISERVICE,ri.RISIZE,ri.RIMINPER,ri.RIMAXPER,ri.RIMAINIMG,ri.RIEXTRAIMG1,ri.RIEXTRAIMG2,ri.aid,ac.aname,ac.aaddress,ac.axcoordi,ac.aycoordi,ac.amainimg,ac.aphone from (
@@ -47,7 +47,7 @@
 		where ac.aid = b.aid
 		and ac.aaddress like '%'||#{aaddress}||'%' or ac.aname like '%'||#{aname}||'%'
 		-->
-	 <select id="rangeSlider_getMinMax" resultType="com.jhta.project.vo.lhjcjy.RangeSlider_GetMinMaxVolhjcjy" parameterType="hashmap">
+	 <select id="rangeSlider_getMinMax" resultType="com.jhta.project.vo.RangeSlider_GetMinMaxVolhjcjy" parameterType="hashmap">
 		<![CDATA[
 		select NVL(min(amountSum),0) as minSum, NVL(max(amountSum),0) as maxSum from (
       select * from (select finfinfin.*, ROW_NUMBER() OVER(PARTITION BY aname ORDER BY aname, amountsum) rnum from(        

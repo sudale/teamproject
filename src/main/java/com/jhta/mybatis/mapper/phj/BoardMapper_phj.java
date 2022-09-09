@@ -3,7 +3,7 @@ package com.jhta.mybatis.mapper.phj;
 import java.util.HashMap;
 import java.util.List;
 
-import com.jhta.project.vo.phj.BoardVo_phj;
+import com.jhta.project.vo.BoardVo_phj;
 
 public interface BoardMapper_phj {
 	public int count_phj(HashMap<String, Object> map);

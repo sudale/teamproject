@@ -1,4 +1,4 @@
-package com.jhta.project.vo.phj;
+package com.jhta.project.vo;
 /*
  * CREATE TABLE ACCOMMODATIONS
 (
@@ -28,7 +28,7 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 @AllArgsConstructor
 @Data
-public class AccommodationsVo {
+public class AccommodationsVo3 {
 	private int aid;
 	private String acate;
 	private String aname;

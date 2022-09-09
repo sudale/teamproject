@@ -9,7 +9,7 @@ import org.springframework.stereotype.Service;
 import com.jhta.mybatis.mapper.lhjcjy.AutoCompleteMapperlhjcjy;
 import com.jhta.mybatis.mapper.lhjcjy.FirstSearchMapperlhjcjy;
 import com.jhta.mybatis.mapper.lhjcjy.SearchByStarMapperlhjcjy;
-import com.jhta.project.vo.lhjcjy.SearchVolhjcjy;
+import com.jhta.project.vo.SearchVolhjcjy;
 
 
 

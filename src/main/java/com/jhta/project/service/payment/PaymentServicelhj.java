@@ -7,7 +7,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import com.jhta.mybatis.mapper.lhj.Admin_PaymentMapperlhj;
-import com.jhta.project.vo.lhj.PaymentVo;
+import com.jhta.project.vo.PaymentVo2;
 
 
 @Service
@@ -17,7 +17,7 @@ public class PaymentServicelhj {
 	public int count(HashMap<String, Object> map) {
 		return mapper.count(map);
 	}
-	public List<PaymentVo> paymentlist(){
+	public List<PaymentVo2> paymentlist(){
 		return mapper.paymentlist();
 	}
 }

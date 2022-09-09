@@ -3,16 +3,16 @@ package com.jhta.mybatis.mapper.lhj;
 import java.util.HashMap;
 import java.util.List;
 
-import com.jhta.project.vo.lhj.AccommodationsVo;
-import com.jhta.project.vo.lhj.Room_infoVo;
+import com.jhta.project.vo.AccommodationsVo2;
+import com.jhta.project.vo.Room_infoVo2;
 
 public interface Admin_AccommodationsMapperlhj {
 	public int count(HashMap<String, Object> map);
-	public List<AccommodationsVo> accommlist();
-	public AccommodationsVo detail(int aid);
-	public List<Room_infoVo> roomlist(int aid);
-	public Room_infoVo roomDetail(int riid);
-	public int accommUpdate(AccommodationsVo vo);
-	public int roomUpdate(Room_infoVo vo);
+	public List<AccommodationsVo2> accommlist();
+	public AccommodationsVo2 detail(int aid);
+	public List<Room_infoVo2> roomlist(int aid);
+	public Room_infoVo2 roomDetail(int riid);
+	public int accommUpdate(AccommodationsVo2 vo);
+	public int roomUpdate(Room_infoVo2 vo);
 	public int delupdate(HashMap<String, Object> map);
 }

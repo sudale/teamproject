@@ -19,8 +19,8 @@ import org.springframework.web.multipart.MultipartFile;
 import org.springframework.web.multipart.MultipartHttpServletRequest;
 
 import com.jhta.project.service.hotelmanage.AccommodationsServicelhj;
-import com.jhta.project.vo.lhj.AccommodationsVo;
-import com.jhta.project.vo.lhj.Room_infoVo;
+import com.jhta.project.vo.AccommodationsVo2;
+import com.jhta.project.vo.Room_infoVo2;
 
 
 
@@ -32,7 +32,7 @@ public class AccommodationsControllerlhj {
 	@RequestMapping(value = "admin/lhj/accommlist", produces = {MediaType.APPLICATION_JSON_VALUE}) //숙소 목록 불러오기
 	public HashMap<String, Object> accommlist() {
 		HashMap<String, Object> map = new HashMap<String, Object>();
-		List<AccommodationsVo> list = acservice.accommlist();
+		List<AccommodationsVo2> list = acservice.accommlist();
 		String aregdate1 = list.get(0).getAregdate().substring(0,10);
 		for(int i=0; i<list.size() ;i++) {
 			list.get(i).setAregdate(aregdate1);
@@ -45,7 +45,7 @@ public class AccommodationsControllerlhj {
 	@RequestMapping(value = "admin/lhj/detail", produces = {MediaType.APPLICATION_JSON_VALUE}) //개별 숙소 목록 불러오기
 	public HashMap<String, Object> detail(int aid){
 		HashMap<String, Object> map = new HashMap<String, Object>();
-		AccommodationsVo vo = acservice.detail(aid);
+		AccommodationsVo2 vo = acservice.detail(aid);
 		//System.out.println("컨트롤러: " + aid);
 		String aregdate1 = vo.getAregdate().substring(0,10);
 		vo.setAregdate(aregdate1);
@@ -54,7 +54,7 @@ public class AccommodationsControllerlhj {
 	}
 	
 	@RequestMapping(value = "admin/lhj/accommUpdate", method = {RequestMethod.POST})  //숙소 정보 변경하기
-	public HashMap<String, Object> accommUpdate(AccommodationsVo vo, MultipartHttpServletRequest mfRequest){
+	public HashMap<String, Object> accommUpdate(AccommodationsVo2 vo, MultipartHttpServletRequest mfRequest){
 		HashMap<String, Object> map = new HashMap<String, Object>();
 		List<MultipartFile> fileList = mfRequest.getFiles("file");
 		//파일이 수정되지 않았을 때
@@ -77,7 +77,7 @@ public class AccommodationsControllerlhj {
 				is.close();
 				fos.close();
 				// 1. 기존 파일 삭제
-				AccommodationsVo avo = acservice.detail(vo.getAid());
+				AccommodationsVo2 avo = acservice.detail(vo.getAid());
 				File file = new File(path + "//" + avo.getAmainimg());
 				if (file.exists()) {
 					file.delete();
@@ -100,7 +100,7 @@ public class AccommodationsControllerlhj {
 	@RequestMapping(value = "admin/lhj/roomlist", produces = {MediaType.APPLICATION_JSON_VALUE}) //객실 목록 불러오기
 	public HashMap<String, Object> roomList(int aid) {
 		HashMap<String, Object> map = new HashMap<String, Object>();
-		List<Room_infoVo> list = acservice.roomlist(aid);
+		List<Room_infoVo2> list = acservice.roomlist(aid);
 		map.put("list", list);
 		//System.out.println("컨트롤러: " + list);
 		return map;
@@ -109,7 +109,7 @@ public class AccommodationsControllerlhj {
 	@RequestMapping(value = "admin/lhj/roomDetail", produces = {MediaType.APPLICATION_JSON_VALUE}) //개별 객실 목록 불러오기
 	public HashMap<String, Object> roomDetail(int riid){
 		HashMap<String, Object> map = new HashMap<String, Object>();
-		Room_infoVo vo = acservice.roomDetail(riid);
+		Room_infoVo2 vo = acservice.roomDetail(riid);
 		//System.out.println("컨트롤러: " + riid);
 		map.put("vo", vo);
 		System.out.println(vo.getAid());
@@ -117,14 +117,14 @@ public class AccommodationsControllerlhj {
 	}
 	
 	@RequestMapping(value = "admin/lhj/roomUpdate", method = {RequestMethod.POST}) //숙소 정보 변경하기
-	public HashMap<String, Object> roomUpdate(Room_infoVo vo, MultipartHttpServletRequest mfRequest){
+	public HashMap<String, Object> roomUpdate(Room_infoVo2 vo, MultipartHttpServletRequest mfRequest){
 		HashMap<String, Object> map = new HashMap<String, Object>();
 		List<MultipartFile> fileList = mfRequest.getFiles("file");
 		System.out.println("메인이미지: "+fileList.get(0).getOriginalFilename());
 		System.out.println("추가이미지1: "+fileList.get(1).getOriginalFilename());
 		System.out.println("추가이미지2: "+fileList.get(2).getOriginalFilename());
 		String rpath = sc.getRealPath("/resources/images/room_info");
-		Room_infoVo rvo = acservice.roomDetail(vo.getRiid());
+		Room_infoVo2 rvo = acservice.roomDetail(vo.getRiid());
 		for (int i = 0; i < fileList.size(); i++) {
 			//i번째 파일을 수정했을때
 			if(fileList.get(i).getOriginalFilename() != "") {

@@ -8,8 +8,8 @@ import org.springframework.stereotype.Service;
 
 import com.jhta.mybatis.mapper.lhjcjy.AutoCompleteMapperlhjcjy;
 import com.jhta.mybatis.mapper.lhjcjy.FirstSearchMapperlhjcjy;
-import com.jhta.project.vo.lhjcjy.AccommodationsVo2lhjcjy;
-import com.jhta.project.vo.lhjcjy.RangeSlider_GetMinMaxVolhjcjy;
+import com.jhta.project.vo.AccommodationsVo2lhjcjy;
+import com.jhta.project.vo.RangeSlider_GetMinMaxVolhjcjy;
 
 
 

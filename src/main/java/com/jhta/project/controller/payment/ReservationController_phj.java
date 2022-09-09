@@ -17,7 +17,7 @@ import org.springframework.web.servlet.ModelAndView;
 import com.jhta.project.service.member_user.MembersService;
 import com.jhta.project.service.reservation.ReservationServicephj;
 import com.jhta.project.vo.MembersVo;
-import com.jhta.project.vo.phj.ReservationVo;
+import com.jhta.project.vo.ReservationVo2;
 
 @Controller
 public class ReservationController_phj {
@@ -30,7 +30,7 @@ public class ReservationController_phj {
 	
 	@RequestMapping(value="phj/checkReservation/{mid}",produces = {MediaType.APPLICATION_JSON_VALUE})
 	public @ResponseBody HashMap<String, Object> checkRes(@PathVariable("mid")String mid){
-		ReservationVo vo=service.selectRes(mid);
+		ReservationVo2 vo=service.selectRes(mid);
 		HashMap<String, Object> map=new HashMap<String, Object>();
 		map.put("mid", vo.getMid());
 		map.put("rordernum", vo.getRordernum());
@@ -52,7 +52,7 @@ public class ReservationController_phj {
 		return mv;
 	}
 	@RequestMapping(value="phj/reservationOk",method=RequestMethod.GET)
-	public ModelAndView ReservationInsert(ReservationVo vo,String sum,int rexperson,int rexbed,int rexbreaknum,
+	public ModelAndView ReservationInsert(ReservationVo2 vo,String sum,int rexperson,int rexbed,int rexbreaknum,
 			String breakfastfee,String bedfee,String personfee,String totalbedfee,String totalbreakfee) {
 		ModelAndView mv=new ModelAndView("user/payment/pay");
 		mv.addObject("sum", sum);
@@ -88,7 +88,7 @@ public class ReservationController_phj {
 	
 	@RequestMapping(value="phj/insert",produces = {MediaType.APPLICATION_JSON_VALUE})
 	public @ResponseBody HashMap<String, Object> insert(
-			@RequestBody ReservationVo vo) {
+			@RequestBody ReservationVo2 vo) {
 		HashMap<String, Object> map=new HashMap<String, Object>();
 		try {
 			service.insertRes(vo);

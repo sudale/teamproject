@@ -8,7 +8,7 @@ import org.springframework.stereotype.Service;
 
 import com.jhta.mybatis.mapper.hjy.BoardMapperHjy;
 import com.jhta.project.vo.BoardVo;
-import com.jhta.project.vo.phj.BoardVo_phj;
+import com.jhta.project.vo.BoardVo_phj;
 
 @Service
 public class BoardServiceHjy {

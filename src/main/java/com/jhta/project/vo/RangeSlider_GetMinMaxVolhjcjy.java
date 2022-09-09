@@ -1,4 +1,4 @@
-package com.jhta.project.vo.lhjcjy;
+package com.jhta.project.vo;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;

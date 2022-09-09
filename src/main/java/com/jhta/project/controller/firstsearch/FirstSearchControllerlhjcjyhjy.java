@@ -14,8 +14,8 @@ import org.springframework.web.servlet.ModelAndView;
 
 import com.jhta.project.service.firstsearch.FirstSearchServicelhjcjy;
 import com.jhta.project.service.firstsearch.GetPriceServicelhjcjyhjy;
-import com.jhta.project.vo.lhjcjy.AccommodationsVolhjcjy;
-import com.jhta.project.vo.lhjcjy.RangeSlider_GetMinMaxVolhjcjy;
+import com.jhta.project.vo.AccommodationsVolhjcjy;
+import com.jhta.project.vo.RangeSlider_GetMinMaxVolhjcjy;
 
 
 

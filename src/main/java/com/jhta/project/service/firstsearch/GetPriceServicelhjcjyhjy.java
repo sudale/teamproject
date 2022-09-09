@@ -8,7 +8,7 @@ import org.springframework.stereotype.Service;
 
 import com.jhta.mybatis.mapper.lhjcjy.GetPriceMapperlhjcjy;
 import com.jhta.mybatis.mapper.lhjcjyhjy.GetPriceMapperlhjcjyhjy;
-import com.jhta.project.vo.lhjcjy.AccommodationsVolhjcjy;
+import com.jhta.project.vo.AccommodationsVolhjcjy;
 
 
 @Service

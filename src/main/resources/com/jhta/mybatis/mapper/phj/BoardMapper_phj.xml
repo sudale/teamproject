@@ -3,19 +3,19 @@
   PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
   "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.jhta.mybatis.mapper.phj.BoardMapper_phj">
-	<update id="updateBoard" parameterType="com.jhta.project.vo.phj.BoardVo_phj">
+	<update id="updateBoard" parameterType="com.jhta.project.vo.BoardVo_phj">
 		update board set bcate=#{bcate},btitle=#{btitle},bcontent=#{bcontent},brdate=#{brdate},bfile1=#{bfile1, jdbcType=VARCHAR},
 		bfile2=#{bfile2, jdbcType=VARCHAR},bfile3=#{bfile3, jdbcType=VARCHAR},mid=#{mid} where bid=#{bid}
 	</update>
 	<delete id="deleteBoard" parameterType="int">
 		delete from board where bid=#{bid}
 	</delete>
-	<insert id="insertBoard" parameterType="com.jhta.project.vo.phj.BoardVo_phj">
+	<insert id="insertBoard" parameterType="com.jhta.project.vo.BoardVo_phj">
 		insert into board
 		values(seq_board.nextval,#{bcate},#{btitle},#{bcontent},
 		sysdate,#{bfile1, jdbcType=VARCHAR},#{bfile2, jdbcType=VARCHAR},#{bfile3, jdbcType=VARCHAR},#{mid})
 	</insert>
-	<select id="selectBoardAll" resultType="com.jhta.project.vo.phj.BoardVo_phj">
+	<select id="selectBoardAll" resultType="com.jhta.project.vo.BoardVo_phj">
 		select * from board
 	</select>
 
@@ -29,7 +29,7 @@
 		<include refid="search_phj" />
 	</select>
 	<select id="selectBoardMine" parameterType="hashmap"
-		resultType="com.jhta.project.vo.phj.BoardVo_phj">
+		resultType="com.jhta.project.vo.BoardVo_phj">
 		select* from
 		(
 		select aa.*, rownum rnum from
@@ -46,7 +46,7 @@
 		<include refid="search_phj" />
 	</select>
 	<select id="selectBoardcate" parameterType="hashmap"
-		resultType="com.jhta.project.vo.phj.BoardVo_phj">
+		resultType="com.jhta.project.vo.BoardVo_phj">
 		select* from
 		(
 		select aa.*, rownum rnum from

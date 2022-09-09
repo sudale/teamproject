@@ -1,4 +1,4 @@
-package com.jhta.project.vo.phj;
+package com.jhta.project.vo;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
@@ -25,7 +25,7 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 @NoArgsConstructor
 @Data
-public class Additional_FeeVo_phj {
+public class Additional_FeeVolhjcjy_DUMMY {
 	private int afid;
 	private int afpersonnel;
 	private int afbreakfast;

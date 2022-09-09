@@ -1,4 +1,4 @@
-package com.jhta.project.vo.phj;
+package com.jhta.project.vo;
 
 import java.sql.Date;
 

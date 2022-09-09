@@ -4,7 +4,7 @@ import java.util.HashMap;
 import java.util.List;
 
 import com.jhta.project.vo.BoardVo;
-import com.jhta.project.vo.phj.BoardVo_phj;
+import com.jhta.project.vo.BoardVo_phj;
 
 public interface BoardMapperHjy {
 	public int count(HashMap<String, Object> map);

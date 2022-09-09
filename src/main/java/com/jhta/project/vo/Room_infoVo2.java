@@ -1,4 +1,4 @@
-package com.jhta.project.vo.lhjcjy;
+package com.jhta.project.vo;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
@@ -30,7 +30,7 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 @NoArgsConstructor
 @Data
-public class Room_InfoVolhjcjy {
+public class Room_infoVo2 {
 	private int riid;
 	private String riroomtype;
 	private int riroom;
@@ -38,7 +38,7 @@ public class Room_InfoVolhjcjy {
 	private String risize;
 	private int riminper;
 	private int rimaxper;
-	private int rireak;
+	private int ripeak;
 	private int risemipeak;
 	private int rioff;
 	private String rimainimg;

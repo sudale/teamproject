@@ -4,7 +4,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import com.jhta.mybatis.mapper.phj.ReservationMapper;
-import com.jhta.project.vo.phj.ReservationVo;
+import com.jhta.project.vo.ReservationVo2;
 
 @Service
 public class ReservationServicephj {
@@ -13,10 +13,10 @@ public class ReservationServicephj {
 	public void setMapper(ReservationMapper mapper) {
 		this.mapper=mapper;
 	}
-	public int insertRes(ReservationVo vo) {
+	public int insertRes(ReservationVo2 vo) {
 		return mapper.insertRes(vo);
 	}
-	public ReservationVo selectRes(String mid) {
+	public ReservationVo2 selectRes(String mid) {
 		return mapper.selectRes(mid);
 	}
 }
