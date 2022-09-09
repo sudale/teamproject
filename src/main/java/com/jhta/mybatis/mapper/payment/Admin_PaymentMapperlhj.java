@@ -1,4 +1,4 @@
-package com.jhta.mybatis.mapper.lhj;
+package com.jhta.mybatis.mapper.payment;
 
 import java.util.HashMap;
 import java.util.List;

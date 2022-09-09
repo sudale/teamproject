@@ -6,7 +6,7 @@ import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import com.jhta.mybatis.mapper.lhj.Admin_PaymentMapperlhj;
+import com.jhta.mybatis.mapper.payment.Admin_PaymentMapperlhj;
 import com.jhta.project.vo.PaymentVo2;
 
 

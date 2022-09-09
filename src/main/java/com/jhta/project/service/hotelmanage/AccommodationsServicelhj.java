@@ -6,7 +6,7 @@ import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import com.jhta.project.controller.hotelmanage.Admin_AccommodationsMapperlhj;
+import com.jhta.mybatis.mapper.hotelmanage.Admin_AccommodationsMapperlhj;
 import com.jhta.project.vo.AccommodationsVo2;
 import com.jhta.project.vo.Room_infoVo2;
 
