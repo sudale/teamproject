@@ -24,7 +24,7 @@ import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.multipart.MultipartFile;
 import org.springframework.web.servlet.ModelAndView;
 
-import com.jhta.mybatis.mapper.kjy.MypageMapperkjy;
+import com.jhta.mybatis.mapper.member_mypage.MypageMapperkjy;
 import com.jhta.project.vo.MypageVo_kjy;
 
 @Controller

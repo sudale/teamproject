@@ -2,7 +2,7 @@
 <!DOCTYPE mapper
   PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
   "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
-<mapper namespace="com.jhta.mybatis.mapper.kjy.ReservationMapperkjy">
+<mapper namespace="com.jhta.mybatis.mapper.reservation.ReservationMapperkjy">
 	<select id="pastlist" resultType="com.jhta.project.vo.ReservationVo_kjy" parameterType="hashmap">
 	<![CDATA[
 	select * from

@@ -1,4 +1,4 @@
-package com.jhta.mybatis.mapper.kjy;
+package com.jhta.mybatis.mapper.reservation;
 
 import java.util.Date;
 import java.util.HashMap;

@@ -2,7 +2,7 @@
 <!DOCTYPE mapper
   PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
   "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
-<mapper namespace="com.jhta.mybatis.mapper.kjy.Room_infoMapperkjy">
+<mapper namespace="com.jhta.mybatis.mapper.hotelmanage.Room_infoMapperkjy">
 	<select id="list" resultType="com.jhta.project.vo.Room_infoVo_kjy" parameterType="hashmap">
 		<!-- 
 		SELECT f.* FROM(

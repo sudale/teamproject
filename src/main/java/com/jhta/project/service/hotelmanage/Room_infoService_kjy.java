@@ -1,4 +1,4 @@
-package com.jhta.project.service.board;
+package com.jhta.project.service.hotelmanage;
 
 import java.util.HashMap;
 import java.util.List;
@@ -6,7 +6,7 @@ import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import com.jhta.mybatis.mapper.kjy.Room_infoMapperkjy;
+import com.jhta.mybatis.mapper.hotelmanage.Room_infoMapperkjy;
 import com.jhta.project.vo.Room_infoVo_kjy;
 
 @Service
