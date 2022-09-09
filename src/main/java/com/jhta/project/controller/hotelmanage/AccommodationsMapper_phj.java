@@ -1,4 +1,4 @@
-package com.jhta.mybatis.mapper.phj;
+package com.jhta.project.controller.hotelmanage;
 
 
 import com.jhta.project.vo.AccommodationsVo3;
