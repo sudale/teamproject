@@ -2,7 +2,7 @@
 <!DOCTYPE mapper
   PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
   "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
-<mapper namespace="com.jhta.mybatis.mapper.lhjcjy.FirstSearchMapperlhjcjy">
+<mapper namespace="com.jhta.mybatis.mapper.firstsearch.FirstSearchMapperlhjcjy">
 	<select id="searchDefault" parameterType="hashmap" resultType="com.jhta.project.vo.AccommodationsVo2lhjcjy">
   		<![CDATA[
 		    select * from (select fin.*, ROW_NUMBER() OVER(PARTITION BY aname ORDER BY aname, amountsum) rnum from(        

@@ -1,4 +1,4 @@
-package com.jhta.mybatis.mapper.lhjcjy;
+package com.jhta.mybatis.mapper.hotelmanage;
 
 import java.util.Date;
 import java.util.HashMap;
