@@ -1,4 +1,4 @@
-package com.jhta.mybatis.mapper.lhjcjyhjy;
+package com.jhta.mybatis.mapper.firstsearch;
 
 import java.util.HashMap;
 import java.util.List;

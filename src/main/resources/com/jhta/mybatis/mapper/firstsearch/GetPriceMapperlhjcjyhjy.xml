@@ -3,7 +3,7 @@
   PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
   "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper
-	namespace="com.jhta.mybatis.mapper.lhjcjyhjy.GetPriceMapperlhjcjyhjy">
+	namespace="com.jhta.mybatis.mapper.firstsearch.GetPriceMapperlhjcjyhjy">
 
 	<select id="getprice" parameterType="hashmap"
 		resultType="com.jhta.project.vo.AccommodationsVolhjcjy">
