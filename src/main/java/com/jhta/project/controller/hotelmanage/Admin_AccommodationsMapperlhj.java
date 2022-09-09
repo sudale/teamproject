@@ -1,4 +1,4 @@
-package com.jhta.mybatis.mapper.lhj;
+package com.jhta.project.controller.hotelmanage;
 
 import java.util.HashMap;
 import java.util.List;
