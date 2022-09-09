@@ -1,4 +1,4 @@
-package com.jhta.project.vo.jhr;
+package com.jhta.project.vo;
 
 import java.util.Date;
 
@@ -13,7 +13,7 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 @AllArgsConstructor
 @Data
-public class UserqnaVo {
+public class UserqnaVo3 {
 	private String qid;
 	private String qcate;
 	private String qpw;

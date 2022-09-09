@@ -6,8 +6,8 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import com.jhta.mybatis.mapper.jhr.MembersMapper;
-import com.jhta.project.vo.jhr.Chat_membersVo;
-import com.jhta.project.vo.jhr.MembersVo;
+import com.jhta.project.vo.Chat_membersVo;
+import com.jhta.project.vo.MembersVo;
 import com.jhta.project.vo.kjy.FavoriteVo_kjy;
 
 @Service

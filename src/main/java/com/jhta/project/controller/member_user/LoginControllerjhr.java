@@ -11,7 +11,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 
 import com.jhta.project.service.member_user.MembersService;
-import com.jhta.project.vo.jhr.MembersVo;
+import com.jhta.project.vo.MembersVo;
 
 @Controller
 public class LoginControllerjhr {

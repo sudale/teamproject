@@ -15,7 +15,7 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
 
 import com.jhta.mybatis.mapper.jhr.UserqnaMapper;
-import com.jhta.project.vo.jhr.UserqnaVo;
+import com.jhta.project.vo.UserqnaVo3;
 import com.jhta.util.PageUtil;
 
 @Controller
@@ -37,7 +37,7 @@ public class ListController {
 		pmap.put("startRowNum", pu.getStartRow());
 		pmap.put("endRowNum", pu.getEndRow());
 		pmap.put("mid", mid);
-		List<UserqnaVo> list=service.list(pmap);
+		List<UserqnaVo3> list=service.list(pmap);
 		
 		
 		HashMap<String, Object> map=new HashMap<String, Object>();

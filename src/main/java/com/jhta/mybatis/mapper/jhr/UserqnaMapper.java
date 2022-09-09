@@ -3,16 +3,16 @@ package com.jhta.mybatis.mapper.jhr;
 import java.util.HashMap;
 import java.util.List;
 
-import com.jhta.project.vo.jhr.UserqnaVo;
+import com.jhta.project.vo.UserqnaVo3;
 
 public interface UserqnaMapper {
-	UserqnaVo detail(HashMap<String,String> map);
-	List<UserqnaVo> detail2(String mid);
-	int delete(UserqnaVo vo);
+	UserqnaVo3 detail(HashMap<String,String> map);
+	List<UserqnaVo3> detail2(String mid);
+	int delete(UserqnaVo3 vo);
 	int update(HashMap<String, String> map);
-	List<UserqnaVo> checkId(String mid);
-	List<UserqnaVo> list(HashMap<String, Object> map);
+	List<UserqnaVo3> checkId(String mid);
+	List<UserqnaVo3> list(HashMap<String, Object> map);
 	int count(HashMap<String, Object> map);
-	UserqnaVo prev(int num);
-	UserqnaVo next(int num);
+	UserqnaVo3 prev(int num);
+	UserqnaVo3 next(int num);
 }

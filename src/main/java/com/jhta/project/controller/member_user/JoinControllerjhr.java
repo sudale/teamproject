@@ -22,8 +22,8 @@ import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.multipart.MultipartFile;
 
 import com.jhta.project.service.member_user.MembersService;
-import com.jhta.project.vo.jhr.Chat_membersVo;
-import com.jhta.project.vo.jhr.MembersVo;
+import com.jhta.project.vo.Chat_membersVo;
+import com.jhta.project.vo.MembersVo;
 import com.jhta.project.vo.kjy.FavoriteVo_kjy;
 
 @Controller

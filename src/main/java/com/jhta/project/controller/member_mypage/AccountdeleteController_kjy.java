@@ -30,7 +30,7 @@ import org.springframework.web.bind.annotation.ResponseBody;
 
 import com.jhta.mybatis.mapper.kjy.AccountdeleteMapperkjy;
 import com.jhta.project.service.member_user.MembersService;
-import com.jhta.project.vo.jhr.MembersVo;
+import com.jhta.project.vo.MembersVo;
 
 @Controller
 public class AccountdeleteController_kjy {

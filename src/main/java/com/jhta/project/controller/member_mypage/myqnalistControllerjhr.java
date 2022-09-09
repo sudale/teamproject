@@ -17,7 +17,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 
 import com.jhta.project.service.qna.UserqnaService;
-import com.jhta.project.vo.jhr.UserqnaVo;
+import com.jhta.project.vo.UserqnaVo3;
 
 @Controller
 public class myqnalistControllerjhr {
@@ -32,7 +32,7 @@ public class myqnalistControllerjhr {
 		HashMap<String, String> map=new HashMap<String, String>();
 		map.put("mid",mid);
 		map.put("qid",qid);
-		UserqnaVo vo=service.detail(map);
+		UserqnaVo3 vo=service.detail(map);
 		model.addAttribute("vo",vo);
 		return "user/member_mypage/myqnaUpdate";
 	}
@@ -55,7 +55,7 @@ public class myqnalistControllerjhr {
 		}
 	}
 	@GetMapping("/jhr/myqnaDelete")
-	public String delete(UserqnaVo qid) {
+	public String delete(UserqnaVo3 qid) {
 		service.delete(qid);
 		return "redirect:/user/member_mypage/mypage";
 	}

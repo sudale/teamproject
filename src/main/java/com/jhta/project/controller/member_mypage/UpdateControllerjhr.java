@@ -20,7 +20,7 @@ import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.multipart.MultipartFile;
 
 import com.jhta.project.service.member_user.MembersService;
-import com.jhta.project.vo.jhr.MembersVo;
+import com.jhta.project.vo.MembersVo;
 
 @Controller
 public class UpdateControllerjhr {

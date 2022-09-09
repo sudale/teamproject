@@ -16,7 +16,7 @@ import org.springframework.web.servlet.ModelAndView;
 
 import com.jhta.project.service.member_user.MembersService;
 import com.jhta.project.service.reservation.ReservationServicephj;
-import com.jhta.project.vo.jhr.MembersVo;
+import com.jhta.project.vo.MembersVo;
 import com.jhta.project.vo.phj.ReservationVo;
 
 @Controller
