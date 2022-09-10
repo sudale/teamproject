@@ -887,8 +887,7 @@ function outMoveAfter(){ //버튼 클릭시 다음날로 이동
 					</div>
 					
 					
-					
-				
+		
 
 					<div class="search_insert date">
 						<div class="search_date_display">
@@ -1004,7 +1003,7 @@ function outMoveAfter(){ //버튼 클릭시 다음날로 이동
 										<!-- <div class="card">
 											<div class="card-body"> -->
 												
-													<div class="col-md-3">
+													<div class="col-md-3 view_img">
 														<c:choose>
 															<c:when test="${vo.amainimg eq null or vo.amainimg==''}">
 																<img
