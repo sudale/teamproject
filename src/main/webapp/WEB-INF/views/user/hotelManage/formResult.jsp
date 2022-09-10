@@ -28,8 +28,6 @@
 <div class="sub_container">
 
 
-</div>
-
 <div id="login" class="login_container">
 	<div class="login_contents">
 		<ul class="tab_wrap">
@@ -39,9 +37,12 @@
 						<div class="login_inner">
 							<div class="login_box">
 								<div class="login_title" style="text-align: center;">
-									신청이 완료되었습니다. <br>숙소 등록까지 약 7일이 소요됩니다.
-									<br>
-									<br>
+									
+									
+							<h2>신청이 완료되었습니다.</h2>
+							<h3 lang="en">빠른 시일내에 승인 처리 해드리겠습니다. 조금만 기다려주세요. 🎈</h3>
+						
+						
 									<a href="${pageContext.request.contextPath }/" style="color: #00AEF0;">메인페이지로 이동</a>
 								</div>
 							</div>
@@ -51,6 +52,8 @@
 			</li>
 		</ul>
 	</div>
+</div>
+
 </div>
 
 <div class="footer">

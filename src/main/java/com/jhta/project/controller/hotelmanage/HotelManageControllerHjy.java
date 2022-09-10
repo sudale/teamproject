@@ -228,7 +228,7 @@ public class HotelManageControllerHjy {
 		return "user/hotelManage/mailResult";
 	}
 
-	/**
+	/*
 	 * hotelRequest
 	 * 호텔등록폼에서 등록버튼 눌렀을때 수행.
 	 * tempdb, tempimg폴더에 저장하기,메일보내기메소드 포함.
@@ -239,6 +239,7 @@ public class HotelManageControllerHjy {
 	 * @param mtfRequest
 	 * @return
 	 */
+	
 	@RequestMapping(value = "hjy/hotelreq", method = RequestMethod.POST)
 	public String hotelRequest(AccommodationsVo accommodationsVo, Additional_feeVo additional_feeVoList,
 			PeriodVo periodVoList, Room_InfoVo roomInfoVoList, MultipartHttpServletRequest mtfRequest) {

@@ -211,11 +211,11 @@ public class Room_infoController_kjy {
 					vo.setPerimg("resources/images/room_info/minperson6.png");
 				}
 				
-				//마감임박
-				resernum=vo.getResernum();
-				if(resernum <= 5) {
-					vo.setReserimg("resources/images/room_info/reserimg1.png");
-				}
+//				//마감임박
+//				resernum=vo.getResernum();
+//				if(resernum <= 5) {
+//					vo.setReserimg("resources/images/room_info/reserimg1.png");
+//				}
 
 
 				//예약이 꽉찼을경우 페이지이동

@@ -1,11 +1,17 @@
 @charset "UTF-8";
 
-/*=========================== 회원가입, 아이디찾기, 비밀번호 찾기 공통 =============================*/
-.sub_container{
-	position:relative;
-	min-height:500px;
-	width:100%;
+/*========================== 서브 콘텐츠 =============================*/
+.sub_content {
+	min-height: calc(100vh - 46px);
+	box-sizing: border-box;
+	position: relative;
+	z-index: 1;
 }
+
+
+
+/*=========================== 회원가입, 아이디찾기, 비밀번호 찾기 공통 =============================*/
+
 
 /* 로그인 */
 .login_container {
@@ -100,6 +106,7 @@
 
 .confirm-btn {
 	padding-top: 15px;
+	text-align:center;
 }
 
 .confirm-btn .btn_login {
@@ -259,6 +266,9 @@ span.point_color.ex {
 	font-size: 14px;
 	flex: 2;
 }
+.join1 ul li input.btn_pwd{
+	background:none;
+}
 
 .join_col1 {
 	width: 160px;
@@ -331,7 +341,7 @@ span.point_color.ex {
 }
 
 /*  파일첨부   */
-.filebox label {
+/* .filebox label {
 	display: block;
 	padding: 0.5em 0.75em;
 	color: #999;
@@ -344,7 +354,7 @@ span.point_color.ex {
 	flex: initial !important;
 	display: block;
 	max-width: 100% !important;
-}
+} */
 
 
 
@@ -469,8 +479,8 @@ span.point_color.ex {
 
 .room_basic,.room_detail,.room_season{
 	background: transparent;
-	border-bottom: 1px solid #505050;
-	margin-bottom: 40px;
+	/* border-bottom: 1px solid #505050; */
+	margin: 60px auto;
 }
 .collapse{
 	position:relative;
@@ -481,6 +491,20 @@ span.point_color.ex {
     display: none;
 }
 
+
+.select {
+
+  border: 0 none;
+  
+}
+.selectBox .select option {
+  background: lightcoral;
+  color: #fff;
+  padding: 3px 0;
+  font-size: 16px;
+}
+
+
 .hotel_reg_container .join1 ul li{
 border-bottom: 1px solid #191919;
 }
@@ -490,6 +514,7 @@ border-bottom: 1px solid #191919;
 .hotel_reg_container .add_input {
     display: flex;
     align-items: center;
+    margin-bottom:30px;
 }
 
 
@@ -519,6 +544,10 @@ border-bottom: 1px solid #191919;
 	border: none;
 	outline: none;
 }
+.hotel_reg_container .host_regform input[type='date']{
+	display:block;
+}
+
 
 .hotel_reg_container .host_regform .line-box {
 	position: relative;
@@ -547,13 +576,15 @@ border-bottom: 1px solid #191919;
 }
 
 .hotel_reg_container .host_regform button {
-	display: inline-block;
-	padding: 12px 24px;
-	background: rgb(220, 220, 220);
-	font-weight: bold;
-	color: rgb(120, 120, 120);
-	border: none;
-	outline: none;
+	display: block;
+    width: 30%;
+    color: #fff;
+    font-size: 16px;
+    border-radius: 4px;
+    background-color: #ff346e;
+    border: none;
+    text-align: center;
+    margin: 0 auto;
 	border-radius: 3px;
 	cursor: pointer;
 	transition: ease .3s;
@@ -600,17 +631,18 @@ border-bottom: 1px solid #191919;
 
 .hotel_reg_container .host_regform .star-rating label {
 	-webkit-text-fill-color: transparent;
-	/* Will override color (regardless of order) */
-	-webkit-text-stroke-width: 2.3px;
-	-webkit-text-stroke-color: #00AEF0;
+	
+	-webkit-text-stroke-width: 1.3px;
+	-webkit-text-stroke-color: #fe346e;
 	cursor: pointer;
+	font-size: 20px;
 }
 /*클릭시 변경*/
 .hotel_reg_container .host_regform .star-rating :checked ~ label {
-	-webkit-text-fill-color: #00AEF0;
+	-webkit-text-fill-color: #fe346e;
 }
 /*호버시 변경*/
 .hotel_reg_container .host_regform .star-rating label:hover,
 	.star-rating label:hover ~ label {
-	-webkit-text-fill-color: blue;
+	-webkit-text-fill-color: #fe346e;
 }

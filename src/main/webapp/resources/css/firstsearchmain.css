@@ -10,6 +10,7 @@
 }
 
 /*top_search*/
+/*
 .search {
 	width:1220px;
 	display:block;
@@ -142,7 +143,7 @@
 	margin-bottom:4px !important;
 }
 .search_city_display {
-	/*width:473px;*/
+	/*width:473px;
 	height:54px !important;
 	display:flex !important;
 	align-items:center !important;
@@ -420,7 +421,7 @@
 	margin-bottom:4px !important;
 }
 .search_room_display {
-	/*width:473px;*/
+	
 	height:54px !important;
 	display:flex !important;
 	align-items:center !important;
@@ -481,7 +482,7 @@
 }
 .search_people_display {
 	/*width:473px;*/
-	height:54px !important;
+	/*height:54px !important;
 	display:flex !important;
 	align-items:center !important;
 	cursor:text !important;
@@ -495,7 +496,7 @@
 	font-size:15px !important;
 	font-weight:400 !important;
 	letter-spacing:normal;
-}
+}*/
 .search_people_display svg {
 	width:24px !important;
 	height:24px !important;
@@ -551,7 +552,9 @@
 	background-color:#f4f4f4;
 	border:none;
 	padding-left:4px;
-}
+}*/
+
+
 /*
 input[type="date"]::-webkit-calendar-picker-indicator {
     background: none;

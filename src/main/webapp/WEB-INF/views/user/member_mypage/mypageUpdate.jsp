@@ -40,31 +40,19 @@
 		<div class="join1" style="margin-bottom: 10px !important;">
 			<ul>
 
-				<div class="join_col1">
-					<label for="">프로필 사진 <span class="point_color">*</span></label>
-				</div>
-
 				<img id="profileimg" onerror="this.style.display='none'"
 					style="max-width: 400px; max-height: 300px; box-sizing: border-box; margin-bottom: 10px;">
 
-				<li class="filebox">프로필사진 <label for="ex_file"><div
-							class="btn-upload">프로필 수정하기</div></label> <input type="file"
-					name="profile" id="ex_file" class="file">
-				</li>
+			
 
 
-				<div class="join_col_input">
-					<div class="input_wrap">
-						<div class="wrap_inner">
-							<div class="ui_input">
-								<input type="file" id="profile" name="profile"
-									class="input_space" value="${vo.mprofile}">
-							</div>
-						</div>
-					</div>
-				</div>
-
-
+<li class="join-field"><label for=""><span
+						class="point_color">*</span>프로필사진</label> <input type="file"
+					name="profile" id="profile" class="file input_space" value="${vo.mprofile}">
+					
+					</li>
+					
+					
 
 
 				<li class="join-field"><label for=""><span
@@ -100,26 +88,7 @@
 					<input type="text" id="memail" lang="en" name="memail" class="input_space"
 					value="${vo.memail}"></li>
 					
-					
-
-
-				<div class="join1" style="margin-bottom: 10px !important;">
-					<div class="join_col1">
-						<label for="">비밀번호  <span class="point_color">*</span></label>
-					</div>
-					<div class="join_col_input">
-						<div class="input_wrap">
-							<div class="wrap_inne">
-								<div class="ui_input2">
-									<a href="${pageContext.request.contextPath }/jhr/mypageResetpw"><input
-										type="button" value="비밀번호 변경" class="btn_pwd"></a>
-								</div>
-							</div>
-						</div>
-					</div>
-					</div>
-					
-					
+	
 						<li class="join-field">
 						<label for=""><span class="point_color">*</span>비밀번호 변경</label> 
 			

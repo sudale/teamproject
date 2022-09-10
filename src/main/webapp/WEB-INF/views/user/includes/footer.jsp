@@ -11,7 +11,7 @@
 				<a href="#">개인 정보 보호 정책</a>
 				<a href="#">쿠키 정책</a>
 				<a href="#">이용 약관</a>
-				<span>©2021 J6Combined</span>
+				<span lang="en">©2022 ILUVJEJU</span>
 			</div>
 		</div>
 		

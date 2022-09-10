@@ -6,20 +6,24 @@
 <head>
 <meta charset="UTF-8">
 <title>Insert title here</title>
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+<!-- 파비콘 이미지 -->
+<link rel="shortcut icon" type="image/x-icon" href="${pageContext.request.contextPath}/resources/images/logo/favicon.ico" />
+
+<link rel="stylesheet" href="${pageContext.request.contextPath}/resources/css/reset.css">
+<link rel="stylesheet" href="${pageContext.request.contextPath}/resources/css/header.css">
+<link rel="stylesheet" href="${pageContext.request.contextPath}/resources/css/layout.css">
+<link rel="stylesheet" href="${pageContext.request.contextPath}/resources/css/footer.css">
+
 <link rel="stylesheet" href="${pageContext.request.contextPath }/resources/js/jquery-ui.css">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Do+Hyeon&family=Hahmlet:wght@500;600;700&family=Nanum+Pen+Script&display=swap" rel="stylesheet">
+
+
 <script type="text/javascript"
    src="https://openapi.map.naver.com/openapi/v3/maps.js?ncpClientId=83bfuniegk&submodules=geocoder"></script>
    
    
 </head>
 <style>
-* {
-	font-family: 'Stylish', sans-serif;
-}
+
 
 #largeimgbox {
 	position: relative;
@@ -86,7 +90,7 @@
 	position: absolute;
 	font-size: 12px;
 }
-
+/* 
 #googlemap {
 	position: absolute;
 	top: 400px;
@@ -94,7 +98,7 @@
 	width: 450px;
 	height: 100px;
 	border-radius: 10px;
-}
+} */
 
 .search_title {
 	position: absolute;
@@ -262,7 +266,7 @@
 	right: 0px;
 	font-size: 10px;
 }
-#reserimg{
+/* #reserimg{
 	position:absolute;
 	top:30px;
 	right: 300px;
@@ -271,7 +275,7 @@
 	z-index: 0;
 	opacity: 0.6;
 }
-
+ */
 
 #reviewbox {
 	position: relative;
@@ -390,8 +394,10 @@
 
 </style>
 <div class="header">
-	<jsp:include page="/WEB-INF/views/user/includes/header.jsp"/>
+	<jsp:include page="../includes/header.jsp"/>
 </div>
+
+<div class="sub_content">
 
 <div id="map" style="width: 50%; height: 400px;">
             <input type="text" name="aycoordi" id="${accvo.axcoordi}"> 
@@ -488,18 +494,22 @@
 		</div>
 		</c:if>
 	</c:forEach>
-	<div id="reviewbox">
+	<!-- <div id="reviewbox">
 		<div id="starbox">
 			<p class="reviewtitle">솔직이용후기</p>
 		</div>
 		<div id="totalreview"></div>
 		<div id="page"></div>
-	</div>
+	</div> -->
+	
+  </div>  
+
 </div>
 <div class="footer">
-	<jsp:include page="/WEB-INF/views/user/includes/footer.jsp"/>
+	<jsp:include page="../includes/footer.jsp"/>
 </div>
-<script defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCIFdez0Bx1XuNNQ0eIa12BjxqJ0gFO6eA&callback=initMap&region=kr"></script>
+<!-- <script defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCIFdez0Bx1XuNNQ0eIa12BjxqJ0gFO6eA&callback=initMap&region=kr"></script>
+ -->
 <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
 <script src="${pageContext.request.contextPath }/resources/js/jquery-ui.js"></script>
 <script type="text/javascript">
@@ -544,7 +554,7 @@
 	
 	});
 
-	//구글 지도	
+	/* //구글 지도	
 	function initMap() {
 		var googlename=$("#googlename").val();//호텔 이름
 		var googlex=$("#googlex").val(); //경도
@@ -563,7 +573,7 @@
    		 map: map,
    		 label:googlename
 		});
-	}
+	} */
 	
 	//리뷰 총점
 	var aid=$("#aid").val();
