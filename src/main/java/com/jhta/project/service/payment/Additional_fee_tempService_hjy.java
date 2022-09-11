@@ -13,8 +13,8 @@ public class Additional_fee_tempService_hjy {
 	public int seq() {
 		return mapper.seq();
 	}
-	public Additional_feeVo find(int aid) {
-		return mapper.find(aid);
+	public Additional_feeVo find(int riid) {
+		return mapper.find(riid);
 	};
 	public int insert(Additional_feeVo vo) {
 		return mapper.insert(vo);

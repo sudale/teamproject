@@ -6,6 +6,15 @@
 <head>
 <meta charset="UTF-8">
 <title>결제페이지</title>
+
+<link rel="stylesheet" href="${pageContext.request.contextPath}/resources/css/header.css">
+<link rel="stylesheet" href="${pageContext.request.contextPath}/resources/css/layout.css">
+<link rel="stylesheet" href="${pageContext.request.contextPath}/resources/css/footer.css">
+
+
+
+
+
 <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
 <script type="text/javascript" src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
 
@@ -35,6 +44,9 @@
 <div class="header">
 	<jsp:include page="../includes/header.jsp" flush="true"/>
 </div>
+
+<div class="sub_content">
+
 <form method="post" action="${pageContext.request.contextPath }/phj/payOk">
 <div class="paybox" style="width:700px;text-align: center;margin-left: 30%;">
 	<br><input style="width:60px;" type="hidden" id="rroomnum" name="rroomnum" value="${rroomnum }"><br>
@@ -116,9 +128,15 @@
 	</div>
 </div>
 </form>
+
+</div>
+
+
 <div class="footer" style="clear:both;">
 	<jsp:include page="../includes/footer.jsp" flush="true"/>
 </div>
+
+
 </body>
 <script type="text/javascript">
 	$(document).ready(function(){
@@ -147,20 +165,7 @@
 	    return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
 	}
 	
-/*	$(function(){
-		$('#kakao').click(function(){
-			$.ajax({
-				url:'/project/kakaopay',
-				dataType:'json',
-				success:function(data){
-					window.open(data.next_redirect_pc_url);
-				},
-				error:function(error){
-					alert(error);
-				}
-			})
-		})
-	})*/
+
 	
 	$("#card").click(function () {
 		var totalFee=parseInt($("#totalFee").val());

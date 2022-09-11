@@ -6,6 +6,13 @@
 <head>
 <meta charset="UTF-8">
 <title>예약페이지</title>
+<link rel="stylesheet" href="${pageContext.request.contextPath}/resources/css/header.css">
+<link rel="stylesheet" href="${pageContext.request.contextPath}/resources/css/content.css">
+<link rel="stylesheet" href="${pageContext.request.contextPath}/resources/css/footer.css">
+
+
+
+
 <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
 
@@ -214,6 +221,8 @@
 		$('#totalbreakfee').text(totalbreakfastfee);
 		$('input[name=totalbreakfee]').attr('value',totalbreakfastfee);
 		console.log("체인지");
+		console.log(breakfastfee);
+		console.log(${breakfastfee });
 	});
 	
 	$('#rexbed').on('change', function(){
@@ -226,7 +235,41 @@
 	
 	
 	$(document).ready(function(){
-
+/*		$('#insertOk').submit(function(e){
+			e.preventDefault();
+			var rid=0;
+			var ramount=parseInt($("#ramount").val());
+			var rcheckin=parseInt($("#rcheckin").val());
+			var rcheckout=parseInt($("#rcheckout").val());
+			var rresname=$("#engName").val();
+			var rresemail=$("#emailcheck").val();
+			var rresphone=$("#rresphone").val();
+			var rexbreaknum=$("#rexbreaknum").val();
+			var rexbed=$("#rexbed").val();
+			var rexperson=$("#rexperson").val();
+			var rcancel=$("#rcancel").val();
+			var mid=$("#mid").val();
+			var riid=parseInt($("#riid").val());
+			var rordernum=0;
+			console.log("눌렸냐");
+			$.ajax({
+				url:'/project/phj/reservation',
+				data:JSON.stringify({"rid":rid,"rordernum":rordernum,"ramount":ramount,"rcheckin":rcheckin,"rcheckout":rcheckout,
+					"rresname":rresname,"rresphone":rresphone,"rresemail":rresemail,"rexbreaknum":rexbreaknum,
+					"rexbed":rexbed,"rexperson":rexperson,"rcancel":rcancel,"mid":mid,"riid":riid}),
+				type:"post",
+				dataType:"json",
+				contentType:'application/json',
+				success:function(data){
+					console.log(data);
+					if(data.code=='success'){
+						console.log(data.code);
+					}else{
+						alert("실패");
+					}
+				}
+			})
+		}) */
 		var aid=parseInt($("#aid").val());
 		$.ajax({
 			url:"/project/phj/accoinfo/"+aid,
@@ -243,7 +286,23 @@
 				$("#hotelInfo").html(info);
 			}
 		})
-
+/*		
+		var rcheckin=parseInt($("#rcheckin").val());
+		var rcheckout=parseInt($("#rcheckout").val());
+		$.ajax({
+			url:"/project/phj/roominfo/"+riid,
+			dataType:"json",			
+			success:function(data){
+				console.log(data.riroomtype);
+				let roominfo="";
+				
+				roominfo +="<h3>"+ data.riroomtype +"</h3>"+ "<br>" +
+				rcheckin + "<br>" +
+				rcheckout;
+				
+				$("#totalinfo").html(roominfo);
+			}
+		})*/
 		var riid=parseInt($("#riid").val());
 		var ramount=parseInt($("#ramount").val());
 		$.ajax({
