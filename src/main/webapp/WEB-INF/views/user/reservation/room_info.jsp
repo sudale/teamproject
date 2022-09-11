@@ -379,11 +379,7 @@
 	<div class="largeimg">
 			<img src="${pageContext.request.contextPath }/resources/images/accommodations/${accvo.amainimg}" class="amainimg">
 	</div>
-	<div id="imgbox">
-				<img src="${pageContext.request.contextPath }/resources/images/room_info/${vo.rimainimg }" id="smallimg1">
-				<img src="${pageContext.request.contextPath }/resources/images/room_info/${vo.riextraimg1}" id="smallimg2">
-				<img src="${pageContext.request.contextPath }/resources/images/room_info/${vo.riextraimg2}" id="smallimg3">			
-			</div>
+	
 			
 		</div>
 		
@@ -403,7 +399,11 @@
 		<input type="hidden" value="${vo.aid }" id="aid">
 		<c:if test="${riid eq vo.riid}">
 		<div id="search_info">
-			
+			<div id="imgbox">
+				<img src="${pageContext.request.contextPath }/resources/images/room_info/${vo.rimainimg }" id="smallimg1">
+				<img src="${pageContext.request.contextPath }/resources/images/room_info/${vo.riextraimg1}" id="smallimg2">
+				<img src="${pageContext.request.contextPath }/resources/images/room_info/${vo.riextraimg2}" id="smallimg3">			
+			</div>
 			<div id="romm_name">
 				<h2 class="name">${vo.riroomtype}</h2>
 				<p class="serv">부가서비스</p>
