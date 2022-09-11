@@ -66,14 +66,14 @@
 	<div class="header">
 		<jsp:include page="../includes/header.jsp" flush="true"/>
 	</div>
-	<div class="board_header">
+	<!-- <div class="board_header">
 		<ul class="ulcss">
 	      <li class="licss"><a href="/project/phj/home" class="liactive">MyPage</a></li>
 	      <li class="licss"><a href="/project/hjy/board/all">자유게시판</a></li>
 	      <li class="licss"><a href="/project/hjy/board/review">리뷰게시판</a></li>
 	      <li class="licss"><a href="/project/hjy/board/matching">매칭게시판</a></li>
 	    </ul>
-	</div>
+	</div> -->
 	<div id="page-wrapper">
 	  <!-- 사이드바 -->
 	  <div id="sidebar-wrapper">

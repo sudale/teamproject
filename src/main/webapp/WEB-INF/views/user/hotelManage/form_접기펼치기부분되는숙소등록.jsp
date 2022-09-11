@@ -139,8 +139,8 @@
 					<h3 class="room_title">객실 세부 정보</h3>
 					<div id="roomInfoadd"></div>
 
-					<!-- <input type="button" onclick="roomInfoAdd()" value="객실세부정보 추가"
-						class="button"> -->
+					<input type="button" onclick="roomInfoAdd()" value="객실세부정보 추가"
+						class="button">
 
 					<script>
 	  var cnt = 0;
@@ -155,9 +155,9 @@
 			    <div class="card">
 			   
 			    <div class="card-header">
-			    <!--<a class="card-link" data-toggle="collapse" href="#collapse\${cnt}"> 접기/펼치기 </a>
+			    <a class="card-link" data-toggle="collapse" href="#collapse\${cnt}"> 접기/펼치기 </a>
 			    <a href="javascript:deleteForm(\${cnt})" style="text-align: right; position: relative;">삭제</a>
-		      -->  
+		      
 			    
 			    <ul>
 				<li class="join-field"><label for=""> <span
@@ -255,7 +255,7 @@ name="file" id="addfile2" class="file input" multiple="multiple">
 </li>
 
 
-<h1 style="font-family: sans-serif; font-size:18px; margin-top:40px;">추가요금 설정</h1>
+<h1 style="font-family: sans-serif; font-size:18px;">추가요금 설정</h1>
 
 <li class="join-field">
 <label for=""> <span
@@ -314,8 +314,8 @@ name="file" id="addfile2" class="file input" multiple="multiple">
 
 					<div id="periodInfoAdd"></div>
 					<hr>
-					<!-- <input type="button" onclick="periodInfoAdd()" value="시즌정보 추가"
-						class="button"> -->
+					<input type="button" onclick="periodInfoAdd()" value="시즌정보 추가"
+						class="button">
 
 
 					<script>
@@ -328,15 +328,15 @@ name="file" id="addfile2" class="file input" multiple="multiple">
 			  <div id="accordion">
 			    <div class="card">
 			    <div class="card-header">
-			   <!-- <a class="card-link" data-toggle="collapse" href="#period\${periodCnt}"> 접기/펼치기 </a>
+			    <a class="card-link" data-toggle="collapse" href="#period\${periodCnt}"> 접기/펼치기 </a>
 			    <a href="javascript:deleteperiodForm(\${periodCnt})" style="text-align: right; position: relative;">삭제</a><br>
-		        -->
+		        
 				<ul>
 				<li class="join-field">
 				<label for=""> <span
 						class="point_color">*</span> 시즌 
 				</label>
-						<select name = "periodVo[\${periodCnt}].peseason" class="select">
+						<select name = "periodVo[\${periodCnt}].peseason" class="">
 				    	<option value="비수기">비수기</option>
 				    	<option value="준성수기">준성수기</option>
 				    	<option value="성수기">성수기</option>
@@ -395,12 +395,8 @@ name="file" id="addfile2" class="file input" multiple="multiple">
 			<!--  -->
 
 
-<div class="confirm-btn">
-			<button type="submit" class="btn_join llog submit_btn">신청하기</button>
-			
-		</div>
-		
-		
+
+			<button type="submit">신청하기</button>
 		</form>
 
 

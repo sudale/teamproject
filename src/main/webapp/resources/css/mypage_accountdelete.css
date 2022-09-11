@@ -19,17 +19,11 @@
    	padding:0 !important;
 }
 .deletecontent{
-	/*
-	position:absolute;
-	top:100px;
-	*/
-	width:1000px;
-	height:300px;
-	align-items:center;
-	text-align:center;
-	border:1px solid gray;
-	border-radius: 10px;
-	padding:105px 0;
+	width: 1000px;
+    min-height: 300px;
+    align-items: center;
+    text-align: center;   
+    padding: 50px 0;
 }
 .pwinput{
 	/*
@@ -48,18 +42,24 @@
 	height:35px;
 	font-size:20px;
 	text-align: center;
+	
+    border: 1px solid #adadad;
+    padding: 10px;
+    color: #191919;
+    width: 50%;
+    height: 50px;
+    font-size: 14px;
+    flex: 2;
+    
+	
 }
 #okbtn{
-	/*
-	position:absolute;
-	top:170px;
-	left:450px;
-	*/
+	
 	width:100px;
-	height:36px;
-	background-color:#00aef0;
+	height:45px;
+	background-color:#ff346e;
 	border:none;
-	margin-top:-10px;
+	
 }
 
 .modal3 {
