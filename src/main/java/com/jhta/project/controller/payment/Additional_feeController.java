@@ -18,11 +18,16 @@ public class Additional_feeController {
 	
 	@GetMapping(value="phj/addfee/{riid}",produces = {MediaType.APPLICATION_JSON_VALUE})
 	public @ResponseBody HashMap<String, Object> addfee(@PathVariable("riid")int riid){
+		System.out.println("riid");
+		System.out.println(riid);
+		System.out.println("{riid}");
+		System.out.println("@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@");
 		Additional_FeeVo_phj vo=service.selectFee(riid);
 		HashMap<String, Object> map=new HashMap<String, Object>();
 		map.put("personfee", vo.getAfpersonnel());
 		map.put("bedfee", vo.getAfbed());
 		map.put("breakfastfee", vo.getAfbreakfast());
+		System.out.println(map);
 		return map;
 	}
 }
