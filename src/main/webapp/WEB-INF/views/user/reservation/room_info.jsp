@@ -400,8 +400,8 @@
 <div class="sub_content">
 
 <div id="map" style="width: 50%; height: 400px;">
-            <input type="text" name="aycoordi" id="${accvo.axcoordi}"> 
-            <input type="text" name="axcoordi" id="${accvo.aycoordi}">
+            <input type="text" name="aycoordi" id=${accvo.axcoordi }> 
+            <input type="text" name="axcoordi" id=${accvo.aycoordi }>
    </div>
 <!-- 이미지 크게 일단 하나 -->
 <div id="content">
@@ -675,6 +675,8 @@
 
 <script>
 var map = new naver.maps.Map("map");
+var jeju = new naver.maps.LatLng(${accvo.axcoordi}, ${accvo.aycoordi});
+map.setCenter(jeju);
 var marker = new naver.maps.Marker({
     position: new naver.maps.LatLng(${accvo.axcoordi}, ${accvo.aycoordi}),
     map: map
