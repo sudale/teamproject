@@ -677,3 +677,6 @@ span.point_color.ex {
 .detailbox {
 
 }
+.room_detailMap_wrap{
+	position: relative;
+}

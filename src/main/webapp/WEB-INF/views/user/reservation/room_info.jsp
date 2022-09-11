@@ -113,11 +113,8 @@
 
 /* 이미지박스 */
 #imgbox {
-	position: absolute;
-	top: 20px;
-	left: 20px;
-	width: 175px;
-	height: 195px;
+	position: relative;
+	
 }
 
 #smallimg1 {
@@ -372,10 +369,7 @@
 
 <div class="sub_content">
 
-<%-- <div id="map" style="width: 50%; height: 400px;">
-            <input type="text" name="aycoordi" id=${accvo.axcoordi }> 
-            <input type="text" name="axcoordi" id=${accvo.aycoordi }>
-</div> --%>
+
 <!-- 이미지 크게 일단 하나 -->
 <div class="roomdetail_content">
 
@@ -398,16 +392,12 @@
 		<p class="adetail">${accvo.adetail}</p>
 	</div>
 	<p class="agrade">${accvo.agrade}등급 &nbsp;|&nbsp; </p>
-	<p class="aadress">${accvo.aaddress}</p>
 	
-	<div id="googlemap">
-		<input type="hidden" value="${accvo.aname}" id="googlename">
-		<input type="hidden" value="${accvo.axcoordi}" id="googlex">
-		<input type="hidden" value="${accvo.aycoordi}" id="googley">
-	</div>
-		
+	
+	
 
-	
+
+
 	<p class='search_title'>검색결과</p>
 	<c:forEach var="vo" items="${list }" varStatus="status">
 		<input type="hidden" value="${vo.aid }" id="aid">
@@ -476,6 +466,19 @@
 		</div>
 		</c:if>
 	</c:forEach>
+	
+	
+<div class="room_detailMap_wrap">
+<p class="aadress">${accvo.aaddress}</p>
+	
+	 <div id="map" style="width: 50%; height: 400px;">
+            <input type="text" name="aycoordi" id=${accvo.axcoordi }> 
+            <input type="text" name="axcoordi" id=${accvo.aycoordi }>
+</div> 
+	
+</div>
+	
+	
 	<!-- <div id="reviewbox">
 		<div id="starbox">
 			<p class="reviewtitle">솔직이용후기</p>
