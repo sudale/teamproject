@@ -214,6 +214,8 @@
 		$('#totalbreakfee').text(totalbreakfastfee);
 		$('input[name=totalbreakfee]').attr('value',totalbreakfastfee);
 		console.log("체인지");
+		console.log(breakfastfee);
+		console.log(${breakfastfee });
 	});
 	
 	$('#rexbed').on('change', function(){
