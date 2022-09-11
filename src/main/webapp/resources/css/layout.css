@@ -12,7 +12,7 @@
 .btn {
 	display: block;
 	width: 100%;
-	heigth: 45px;
+	height: 45px;
 	color: #fff;
 	font-size: 16px;
 	border-radius: 4px;
@@ -577,11 +577,8 @@ span.point_color.ex {
 }
 
 .hotel_reg_container .host_regform button {
-	
 	width: 30%;
-	
 }
-
 
 /*별점 칠하기 css*/
 .hotel_reg_container .host_regform .star-rating {
@@ -626,6 +623,8 @@ span.point_color.ex {
 .view_Rlist {
 	display: flex;
 	justify-content: space-between;
+	border-bottom: 1px solid #eee;
+	padding: 40px 0;
 }
 
 .view_Rimg {
@@ -634,16 +633,99 @@ span.point_color.ex {
 
 .view_Rimg img {
 	width: 100%;
+	border-radius: 5px;
 }
 
-.view_Rtitle {
+.view_Rinfo {
+	width: 40%;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+
+.view_Rinfo .room_Listtop>* {
+	padding-bottom: 12px;
+}
+
+.view_Rinfo .room_Listbottom {
+	border-top: 2px solid #eee;
+	padding: 40px 0;
+}
+
+.view_Rinfo .view_Rtitle {
 	font-size: 30px;
 }
 
-.view_Rgrade {
-	font-size: 30px;
+.view_Rinfo .view_Rgrade {
+	font-size: 17px;
 }
 
-.view_Rprice {
-	font-size: 40px;
+.view_Rinfo .view_Rprice {
+	font-size: 35px;
+	padding: 20px 0;
 }
+
+.view_Radress {
+	font-size: 15px;
+}
+
+/*=================================숙소 상세보기 ======================================*/
+.roomdetail_content{
+	max-width:1200px;
+	margin:0 auto;
+}
+.detailbox {
+
+}
+.room_detailMap_wrap{
+	position: relative;
+}
+
+.detail_info {
+   margin: 40px auto;
+}
+/* 이미지박스 */
+
+
+.largeimgbox {
+	position: relative;
+	display: flex;
+	
+}
+
+.imgbox {
+	position: relative;	
+}
+.imgbox img {border-radius: 10px;}
+
+
+.smallImg{
+ width: 272px;
+	      margin-top: 8px;
+    min-height: 185px;
+}
+#smallimg1 {width: 560px;}
+#smallimg2 {margin-right:10px;}
+#smallimg3 {}
+
+.view_rest_form{
+	position: fixed;
+	right:0;
+	top:0;	
+}
+.person_wrap{
+	display:flex;
+}
+
+
+.price_wrap {
+    position: absolute;
+    top: 0;
+    right: 0;
+    border: 1px solid rgb(221, 221, 221);
+    border-radius: 12px;
+    padding: 24px;
+    box-shadow: rgb(0 0 0 / 12%) 0px 6px 16px;
+    
+}
+

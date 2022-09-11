@@ -1019,112 +1019,79 @@ function outMoveAfter(){ //버튼 클릭시 다음날로 이동
 															</c:otherwise>
 														</c:choose>
 													</div>
-													<div class="col-md-6 ">
+													
+													
+													<div class="col-md-6 view_Rinfo">
+														
+														<div class="room_Listtop">
+														
 														<h3 class="view_Rtitle">${vo.aname }</h3>
 														<c:if test="${vo.agrade!=null}">
 															<h3 class="view_Rgrade">${vo.agrade}성급</h3>
 														</c:if>
 														
 													
-														<c:choose>
-															<c:when test="${vo.restar == 5}">
-															
-															
-																<span class="agrade_star">
-																
-																<img class="star" src="${pageContext.request.contextPath}/resources/images/room_info/star.svg">
-																<img class="star" src="${pageContext.request.contextPath}/resources/images/room_info/star.svg">
-																<img class="star" src="${pageContext.request.contextPath}/resources/images/room_info/star.svg">
-																<img class="star" src="${pageContext.request.contextPath}/resources/images/room_info/star.svg">
-																<img class="star" src="${pageContext.request.contextPath}/resources/images/room_info/star.svg">
-																</span>
-															</c:when>
-															<c:when test="${vo.restar == 4}">
-																<!-- <span class="star">★★★★☆</span> -->
-																<img class="star" src="${pageContext.request.contextPath}/resources/images/room_info/star.svg">
-																<img class="star" src="${pageContext.request.contextPath}/resources/images/room_info/star.svg">
-																<img class="star" src="${pageContext.request.contextPath}/resources/images/room_info/star.svg">
-															</c:when>
-															<c:when test="${vo.restar==3 }">
-																<img class="star" src="${pageContext.request.contextPath}/resources/images/room_info/star.svg">
-																<img class="star" src="${pageContext.request.contextPath}/resources/images/room_info/star.svg">
-																<img class="star" src="${pageContext.request.contextPath}/resources/images/room_info/star.svg">
-															</c:when>
-															<c:when test="${vo.restar==2 }">
-																<img class="star" src="${pageContext.request.contextPath}/resources/images/room_info/star.svg">
-																<img class="star" src="${pageContext.request.contextPath}/resources/images/room_info/star.svg">
-															</c:when>
-															<c:when test="${vo.restar==1 }">
-																<img class="star" src="${pageContext.request.contextPath}/resources/images/room_info/star.svg">
-																
-															</c:when>
-															<c:when test="${vo.restar==0 }">
-																<img class="star" src="${pageContext.request.contextPath}/resources/images/room_info/star.svg">
-															</c:when>
-															<c:otherwise>
-																<span>☆☆☆☆☆</span>
-															</c:otherwise>
-														</c:choose>
+														 <c:choose>
+                                             <c:when test="${vo.agrade == 5}">
+                                             
+                                             
+                                                <span class="agrade_star">
+                                                
+                                                <img class="star" src="${pageContext.request.contextPath}/resources/images/room_info/star.svg">
+                                                <img class="star" src="${pageContext.request.contextPath}/resources/images/room_info/star.svg">
+                                                <img class="star" src="${pageContext.request.contextPath}/resources/images/room_info/star.svg">
+                                                <img class="star" src="${pageContext.request.contextPath}/resources/images/room_info/star.svg">
+                                                <img class="star" src="${pageContext.request.contextPath}/resources/images/room_info/star.svg">
+                                                </span>
+                                             </c:when>
+                                             <c:when test="${vo.agrade == 4}">
+                                                <!-- <span class="star">★★★★☆</span> -->
+                                                <img class="star" src="${pageContext.request.contextPath}/resources/images/room_info/star.svg">
+                                                <img class="star" src="${pageContext.request.contextPath}/resources/images/room_info/star.svg">
+                                                <img class="star" src="${pageContext.request.contextPath}/resources/images/room_info/star.svg">
+                                             </c:when>
+                                             <c:when test="${vo.agrade==3 }">
+                                                <img class="star" src="${pageContext.request.contextPath}/resources/images/room_info/star.svg">
+                                                <img class="star" src="${pageContext.request.contextPath}/resources/images/room_info/star.svg">
+                                                <img class="star" src="${pageContext.request.contextPath}/resources/images/room_info/star.svg">
+                                             </c:when>
+                                             <c:when test="${vo.agrade==2 }">
+                                                <img class="star" src="${pageContext.request.contextPath}/resources/images/room_info/star.svg">
+                                                <img class="star" src="${pageContext.request.contextPath}/resources/images/room_info/star.svg">
+                                             </c:when>
+                                             <c:when test="${vo.agrade==1 }">
+                                                <img class="star" src="${pageContext.request.contextPath}/resources/images/room_info/star.svg">
+                                                
+                                             </c:when>
+                                             <c:when test="${vo.agrade==0 }">
+                                                <img class="star" src="${pageContext.request.contextPath}/resources/images/room_info/star.svg">
+                                             </c:when>
+                                             <c:otherwise>
+                                                <span>☆☆☆☆☆test1</span>
+                                             </c:otherwise>
+                                          </c:choose>
+                                          
+														
+									
 														
 														
+														<h3 class="view_Radress" lang="en">${vo.aaddress }</h3>
 														
-														
-														
-														<h3>${vo.aaddress }</h3>
-														<div id="map${status.index }"
-															style="width: 200px; height: 200px;">
-															<input type="hidden" id="axcoordi${status.index }"
-																value="${vo.axcoordi }"> <input type="hidden"
-																id="aycoordi${status.index }" value="${vo.aycoordi }">
-														</div>
-														<script type="text/javascript">
-													      mainMapList(${status.index });
-													</script>
-													
-													
-														<h4 clsss="view_Rprice">${vo.amountsum}원</h4>
-														<button class="btn btn-outline-primary"
-															onclick="location.href='${pageContext.request.contextPath }/user/kjy/room_info?aid=${vo.aid}&riid=${vo.riid }&person=${rimaxper}&roomnum=${countRoom}&startday=${rcheckin}&endday=${rcheckout}'">예약하기</button>
-													
-													
 													
 													</div>
 													
 													
+													<div class="room_Listbottom">
 													
-													<div class="col-md-3 grade_test" style="padding-left: 70px;">
-														<c:if test="${vo.agrade!=null}">
-															<h5>${vo.agrade }성급</h5>
-														</c:if>
-														
-														<c:choose>
-															<c:when test="${vo.restar== vrestar }">
-																<h5>★★★★★</h5>
-															</c:when>
-															<c:when test="${vo.restar==4 }">
-																<h5>★★★★☆</h5>
-															</c:when>
-															<c:when test="${vo.restar==3 }">
-																<h5>★★★☆☆</h5>
-															</c:when>
-															<c:when test="${vo.restar == 2 }">
-																<h5>★★☆☆☆</h5>
-															</c:when>
-															<c:when test="${vo.restar==1 }">
-																<h5>★☆☆☆☆</h5>
-															</c:when>
-															<c:when test="${vo.restar==0 }">
-																<h5>☆☆☆☆☆</h5>
-															</c:when>
-															<c:otherwise>
-																<h5>☆☆☆☆☆</h5>
-															</c:otherwise>
-														</c:choose>
-														<h4>${vo.amountsum}원</h4>
+													
+														<h4 class="view_Rprice" lang="en">${vo.amountsum}원</h4>
 														<button class="btn btn-outline-primary"
 															onclick="location.href='${pageContext.request.contextPath }/user/kjy/room_info?aid=${vo.aid}&riid=${vo.riid }&person=${rimaxper}&roomnum=${countRoom}&startday=${rcheckin}&endday=${rcheckout}'">예약하기</button>
+													</div>
 													
 													</div>
+													
+										
 
 												</div>
 										<!-- 	</div>

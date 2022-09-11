@@ -28,6 +28,7 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 @AllArgsConstructor
 @Data
+
 public class AccommodationsVo2lhjcjy {
 	private int aid;
 	private int riid;

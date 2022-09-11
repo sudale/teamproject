@@ -24,6 +24,7 @@ public class FirstSearchControllerlhjcjyhjy {
 	@Autowired private FirstSearchServicelhjcjy service;
 	@Autowired private GetPriceServicelhjcjyhjy gpservice;
 	
+	 
 	Logger logger = LoggerFactory.getLogger(FirstSearchControllerHjy.class);
 
 	//메인검색 완성하면 지우기

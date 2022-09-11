@@ -1,104 +1,64 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
-    pageEncoding="UTF-8"%>
-<%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+	pageEncoding="UTF-8"%>
+<%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <!DOCTYPE html>
 <html>
 <head>
 <meta charset="UTF-8">
 <title>Insert title here</title>
 <!-- 파비콘 이미지 -->
-<link rel="shortcut icon" type="image/x-icon" href="${pageContext.request.contextPath}/resources/images/logo/favicon.ico" />
+<link rel="shortcut icon" type="image/x-icon"
+	href="${pageContext.request.contextPath}/resources/images/logo/favicon.ico" />
 
-<link rel="stylesheet" href="${pageContext.request.contextPath}/resources/css/reset.css">
-<link rel="stylesheet" href="${pageContext.request.contextPath}/resources/css/header.css">
-<link rel="stylesheet" href="${pageContext.request.contextPath}/resources/css/layout.css">
-<link rel="stylesheet" href="${pageContext.request.contextPath}/resources/css/footer.css">
+<link rel="stylesheet"
+	href="${pageContext.request.contextPath}/resources/css/reset.css">
+<link rel="stylesheet"
+	href="${pageContext.request.contextPath}/resources/css/header.css">
+<link rel="stylesheet"
+	href="${pageContext.request.contextPath}/resources/css/layout.css">
+<link rel="stylesheet"
+	href="${pageContext.request.contextPath}/resources/css/footer.css">
 
-<link rel="stylesheet" href="${pageContext.request.contextPath }/resources/js/jquery-ui.css">
+<link rel="stylesheet"
+	href="${pageContext.request.contextPath }/resources/js/jquery-ui.css">
 
 
 <script type="text/javascript"
-   src="https://openapi.map.naver.com/openapi/v3/maps.js?ncpClientId=83bfuniegk&submodules=geocoder"></script>
-   
-   
+	src="https://openapi.map.naver.com/openapi/v3/maps.js?ncpClientId=83bfuniegk&submodules=geocoder"></script>
+
+
 </head>
 <style>
-
-
-#largeimgbox {
-	position: relative;
-	width: 1000px;
-	left: 400px;
-	height: 600px;
-	top: 0px;
-	margin-bottom: 200px;
-	border-bottom: 1px solid gray;
-}
-
 .largeimg {
-	position: absolute;
-	top: 100px;
-	left: 0px;
-	width: 500px;
-	height: 400px;
 	border-radius: 10px;
+	margin-right: 10px;
 }
 
 .amainimg {
-	position: absolute;
-	top: 0px;
-	left: 0px;
-	width: 500px;
-	height: 400px;
+	width: 100%;
+	height: 100%;
 	z-index: 1;
 	border-radius: 10px;
 }
 
 .anme {
-	position: absolute;
-	top: 100px;
-	left: 550px;
 	font-size: 30px;
 	font-weight: bold;
 }
 
 .agrade {
-	position: absolute;
-	top: 150px;
-	left: 550px;
-	font-size: 15px;
+	font-size: 23px;
 	font-weight: bold;
 }
 
 .aadress {
-	position: absolute;
-	top: 150px;
-	left: 600px;
 	font-size: 15px;
 	font-weight: bold;
 }
 
-.detailbox {
-	position: absolute;
-	top: 180px;
-	left: 550px;
-	width: 450px;
-	height: 200px;
-}
-
 .adetail {
-	position: absolute;
-	font-size: 12px;
+	font-size: 20px;
 }
-/* 
-#googlemap {
-	position: absolute;
-	top: 400px;
-	left: 550px;
-	width: 450px;
-	height: 100px;
-	border-radius: 10px;
-} */
 
 .search_title {
 	position: absolute;
@@ -116,22 +76,15 @@
 	font-weight: bold;
 }
 
-#search_info{
-	position: absolute;
-	width: 1000px;
-	top:750px;
-	left: 400px;
-	height: 235px;
-	border: 1px solid blue;
-	border-radius: 10px;
-	box-shadow: 5px 5px 5px gray;
+#search_info {
+	position: relative;
 }
 
 /* 전체테두리 */
 #room_info {
 	position: relative;
 	width: 1000px;
-	top:220px;
+	top: 220px;
 	left: 400px;
 	height: 235px;
 	border: 1px solid blue;
@@ -140,162 +93,74 @@
 	box-shadow: 5px 5px 5px gray;
 }
 
-/* 이미지박스 */
-#imgbox {
-	position: absolute;
-	top: 20px;
-	left: 20px;
-	width: 175px;
-	height: 195px;
-}
-
-#smallimg1 {
-	position: absolute;
-	top: 0px;
-	left: 0px;
-	width: 175px;
-	height: 120px;
-}
-
-#smallimg2 {
-	position: absolute;
-	top: 125px;
-	left: 0px;
-	width: 85px;
-	height: 70px;
-}
-
-#smallimg3 {
-	position: absolute;
-	top: 125px;
-	left: 90px;
-	width: 85px;
-	height: 70px;
-}
-
 #romm_name {
-	position: absolute;
-	top: 20px;
-	left: 215px;
-	width: 765px;
-	height: 195px;
-}
-
-.name {
-	position: absolute;
-	top: 0px;
-	line-height: 0px;
+	
 }
 
 .serv {
-	position: absolute;
-	top: 80px;
-	font-size: 15px;
-	cursor: help;
+	
 }
 
 .subname {
-	position: absolute;
-	top: 105px;
-	font-size: 10px;
-	color: blue;
+	
 }
 
 .sumprice {
-	position: absolute;
-	top: 165px;
-	right: 180px;
-	font-size: 20px;
-	color: red;
+	
 }
 
 .price {
-	position: absolute;
-	top: 135px;
-	right: 180px;
-	font-size: 15px;
+	
 }
 
 .btn {
-	position: absolute;
-	top: 140px;
-	right: 0px;
-	width: 150px;
-	height: 50px;
+	
 }
 
 /* 맨우측 인원표시 */
 .maxpersonimg {
-	position: absolute;
-	top: 0px;
-	right: 0px;
-	height: 20px;
+	
 }
 
 .maxperson {
-	position: absolute;
-	top: 25px;
-	right: 0px;
-	font-size: 10px;
+	
 }
 
 .minpersonimg {
-	position: absolute;
-	top: 0px;
-	right: 120px;
-	height: 20px;
+	
 }
 
 .minperson {
-	position: absolute;
-	top: 25px;
-	right: 120px;
-	font-size: 10px;
+	
 }
 
 .personimg {
-	position: absolute;
-	top: 50px;
-	right: 0px;
-	height: 20px;
+	
 }
 
 .person {
-	position: absolute;
-	top: 75px;
-	right: 0px;
-	font-size: 10px;
+	
 }
-/* #reserimg{
-	position:absolute;
-	top:30px;
-	right: 300px;
-	width: 300px;
-	height: 150px;
-	z-index: 0;
-	opacity: 0.6;
-}
- */
 
 #reviewbox {
 	position: relative;
 	width: 1000px;
-	margin-top:400px;
-	margin-bottom:20px;
+	margin-top: 400px;
+	margin-bottom: 20px;
 	left: 400px;
 	border-top: 1px solid gray;
 }
 
 .reviewtitle {
 	position: absolute;
-	top:30px;
+	top: 30px;
 	font-size: 25px;
 	font-weight: bold;
 }
 
-#starbox{
-	position:relative;
-	height:150px;
+#starbox {
+	position: relative;
+	height: 150px;
 }
 
 .sumstart {
@@ -307,9 +172,8 @@
 
 #totalreview {
 	position: relative;
-	
-	
 }
+
 #review {
 	position: relative;
 	width: 1000px;
@@ -391,127 +255,221 @@
 	height: 50px;
 	font-size: 25px;
 }
-
 </style>
 <div class="header">
-	<jsp:include page="../includes/header.jsp"/>
+	<jsp:include page="../includes/header.jsp" />
 </div>
+
+
 
 <div class="sub_content">
 
-<div id="map" style="width: 50%; height: 400px;">
+
+	<!-- 이미지 크게 일단 하나 -->
+	<div class="roomdetail_content">
+
+
+
+		<div class="largeimgbox">
+
+			<div class="largeimg">
+				<img
+					src="${pageContext.request.contextPath }/resources/images/accommodations/${accvo.amainimg}"
+					class="amainimg">
+			</div>
+
+			<c:forEach var="vo" items="${list }" varStatus="status">
+				<input type="hidden" value="${vo.aid }" id="aid">
+				<c:if test="${riid eq vo.riid}">
+
+					<div class="imgbox">
+						<img
+							src="${pageContext.request.contextPath }/resources/images/room_info/${vo.rimainimg }"
+							id="smallimg1" class=""> <img
+							src="${pageContext.request.contextPath }/resources/images/room_info/${vo.riextraimg1}"
+							id="smallimg2" class="smallImg"> <img
+							src="${pageContext.request.contextPath }/resources/images/room_info/${vo.riextraimg2}"
+							id="smallimg3" class="smallImg">
+					</div>
+
+				</c:if>
+				<c:if test="${riid ne vo.riid}">
+
+
+					<div class="imgbox">
+						<img
+							src="${pageContext.request.contextPath }/resources/images/room_info/${vo.rimainimg }"
+							id="smallimg1" class=""> <img
+							src="${pageContext.request.contextPath }/resources/images/room_info/${vo.riextraimg1}"
+							id="smallimg2" class="smallImg"> <img
+							src="${pageContext.request.contextPath }/resources/images/room_info/${vo.riextraimg2}"
+							id="smallimg3" class="smallImg">
+					</div>
+
+
+
+				</c:if>
+			</c:forEach>
+
+
+		</div>
+
+
+
+
+		<div class="detail_info">
+
+			<p class="anme">${accvo.aname}</p>
+			<p class="adetail">${accvo.adetail}</p>
+			<c:forEach var="vo" items="${list }" varStatus="status">
+				<input type="hidden" value="${vo.aid }" id="aid">
+			 <c:if test="${riid eq vo.riid}">
+			 <div class="person_wrap">
+						  
+							<p class="maxperson">최대&nbsp;${vo.rimaxper}인</p>
+							<p class="minperson">최소&nbsp;${vo.riminper}인</p>
+
+							<p class="person">현재&nbsp;${person}인</p>
+							</div>
+							
+			</c:if>
+			</c:forEach>			
+							
+			<p class="agrade">${accvo.agrade}등급
+				<c:choose>
+					<c:when test="${accvo.agrade == 5}">
+
+
+						<span class="agrade_star"> <img class="star"
+							src="${pageContext.request.contextPath}/resources/images/room_info/star.svg">
+							<img class="star"
+							src="${pageContext.request.contextPath}/resources/images/room_info/star.svg">
+							<img class="star"
+							src="${pageContext.request.contextPath}/resources/images/room_info/star.svg">
+							<img class="star"
+							src="${pageContext.request.contextPath}/resources/images/room_info/star.svg">
+							<img class="star"
+							src="${pageContext.request.contextPath}/resources/images/room_info/star.svg">
+						</span>
+					</c:when>
+					<c:when test="${accvo.agrade == 4}">
+						<!-- <span class="star">★★★★☆</span> -->
+						<img class="star"
+							src="${pageContext.request.contextPath}/resources/images/room_info/star.svg">
+						<img class="star"
+							src="${pageContext.request.contextPath}/resources/images/room_info/star.svg">
+						<img class="star"
+							src="${pageContext.request.contextPath}/resources/images/room_info/star.svg">
+					</c:when>
+					<c:when test="${accvo.agrade==3 }">
+						<img class="star"
+							src="${pageContext.request.contextPath}/resources/images/room_info/star.svg">
+						<img class="star"
+							src="${pageContext.request.contextPath}/resources/images/room_info/star.svg">
+						<img class="star"
+							src="${pageContext.request.contextPath}/resources/images/room_info/star.svg">
+					</c:when>
+					<c:when test="${accvo.agrade==2 }">
+						<img class="star"
+							src="${pageContext.request.contextPath}/resources/images/room_info/star.svg">
+						<img class="star"
+							src="${pageContext.request.contextPath}/resources/images/room_info/star.svg">
+					</c:when>
+					<c:when test="${accvo.agrade==1 }">
+						<img class="star"
+							src="${pageContext.request.contextPath}/resources/images/room_info/star.svg">
+
+					</c:when>
+					<c:when test="${accvo.agrade==0 }">
+						<img class="star"
+							src="${pageContext.request.contextPath}/resources/images/room_info/star.svg">
+					</c:when>
+					<c:otherwise>
+						<span>☆☆☆☆☆test1</span>
+					</c:otherwise>
+				</c:choose>
+
+
+
+			</p>
+
+
+
+			<c:forEach var="vo" items="${list }" varStatus="status">
+				<input type="hidden" value="${vo.aid }" id="aid">
+				<c:if test="${riid eq vo.riid}">
+					<div id="search_info">
+					
+
+						<div id="romm_name">
+							<h2 class="name">${vo.riroomtype}</h2>
+
+							<p class="serv">부가서비스</p>
+							<p class="subname">${vo.riservice}</p>
+							
+							
+							<div class="price_wrap">
+							<p class="sumprice">₩&nbsp;${vo.sum}</p>
+							
+							<p class="price">
+								<a href="javascript:void(0);" title="${vo.price}">요금세부정보</a>
+							</p>
+							
+						  
+							<!-- session에 id가 있는지 확인후 없을경우 로그인페이지로 -->
+							<c:choose>
+								<c:when test="${empty sessionScope.mid }">
+									<input type="button" class="btn btn-primary" class="btn"
+										value="바로예약" onclick="loginpage()">
+								</c:when>
+								<c:otherwise>
+									<input type="button" class="btn btn-primary" class="btn"
+										value="바로예약"
+										onclick="location.href='${pageContext.request.contextPath }/phj/reservation?aid=${vo.aid}&riid=${vo.riid}&startday=${startday}&endday=${endday}&ramount=${person }&sum=${vo.sum }&roomnum=${roomnum}'">
+								</c:otherwise>
+							</c:choose>
+							
+							</div>
+							
+						</div>
+					</div>
+				</c:if>
+				
+				
+			</c:forEach>
+		</div>
+
+
+
+
+
+
+		<%-- 지도 부분 잠시주석
+<div class="room_detailMap_wrap">
+<p class="aadress">${accvo.aaddress}</p>
+	
+	 <div id="map" style="width: 50%; height: 400px;">
             <input type="text" name="aycoordi" id=${accvo.axcoordi }> 
             <input type="text" name="axcoordi" id=${accvo.aycoordi }>
-   </div>
-<!-- 이미지 크게 일단 하나 -->
-<div id="content">
-	<div id="largeimgbox">
-	<p class="anme">${accvo.aname}</p>
-	<p class="agrade">${accvo.agrade}&nbsp;|&nbsp;</p>
-	<p class="aadress">${accvo.aaddress}</p>
-	<div class="detailbox">
-		<p class="adetail">${accvo.adetail}</p>
-	</div>
-	<div id="googlemap">
-		<input type="hidden" value="${accvo.aname}" id="googlename">
-		<input type="hidden" value="${accvo.axcoordi}" id="googlex">
-		<input type="hidden" value="${accvo.aycoordi}" id="googley">
-	</div>
-		<div class="largeimg">
-			<img src="${pageContext.request.contextPath }/resources/images/accommodations/${accvo.amainimg}" class="amainimg">
-		</div>
-	</div>
+</div> 
 	
-	<p class='search_title'>검색결과</p>
-	<c:forEach var="vo" items="${list }" varStatus="status">
-		<input type="hidden" value="${vo.aid }" id="aid">
-		<c:if test="${riid eq vo.riid}">
-		<div id="search_info">
-			<div id="imgbox">
-				<img src="${pageContext.request.contextPath }/resources/images/room_info/${vo.rimainimg }" id="smallimg1">
-				<img src="${pageContext.request.contextPath }/resources/images/room_info/${vo.riextraimg1}" id="smallimg2">
-				<img src="${pageContext.request.contextPath }/resources/images/room_info/${vo.riextraimg2}" id="smallimg3">			
-			</div>
-			<div id="romm_name">
-				<h2 class="name">${vo.riroomtype}</h2>
-				<p class="serv">부가서비스</p>
-				<p class="subname">${vo.riservice}</p>
-				<p class="sumprice">₩&nbsp;${vo.sum}</p>
-				<p class="price"><a href="javascript:void(0);" title="${vo.price}">요금세부정보</a></p>
-			 	<img class="maxpersonimg" src="${pageContext.request.contextPath }/${vo.maxperimg}">
-			 	<p class="maxperson">최대&nbsp;${vo.rimaxper}인</p>
-			 	<img class="minpersonimg" src="${pageContext.request.contextPath }/${vo.minperimg}">
-			 	<p class="minperson">최소&nbsp;${vo.riminper}인</p>
-			 	<img class="personimg" src="${pageContext.request.contextPath }/${vo.perimg}">
-			 	<p class="person">현재&nbsp;${person}인</p>
-			 	<img src="${pageContext.request.contextPath }/${vo.reserimg}" onerror="this.style.display='none'" id="reserimg">
-			 	<!-- session에 id가 있는지 확인후 없을경우 로그인페이지로 -->
-			 	<c:choose>
-			 		<c:when test="${empty sessionScope.mid }">
-			 			<input type="button" class="btn btn-primary" class="btn" value="바로예약" onclick="loginpage()">
-			 		</c:when>
-			 		<c:otherwise>
-			 			<input type="button" class="btn btn-primary" class="btn" value="바로예약" onclick="location.href='${pageContext.request.contextPath }/phj/reservation?aid=${vo.aid}&riid=${vo.riid}&startday=${startday}&endday=${endday}&ramount=${person }&sum=${vo.sum }&roomnum=${roomnum}'">
-			 		</c:otherwise>
-			 	</c:choose>
-			</div>
-		</div>
-		</c:if>
-		<c:if test="${riid ne vo.riid}">
-		<p class='room_title'>객실정보</p>
-		<div id="room_info">
-			
-			<div id="imgbox">
-				<img src="${pageContext.request.contextPath }/resources/images/room_info/${vo.rimainimg }" id="smallimg1">
-				<img src="${pageContext.request.contextPath }/resources/images/room_info/${vo.riextraimg1}" id="smallimg2">
-				<img src="${pageContext.request.contextPath }/resources/images/room_info/${vo.riextraimg2}" id="smallimg3">			
-			</div>
-			
-			
-			<div id="romm_name">
-				<h2 class="name">${vo.riroomtype}</h2>
-				<p class="serv">부가서비스</p>
-				<p class="subname">${vo.riservice}</p>
-				<p class="sumprice">₩&nbsp;${vo.sum}</p>
-				<p class="price"><a href="javascript:void(0);" title="${vo.price}">요금세부정보</a></p>
-			 	<img class="maxpersonimg" src="${pageContext.request.contextPath }/${vo.maxperimg}">
-			 	<p class="maxperson">최대&nbsp;${vo.rimaxper}인</p>
-			 	<img class="minpersonimg" src="${pageContext.request.contextPath }/${vo.minperimg}">
-			 	<p class="minperson">최소&nbsp;${vo.riminper}인</p>
-			 	<img class="personimg" src="${pageContext.request.contextPath }/${vo.perimg}">
-			 	<p class="person">현재&nbsp;${person}인</p>
-			 	<img src="${pageContext.request.contextPath }/${vo.reserimg}" onerror="this.style.display='none'" id="reserimg">
-			 	<!-- session에 id가 있는지 확인후 없을경우 로그인페이지로  -->
-			 	<c:choose>
-			 		<c:when test="${empty sessionScope.mid }">
-			 			<input type="button" class="btn btn-primary" class="btn" value="바로예약" onclick="loginpage()">
-			 		</c:when>
-			 		<c:otherwise>
-			 			<input type="button" class="btn btn-primary" class="btn" value="바로예약" onclick="location.href='${pageContext.request.contextPath }/phj/reservation?aid=${vo.aid}&riid=${vo.riid}&startday=${startday}&endday=${endday}&ramount=${person }&sum=${vo.sum }&roomnum=${roomnum}'">
-			 		</c:otherwise>
-			 	</c:choose>
-			</div>
-		</div>
-		</c:if>
-	</c:forEach>
-	<!-- <div id="reviewbox">
-		<div id="starbox">
-			<p class="reviewtitle">솔직이용후기</p>
-		</div>
-		<div id="totalreview"></div>
-		<div id="page"></div>
-	</div> -->
-	
-  </div>  
+</div> --%>
+
+
+
+	</div>
 
 </div>
+
+
 <div class="footer">
-	<jsp:include page="../includes/footer.jsp"/>
+	<jsp:include page="../includes/footer.jsp" />
 </div>
 <!-- <script defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCIFdez0Bx1XuNNQ0eIa12BjxqJ0gFO6eA&callback=initMap&region=kr"></script>
  -->
 <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
-<script src="${pageContext.request.contextPath }/resources/js/jquery-ui.js"></script>
+<script
+	src="${pageContext.request.contextPath }/resources/js/jquery-ui.js"></script>
 <script type="text/javascript">
 	$(function(){
 		list(1);
