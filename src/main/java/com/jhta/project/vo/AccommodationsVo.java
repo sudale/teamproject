@@ -18,6 +18,7 @@ public class AccommodationsVo {
 	private String axcoordi;
 	private String aycoordi;
 	private int atotalroom;
+	//private String restar;
 	private String agrade;
 	private String adetail;
 	private String amainimg;
