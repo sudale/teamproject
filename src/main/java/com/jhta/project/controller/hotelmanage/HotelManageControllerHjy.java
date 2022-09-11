@@ -81,17 +81,8 @@ public class HotelManageControllerHjy {
 	@GetMapping("hjy/ok")
 	public String hotelAllow(String aid,Model model) {
 //		찐db에 저장하기
-		
-		System.out.println(" hotelAllow 메서드 실행@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@");
-		System.out.println(aid + "aid 입니다.@@@@@@@@@@@@@@@@@@@");
-		System.out.println(model + " : model 입니다.@@@@@@@@@@@@@@@@@@@");
-		
-
 		// 숙소테이블
 		AccommodationsVo accommodationsVo = accommodations_tempservice.find(Integer.parseInt(aid));
-		
-		System.out.println(accommodationsVo + " : accommodationsVo 입니다.@@@@@@@@@@@@@@@@@@@");
-		
 		int n = accommodationsservice.insert(accommodationsVo);
 		int aidSave = accommodationsservice.seq();
 
@@ -108,9 +99,10 @@ public class HotelManageControllerHjy {
 			e.printStackTrace();
 		}
 		accommodations_tempservice.delete(Integer.parseInt(aid));
-
+		
 		// 객실세부정보
 		List<Room_InfoVo> Room_info_tempVoList = roomInfo_tempservice.find(Integer.parseInt(aid));
+		System.out.println(Room_info_tempVoList);
 		for (Room_InfoVo roomInfoVo : Room_info_tempVoList) {
 			roomInfoVo.setAid(aidSave);
 			int n1 = roomInfoservice.insert(roomInfoVo);
@@ -153,8 +145,11 @@ public class HotelManageControllerHjy {
 			// 찐테이블에 넣을 riid번호
 			int rid = roomInfoservice.seq();
 			// 추가요금정보
+			System.out.println("@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@");
+			System.out.println("@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@     "+riid);
 			Additional_feeVo additional_feeVo = additional_fee_tempservice.find(riid);
-			additional_feeVo.setRiid(rid);
+			System.out.println("@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@     "+additional_feeVo);
+			//additional_feeVo.setRiid(rid);
 			int n2 = additional_feeservice.insert(additional_feeVo);
 			additional_fee_tempservice.delete(riid);
 		}
