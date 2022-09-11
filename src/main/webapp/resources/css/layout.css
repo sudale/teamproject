@@ -8,10 +8,29 @@
 	z-index: 1;
 }
 
+/*========================== 버튼공통  =============================*/
+.btn {
+	display: block;
+	width: 100%;
+	heigth: 45px;
+	color: #fff;
+	font-size: 16px;
+	border-radius: 4px;
+	background-color: #ff346e;
+	border: none;
+	text-align: center;
+	margin: 0 auto;
+	border-radius: 3px;
+	cursor: pointer;
+	transition: ease .3s;
+}
 
+.btn:hover {
+	background: #ff346e;
+	color: #ffffff;
+}
 
 /*=========================== 회원가입, 아이디찾기, 비밀번호 찾기 공통 =============================*/
-
 
 /* 로그인 */
 .login_container {
@@ -106,7 +125,7 @@
 
 .confirm-btn {
 	padding-top: 15px;
-	text-align:center;
+	text-align: center;
 }
 
 .confirm-btn .btn_login {
@@ -117,18 +136,6 @@
 	background-color: #ff346e;
 	border: none;
 	cursor: pointer;
-}
-
-.confirm-btn .btn_join {
-	display: block;
-	width: 30%;
-	color: #fff;
-	font-size: 16px;
-	border-radius: 4px;
-	background-color: #ff346e;
-	border: none;
-	text-align: center;
-	margin: 0 auto;
 }
 
 .login_bot_wrap {
@@ -266,8 +273,9 @@ span.point_color.ex {
 	font-size: 14px;
 	flex: 2;
 }
-.join1 ul li input.btn_pwd{
-	background:none;
+
+.join1 ul li input.btn_pwd {
+	background: none;
 }
 
 .join_col1 {
@@ -355,9 +363,6 @@ span.point_color.ex {
 	display: block;
 	max-width: 100% !important;
 } */
-
-
-
 .btn-upload {
 	width: 150px;
 	height: 30px;
@@ -467,8 +472,6 @@ span.point_color.ex {
 	padding: 60px 0;
 }
 
-
-
 .host_regform {
 	position: relative;
 }
@@ -477,48 +480,46 @@ span.point_color.ex {
 	font-size: 25px;
 }
 
-.room_basic,.room_detail,.room_season{
+.room_basic, .room_detail, .room_season {
 	background: transparent;
 	/* border-bottom: 1px solid #505050; */
 	margin: 60px auto;
 }
-.collapse{
-	position:relative;
-	overflow:hidden;
+
+.collapse {
+	position: relative;
+	overflow: hidden;
 	transition: height .3s ease;
 }
-.collapse:not(.show) {
-    display: none;
-}
 
+.collapse:not(.show) {
+	display: none;
+}
 
 .select {
-
-  border: 0 none;
-  
+	border: 0 none;
 }
+
 .selectBox .select option {
-  background: lightcoral;
-  color: #fff;
-  padding: 3px 0;
-  font-size: 16px;
+	background: lightcoral;
+	color: #fff;
+	padding: 3px 0;
+	font-size: 16px;
 }
 
-
-.hotel_reg_container .join1 ul li{
-border-bottom: 1px solid #191919;
+.hotel_reg_container .join1 ul li {
+	border-bottom: 1px solid #191919;
 }
-.hotel_reg_container .room_map{
+
+.hotel_reg_container .room_map {
 	display: block;
 }
+
 .hotel_reg_container .add_input {
-    display: flex;
-    align-items: center;
-    margin-bottom:30px;
+	display: flex;
+	align-items: center;
+	margin-bottom: 30px;
 }
-
-
-
 
 .hotel_reg_containerm .host_regform label {
 	display: block;
@@ -544,10 +545,10 @@ border-bottom: 1px solid #191919;
 	border: none;
 	outline: none;
 }
-.hotel_reg_container .host_regform input[type='date']{
-	display:block;
-}
 
+.hotel_reg_container .host_regform input[type='date'] {
+	display: block;
+}
 
 .hotel_reg_container .host_regform .line-box {
 	position: relative;
@@ -576,42 +577,11 @@ border-bottom: 1px solid #191919;
 }
 
 .hotel_reg_container .host_regform button {
-	display: block;
-    width: 30%;
-    color: #fff;
-    font-size: 16px;
-    border-radius: 4px;
-    background-color: #ff346e;
-    border: none;
-    text-align: center;
-    margin: 0 auto;
-	border-radius: 3px;
-	cursor: pointer;
-	transition: ease .3s;
+	
+	width: 30%;
+	
 }
 
-.hotel_reg_container .host_regform button:hover {
-	background: #00AEF0;
-	color: #ffffff;
-}
-
-.hotel_reg_container .host_regform .button {
-	display: inline-block;
-	padding: 12px 24px;
-	background: rgb(220, 220, 220);
-	font-weight: bold;
-	color: rgb(120, 120, 120);
-	border: none;
-	outline: none;
-	border-radius: 3px;
-	cursor: pointer;
-	transition: ease .3s;
-}
-
-.hotel_reg_container .host_regform .button:hover {
-	background: #00AEF0;
-	color: #ffffff;
-}
 
 /*별점 칠하기 css*/
 .hotel_reg_container .host_regform .star-rating {
@@ -631,7 +601,6 @@ border-bottom: 1px solid #191919;
 
 .hotel_reg_container .host_regform .star-rating label {
 	-webkit-text-fill-color: transparent;
-	
 	-webkit-text-stroke-width: 1.3px;
 	-webkit-text-stroke-color: #fe346e;
 	cursor: pointer;
@@ -647,24 +616,34 @@ border-bottom: 1px solid #191919;
 	-webkit-text-fill-color: #fe346e;
 }
 
-
-
 /*=================================숙소 리스트 ======================================*/
 .room_content {
-    max-width: 1200px;
-    margin: 0 auto;
-    position: relative;
+	max-width: 1200px;
+	margin: 0 auto;
+	position: relative;
 }
 
 .view_Rlist {
-    display: flex;
-    justify-content: space-between;
+	display: flex;
+	justify-content: space-between;
 }
 
-.view_Rimg{
-	width:50%;
+.view_Rimg {
+	width: 50%;
 }
 
-.view_Rimg img{   
+.view_Rimg img {
 	width: 100%;
+}
+
+.view_Rtitle {
+	font-size: 30px;
+}
+
+.view_Rgrade {
+	font-size: 30px;
+}
+
+.view_Rprice {
+	font-size: 40px;
 }

@@ -41,10 +41,11 @@
 <!-- 지도추가 -->
 <script type="text/javascript"
 	src="https://openapi.map.naver.com/openapi/v3/maps.js?ncpClientId=83bfuniegk&submodules=geocoder"></script>
-<!-- css -->
+
+<%-- <!-- css -->
 <link rel="stylesheet"
 	href="${pageContext.request.contextPath}/resources/css/firstsearchmain.css">
-
+ --%>
 
 
 <style type="text/css">
@@ -1004,24 +1005,24 @@ function outMoveAfter(){ //버튼 클릭시 다음날로 이동
 										<!-- <div class="card">
 											<div class="card-body"> -->
 												
-													<div class="col-md-3 view_img">
+													<div class="col-md-3 view_Rimg">
 														<c:choose>
 															<c:when test="${vo.amainimg eq null or vo.amainimg==''}">
 																<img
 																	src="${pageContext.request.contextPath }/resources/images/accommodations/220i0z000000mulfw433F_Z_1080_808_R5_D.jpg"
-																	width="300" height="250">
+																	>
 															</c:when>
 															<c:otherwise>
 																<img
 																	src="${pageContext.request.contextPath }/resources/images/accommodations/${vo.amainimg }"
-																	width="300" height="250">
+																	>
 															</c:otherwise>
 														</c:choose>
 													</div>
 													<div class="col-md-6 ">
-														<h3>${vo.aname }</h3>
+														<h3 class="view_Rtitle">${vo.aname }</h3>
 														<c:if test="${vo.agrade!=null}">
-															<span>${vo.agrade}성급</span>
+															<h3 class="view_Rgrade">${vo.agrade}성급</h3>
 														</c:if>
 														
 													
@@ -1068,6 +1069,7 @@ function outMoveAfter(){ //버튼 클릭시 다음날로 이동
 														
 														
 														
+														
 														<h3>${vo.aaddress }</h3>
 														<div id="map${status.index }"
 															style="width: 200px; height: 200px;">
@@ -1078,6 +1080,14 @@ function outMoveAfter(){ //버튼 클릭시 다음날로 이동
 														<script type="text/javascript">
 													      mainMapList(${status.index });
 													</script>
+													
+													
+														<h4 clsss="view_Rprice">${vo.amountsum}원</h4>
+														<button class="btn btn-outline-primary"
+															onclick="location.href='${pageContext.request.contextPath }/user/kjy/room_info?aid=${vo.aid}&riid=${vo.riid }&person=${rimaxper}&roomnum=${countRoom}&startday=${rcheckin}&endday=${rcheckout}'">예약하기</button>
+													
+													
+													
 													</div>
 													
 													
@@ -1113,6 +1123,7 @@ function outMoveAfter(){ //버튼 클릭시 다음날로 이동
 														<h4>${vo.amountsum}원</h4>
 														<button class="btn btn-outline-primary"
 															onclick="location.href='${pageContext.request.contextPath }/user/kjy/room_info?aid=${vo.aid}&riid=${vo.riid }&person=${rimaxper}&roomnum=${countRoom}&startday=${rcheckin}&endday=${rcheckout}'">예약하기</button>
+													
 													</div>
 
 												</div>
