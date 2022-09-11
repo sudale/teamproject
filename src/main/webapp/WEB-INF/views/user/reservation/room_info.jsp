@@ -27,27 +27,19 @@
 
 #largeimgbox {
 	position: relative;
-	width: 1000px;
-	left: 400px;
-	height: 600px;
-	top: 0px;
-	margin-bottom: 200px;
-	border-bottom: 1px solid gray;
+	display: flex;
+	
 }
 
 .largeimg {
-	position: absolute;
-	top: 100px;
-	left: 0px;
-	width: 500px;
-	height: 400px;
+	
+	/* width: 500px;
+	height: 400px; */
 	border-radius: 10px;
 }
 
 .amainimg {
-	position: absolute;
-	top: 0px;
-	left: 0px;
+	
 	width: 500px;
 	height: 400px;
 	z-index: 1;
@@ -55,50 +47,29 @@
 }
 
 .anme {
-	position: absolute;
-	top: 100px;
-	left: 550px;
+
 	font-size: 30px;
 	font-weight: bold;
 }
 
 .agrade {
-	position: absolute;
-	top: 150px;
-	left: 550px;
+	
 	font-size: 15px;
 	font-weight: bold;
 }
 
 .aadress {
-	position: absolute;
-	top: 150px;
-	left: 600px;
+	
 	font-size: 15px;
 	font-weight: bold;
 }
 
-.detailbox {
-	position: absolute;
-	top: 180px;
-	left: 550px;
-	width: 450px;
-	height: 200px;
-}
+
 
 .adetail {
-	position: absolute;
+	
 	font-size: 12px;
 }
-/* 
-#googlemap {
-	position: absolute;
-	top: 400px;
-	left: 550px;
-	width: 450px;
-	height: 100px;
-	border-radius: 10px;
-} */
 
 .search_title {
 	position: absolute;
@@ -118,13 +89,13 @@
 
 #search_info{
 	position: absolute;
-	width: 1000px;
+	/* width: 1000px;
 	top:750px;
 	left: 400px;
 	height: 235px;
 	border: 1px solid blue;
 	border-radius: 10px;
-	box-shadow: 5px 5px 5px gray;
+	box-shadow: 5px 5px 5px gray; */
 }
 
 /* 전체테두리 */
@@ -397,41 +368,52 @@
 	<jsp:include page="../includes/header.jsp"/>
 </div>
 
+
+
 <div class="sub_content">
 
-<div id="map" style="width: 50%; height: 400px;">
+<%-- <div id="map" style="width: 50%; height: 400px;">
             <input type="text" name="aycoordi" id=${accvo.axcoordi }> 
             <input type="text" name="axcoordi" id=${accvo.aycoordi }>
-   </div>
+</div> --%>
 <!-- 이미지 크게 일단 하나 -->
-<div id="content">
+<div class="roomdetail_content">
+
+
+
 	<div id="largeimgbox">
+	<div class="largeimg">
+			<img src="${pageContext.request.contextPath }/resources/images/accommodations/${accvo.amainimg}" class="amainimg">
+	</div>
+	<div id="imgbox">
+				<img src="${pageContext.request.contextPath }/resources/images/room_info/${vo.rimainimg }" id="smallimg1">
+				<img src="${pageContext.request.contextPath }/resources/images/room_info/${vo.riextraimg1}" id="smallimg2">
+				<img src="${pageContext.request.contextPath }/resources/images/room_info/${vo.riextraimg2}" id="smallimg3">			
+			</div>
+			
+		</div>
+		
 	<p class="anme">${accvo.aname}</p>
-	<p class="agrade">${accvo.agrade}&nbsp;|&nbsp;</p>
-	<p class="aadress">${accvo.aaddress}</p>
 	<div class="detailbox">
 		<p class="adetail">${accvo.adetail}</p>
 	</div>
+	<p class="agrade">${accvo.agrade}등급 &nbsp;|&nbsp; </p>
+	<p class="aadress">${accvo.aaddress}</p>
+	
 	<div id="googlemap">
 		<input type="hidden" value="${accvo.aname}" id="googlename">
 		<input type="hidden" value="${accvo.axcoordi}" id="googlex">
 		<input type="hidden" value="${accvo.aycoordi}" id="googley">
 	</div>
-		<div class="largeimg">
-			<img src="${pageContext.request.contextPath }/resources/images/accommodations/${accvo.amainimg}" class="amainimg">
-		</div>
-	</div>
+		
+
 	
 	<p class='search_title'>검색결과</p>
 	<c:forEach var="vo" items="${list }" varStatus="status">
 		<input type="hidden" value="${vo.aid }" id="aid">
 		<c:if test="${riid eq vo.riid}">
 		<div id="search_info">
-			<div id="imgbox">
-				<img src="${pageContext.request.contextPath }/resources/images/room_info/${vo.rimainimg }" id="smallimg1">
-				<img src="${pageContext.request.contextPath }/resources/images/room_info/${vo.riextraimg1}" id="smallimg2">
-				<img src="${pageContext.request.contextPath }/resources/images/room_info/${vo.riextraimg2}" id="smallimg3">			
-			</div>
+			
 			<div id="romm_name">
 				<h2 class="name">${vo.riroomtype}</h2>
 				<p class="serv">부가서비스</p>
@@ -505,6 +487,8 @@
   </div>  
 
 </div>
+
+
 <div class="footer">
 	<jsp:include page="../includes/footer.jsp"/>
 </div>
