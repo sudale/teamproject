@@ -1,18 +1,5 @@
 @charset "UTF-8";
 
-* { 
-	margin:0;
-	padding:0;
-}
-
-body {
-	min-width: 20em;
-	display:block;
-	box-sizing:border-box;
-	padding:0;
-	margin:0;
-	font-family:Brezel Grotesk,Helvetica Neue,Helvetica,Arial,sans-serif; 
-}
 
 /*findid*/
 .findid {

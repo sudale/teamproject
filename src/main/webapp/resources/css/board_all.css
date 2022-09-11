@@ -1,77 +1,112 @@
 @charset "UTF-8";
 
-* { 
-	margin:0;
-	padding:0;
-}
-
-body {
-	min-width: 20em;
-	display:block;
-	box-sizing:border-box;
-	padding:0;
-	margin:0;
-	font-family:Brezel Grotesk,Helvetica Neue,Helvetica,Arial,sans-serif; 
-}
-
 .board_content {
-	width:80%;
-	display:block;
-	margin:0 auto;
-	margin-bottom:50px;
+	position: relative;
+	max-width: 1200px;
+	display: block;
+	box-sizing: border-box;
+	margin: 0 auto;
+	padding: 60px 0;
 }
 
-/*테이블*/
-.table {
-	margin:0 !important;
-	margin:50px 0 20px 0 !important;
+table {
+	width: 100%;
+	max-width: 100%;
+	margin-bottom: 20px;
+	margin: 0 !important;
+	margin: 50px 0 20px 0 !important;
 }
+
+.table>tbody>tr>th{font-weight:500;}
+table>tbody>tr>td, .table>tbody>tr>th {
+	padding: 15px;
+
+	vertical-align: top;
+	border-top: 1px solid #ddd;
+}
+
+
+
 .table_title {
-	border-top:1px solid #ddd !important;
+	border-top: 1px solid #ddd !important;
 }
+
 th {
-	text-align:center !important;
-	border:none !important;
+	text-align: center !important;
+	border: none !important;
 }
+
 .table_date {
-	width:140px !important;
+	width: 140px !important;
 }
+
 .table_writer {
-	width:140px !important;
+	width: 140px !important;
 }
+
 .table_content {
-	border-bottom:1px solid #ddd;
+	border-bottom: 1px solid #ddd;
 }
+
 .tdalign {
-	text-align:center;
+	text-align: center;
 }
 
 /*하단*/
 .other_content {
-	height:34px;
-	display:flex;
-	flex-direction:row;
-	position:relative;
-	margin-bottom:30px;
+	height: 34px;
+	position: relative;
+	margin-bottom: 30px;
+	text-align: right;
 }
+
 .writebtn {
-	padding:6px 14px !important;
-	position:absolute;
-	left:0;
+	padding: 6px 14px !important;
 }
-.pagebox {
-	position:absolute;
-	left:50%;
+
+.board_search{position:relative;}
+
+
+.pagebox{
+	position:relative;
+	margin-top:50px;
 }
+
+.pagebox a {
+display: flex;
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 .searchbox {
-	width:350px;
-	display:flex;
-	flex-direction:row;
-	margin:0 auto;
+	width: 350px;
+	display: flex;
+	flex-direction: row;
+	margin: 0 auto;
 }
+
 .box_margin {
-	margin-right:10px;
+	margin-right: 10px;
+	margin-right: 10px;
+	display: block;
+	border: 1px solid #adadad;
+	padding: 10px;
+	color: #191919;
+	width: 100%;
+	/* height: 50px; */
+	font-size: 14px;
+	flex: 2;
 }
+
 .submitbtn {
-	padding:6px 14px !important;
+	padding: 6px 14px !important;
+	border:none;
 }

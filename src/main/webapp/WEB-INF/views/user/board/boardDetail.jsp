@@ -38,9 +38,9 @@ element.style {
 	<div class="header">
 		<jsp:include page="/WEB-INF/views/user/includes/header.jsp" flush="true"/>
 	</div>
-	<div class="board_header">
+	<%-- <div class="board_header">
 		<jsp:include page="board_header.jsp" flush="true"/>
-	</div>
+	</div> --%>
 	<div class="container">
 		<div class="card">
 			<table class="table">

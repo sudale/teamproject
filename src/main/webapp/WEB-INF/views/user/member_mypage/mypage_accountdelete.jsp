@@ -7,8 +7,11 @@
 <p class="title">회원탈퇴</p><br>
 <div class="deletecontent">
 	<p class="pwinput">비밀번호를 입력해주세요</p>
-	<input type="password" class="pwtext">
-	<input type="button" value="확인" class="btn btn-primary" id="okbtn">
+	<input type="password" class="pwtext ">
+	<input type="button" value="확인" class="btn btn-primary submit_btn" id="okbtn">
+	
+		
+		
 </div>
 <!-- 모달창 -->
 <div id="myModal3" class="modal3">

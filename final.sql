@@ -1,65 +1,65 @@
---³¯Â¥Å×ÀÌºí »ý¼º
+-- ë‚ ì§œí…Œì´ë¸” ìƒì„±
 drop table date_t;
-create table date_t (ds varchar2(10) NOT NULL PRIMARY KEY);
---µ¥ÀÌÅÍ ÀÔ·Â
+create table date_t (ds varchar(10) NOT NULL PRIMARY KEY);
+-- --ë°ì´í„° ìž…ë ¥
 insert into date_t
 SELECT TO_CHAR( TO_DATE('20180101', 'YYYYMMDD') + ROWNUM-1, 'YYYYMMDD') AS DAY
 FROM DUAL
 CONNECT BY level <= ROUND( TO_DATE('20241231', 'YYYYMMDD') - TO_DATE('20180101', 'YYYYMMDD') );
 commit;
 drop table hotelchain;
---È£ÅÚÃ¼ÀÎ »ý¼º
+-- --í˜¸í…”ì²´ì¸ ìƒì„±
 create table hotelchain(krchainname varchar2(100) NOT NULL PRIMARY KEY, engchainname varchar2(100));
---µ¥ÀÌÅÍ ÀÔ·Â
-insert into hotelchain values('jw¸Þ¸®¾îÆ®','jwmarriotthotel');
-insert into hotelchain values('³ëº¸ÅÚ','novotelhotel');
-insert into hotelchain values('¶ó¸¶´Ù','ramadahotel');
-insert into hotelchain values('¶óÇÑ','lahanhotel');
-insert into hotelchain values('¸£¸Þ¸£µð¾Ó','lemeridienhotel');
-insert into hotelchain values('¸®Ã÷Ä®Æ°','ritzcarltonhotel');
-insert into hotelchain values('¸¸´Ù¸°¿À¸®¿£Å»','mandarinorientalhotel');
-insert into hotelchain values('¸Þ¸®¾îÆ®ÀÎÅÍ³»¼Å³Î','marriottinternationalhotel');
-insert into hotelchain values('º£½ºÆ®¿þ½ºÅÏ','bestwesternhotel');
-insert into hotelchain values('¾ÆÄÚ¸£','accorhotel');
-insert into hotelchain values('¿ùµµÇÁ¾Ö½ºÅä¸®¾Æ','waldorfastoriahotel');
-insert into hotelchain values('ÀÎÅÍÄÜÆ¼³ÙÅÐ','intercontinentalhotel');
-insert into hotelchain values('ÄÚ¾÷','co-ophotel');
-insert into hotelchain values('ÄÜ·¡µå','conradhotel');
-insert into hotelchain values('Æ÷½ÃÁð½º','fourseasonshotel');
-insert into hotelchain values('ÈúÆ°','hiltonhotel');
-insert into hotelchain values('·Ôµ¥','lottehotel');
-insert into hotelchain values('º£´ÏÅ°¾Æ','benikeahotel');
-insert into hotelchain values('½Å¶óÈ£ÅÚ','shillahotel');
-insert into hotelchain values('ÆÄÅ©ÇÏ¾æÆ®','parkhyatthotel');
+-- --ë°ì´í„° ìž…ë ¥
+insert into hotelchain values('jwë©”ë¦¬ì–´íŠ¸','jwmarriotthotel');
+insert into hotelchain values('ë…¸ë³´í…”','novotelhotel');
+insert into hotelchain values('ë¼ë§ˆë‹¤','ramadahotel');
+insert into hotelchain values('ë¼í•œ','lahanhotel');
+insert into hotelchain values('ë¥´ë©”ë¥´ë””ì•™','lemeridienhotel');
+insert into hotelchain values('ë¦¬ì¸ ì¹¼íŠ¼','ritzcarltonhotel');
+insert into hotelchain values('ë§Œë‹¤ë¦°ì˜¤ë¦¬ì—”íƒˆ','mandarinorientalhotel');
+insert into hotelchain values('ë©”ë¦¬ì–´íŠ¸ì¸í„°ë‚´ì…”ë„','marriottinternationalhotel');
+insert into hotelchain values('ë² ìŠ¤íŠ¸ì›¨ìŠ¤í„´','bestwesternhotel');
+insert into hotelchain values('ì•„ì½”ë¥´','accorhotel');
+insert into hotelchain values('ì›”ë„í”„ì• ìŠ¤í† ë¦¬ì•„','waldorfastoriahotel');
+insert into hotelchain values('ì¸í„°ì½˜í‹°ë„¨í„¸','intercontinentalhotel');
+insert into hotelchain values('ì½”ì—…','co-ophotel');
+insert into hotelchain values('ì½˜ëž˜ë“œ','conradhotel');
+insert into hotelchain values('í¬ì‹œì¦ŒìŠ¤','fourseasonshotel');
+insert into hotelchain values('ížíŠ¼','hiltonhotel');
+insert into hotelchain values('ë¡¯ë°','lottehotel');
+insert into hotelchain values('ë² ë‹ˆí‚¤ì•„','benikeahotel');
+insert into hotelchain values('ì‹ ë¼í˜¸í…”','shillahotel');
+insert into hotelchain values('íŒŒí¬í•˜ì–íŠ¸','parkhyatthotel');
 
---(±¹³»)Ç×°ø»ç ÀÔ·Â
+-- --(êµ­ë‚´)í•­ê³µì‚¬ ìž…ë ¥
 drop table airline;
 create table airline(airname varchar2(100) NOT NULL PRIMARY KEY);
---µ¥ÀÌÅÍ ÀÔ·Â
-insert into airline values('´ëÇÑÇ×°ø');
-insert into airline values('¾Æ½Ã¾Æ³ªÇ×°ø');
-insert into airline values('Æ¼¿þÀÌÇ×°ø');
-insert into airline values('Áø¿¡¾î');
-insert into airline values('¿¡¾î¼­¿ï');
-insert into airline values('¿¡¾îºÎ»ê');
-insert into airline values('Á¦ÁÖÇ×°ø');
-insert into airline values('ÀÌ½ºÅ¸Ç×°ø');
-insert into airline values('ÇÃ¶óÀÌ°­¿ø');
-insert into airline values('¿¡¾î·ÎÄÉÀÌÇ×°ø');
+-- --ë°ì´í„° ìž…ë ¥
+insert into airline values('ëŒ€í•œí•­ê³µ');
+insert into airline values('ì•„ì‹œì•„ë‚˜í•­ê³µ');
+insert into airline values('í‹°ì›¨ì´í•­ê³µ');
+insert into airline values('ì§„ì—ì–´');
+insert into airline values('ì—ì–´ì„œìš¸');
+insert into airline values('ì—ì–´ë¶€ì‚°');
+insert into airline values('ì œì£¼í•­ê³µ');
+insert into airline values('ì´ìŠ¤íƒ€í•­ê³µ');
+insert into airline values('í”Œë¼ì´ê°•ì›');
+insert into airline values('ì—ì–´ë¡œì¼€ì´í•­ê³µ');
 
---(±¹³»)°øÇ× ÀÔ·Â
+-- --(êµ­ë‚´)ê³µí•­ ìž…ë ¥
 drop table airport;
 create table airport(portname varchar2(100) NOT NULL PRIMARY KEY);
---µ¥ÀÌÅÍ ÀÔ·Â
-insert into airport values('±èÆ÷±¹Á¦°øÇ×');
-insert into airport values('±èÇØ±¹Á¦°øÇ×');
-insert into airport values('Á¦ÁÖ±¹Á¦°øÇ×');
-insert into airport values('´ë±¸±¹Á¦°øÇ×');
-insert into airport values('Ã»ÁÖ±¹Á¦°øÇ×');
-insert into airport values('¹«¾È±¹Á¦°øÇ×');
-insert into airport values('ÀÎÃµ±¹Á¦°øÇ×');
+-- --ë°ì´í„° ìž…ë ¥
+insert into airport values('ê¹€í¬êµ­ì œê³µí•­');
+insert into airport values('ê¹€í•´êµ­ì œê³µí•­');
+insert into airport values('ì œì£¼êµ­ì œê³µí•­');
+insert into airport values('ëŒ€êµ¬êµ­ì œê³µí•­');
+insert into airport values('ì²­ì£¼êµ­ì œê³µí•­');
+insert into airport values('ë¬´ì•ˆêµ­ì œê³µí•­');
+insert into airport values('ì¸ì²œêµ­ì œê³µí•­');
 
---¼÷¼Òµî·Ï¿äÃ»ÇÒ¶§»ç¿ëÇÒ ÀÓ½ÃÅ×ÀÌºíµé
+-- --ìˆ™ì†Œë“±ë¡ìš”ì²­í• ë•Œì‚¬ìš©í•  ìž„ì‹œí…Œì´ë¸”ë“¤
 DROP TABLE PERIOD_TEMP CASCADE CONSTRAINTS;
 DROP TABLE ADDITIONAL_FEE_TEMP CASCADE CONSTRAINTS;
 DROP TABLE ACCOMMODATIONS_TEMP CASCADE CONSTRAINTS;
@@ -73,100 +73,100 @@ CREATE SEQUENCE SEQ_ACCOMMODATIONS_temp;
 CREATE SEQUENCE SEQ_ADDITIONAL_FEE_temp;
 CREATE SEQUENCE SEQ_PERIOD_temp;
 CREATE SEQUENCE SEQ_ROOM_INFO_temp;
--- ¼÷¼Ò
+-- ìˆ™ì†Œ
 CREATE TABLE ACCOMMODATIONS_TEMP
 (
-	-- ¼÷¼Ò¾ÆÀÌµð
+	-- ìˆ™ì†Œì•„ì´ë””
 	AID NUMBER(4) NOT NULL,
-	-- Ä«Å×°í¸®
+	-- ì¹´í…Œê³ ë¦¬
 	ACATE VARCHAR2(100),
-	-- ¼÷¹Ú¾÷¼Ò¸í
+	-- ìˆ™ë°•ì—…ì†Œëª…
 	ANAME VARCHAR2(200),
-	-- ÁÖ¼Ò
+	-- ì£¼ì†Œ
 	AADDRESS VARCHAR2(200),
-	-- ÀüÈ­¹øÈ£
+	-- ì „í™”ë²ˆí˜¸
 	APHONE VARCHAR2(30),
-	-- xÁÂÇ¥
+	-- xì¢Œí‘œ
 	AXCOORDI VARCHAR2(30),
-	-- yÁÂÇ¥
+	-- yì¢Œí‘œ
 	AYCOORDI VARCHAR2(30),
-	-- ÃÑ°´½Ç¼ö
+	-- ì´ê°ì‹¤ìˆ˜
 	ATOTALROOM NUMBER(5),
-	-- ¼÷¼Ò¼º±Þ
+	-- ìˆ™ì†Œì„±ê¸‰
 	AGRADE VARCHAR2(20),
-	-- ´ëÇ¥¼Ò°³
+	-- ëŒ€í‘œì†Œê°œ
 	ADETAIL VARCHAR2(2000),
-	-- ´ëÇ¥ÀÌ¹ÌÁö
+	-- ëŒ€í‘œì´ë¯¸ì§€
 	AMAINIMG VARCHAR2(3000),
-	-- µî·ÏÀÏ
+	-- ë“±ë¡ì¼
 	AREGDATE DATE,
-	-- »èÁ¦¿©ºÎ : »èÁ¦µÈ °æ¿ì = Y ·Î Ç¥½Ã
+	-- ì‚­ì œì—¬ë¶€ : ì‚­ì œëœ ê²½ìš° = Y ë¡œ í‘œì‹œ
 	-- 
 	AISDEL VARCHAR2(1),
 	PRIMARY KEY (AID)
 );
 
 
--- Ãß°¡¿ä±Ý
+-- ì¶”ê°€ìš”ê¸ˆ
 CREATE TABLE ADDITIONAL_FEE_TEMP
 (
-	-- Ãß°¡ºñ¿ë¾ÆÀÌµð
+	-- ì¶”ê°€ë¹„ìš©ì•„ì´ë””
 	AFID NUMBER(4) NOT NULL,
-	-- ÀÎ¿øÃß°¡ºñ¿ë
+	-- ì¸ì›ì¶”ê°€ë¹„ìš©
 	AFPERSONNEL NUMBER(10),
-	-- Á¶½ÄÃß°¡ºñ¿ë
+	-- ì¡°ì‹ì¶”ê°€ë¹„ìš©
 	AFBREAKFAST NUMBER(10),
-	-- Ä§´ëÃß°¡ºñ¿ë
+	-- ì¹¨ëŒ€ì¶”ê°€ë¹„ìš©
 	AFBED NUMBER(10),
-	-- °´½Ç¾ÆÀÌµð
+	-- ê°ì‹¤ì•„ì´ë””
 	RIID NUMBER(4) NOT NULL,
 	PRIMARY KEY (AFID)
 );
--- ±â°£
+-- ê¸°ê°„
 CREATE TABLE PERIOD_TEMP
 (
-	-- ±â°£¾ÆÀÌµð
+	-- ê¸°ê°„ì•„ì´ë””
 	PEID NUMBER(4) NOT NULL,
-	-- ½ÃÁð : ºñ¼ö±â/¼º¼ö±â/ÁØ¼º¼ö±â
+	-- ì‹œì¦Œ : ë¹„ìˆ˜ê¸°/ì„±ìˆ˜ê¸°/ì¤€ì„±ìˆ˜ê¸°
 	PESEASON VARCHAR2(20),
-	-- ½ÃÀÛ³¯Â¥
+	-- ì‹œìž‘ë‚ ì§œ
 	PESTART DATE,
-	-- ³¡³¯Â¥
+	-- ëë‚ ì§œ
 	PEEND DATE,
-	-- ¼÷¼Ò¾ÆÀÌµð
+	-- ìˆ™ì†Œì•„ì´ë””
 	AID NUMBER(4) NOT NULL,
 	PRIMARY KEY (PEID)
 );
--- °´½Ç¼¼ºÎÁ¤º¸
+-- ê°ì‹¤ì„¸ë¶€ì •ë³´
 CREATE TABLE ROOM_INFO_TEMP
 (
-	-- °´½Ç¾ÆÀÌµð
+	-- ê°ì‹¤ì•„ì´ë””
 	RIID NUMBER(4) NOT NULL,
-	-- °´½ÇÁ¾·ù : (È£ÅÚ-~·ë,Ææ¼Ç-00È£)
+	-- ê°ì‹¤ì¢…ë¥˜ : (í˜¸í…”-~ë£¸,íŽœì…˜-00í˜¸)
 	RIROOMTYPE VARCHAR2(100),
-	-- ÃÑ °´½Ç¼ö
+	-- ì´ ê°ì‹¤ìˆ˜
 	RIROOM NUMBER(4),
-	-- ºÎ°¡¼­ºñ½º : ÀÎÅÍ³Ý,Á¶½Ä,¿åÁ¶,Èí¿¬
+	-- ë¶€ê°€ì„œë¹„ìŠ¤ : ì¸í„°ë„·,ì¡°ì‹,ìš•ì¡°,í¡ì—°
 	RISERVICE VARCHAR2(3000),
-	-- °´½ÇÅ©±â : 7Æò
+	-- ê°ì‹¤í¬ê¸° : 7í‰
 	RISIZE VARCHAR2(50),
-	-- ¼÷¹Ú°¡´ÉÀÎ¿ø
+	-- ìˆ™ë°•ê°€ëŠ¥ì¸ì›
 	RIMINPER NUMBER(3),
-	-- ¼÷¹ÚÃÖ´ëÀÎ¿ø
+	-- ìˆ™ë°•ìµœëŒ€ì¸ì›
 	RIMAXPER NUMBER(3),
-	-- ¼º¼ö±â 1¹Ú ±âº»¿ä±Ý
+	-- ì„±ìˆ˜ê¸° 1ë°• ê¸°ë³¸ìš”ê¸ˆ
 	RIPEAK NUMBER(10),
-	-- ÁØ¼º¼ö±â 1¹Ú ±âº»¿ä±Ý
+	-- ì¤€ì„±ìˆ˜ê¸° 1ë°• ê¸°ë³¸ìš”ê¸ˆ
 	RISEMIPEAK NUMBER(10),
-	-- ºñ¼ö±â 1¹Ú ±âº»¿ä±Ý
+	-- ë¹„ìˆ˜ê¸° 1ë°• ê¸°ë³¸ìš”ê¸ˆ
 	RIOFF NUMBER(10),
-	-- ´ëÇ¥ÀÌ¹ÌÁö
+	-- ëŒ€í‘œì´ë¯¸ì§€
 	RIMAINIMG VARCHAR2(3000),
-	-- Ãß°¡ÀÌ¹ÌÁö1
+	-- ì¶”ê°€ì´ë¯¸ì§€1
 	RIEXTRAIMG1 VARCHAR2(3000),
-	-- Ãß°¡ÀÌ¹ÌÁö2
+	-- ì¶”ê°€ì´ë¯¸ì§€2
 	RIEXTRAIMG2 VARCHAR2(3000),
-	-- ¼÷¼Ò¾ÆÀÌµð
+	-- ìˆ™ì†Œì•„ì´ë””
 	AID NUMBER(4) NOT NULL,
 	PRIMARY KEY (RIID)
 );
@@ -241,469 +241,463 @@ CREATE SEQUENCE SEQ_CHAT_ROOM ;
 
 
 /* Create Tables */
--- Ä£±¸Ãß°¡¸ñ·Ï
+-- ì¹œêµ¬ì¶”ê°€ëª©ë¡
 CREATE TABLE CHAT_ADD
 (
-	-- Ãß°¡¸ñ·Ï¾ÆÀÌµð
+	-- ì¶”ê°€ëª©ë¡ì•„ì´ë””
 	CAID NUMBER(4) NOT NULL,
-	-- ¼ö¶ô´ë±âÁßÀÎ¾ÆÀÌµð
+	-- ìˆ˜ë½ëŒ€ê¸°ì¤‘ì¸ì•„ì´ë””
 	CAADDID VARCHAR2(100),
-	-- ¾ÆÀÌµð
+	-- ì•„ì´ë””
 	CMID VARCHAR2(100) NOT NULL,
 	PRIMARY KEY (CAID)
 );
 
 
--- Ã¤ÆÃÄ£±¸¸ñ·Ï
+-- ì±„íŒ…ì¹œêµ¬ëª©ë¡
 CREATE TABLE CHAT_BUDDY
 (
-	-- Ä£±¸¸ñ·Ï¾ÆÀÌµð
+	-- ì¹œêµ¬ëª©ë¡ì•„ì´ë””
 	CBID NUMBER(4) NOT NULL,
-	-- Ä£±¸¾ÆÀÌµð
+	-- ì¹œêµ¬ì•„ì´ë””
 	CBBUID VARCHAR2(100),
-	-- ¾ÆÀÌµð
+	-- ì•„ì´ë””
 	CMID VARCHAR2(100) NOT NULL,
 	PRIMARY KEY (CBID)
 );
 
 
--- Ã¤ÆÃÈ¸¿ø
+-- ì±„íŒ…íšŒì›
 CREATE TABLE CHAT_MEMBERS
 (
-	-- ¾ÆÀÌµð
+	-- ì•„ì´ë””
 	CMID VARCHAR2(100) NOT NULL,
-	-- ÀÌ¸§
+	-- ì´ë¦„
 	CMNAME VARCHAR2(100),
-	-- »ý³â¿ùÀÏ
+	-- ìƒë…„ì›”ì¼
 	CMBIRTH DATE,
-	-- ÇÁ·ÎÇÊ»çÁø
+	-- í”„ë¡œí•„ì‚¬ì§„
 	CMPROFILE VARCHAR2(3000),
-	-- ´ëÈ­¸í
+	-- ëŒ€í™”ëª…
 	CMSCNAME VARCHAR2(100),
-	-- Å»Åð¿©ºÎ
+	-- íƒˆí‡´ì—¬ë¶€
 	CMDROP VARCHAR2(1),
 	PRIMARY KEY (CMID)
 );
 
-insert into chat_members values('unknown','¾Ë¼ö¾øÀ½',null,'noimage2.jpg',null,null);
+insert into chat_members values('unknown','ì•Œìˆ˜ì—†ìŒ',null,'noimage2.jpg',null,null);
 commit;
 
 
--- Ã¤ÆÃ¸Þ¼¼Áö
+-- ì±„íŒ…ë©”ì„¸ì§€
 CREATE TABLE CHAT_MESSAGE
 (
-	-- ¸Þ¼¼Áö¾ÆÀÌµð
+	-- ë©”ì„¸ì§€ì•„ì´ë””
 	MSGID NUMBER(4) NOT NULL,
-	-- ¸Þ¼¼Áö³»¿ë
+	-- ë©”ì„¸ì§€ë‚´ìš©
 	MSGMESSAGE VARCHAR2(1000),
-	-- ¸Þ¼¼Áö½Ã°£
+	-- ë©”ì„¸ì§€ì‹œê°„
 	MSGTIME DATE,
-    -- ½Ã½ºÅÛ¸Þ¼¼Áö
+    -- ì‹œìŠ¤í…œë©”ì„¸ì§€
     MSGSYSMSG VARCHAR2(1000),
-	-- ¾ÆÀÌµð
+	-- ì•„ì´ë””
 	CMID VARCHAR2(100) NOT NULL,
-	-- Ã¤ÆÃ¹æ¾ÆÀÌµð
+	-- ì±„íŒ…ë°©ì•„ì´ë””
 	CRID NUMBER(4) NOT NULL,
 	PRIMARY KEY (MSGID)
 );
 
 
--- Ã¤ÆÃ¹æ
+-- ì±„íŒ…ë°©
 CREATE TABLE CHAT_ROOM
 (
-	-- Ã¤ÆÃ¹æ¾ÆÀÌµð
+	-- ì±„íŒ…ë°©ì•„ì´ë””
 	CRID NUMBER(4) NOT NULL,
 	PRIMARY KEY (CRID)
 );
 
 
--- Ã¤ÆÃ¹æ¿¬°á
+-- ì±„íŒ…ë°©ì—°ê²°
 CREATE TABLE CHAT_ROOMJOIN
 (
-	-- ¿¬°á¾ÆÀÌµð
+	-- ì—°ê²°ì•„ì´ë””
 	JOINID NUMBER(4) NOT NULL,
-	-- ¸¶Áö¸·Á¢¼Ó½Ã°£
+	-- ë§ˆì§€ë§‰ì ‘ì†ì‹œê°„
 	JOINCONTIME DATE,
-	-- ¾ÆÀÌµð
+	-- ì•„ì´ë””
 	CMID VARCHAR2(100) NOT NULL,
-	-- Ã¤ÆÃ¹æ¾ÆÀÌµð
+	-- ì±„íŒ…ë°©ì•„ì´ë””
 	CRID NUMBER(4) NOT NULL,
 	PRIMARY KEY (JOINID)
 );
--- ¼÷¼Ò
-select * from ACCOMMODATIONS_TEMP;
-select * from ACCOMMODATIONS;
-desc ACCOMMODATIONS_TEMP;
-
-UPDATE ACCOMMODATIONS_TEMP SET AREGDATE = '2021/02/02' WHERE acate = 'È£ÅÚ';
+-- ìˆ™ì†Œ
 CREATE TABLE ACCOMMODATIONS
-
 (
-	-- ¼÷¼Ò¾ÆÀÌµð
+	-- ìˆ™ì†Œì•„ì´ë””
 	AID NUMBER(4) NOT NULL,
-	-- Ä«Å×°í¸®
+	-- ì¹´í…Œê³ ë¦¬
 	ACATE VARCHAR2(100),
-	-- ¼÷¹Ú¾÷¼Ò¸í
+	-- ìˆ™ë°•ì—…ì†Œëª…
 	ANAME VARCHAR2(200),
-	-- ÁÖ¼Ò
+	-- ì£¼ì†Œ
 	AADDRESS VARCHAR2(200),
-	-- ÀüÈ­¹øÈ£
+	-- ì „í™”ë²ˆí˜¸
 	APHONE VARCHAR2(30),
-	-- xÁÂÇ¥
+	-- xì¢Œí‘œ
 	AXCOORDI VARCHAR2(30),
-	-- yÁÂÇ¥
+	-- yì¢Œí‘œ
 	AYCOORDI VARCHAR2(30),
-	-- ÃÑ°´½Ç¼ö
+	-- ì´ê°ì‹¤ìˆ˜
 	ATOTALROOM NUMBER(5),
-	-- ¼÷¼Ò¼º±Þ
+	-- ìˆ™ì†Œì„±ê¸‰
 	AGRADE VARCHAR2(20),
-	-- ´ëÇ¥¼Ò°³
+	-- ëŒ€í‘œì†Œê°œ
 	ADETAIL VARCHAR2(2000),
-	-- ´ëÇ¥ÀÌ¹ÌÁö
+	-- ëŒ€í‘œì´ë¯¸ì§€
 	AMAINIMG VARCHAR2(3000),
-	-- µî·ÏÀÏ
+	-- ë“±ë¡ì¼
 	AREGDATE DATE,
-	-- »èÁ¦¿©ºÎ : »èÁ¦µÈ °æ¿ì = Y ·Î Ç¥½Ã
+	-- ì‚­ì œì—¬ë¶€ : ì‚­ì œëœ ê²½ìš° = Y ë¡œ í‘œì‹œ
 	-- 
 	AISDEL VARCHAR2(1),
 	PRIMARY KEY (AID)
 );
 
 
--- Ãß°¡¿ä±Ý
+-- ì¶”ê°€ìš”ê¸ˆ
 CREATE TABLE ADDITIONAL_FEE
 (
-	-- Ãß°¡ºñ¿ë¾ÆÀÌµð
+	 -- ì¶”ê°€ë¹„ìš©ì•„ì´ë””
 	AFID NUMBER(4) NOT NULL,
-	-- ÀÎ¿øÃß°¡ºñ¿ë
+	-- ì¸ì›ì¶”ê°€ë¹„ìš©
 	AFPERSONNEL NUMBER(10),
-	-- Á¶½ÄÃß°¡ºñ¿ë
+	-- ì¡°ì‹ì¶”ê°€ë¹„ìš©
 	AFBREAKFAST NUMBER(10),
-	-- Ä§´ëÃß°¡ºñ¿ë
+	-- ì¹¨ëŒ€ì¶”ê°€ë¹„ìš©
 	AFBED NUMBER(10),
-	-- °´½Ç¾ÆÀÌµð
+	-- ê°ì‹¤ì•„ì´ë””
 	RIID NUMBER(4) NOT NULL,
 	PRIMARY KEY (AFID)
 );
 
 
--- °Ô½ÃÆÇ
+-- ê²Œì‹œíŒ
 CREATE TABLE BOARD
 (
-	-- °Ô½ÃÆÇ¾ÆÀÌµð
+	-- ê²Œì‹œíŒì•„ì´ë””
 	BID NUMBER(4) NOT NULL,
-	-- Ä«Å×°í¸®
+	-- ì¹´í…Œê³ ë¦¬
 	BCATE VARCHAR2(50),
-	-- Á¦¸ñ
+	-- ì œëª©
 	BTITLE VARCHAR2(100),
-	-- ³»¿ë
+	-- ë‚´ìš©
 	BCONTENT VARCHAR2(3000),
-	-- ÀÛ¼ºÀÏ
+	-- ìž‘ì„±ì¼
 	BRDATE DATE,
-	-- Ã·ºÎÆÄÀÏ1
+	-- ì²¨ë¶€íŒŒì¼1
 	BFILE1 VARCHAR2(4000),
-	-- Ã·ºÎÆÄÀÏ2
+	-- ì²¨ë¶€íŒŒì¼2
 	BFILE2 VARCHAR2(4000),
-	-- Ã·ºÎÆÄÀÏ3
+	-- ì²¨ë¶€íŒŒì¼3
 	BFILE3 VARCHAR2(4000),
-	-- ¾ÆÀÌµð
+	-- ì•„ì´ë””
 	MID VARCHAR2(100) NOT NULL,
 	PRIMARY KEY (BID)
 );
 
 
--- ´ñ±Û
+-- ëŒ“ê¸€
 CREATE TABLE COMMENTS
 (
-	-- ´ñ±Û¾ÆÀÌµð
+	-- ëŒ“ê¸€ì•„ì´ë””
 	CID NUMBER(4) NOT NULL,
-	-- ³»¿ë
+	-- ë‚´ìš©
 	CCONTENT NVARCHAR2(1000),
-	-- ÀÛ¼ºÀÏ
+	-- ìž‘ì„±ì¼
 	CRDATE DATE,
-	-- ±×·ì¹øÈ£
+	-- ê·¸ë£¹ë²ˆí˜¸
 	CREF NUMBER(3),
-	-- Ãâ·Â¼ø¼­
+	-- ì¶œë ¥ìˆœì„œ
 	CSTEP NUMBER(3),
-	-- ´ñ±Û¹øÈ£ : (´ñ±ÛÀÇ´ñ±Û)¸î¹øÂ°´ñ±ÛÀÎÁö
+	-- ëŒ“ê¸€ë²ˆí˜¸ : (ëŒ“ê¸€ì˜ëŒ“ê¸€)ëª‡ë²ˆì§¸ëŒ“ê¸€ì¸ì§€
 	-- 
 	CLEV NUMBER(1),
-	-- »èÁ¦¿©ºÎ : »èÁ¦ ->Y
+	-- ì‚­ì œì—¬ë¶€ : ì‚­ì œ ->Y
 	CISDEL VARCHAR2(1),
-	-- °Ô½ÃÆÇ¾ÆÀÌµð
+	-- ê²Œì‹œíŒì•„ì´ë””
 	BID NUMBER(4) NOT NULL,
-	-- ¾ÆÀÌµð
+	-- ì•„ì´ë””
 	MID VARCHAR2(100) NOT NULL,
 	PRIMARY KEY (CID)
 );
 
 
--- ÀÚÁÖ ¹¯´Â Áú¹®
+-- ìžì£¼ ë¬»ëŠ” ì§ˆë¬¸
 CREATE TABLE FAQ
 (
-	-- ÀÚÁÖ¹¯´ÂÁú¹®¾ÆÀÌµð
+	-- ìžì£¼ë¬»ëŠ”ì§ˆë¬¸ì•„ì´ë””
 	FID NUMBER(4) NOT NULL,
-	-- Á¦¸ñ
+	-- ì œëª©
 	FTITLE VARCHAR2(100),
-	-- ³»¿ë
+	-- ë‚´ìš©
 	FCONTENT VARCHAR2(4000),
-	-- Ã·ºÎÆÄÀÏ
+	-- ì²¨ë¶€íŒŒì¼
 	FFILE VARCHAR2(4000),
-	-- µî·ÏÀÏ
+	-- ë“±ë¡ì¼
 	FRDATE DATE,
-	-- °ø°³¿©ºÎ : °ø°³ ->Y
-	-- ºñ°ø°³->N
+	-- ê³µê°œì—¬ë¶€ : ê³µê°œ ->Y
+	-- ë¹„ê³µê°œ->N
 	-- 
 	FPUBLIC VARCHAR2(1),
-	-- ¾îµå¹Î¾ÆÀÌµð
+	-- ì–´ë“œë¯¼ì•„ì´ë””
 	AID VARCHAR2(10) NOT NULL,
 	PRIMARY KEY (FID)
 );
 
 
--- Áñ°ÜÃ£±â
+-- ì¦ê²¨ì°¾ê¸°
 CREATE TABLE FAVORITE
 (
-	-- Áñ°ÜÃ£±â¾ÆÀÌµð
+	-- ì¦ê²¨ì°¾ê¸°ì•„ì´ë””
 	FAVID NUMBER(4) NOT NULL,
-	-- ¼±È£ÇÏ´Â °øÇ×
+	-- ì„ í˜¸í•˜ëŠ” ê³µí•­
 	FAVAIRPORT VARCHAR2(100),
-	-- ¼±È£ÇÏ´ÂÇ×°ø»ç
+	-- ì„ í˜¸í•˜ëŠ”í•­ê³µì‚¬
 	FAVAIRLINE VARCHAR2(100),
-	-- ¼±È£È£ÅÚÃ¼ÀÎ
+	-- ì„ í˜¸í˜¸í…”ì²´ì¸
 	FAVHOTEL VARCHAR2(100),
-	-- ¾ÆÀÌµð
+	-- ì•„ì´ë””
 	MID VARCHAR2(100) NOT NULL,
 	PRIMARY KEY (FAVID)
 );
 
 
--- °ü¸®ÀÚ
+-- ê´€ë¦¬ìž
 CREATE TABLE HEAD_ADMIN
 (
-	-- ¾îµå¹Î¾ÆÀÌµð
+	-- ì–´ë“œë¯¼ì•„ì´ë””
 	AID VARCHAR2(10) NOT NULL,
-	-- ºñ¹Ð¹øÈ£
+	-- ë¹„ë°€ë²ˆí˜¸
 	APW VARCHAR2(100),
-	-- ÀÌ¸§
+	-- ì´ë¦„
 	ANAME VARCHAR2(100),
-	-- µî·ÏÀÏ
+	-- ë“±ë¡ì¼
 	ARDATE DATE,
 	PRIMARY KEY (AID)
 );
 
-select * from MEMBERS;
--- È¸¿ø
+
+-- íšŒì›
 CREATE TABLE MEMBERS
 (
-	-- ¾ÆÀÌµð
+	-- ì•„ì´ë””
 	MID VARCHAR2(100) NOT NULL,
-	-- ºñ¹Ð¹øÈ£
+	-- ë¹„ë°€ë²ˆí˜¸
 	MPW VARCHAR2(15),
-	-- ÀÌ¸§
+	-- ì´ë¦„
 	MNAME VARCHAR2(100),
-	-- ÀüÈ­¹øÈ£
+	-- ì „í™”ë²ˆí˜¸
 	MPHONE VARCHAR2(300),
-	-- ÀÌ¸ÞÀÏ
+	-- ì´ë©”ì¼
 	MEMAIL VARCHAR2(25),
-	-- °¡ÀÔÀÏ : DATE DEFAULT SYSDATE
+	-- ê°€ìž…ì¼ : DATE DEFAULT SYSDATE
 	MRDATE DATE,
-	-- »ý³â¿ùÀÏ
+	-- ìƒë…„ì›”ì¼
 	MBIRTH DATE,
-	-- ÇÁ·ÎÇÊ»çÁø
+	-- í”„ë¡œí•„ì‚¬ì§„
 	MPROFILE VARCHAR2(3000),
-	-- Å»Åð¿©ºÎ : Å»Åð -> Y
+	-- íƒˆí‡´ì—¬ë¶€ : íƒˆí‡´ -> Y
 	MDROP VARCHAR2(1),
 	PRIMARY KEY (MID)
 );
 
 
--- °øÁö±Û
+-- ê³µì§€ê¸€
 CREATE TABLE NOTICE
 (
-	-- ÀÚÁÖ¹¯´ÂÁú¹®¾ÆÀÌµð
+	-- ìžì£¼ë¬»ëŠ”ì§ˆë¬¸ì•„ì´ë””
 	NID NUMBER(4) NOT NULL,
-	-- Á¦¸ñ
+	-- ì œëª©
 	NTITLE VARCHAR2(100),
-	-- ³»¿ë
+	-- ë‚´ìš©
 	NCONTENT VARCHAR2(4000),
-	-- Ã·ºÎÆÄÀÏ
+	-- ì²¨ë¶€íŒŒì¼
 	NFILE VARCHAR2(4000),
-	-- µî·ÏÀÏ : DATE DEFAULT SYSDATE
+	-- ë“±ë¡ì¼ : DATE DEFAULT SYSDATE
 	NRDATE DATE,
-	-- °ø°³¿©ºÎ : °ø°³->Y
-	-- ºñ°ø°³->N
+	-- ê³µê°œì—¬ë¶€ : ê³µê°œ->Y
+	-- ë¹„ê³µê°œ->N
 	-- 
 	NPUBLIC VARCHAR2(1),
-	-- ¾îµå¹Î¾ÆÀÌµð
+	-- ì–´ë“œë¯¼ì•„ì´ë””
 	AID VARCHAR2(10) NOT NULL,
 	PRIMARY KEY (NID)
 );
 
 
--- °áÁ¦
+-- ê²°ì œ
 CREATE TABLE PAYMENT
 (
-	-- °áÁ¦¾ÆÀÌµð
+	-- ê²°ì œì•„ì´ë””
 	PID NUMBER(4) NOT NULL,
-	-- °áÁ¦¼ö´Ü
+	-- ê²°ì œìˆ˜ë‹¨
 	PMETHOD VARCHAR2(100),
-	-- °áÁ¦³¯Â¥
+	-- ê²°ì œë‚ ì§œ
 	PDATE DATE,
-	-- ÃÑ ºñ¿ë
+	-- ì´ ë¹„ìš©
 	PTOTAL NUMBER(10),
-	-- È¯ºÒ : È¯ºÒ ½Ã Y
+	-- í™˜ë¶ˆ : í™˜ë¶ˆ ì‹œ Y
 	PREFUND VARCHAR2(1),
-	-- °áÁ¦ÅäÅ«
+	-- ê²°ì œí† í°
 	PTOKEN VARCHAR2(100),
-	-- ¿¹¾à¾ÆÀÌµð
+	-- ì˜ˆì•½ì•„ì´ë””
 	RID NUMBER(4) NOT NULL,
-	-- ¾ÆÀÌµð
+	-- ì•„ì´ë””
 	MID VARCHAR2(100) NOT NULL,
 	PRIMARY KEY (PID)
 );
 
 
--- ±â°£
+-- ê¸°ê°„
 CREATE TABLE PERIOD
 (
-	-- ±â°£¾ÆÀÌµð
+	-- ê¸°ê°„ì•„ì´ë””
 	PEID NUMBER(4) NOT NULL,
-	-- ½ÃÁð : ºñ¼ö±â/¼º¼ö±â/ÁØ¼º¼ö±â
+	-- ì‹œì¦Œ : ë¹„ìˆ˜ê¸°/ì„±ìˆ˜ê¸°/ì¤€ì„±ìˆ˜ê¸°
 	PESEASON VARCHAR2(20),
-	-- ½ÃÀÛ³¯Â¥
+	-- ì‹œìž‘ë‚ ì§œ
 	PESTART DATE,
-	-- ³¡³¯Â¥
+	-- ëë‚ ì§œ
 	PEEND DATE,
-	-- ¼÷¼Ò¾ÆÀÌµð
+	-- ìˆ™ì†Œì•„ì´ë””
 	AID NUMBER(4) NOT NULL,
 	PRIMARY KEY (PEID)
 );
 
 
--- ¿¹¾à
+-- ì˜ˆì•½
 CREATE TABLE RESERVATION
 (
-	-- ¿¹¾à¾ÆÀÌµð
+	-- ì˜ˆì•½ì•„ì´ë””
 	RID NUMBER(4) NOT NULL,
-	-- °´½Ç¿¹¾à¹øÈ£
+	-- ê°ì‹¤ì˜ˆì•½ë²ˆí˜¸
 	RORDERNUM NUMBER(3),
-	-- ÀÎ¿ø
+	-- ì¸ì›
 	RAMOUNT NUMBER(3),
-	-- ¹æ °³¼ö
+	-- ë°© ê°œìˆ˜
 	RROOMNUM NUMBER(3),
-	-- ¿¹¾à½ÃÀÛÀÏ
+	-- ì˜ˆì•½ì‹œìž‘ì¼
 	RCHECKIN VARCHAR2(15),
-	-- ¿¹¾àÁ¾·áÀÏ : ´ÙÀ½³¯Åð½Ç
+	-- ì˜ˆì•½ì¢…ë£Œì¼ : ë‹¤ìŒë‚ í‡´ì‹¤
 	RCHECKOUT VARCHAR2(15),
-	-- ¿¹¾àÀÚÀÌ¸§
+	-- ì˜ˆì•½ìžì´ë¦„
 	RRESNAME VARCHAR2(300),
-	-- ¿¹¾àÀÚÀüÈ­¹øÈ£
+	-- ì˜ˆì•½ìžì „í™”ë²ˆí˜¸
 	RRESPHONE VARCHAR2(300),
-	-- ¿¹¾àÀÚ ÀÌ¸ÞÀÏ
+	-- ì˜ˆì•½ìž ì´ë©”ì¼
 	RRESEMAIL VARCHAR2(300),
-	-- Á¶½ÄÃß°¡ÀÎ¿ø : 0 -> Á¶½ÄÃß°¡¾ÈÇÔ
-	-- 1~ -> ¸í Á¶½Ä Ãß°¡
+	-- ì¡°ì‹ì¶”ê°€ì¸ì› : 0 -> ì¡°ì‹ì¶”ê°€ì•ˆí•¨
+	-- 1~ -> ëª… ì¡°ì‹ ì¶”ê°€
 	-- 
 	REXBREAKNUM NUMBER(1),
-	-- Ä§´ëÃß°¡ : 1°³Ãß°¡ ->1
+	-- ì¹¨ëŒ€ì¶”ê°€ : 1ê°œì¶”ê°€ ->1
 	REXBED NUMBER(1),
-	-- ÀÎ¿øÃß°¡ : 0->Ãß°¡¾ÈÇÔ
-	-- 1~->¸í Ãß°¡
+	-- ì¸ì›ì¶”ê°€ : 0->ì¶”ê°€ì•ˆí•¨
+	-- 1~->ëª… ì¶”ê°€
 	REXPERSON NUMBER(1),
-	-- Ãë¼Ò¿©ºÎ : Ãë¼Ò->Y
+	-- ì·¨ì†Œì—¬ë¶€ : ì·¨ì†Œ->Y
 	-- 
 	RCANCEL VARCHAR2(5),
-	-- ¾ÆÀÌµð
+	-- ì•„ì´ë””
 	MID VARCHAR2(100) NOT NULL,
-	-- °´½Ç¾ÆÀÌµð
+	-- ê°ì‹¤ì•„ì´ë””
 	RIID NUMBER(4) NOT NULL,
 	PRIMARY KEY (RID)
 );
 
 
--- ¸®ºä
+-- ë¦¬ë·°
 CREATE TABLE REVIEW
 (
-	-- ¸®ºä¾ÆÀÌµð
+	-- ë¦¬ë·°ì•„ì´ë””
 	REID NUMBER(4) NOT NULL,
-	-- ¸®ºäÁ¦¸ñ
+	-- ë¦¬ë·°ì œëª©
 	RETITLE VARCHAR2(300),
-	-- ¸®ºä³»¿ë
+	-- ë¦¬ë·°ë‚´ìš©
 	RECONTENT VARCHAR2(4000),
-	-- ¸®ºä»çÁø
+	-- ë¦¬ë·°ì‚¬ì§„
 	REPHOTO VARCHAR2(4000),
-	-- ¸®ºäµî·ÏÀÏ : DATE DEFAULT SYSDATE
+	-- ë¦¬ë·°ë“±ë¡ì¼ : DATE DEFAULT SYSDATE
 	RERDATE DATE,
-	-- º°Á¡
+	-- ë³„ì 
 	RESTAR NUMBER(3),
-	-- ¾ÆÀÌµð
+	-- ì•„ì´ë””
 	MID VARCHAR2(100) NOT NULL,
-	-- ¿¹¾à¾ÆÀÌµð
+	-- ì˜ˆì•½ì•„ì´ë””
 	RID NUMBER(4) NOT NULL,
 	PRIMARY KEY (REID)
 );
 
 
--- °´½Ç¼¼ºÎÁ¤º¸
+-- ê°ì‹¤ì„¸ë¶€ì •ë³´
 CREATE TABLE ROOM_INFO
 (
-	-- °´½Ç¾ÆÀÌµð
+	-- ê°ì‹¤ì•„ì´ë””
 	RIID NUMBER(4) NOT NULL,
-	-- °´½ÇÁ¾·ù : (È£ÅÚ-~·ë,Ææ¼Ç-00È£)
+	-- ê°ì‹¤ì¢…ë¥˜ : (í˜¸í…”-~ë£¸,íŽœì…˜-00í˜¸)
 	RIROOMTYPE VARCHAR2(100),
-	-- ÃÑ °´½Ç¼ö
+	-- ì´ ê°ì‹¤ìˆ˜
 	RIROOM NUMBER(4),
-	-- ºÎ°¡¼­ºñ½º : ÀÎÅÍ³Ý,Á¶½Ä,¿åÁ¶,Èí¿¬
+	-- ë¶€ê°€ì„œë¹„ìŠ¤ : ì¸í„°ë„·,ì¡°ì‹,ìš•ì¡°,í¡ì—°
 	RISERVICE VARCHAR2(3000),
-	-- °´½ÇÅ©±â : 7Æò
+	-- ê°ì‹¤í¬ê¸° : 7í‰
 	RISIZE VARCHAR2(50),
-	-- ¼÷¹Ú°¡´ÉÀÎ¿ø
+	-- ìˆ™ë°•ê°€ëŠ¥ì¸ì›
 	RIMINPER NUMBER(3),
-	-- ¼÷¹ÚÃÖ´ëÀÎ¿ø
+	-- ìˆ™ë°•ìµœëŒ€ì¸ì›
 	RIMAXPER NUMBER(3),
-	-- ¼º¼ö±â 1¹Ú ±âº»¿ä±Ý
+	-- ì„±ìˆ˜ê¸° 1ë°• ê¸°ë³¸ìš”ê¸ˆ
 	RIPEAK NUMBER(10),
-	-- ÁØ¼º¼ö±â 1¹Ú ±âº»¿ä±Ý
+	-- ì¤€ì„±ìˆ˜ê¸° 1ë°• ê¸°ë³¸ìš”ê¸ˆ
 	RISEMIPEAK NUMBER(10),
-	-- ºñ¼ö±â 1¹Ú ±âº»¿ä±Ý
+	-- ë¹„ìˆ˜ê¸° 1ë°• ê¸°ë³¸ìš”ê¸ˆ
 	RIOFF NUMBER(10),
-	-- ´ëÇ¥ÀÌ¹ÌÁö
+	-- ëŒ€í‘œì´ë¯¸ì§€
 	RIMAINIMG VARCHAR2(3000),
-	-- Ãß°¡ÀÌ¹ÌÁö1
+	-- ì¶”ê°€ì´ë¯¸ì§€1
 	RIEXTRAIMG1 VARCHAR2(3000),
-	-- Ãß°¡ÀÌ¹ÌÁö2
+	-- ì¶”ê°€ì´ë¯¸ì§€2
 	RIEXTRAIMG2 VARCHAR2(3000),
-	-- ¼÷¼Ò¾ÆÀÌµð
+	-- ìˆ™ì†Œì•„ì´ë””
 	AID NUMBER(4) NOT NULL,
 	PRIMARY KEY (RIID)
 );
 
 
--- ¹®ÀÇ±Û
+-- ë¬¸ì˜ê¸€
 CREATE TABLE USERQNA
 (
-	-- ¹®ÀÇ±Û¾ÆÀÌµð
+	-- -- ë¬¸ì˜ê¸€ì•„ì´ë””
 	QID NUMBER(4) NOT NULL,
-	-- ¹®ÀÇ±ÛÄ«Å×°í¸® : 1.»óÇ° 2.±³È¯/È¯ºÒ 3.»çÀÌÆ®ÀÌ¿ë 4.±âÅ¸
+	-- ë¬¸ì˜ê¸€ì¹´í…Œê³ ë¦¬ : 1.ìƒí’ˆ 2.êµí™˜/í™˜ë¶ˆ 3.ì‚¬ì´íŠ¸ì´ìš© 4.ê¸°íƒ€
 	QCATE VARCHAR2(20),
-	-- ¹®ÀÇ±Ûºñ¹ø
+	-- ë¬¸ì˜ê¸€ë¹„ë²ˆ
 	QPW VARCHAR2(100),
-	-- ¹®ÀÇ±ÛÁ¦¸ñ
+	-- ë¬¸ì˜ê¸€ì œëª©
 	QTITLE VARCHAR2(300),
-	-- ¹®ÀÇ±Û³»¿ë
+	-- ë¬¸ì˜ê¸€ë‚´ìš©
 	QCONTENT VARCHAR2(4000),
-	-- ¹®ÀÇ±ÛÃ·ºÎ
+	-- ë¬¸ì˜ê¸€ì²¨ë¶€
 	QFILE VARCHAR2(4000),
-	-- ¹®ÀÇ±Ûµî·ÏÀÏ : DATE DEFAULT SYSDATE
+	-- ë¬¸ì˜ê¸€ë“±ë¡ì¼ : DATE DEFAULT SYSDATE
 	QRDATE DATE,
-	-- ¹®ÀÇ±ÛÃ³¸®¿©ºÎ : Ã³¸®->Y
+	-- ë¬¸ì˜ê¸€ì²˜ë¦¬ì—¬ë¶€ : ì²˜ë¦¬->Y
 	QLEV VARCHAR2(1),
-	-- ±×·ì¹øÈ£
+	-- ê·¸ë£¹ë²ˆí˜¸
 	QREF NUMBER(3),
-	-- ±Û¹øÈ£
+	-- ê¸€ë²ˆí˜¸
 	QSTEP NUMBER(3),
-	-- ¾ÆÀÌµð
+	-- ì•„ì´ë””
 	MID VARCHAR2(100) NOT NULL,
 	PRIMARY KEY (QID)
 );
@@ -846,4 +840,4 @@ ALTER TABLE RESERVATION
 
 
 
---sqlÃÊ±â¼¼ÆÃ
+-- --sqlì´ˆê¸°ì„¸íŒ…

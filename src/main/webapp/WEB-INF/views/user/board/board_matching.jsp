@@ -27,14 +27,14 @@
 	<div class="header">
 		<jsp:include page="../includes/header.jsp" flush="true"/>
 	</div>
-	<div class="board_header">
+	<!-- <div class="board_header">
 		<ul class="ulcss">
 	      <li class="licss"><a href="/project/phj/home">MyPage</a></li>
 	      <li class="licss"><a href="/project/hjy/board/all">자유게시판</a></li>
 	      <li class="licss"><a href="/project/hjy/board/review">리뷰게시판</a></li>
 	      <li class="licss"><a href="/project/hjy/board/matching" class="liactive">매칭게시판</a></li>
 	    </ul>
-	</div>
+	</div> -->
 	<input type="hidden" name="bcate" id="bcate" value="${bcate }">
 	
 	<div class="board_content">

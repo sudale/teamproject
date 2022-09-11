@@ -1,0 +1,11 @@
+@charset "UTF-8";
+
+
+
+.sub_content {
+	min-height: calc(100vh - 46px);
+	box-sizing: border-box;
+	position: relative;
+	z-index: 1;
+}
+
