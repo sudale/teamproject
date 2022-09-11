@@ -139,8 +139,6 @@
 					<h3 class="room_title">객실 세부 정보</h3>
 					<div id="roomInfoadd"></div>
 
-					<!-- <input type="button" onclick="roomInfoAdd()" value="객실세부정보 추가"
-						class="button"> -->
 
 					<script>
 	  var cnt = 0;
@@ -396,7 +394,7 @@ name="file" id="addfile2" class="file input" multiple="multiple">
 
 
 <div class="confirm-btn">
-			<button type="submit" class="btn_join llog submit_btn">신청하기</button>
+			<button type="submit" class="btn btn_join llog submit_btn">신청하기</button>
 			
 		</div>
 		

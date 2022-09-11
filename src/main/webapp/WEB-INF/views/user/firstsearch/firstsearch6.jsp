@@ -26,13 +26,9 @@
 <!-- 부트스트랩 -->
 <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
 <script
-	src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
-	integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
-	crossorigin="anonymous"></script>
+	src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
 <script
-	src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.min.js"
-	integrity="sha384-+YQ4JLhjyBLPDQt//I+STsc9iw4uQqACwlvpslubQzn4u2UU2UFM80nGisd026JF"
-	crossorigin="anonymous"></script>
+	src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.min.js"></script>
 <!-- jquery ui -->
 <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
 <link rel="stylesheet"
@@ -40,13 +36,14 @@
 
 
 <!-- x,y좌표 위도,경도로 바꾸기 -->
-<script
+<!-- <script
 	src="https://cdnjs.cloudflare.com/ajax/libs/proj4js/2.7.5/proj4.js"></script>
-<!-- 지도추가 -->
+지도추가
 <script type="text/javascript"
 	src="https://openapi.map.naver.com/openapi/v3/maps.js?ncpClientId=83bfuniegk&submodules=geocoder"></script>
-<!-- css -->
-<%-- <link rel="stylesheet"
+ -->
+<%-- <!-- css -->
+<link rel="stylesheet"
 	href="${pageContext.request.contextPath}/resources/css/firstsearchmain.css">
  --%>
 
@@ -225,13 +222,13 @@ $(function(){
 		let star;
 		//성급 몇인지 뽑아오는부분
  		for (var i =1; i <= 5; i++) {
- 			if($("#grade"+i).attr('style')=="background-color: #00AEF0 opacity:0.8;"){
+ 			if($("#grade"+i).attr('style')=="background-color: #FF346E opacity:0.8;"){
  				grade = $("#grade"+i).attr('id')
  				grade = grade.substring(5)
  				break;
  			};
 		}
- 		//리뷰별점 몇인지 뽑아오는부분
+ 		 //리뷰별점 몇인지 뽑아오는부분
  		for (var i =1; i <= 5; i++) {
  			if($("#star"+i).attr('style')=="background-color: #00AEF0 opacity:0.8;"){
  				star = $("#star"+i).attr('id')
@@ -317,15 +314,17 @@ $(function(){
 	 	callList()
 	});
    	
-	// 성급 div박스
+	/* // 성급 div박스
  	$(".grade_section_field").click(function(){
 		let agrade = $(this).attr("id");
-		$(this).siblings().attr('style','background-color: none');
+		$(this).siblings().attr('style','background-color: #FF346E');
 		for (var i =0; i <= 6-agrade.substring(5); i++) {
 			$("#grade"+(Number(agrade.substring(5))+i)).attr('style','background-color: #00AEF0; opacity:0.8;');
 		}
 		callList();
 	});		
+	 */
+	
   		
   	//슬라이더 관련 실행
 	slider(${minmax.minsum},${minmax.maxsum})
@@ -408,7 +407,7 @@ function callList(){
 
 
 //지도로 보기 ajax받아와서 뿌려주기 
-function gomapchange(facilities,minprice,maxprice,sort,axcoordi,aycoordi,distance,agrade,restar){
+function gomapchange(facilities,minprice,maxprice,sort,axcoordi,aycoordi,distance,/* agrade,restar */){
 	  let gomapchange = new naver.maps.Map('gomapchange', {
           center: new naver.maps.LatLng(ycoordi, xcoordi),
           zoom: 14
@@ -422,7 +421,7 @@ function gomapchange(facilities,minprice,maxprice,sort,axcoordi,aycoordi,distanc
 			fac+=",";
 		}
 	}
-	  $.ajax({
+	  /* $.ajax({
 			url:"${pageContext.request.contextPath }/hjy/firstsearchajax",
 			 async: false,
 			 data:{"searchHotel":"${aaddress }","checkin":"${rcheckin }","checkout":"${rcheckout }","countRoom":"${countRoom }","countPeople":"${rimaxper}",
@@ -483,7 +482,7 @@ function gomapchange(facilities,minprice,maxprice,sort,axcoordi,aycoordi,distanc
 					}
 				}
 		  })	
-
+ */
 		  var markerList = [];
 		  for (var i=0, ii=latlngs.length; i<ii; i++) {
 	          let marker = new naver.maps.Marker({
@@ -614,6 +613,7 @@ function list(facilities,minprice,maxprice,sort,xcoordi,ycoordi,distance,agrade,
 							console.log("숙소이름: "+data.list[i].aname);
 							console.log("두개사이의 거리: "+isdistancein(refcoordi, dbcoordi),"m");
 							console.log("distance: "+distance)
+							
 							if(isdistancein(refcoordi, dbcoordi)<=distance){
 								   	html+="<div class='row mb-3'>";
 									
@@ -633,11 +633,13 @@ function list(facilities,minprice,maxprice,sort,xcoordi,ycoordi,distance,agrade,
 									html+="<input type='hidden' id='aycoordi"+changecnt+"' value="+data.list[i].aycoordi+">";
 									html+="</div>";
 									html+="</div>";
-									html+="<div class='col-md-3' style='padding-left: 70px;'>";
+									
+									
+									/* html+="<div class='col-md-3' style='padding-left: 70px;'>";
 									if(data.list[i].agrade !=null){
-										html+="<h5>"+data.list[i].agrade+"성급</h5>";
+										html+="<h3>"+data.list[i].agrade+"성급</h3>";
 									}
-									html+="<h5>";
+									html+="<h3>";
 									if(data.list[i].restar==5){
 										html+="★★★★★";
 									}else if(data.list[i].restar==4){
@@ -651,7 +653,7 @@ function list(facilities,minprice,maxprice,sort,xcoordi,ycoordi,distance,agrade,
 									}else{
 										html+="☆☆☆☆☆";
 									}
-									html+="</h5>";
+									html+="</h3>"; */
 									html+="<h4>"+data.list[i].amountsum+"원</h4>";
 									html+="<button class='btn btn-outline-primary' onclick=\"";
 									html+="location.href='${pageContext.request.contextPath }/user/kjy/room_info?aid="+data.list[i].aid+"&riid="+data.list[i].riid+
@@ -686,11 +688,11 @@ function list(facilities,minprice,maxprice,sort,xcoordi,ycoordi,distance,agrade,
 								html+="<input type='hidden' id='aycoordi"+i+"' value="+data.list[i].aycoordi+">";
 								html+="</div>";
 								html+="</div>";
-								html+="<div class='col-md-3'style='padding-left: 70px;'>";
+								/* html+="<div class='col-md-3'style='padding-left: 70px;'>";
 								if(data.list[i].agrade !=null){
 									html+="<h5>"+data.list[i].agrade+"성급</h5>";
 								}
-								html+="<h5>"
+								html+="<h3>"
 								if(data.list[i].restar==5){
 									html+="★★★★★"
 								}else if(data.list[i].restar==4){
@@ -704,7 +706,7 @@ function list(facilities,minprice,maxprice,sort,xcoordi,ycoordi,distance,agrade,
 								}else{
 									html+="☆☆☆☆☆"
 								}
-								html+="</h5>"
+								html+="</h3>" */
 								html+="<h4>"+data.list[i].amountsum+"원</h4>";
 								html+="<button class='btn btn-outline-primary' onclick=\"";
 								html+="location.href='${pageContext.request.contextPath }/user/kjy/room_info?aid="+data.list[i].aid+"&riid="+data.list[i].riid;
@@ -770,7 +772,7 @@ function searchAddressToCoordinate(address) {
 	});
 }
 
-//찍힌 좌표와 선택한 반경에 따라 원 그려주기 -지영
+//찍힌 좌표와 선택한 반경에 따라 원 그려주기
 function makeCircle(locationmap,locationposition,size){
 circle.push(
 	new naver.maps.Circle({
@@ -859,7 +861,7 @@ function outMoveAfter(){ //버튼 클릭시 다음날로 이동
 </head>
 <body>
 	<div class="header">
-		<jsp:include page="/WEB-INF/views/user/includes/header.jsp" flush="true"/>
+		<jsp:include page="../includes/header.jsp" flush="true"/>
 	</div>
 	
 	
@@ -1003,64 +1005,93 @@ function outMoveAfter(){ //버튼 클릭시 다음날로 이동
 										<!-- <div class="card">
 											<div class="card-body"> -->
 												
-													<div class="col-md-3 view_img">
+													<div class="col-md-3 view_Rimg">
 														<c:choose>
 															<c:when test="${vo.amainimg eq null or vo.amainimg==''}">
 																<img
 																	src="${pageContext.request.contextPath }/resources/images/accommodations/220i0z000000mulfw433F_Z_1080_808_R5_D.jpg"
-																	width="300" height="250">
+																	>
 															</c:when>
 															<c:otherwise>
 																<img
 																	src="${pageContext.request.contextPath }/resources/images/accommodations/${vo.amainimg }"
-																	width="300" height="250">
+																	>
 															</c:otherwise>
 														</c:choose>
 													</div>
-													<div class="col-md-6">
-														<h3>${vo.aname }</h3>
-														<small>${vo.aaddress }</small>
-														<div id="map${status.index }"
-															style="width: 200px; height: 200px;">
-															<input type="hidden" id="axcoordi${status.index }"
-																value="${vo.axcoordi }"> <input type="hidden"
-																id="aycoordi${status.index }" value="${vo.aycoordi }">
-														</div>
-														<script type="text/javascript">
-													mainMapList(${status.index });
-													</script>
-													</div>
-													<div class="col-md-3" style="padding-left: 70px;">
+													
+													
+													<div class="col-md-6 view_Rinfo">
+														
+														<div class="room_Listtop">
+														
+														<h3 class="view_Rtitle">${vo.aname }</h3>
 														<c:if test="${vo.agrade!=null}">
-															<h5>${vo.agrade }성급</h5>
+															<h3 class="view_Rgrade">${vo.agrade}성급</h3>
 														</c:if>
-														<c:choose>
-															<c:when test="${vo.restar==5 }">
-																<h5>★★★★★</h5>
-															</c:when>
-															<c:when test="${vo.restar==4 }">
-																<h5>★★★★☆</h5>
-															</c:when>
-															<c:when test="${vo.restar==3 }">
-																<h5>★★★☆☆</h5>
-															</c:when>
-															<c:when test="${vo.restar==2 }">
-																<h5>★★☆☆☆</h5>
-															</c:when>
-															<c:when test="${vo.restar==1 }">
-																<h5>★☆☆☆☆</h5>
-															</c:when>
-															<c:when test="${vo.restar==0 }">
-																<h5>☆☆☆☆☆</h5>
-															</c:when>
-															<c:otherwise>
-																<h5>☆☆☆☆☆</h5>
-															</c:otherwise>
-														</c:choose>
-														<h4>${vo.amountsum}원</h4>
+														
+													
+														 <c:choose>
+                                             <c:when test="${vo.agrade == 5}">
+                                             
+                                             
+                                                <span class="agrade_star">
+                                                
+                                                <img class="star" src="${pageContext.request.contextPath}/resources/images/room_info/star.svg">
+                                                <img class="star" src="${pageContext.request.contextPath}/resources/images/room_info/star.svg">
+                                                <img class="star" src="${pageContext.request.contextPath}/resources/images/room_info/star.svg">
+                                                <img class="star" src="${pageContext.request.contextPath}/resources/images/room_info/star.svg">
+                                                <img class="star" src="${pageContext.request.contextPath}/resources/images/room_info/star.svg">
+                                                </span>
+                                             </c:when>
+                                             <c:when test="${vo.agrade == 4}">
+                                                <!-- <span class="star">★★★★☆</span> -->
+                                                <img class="star" src="${pageContext.request.contextPath}/resources/images/room_info/star.svg">
+                                                <img class="star" src="${pageContext.request.contextPath}/resources/images/room_info/star.svg">
+                                                <img class="star" src="${pageContext.request.contextPath}/resources/images/room_info/star.svg">
+                                             </c:when>
+                                             <c:when test="${vo.agrade==3 }">
+                                                <img class="star" src="${pageContext.request.contextPath}/resources/images/room_info/star.svg">
+                                                <img class="star" src="${pageContext.request.contextPath}/resources/images/room_info/star.svg">
+                                                <img class="star" src="${pageContext.request.contextPath}/resources/images/room_info/star.svg">
+                                             </c:when>
+                                             <c:when test="${vo.agrade==2 }">
+                                                <img class="star" src="${pageContext.request.contextPath}/resources/images/room_info/star.svg">
+                                                <img class="star" src="${pageContext.request.contextPath}/resources/images/room_info/star.svg">
+                                             </c:when>
+                                             <c:when test="${vo.agrade==1 }">
+                                                <img class="star" src="${pageContext.request.contextPath}/resources/images/room_info/star.svg">
+                                                
+                                             </c:when>
+                                             <c:when test="${vo.agrade==0 }">
+                                                <img class="star" src="${pageContext.request.contextPath}/resources/images/room_info/star.svg">
+                                             </c:when>
+                                             <c:otherwise>
+                                                <span>☆☆☆☆☆test1</span>
+                                             </c:otherwise>
+                                          </c:choose>
+                                          
+														
+									
+														
+														
+														<h3 class="view_Radress" lang="en">${vo.aaddress }</h3>
+														
+													
+													</div>
+													
+													
+													<div class="room_Listbottom">
+													
+													
+														<h4 class="view_Rprice" lang="en">${vo.amountsum}원</h4>
 														<button class="btn btn-outline-primary"
 															onclick="location.href='${pageContext.request.contextPath }/user/kjy/room_info?aid=${vo.aid}&riid=${vo.riid }&person=${rimaxper}&roomnum=${countRoom}&startday=${rcheckin}&endday=${rcheckout}'">예약하기</button>
 													</div>
+													
+													</div>
+													
+										
 
 												</div>
 										<!-- 	</div>

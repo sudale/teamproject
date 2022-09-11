@@ -7,7 +7,7 @@
 		select seq_additional_fee_temp.currval from dual
 	</select>
 	<select id="find" resultType="com.jhta.project.vo.Additional_feeVo" parameterType="int">
-		select * from room_info_temp where riid = #{riid}
+		select * from additional_fee_temp where riid = #{riid}
 	</select>
 	<insert id="insert" parameterType="com.jhta.project.vo.Additional_feeVo">
 		insert into additional_fee_temp values(seq_additional_fee_temp.nextval,#{afpersonnel},#{afbreakfast},#{afbed},#{riid})

@@ -84,7 +84,7 @@ public class FirstSearchAjaxControllerHjy {
 	 */
 	@RequestMapping(value = "hjy/firstsearchajax", method = RequestMethod.GET)
 	public HashMap<String, Object> searchGet(String searchHotel, String checkin, String checkout, String countPeople, String countRoom,
-			 String fac, String minprice, String maxprice,String sort,String restar,String agrade,String autoaname, HttpSession session) {
+			 String fac, String minprice, String maxprice,String sort,String restar, String agrade,String autoaname, HttpSession session) {
 			String [] facilities = fac.split(",");
 		return execute(searchHotel, checkin, checkout, countPeople, countRoom,facilities,minprice,maxprice,sort,restar,agrade,autoaname,session);
 	}
@@ -170,6 +170,7 @@ public class FirstSearchAjaxControllerHjy {
 			hs.put("countRoom", countRoom);
 			hs.put("minprice", minprice);
 			hs.put("maxprice", maxprice);
+			
 			if(restar!=null) {
 				hs.put("restar", restar);
 			}
