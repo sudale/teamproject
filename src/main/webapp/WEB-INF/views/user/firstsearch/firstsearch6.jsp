@@ -36,12 +36,12 @@
 
 
 <!-- x,y좌표 위도,경도로 바꾸기 -->
-<script
+<!-- <script
 	src="https://cdnjs.cloudflare.com/ajax/libs/proj4js/2.7.5/proj4.js"></script>
-<!-- 지도추가 -->
+지도추가
 <script type="text/javascript"
 	src="https://openapi.map.naver.com/openapi/v3/maps.js?ncpClientId=83bfuniegk&submodules=geocoder"></script>
-
+ -->
 <%-- <!-- css -->
 <link rel="stylesheet"
 	href="${pageContext.request.contextPath}/resources/css/firstsearchmain.css">
@@ -228,14 +228,14 @@ $(function(){
  				break;
  			};
 		}
- 		/* //리뷰별점 몇인지 뽑아오는부분
+ 		 //리뷰별점 몇인지 뽑아오는부분
  		for (var i =1; i <= 5; i++) {
  			if($("#star"+i).attr('style')=="background-color: #00AEF0 opacity:0.8;"){
  				star = $("#star"+i).attr('id')
  				star = star.substring(4)
  				break;
  			};
-		} */
+		}
  		
     	for (var i = 0; i < circle.length; i++) {
 	    	circle[i].setMap(null);
