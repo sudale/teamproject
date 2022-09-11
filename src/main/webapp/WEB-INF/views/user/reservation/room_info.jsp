@@ -380,7 +380,32 @@
 			<img src="${pageContext.request.contextPath }/resources/images/accommodations/${accvo.amainimg}" class="amainimg">
 	</div>
 	
+		<c:forEach var="vo" items="${list }" varStatus="status">
+		<input type="hidden" value="${vo.aid }" id="aid">
+		<c:if test="${riid eq vo.riid}">
+		
+			<div id="imgbox">
+				<img src="${pageContext.request.contextPath }/resources/images/room_info/${vo.rimainimg }" id="smallimg1">
+				<img src="${pageContext.request.contextPath }/resources/images/room_info/${vo.riextraimg1}" id="smallimg2">
+				<img src="${pageContext.request.contextPath }/resources/images/room_info/${vo.riextraimg2}" id="smallimg3">			
+			</div>
+		
+		</c:if>
+		<c:if test="${riid ne vo.riid}">
+		
 			
+			<div id="imgbox">
+				<img src="${pageContext.request.contextPath }/resources/images/room_info/${vo.rimainimg }" id="smallimg1">
+				<img src="${pageContext.request.contextPath }/resources/images/room_info/${vo.riextraimg1}" id="smallimg2">
+				<img src="${pageContext.request.contextPath }/resources/images/room_info/${vo.riextraimg2}" id="smallimg3">			
+			</div>
+			
+			
+	
+		</c:if>
+	</c:forEach>
+	
+		
 		</div>
 		
 	<p class="anme">${accvo.aname}</p>
@@ -399,11 +424,11 @@
 		<input type="hidden" value="${vo.aid }" id="aid">
 		<c:if test="${riid eq vo.riid}">
 		<div id="search_info">
-			<div id="imgbox">
+			<%-- <div id="imgbox">
 				<img src="${pageContext.request.contextPath }/resources/images/room_info/${vo.rimainimg }" id="smallimg1">
 				<img src="${pageContext.request.contextPath }/resources/images/room_info/${vo.riextraimg1}" id="smallimg2">
 				<img src="${pageContext.request.contextPath }/resources/images/room_info/${vo.riextraimg2}" id="smallimg3">			
-			</div>
+			</div> --%>
 			<div id="romm_name">
 				<h2 class="name">${vo.riroomtype}</h2>
 				<p class="serv">부가서비스</p>
@@ -433,11 +458,11 @@
 		<p class='room_title'>객실정보</p>
 		<div id="room_info">
 			
-			<div id="imgbox">
+			<%-- <div id="imgbox">
 				<img src="${pageContext.request.contextPath }/resources/images/room_info/${vo.rimainimg }" id="smallimg1">
 				<img src="${pageContext.request.contextPath }/resources/images/room_info/${vo.riextraimg1}" id="smallimg2">
 				<img src="${pageContext.request.contextPath }/resources/images/room_info/${vo.riextraimg2}" id="smallimg3">			
-			</div>
+			</div> --%>
 			
 			
 			<div id="romm_name">
