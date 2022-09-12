@@ -32,19 +32,7 @@
 
 
 </head>
-<style>
-.largeimg {
-	border-radius: 10px;
-	margin-right: 10px;
-}
 
-.amainimg {
-	width: 100%;
-	height: 100%;
-	z-index: 1;
-	border-radius: 10px;
-}
-</style>
 <div class="header">
 	<jsp:include page="../includes/header.jsp" />
 </div>
