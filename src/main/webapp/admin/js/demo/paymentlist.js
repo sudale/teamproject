@@ -20,6 +20,14 @@ $(document).ready(function(){
          	buttons: [
             'copy', 'excel', 'pdf', 'print'
         ],
+        columnDefs: [
+            {
+                target: 4,
+                visible: false,
+                searchable: false,
+            },
+        ],
+        
         dom: 'Bfrtip',
      	buttons: [
       	  {
