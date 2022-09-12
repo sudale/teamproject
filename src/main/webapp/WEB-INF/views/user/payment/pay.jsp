@@ -27,12 +27,9 @@
 
 
 
-<!-- <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script> -->
-<!-- <script type="text/javascript"
-	src="https://code.jquery.com/jquery-1.12.4.min.js"></script> -->
+<script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
 
-<!-- <link rel="stylesheet"
-	href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css"> -->
+
 <script type="text/javascript"
 	src="https://service.iamport.kr/js/iamport.payment-1.1.5.js"></script>
 
@@ -76,7 +73,7 @@
 
 
 
-					<input style="width: 60px;" type="hidden" id="rroomnum"
+					<input  type="hidden" id="rroomnum"
 						name="rroomnum" value="${rroomnum }"><br> <input
 						type="hidden" name="rid" id="rid" value="${rid }"> <input
 						type="hidden" id="ramount" value="${ramount }"> <input
@@ -141,23 +138,23 @@
 							<td lang="en" id="daytotal1"></td>
 						</tr>
 
-						<tr>
+						<tr class="last">
 							<th>총 결제 가격</th>
 							<td lang="en" id="totalFee1"></td>
 						</tr>
+						
+						
+					
 					</table>
 					
-					
-					<span
-						style="border: none; border-color: gray; font-size: 17px;">안전
-						결제 | 모든 카드 정보는 왼벽하게 암호화되어 안전하게 보호됩니다.</span> <br> <br>
-					<div>
-						<span style="font-size: 17px;">결제방법 선택</span><br> <input
-							type="button" id="card" value="신용/직불카드" class="btn btn-link"
-							style="border-color: #6799FF; border-radius: 5px;">
+					<div class="pay_btn" >
+					<span> 안전 결제 | 모든 카드 정보는 왼벽하게 암호화되어 안전하게 보호됩니다.</span> 
+						 <input type="button" id="card" value="신용/직불카드" class="btn submit_btn">
 
 
 					</div>
+					
+					
 				</div>
 			</form>
 		</div>
@@ -254,7 +251,7 @@
 			 */
 			name : '주문명:숙소 예약',
 			//결제창에서 보여질 이름
-			amount : 1,
+			amount : 100,
 			//totalFee*1000,
 			buyer_email : '${rresemail }',
 			buyer_name : '${rresname }',

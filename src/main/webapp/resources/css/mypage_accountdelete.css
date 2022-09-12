@@ -56,7 +56,8 @@
 #okbtn{
 	
 	width:100px;
-	height:45px;
+	height:50px;
+	vertical-align: top;
 	background-color:#ff346e;
 	border:none;
 	

@@ -30,6 +30,12 @@
 	color: #ffffff;
 }
 
+.btn-default{
+    width: 150px;
+    background: #191919;
+    flex: 2;	
+}
+
 /*=========================== 회원가입, 아이디찾기, 비밀번호 찾기 공통 =============================*/
 
 /* 로그인 */
@@ -278,6 +284,7 @@ span.point_color.ex {
 
 .join1 ul li input.btn_pwd {
 	background: none;
+	border-radius: 0;
 }
 
 .join_col1 {
@@ -856,17 +863,16 @@ span.point_color.ex {
 }
 /*============================== 예약페이지 진행 페이지 ======================================*/
 .reservation_wrap {
-	
 	max-width: 1200px;
-    display: block;
-    box-sizing: border-box;
-    margin: 0 auto;
-    padding: 60px 0;
+	display: block;
+	box-sizing: border-box;
+	margin: 0 auto;
+	padding: 60px 0;
 }
 
 .reser_title {
-    font-size: 19px;
-    font-weight: 500;
+	font-size: 19px;
+	font-weight: 500;
 }
 
 .reservation_form {
@@ -909,43 +915,89 @@ span.point_color.ex {
 }
 
 .reser_box {
-	width:50%;
+	width: 50%;
 }
 
-.speci_add > p{
+.speci_add>p {
 	padding: 20px 0;
 }
-.speci_add .cancel > span {
+
+.speci_add .cancel>span {
 	color: #ff346e;
-    border: 1px solid #ff346e;
-    padding: 10px 30px;
-    display: block;
-    margin: 20px 0 10px;
-    border-radius: 20px;
-    width: 47%;
-    font-weight: 500;
-    font-size: 13px;
-    text-align: center;
-}
-.totalinfo{
-	width:50%;
+	border: 1px solid #ff346e;
+	padding: 10px 30px;
+	display: block;
+	margin: 20px 0 10px;
+	border-radius: 20px;
+	width: 47%;
+	font-weight: 500;
+	font-size: 13px;
+	text-align: center;
 }
 
-.totalinfo .reservation_room  > table  > tr {
-    border-bottom: 1px solid #191919;
+.totalinfo {
+	width: 50%;
 }
+
+.totalinfo .reservation_room>table>tr {
+	border-bottom: 1px solid #191919;
+}
+
 .totalinfo .reservation_room {
-    padding: 20px 0;
-    margin: 10px auto;
+	padding: 20px 0;
+	margin: 10px auto;
 }
 
-
-/*============================== 최종 결제페이지 ======================================*/
+/*============================== 최종 결제진행중 보여주는 페이지 ======================================*/
 .pay_content {
 	max-width: 1200px;
-    display: block;
-    box-sizing: border-box;
-    margin: 0 auto;
-    padding: 60px 0;
-	
+	display: block;
+	box-sizing: border-box;
+	margin: 0 auto;
+	padding: 60px 0;
+}
+
+.pay_btn {
+	text-align: center;
+	display: flex;
+	align-items: center;
+	flex-direction: column;
+}
+
+.pay_btn span {
+	padding-bottom: 40px;
+	display: block;
+}
+
+/*============================== 결제완료 ======================================*/
+.res_completion {
+	max-width: 1200px;
+	display: block;
+	box-sizing: border-box;
+	margin: 0 auto;
+	padding: 60px 0;
+	text-align:center;
+}
+
+.res_comp_tit {
+	font-size: 30px;
+}
+.res_comp_tit strong {
+    font-weight: 700;
+}
+
+
+.res_comp_tit img {
+	display: inline-block;
+	vertical-align: middle;
+}
+.res_comp_midtit {
+	padding-top:10px;
+    
+}
+.res_comp_midtit .mypagehref a{
+	font-size: 20px;
+        color: #ff346e;
+    text-decoration: underline;
+	font-weight:500;
 }

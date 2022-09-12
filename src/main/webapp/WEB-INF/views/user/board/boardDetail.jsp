@@ -3,32 +3,41 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
 <%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt"%>
-<%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <!DOCTYPE html>
 <html>
 <head>
 <meta charset="UTF-8">
-<title>J6 게시판</title>
-
-<!-- 닉네임 눌러서 선객하틑 관련 -->
+<title>공지사항</title>
+<%-- 
 <link href="${pageContext.request.contextPath }/admin/css/sb-admin-2.min.css" rel="stylesheet">
-<link href="${pageContext.request.contextPath }/admin/vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
-<script
-	src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+ --%>
 <link
-	href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
-	rel="stylesheet" id="bootstrap-css">
-<script
-	src="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.bundle.min.js"></script>
-	
-	
+	href="${pageContext.request.contextPath }/admin/vendor/fontawesome-free/css/all.min.css"
+	rel="stylesheet" type="text/css">
+
+<!-- 파비콘 이미지 -->
+<link rel="shortcut icon" type="image/x-icon"
+	href="${pageContext.request.contextPath}/resources/images/logo/favicon.ico" />
+
+<link rel="stylesheet" href="${pageContext.request.contextPath}/resources/css/reset.css">
 <link rel="stylesheet" href="${pageContext.request.contextPath}/resources/css/header.css">
-<link rel="stylesheet" href="${pageContext.request.contextPath}/resources/css/footer.css">
+<link rel="stylesheet" href="${pageContext.request.contextPath}/resources/css/layout.css">
+<link rel="stylesheet" href="${pageContext.request.contextPath}/resources/css/board_all.css">
 <link rel="stylesheet" href="${pageContext.request.contextPath}/resources/css/boardDetail.css">
+<link rel="stylesheet" href="${pageContext.request.contextPath}/resources/css/footer.css">
+
+
+<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.bundle.min.js"></script>
+
+
+
 <style type="text/css">
 element.style {
 	transform: translate3d(0px, 0px, 0px);
 }
+
 .dropdown-list {
 	transform: translate3d(0px, 0px, 0px);
 }
@@ -36,149 +45,170 @@ element.style {
 </head>
 <body>
 	<div class="header">
-		<jsp:include page="/WEB-INF/views/user/includes/header.jsp" flush="true"/>
+		<jsp:include page="../includes/header.jsp" flush="true" />
 	</div>
-	<%-- <div class="board_header">
-		<jsp:include page="board_header.jsp" flush="true"/>
-	</div> --%>
-	<div class="container">
-		<div class="card">
-			<table class="table">
-				<tr>
-					<th>글번호</th>
-					<td>${vo.bid }</td>
-				</tr>
-				<tr>
-					<th>제목</th>
-					<td><strong>${vo.btitle }</strong></td>
-				</tr>
-				<tr>
-					<th>아이디</th>
-					<td>
-						<c:choose>
-							<c:when test="${my != null}">
+
+	<div class="sub_content">
+		<div class="board_content">
+			
+				<div class="card">
+					<table class="table">
+						<tr>
+							<th class="detail">글번호</th>
+							<td lang="en">${vo.bid }</td>
+						</tr>
+						<tr>
+							<th>제목</th>
+							<td><strong lang="en">${vo.btitle }</strong></td>
+						</tr>
+						<tr>
+							<th>아이디</th>
+							<td lang="en"><c:choose>
+									<c:when test="${my != null}">
 								${vo.mid }
 							</c:when>
-							<c:otherwise>
-								<ul class="navbar-nav ml-auto re_container">
-						        	<li class="nav-item dropdown no-arrow mx-1 re_box">
-										<a class="nav-link dropdown-toggle user" href="#" role="button"
-							                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">${vo.mid }
-							            </a>
-						                <div class="dropdown-list dropdown-menu shadow animated--grow-in"
-					                    	aria-labelledby="alertsDropdown"style="position: absolute; top: 10px;left:10px;">
-											<!-- Dropdown - Alerts -->
-							                <a class="dropdown-item d-flex align-items-center" href="#">
-							                    <%--
+									<c:otherwise>
+										<ul class="navbar-nav ml-auto re_container">
+											<li class="nav-item dropdown no-arrow mx-1 re_box"><a
+												class="nav-link dropdown-toggle user" href="#" role="button"
+												data-toggle="dropdown" aria-haspopup="true"
+												aria-expanded="false">${vo.mid } </a>
+												<div
+													class="dropdown-list dropdown-menu shadow animated--grow-in"
+													aria-labelledby="alertsDropdown"
+													style="position: absolute; top: 10px; left: 10px;">
+													<!-- Dropdown - Alerts -->
+													<a class="dropdown-item d-flex align-items-center" href="#">
+														<%--
 							                    <div class="mr-3">
 							                        <div class="icon-circle bg-primary">
 							                        	<img src="">
 							                        </div>
 							                    </div>
 							                     --%>
-							                    <div>
-							                        <span class="font-weight-bold">
-							                        	<div class="small text-gray-500" onclick='friendreq("${vo.mid }");'>친구요청</div>
-							                        </span>
-							                    </div>
-							               	</a>
-											<%--
+														<div>
+															<span class="font-weight-bold">
+																<div class="small text-gray-500"
+																	onclick='friendreq("${vo.mid }");'>친구요청</div>
+															</span>
+														</div>
+													</a>
+													<%--
 							                    <div>
 							                        <span class="font-weight-bold">
 														<a href='javascript:friendreq("\${mid}");'>프로필보기</a></li>
 							                        </span>
 							                    </div>
 							                    --%>
-						                </div>
-									</li>
-								</ul>
+												</div></li>
+										</ul>
+									</c:otherwise>
+								</c:choose></td>
+						</tr>
+						<tr>
+							<th>작성일</th>
+							<td lang="en">${vo.brdate }</td>
+						</tr>
+						
+						
+						<!-- <tr>
+							<th colspan="2">내용</th>
+						</tr> -->
+						
+						<tr>
+						
+						<!-- th colspan="2">내용</th> -->
+							<td colspan="2">
+								<div id="imgbox">
+									${vo.bcontent }<br> <img
+										src="${pageContext.request.contextPath }/resources/images/board/${vo.bfile1 }"
+										onerror="this.style.display='none'"
+										style='width: 50%; margin-top: 5px;'> <img
+										src="${pageContext.request.contextPath }/resources/images/board/${vo.bfile2 }"
+										onerror="this.style.display='none'"
+										style='width: 50%; margin-top: 5px;'> <img
+										src="${pageContext.request.contextPath }/resources/images/board/${vo.bfile3 }"
+										onerror="this.style.display='none'"
+										style='width: 50%; margin-top: 5px;'>
+								</div>
+							</td>
+						</tr>
+					</table>
+				</div>
+				
+				<div class="card">
+					<div class="cmtHead">
+						<h4>
+							댓글<strong id="comment">(${cnt})</strong>
+						</h4>
+					</div>
+					<hr>
+					<c:if test="${cnt ==0}">
+						<div class="no_re">댓글이 없습니다.</div>
+					</c:if>
+					<c:if test="${cnt !=0}">
+						<div id="cmt"></div>
+					</c:if>
+				</div>
+			
+				<div class="card mb-2">
+					<div class="card-header bg-light">
+						댓글 <i class="fa fa-comment fa"></i>
+						
+					</div>
+					
+					<div class="card-body">
+						<ul class="list-group list-group-flush">
+							<li class="list-group-item">
+								<div class="form-inline mb-2">${mid }</div> <textarea
+									class="form-control" id="ccontentText" placeholder="댓글을 남겨보세요."
+									rows="3"></textarea> <br>
+							<button type="button" class="btn writebtn" id="btnAdd">등록</button>
+							</li>
+						</ul>
+					</div>
+				</div>
+
+				<div class="more_content">
+					<div class="more_prev">
+						<c:choose>
+							<c:when test="${prevVo eq null }">
+								<p>이전글 없음</p>
+							</c:when>
+							<c:otherwise>
+						이전글 <a
+									href="${pageContext.request.contextPath }/hjy/board/detail?bid=${prevVo.bid }">${prevVo.btitle }</a>
 							</c:otherwise>
 						</c:choose>
-					</td>
-				</tr>
-				<tr>
-					<th>작성일</th>
-					<td>${vo.brdate }</td>
-				</tr>
-				<tr>
-					<th colspan="2">내용</th>
-				</tr>
-				<tr>
-					<td colspan="2">
-						<div id="imgbox">
-							${vo.bcontent }<br>
-							<img src="${pageContext.request.contextPath }/resources/images/board/${vo.bfile1 }" onerror="this.style.display='none'" style='width:50%; margin-top:5px;'>
-							<img src="${pageContext.request.contextPath }/resources/images/board/${vo.bfile2 }" onerror="this.style.display='none'" style='width:50%; margin-top:5px;'>
-							<img src="${pageContext.request.contextPath }/resources/images/board/${vo.bfile3 }" onerror="this.style.display='none'" style='width:50%; margin-top:5px;'>
-						</div>
-					</td>
-				</tr>
-			</table>
-		</div>
-		<br>
-		<div class="card">
-			<div class="cmtHead">
-				<h4>
-					댓글<strong id="comment">(${cnt})</strong>
-				</h4>
-			</div>
-			<hr>
-			<c:if test="${cnt ==0}">
-				<div class="no_re">
-					댓글이 없습니다.
+					</div>
+					<div class="more_next">
+						<c:choose>
+							<c:when test="${nextVo eq null }">
+								<p>다음글 없음</p>
+							</c:when>
+							<c:otherwise>
+						다음글 <a
+									href="${pageContext.request.contextPath }/hjy/board/detail?bid=${nextVo.bid }">${nextVo.btitle }</a>
+							</c:otherwise>
+						</c:choose>
+					</div>
 				</div>
-			</c:if>
-			<c:if test="${cnt !=0}">
-				<div id="cmt"></div>
-			</c:if>
-		</div>
-		<br>
-			<div class="card mb-2">
-				<div class="card-header bg-light">
-				        <i class="fa fa-comment fa"></i> 
-				</div>
-				<div class="card-body">
-					<ul class="list-group list-group-flush">
-					    <li class="list-group-item">
-						<div class="form-inline mb-2">
-							${mid }
-						</div>
-						<textarea class="form-control" id="ccontentText"  placeholder="댓글을 남겨보세요." rows="3"></textarea>
-						<br><button type="button" class="btn btn-outline-primary" id="btnAdd">등록</button> 
-					    </li>
-					</ul>
-				</div>
-			</div>
 			
-		<div class="more_content">
-			<div class="more_prev">
-				<c:choose>
-					<c:when test="${prevVo eq null }">
-						<p>이전글 없음</p>
-					</c:when>
-					<c:otherwise>
-						이전글 <a href="${pageContext.request.contextPath }/hjy/board/detail?bid=${prevVo.bid }">${prevVo.btitle }</a>
-					</c:otherwise>
-				</c:choose>
+			
 			</div>
-			<div class="more_next">
-				<c:choose>
-					<c:when test="${nextVo eq null }">
-						<p>다음글 없음</p>
-					</c:when>
-					<c:otherwise>
-						다음글 <a href="${pageContext.request.contextPath }/hjy/board/detail?bid=${nextVo.bid }">${nextVo.btitle }</a>
-					</c:otherwise>
-				</c:choose>
-			</div>
+
 		</div>
-		<br>
-	</div>
+
+
+
 	<div class="footer">
-		<jsp:include page="/WEB-INF/views/user/includes/footer.jsp" flush="true"/>
+		<jsp:include page="/WEB-INF/views/user/includes/footer.jsp"
+			flush="true" />
 	</div>
 </body>
-		<script type="text/javascript">
+
+
+<script type="text/javascript">
 			$(document).ready(function() {
 				list();
 				$("#btnAdd").click(function(){
