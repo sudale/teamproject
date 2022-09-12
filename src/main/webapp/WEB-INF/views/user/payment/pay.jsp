@@ -219,7 +219,7 @@
 		*/
 		name: '주문명:숙소 예약',
 		//결제창에서 보여질 이름
-		amount: 500,
+		amount: 1,
 			//totalFee*1000,
 		buyer_email: '${rresemail }',
 		buyer_name: '${rresname }',
