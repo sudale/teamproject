@@ -24,8 +24,8 @@ public class PayRefund {
 	public static final String IMPORT_PAYMENTINFO_URL = "https://api.iamport.kr/payments/find/";
 	public static final String IMPORT_CANCEL_URL = "https://api.iamport.kr/payments/cancel";
 	public static final String IMPORT_PREPARE_URL = "https://api.iamport.kr/payments/prepare";
-	public static final String KEY = "4020842485722800";
-	public static final String SECRET = "dtbBWgtcoizHwHAtBwGZOJCpjB8C5oZE7QKNZichzdTevpqvu1UgtN2wTeOChZHbfu1gikiE6z3R3JyH"; 
+	public static final String KEY = "0410089379423116";
+	public static final String SECRET = "62ea5537fa23ff4c1d47ed29efc8b6c619a6348ae31a4381165891ab92b56448410b34e426788124"; 
 	// 아임포트 인증(토큰)을 받아주는 함수 
 	public String getImportToken() {
 		String result = "";

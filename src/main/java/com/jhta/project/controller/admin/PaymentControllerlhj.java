@@ -24,7 +24,8 @@ public class PaymentControllerlhj {
 			list.get(i).setPdate(pdate1);
 		}	
 		map.put("list", list);
-		//System.out.println("컨트롤러: " + list);
+		System.out.println("컨트롤러: " + list);
+		System.out.println(map);
 		return map;
 	}
 }
