@@ -229,7 +229,13 @@ public class BoardControllerHjy {
 		return "user/board/boardDetail";
 	}
 	
+	
+
+	
 	/**
+	 * 
+	 * 
+	 * 
 	 * 게시판글쓰기
 	 * @param req
 	 * @param bcate
@@ -239,11 +245,16 @@ public class BoardControllerHjy {
 	public ModelAndView newPost(HttpServletRequest req,String bcate) {
 		HttpSession session=req.getSession();
 		String mid=(String)session.getAttribute("mid");
-		ModelAndView mv=new ModelAndView("user/board/boardinsert");
-		mv.addObject("bcate",bcate);
-		System.out.println("카테고리:"+bcate);
-		mv.addObject("mid",mid);
-		return mv;
+		if(mid.equals("admin")) {
+			ModelAndView mv=new ModelAndView("user/board/boardinsert");
+			mv.addObject("bcate",bcate);
+			System.out.println("카테고리:"+bcate);
+			mv.addObject("mid",mid);
+			return mv;
+		} else {
+			ModelAndView mv=new ModelAndView("user/board/adminRefuse");
+			return mv;
+	}
 	}
 	@RequestMapping(value="phj/board/boardinsert",method = RequestMethod.POST)
 	public String insertBoard(BoardVo_phj vo,String bcate, MultipartHttpServletRequest mtfRequest) {
