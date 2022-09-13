@@ -6,11 +6,17 @@
 <head>
 <meta charset="UTF-8">
 <title>아이디 찾기 결과</title>
-<link rel="stylesheet" href="${pageContext.request.contextPath}/resources/css/header.css">
-<link rel="stylesheet" href="${pageContext.request.contextPath}/resources/css/footer.css">
-<link rel="stylesheet" href="${pageContext.request.contextPath}/resources/css/findidresult.css">
 
-<link href="https://fonts.googleapis.com/css2?family=Nanum+Gothic:wght@400;700;800&display=swap" rel="stylesheet">
+<!-- 파비콘 이미지 -->
+<link rel="shortcut icon" type="image/x-icon" href="${pageContext.request.contextPath}/resources/images/logo/favicon.ico" />
+
+<link rel="stylesheet" href="${pageContext.request.contextPath}/resources/css/reset.css">
+<link rel="stylesheet" href="${pageContext.request.contextPath}/resources/css/header.css">
+<link rel="stylesheet" href="${pageContext.request.contextPath}/resources/css/layout.css">
+<link rel="stylesheet" href="${pageContext.request.contextPath}/resources/css/footer.css">
+
+<%-- <link rel="stylesheet" href="${pageContext.request.contextPath}/resources/css/findidresult.css">
+ --%>
 
 </head>
 <body>
@@ -21,12 +27,18 @@
 <div class="findid">
 	<div class="findid_container">
 		<h2 class="title">아이디 찾기 결과</h2>
-		<h1>${findidResult }</h1>
+		<h3 lang="en">${findidResult }</h3>
 		
-		<div class="btn_area">
-			<a href="${pageContext.request.contextPath }/jhr/login">로그인</a>
-			<a href="${pageContext.request.contextPath }/" style="margin-left:20px;">홈</a>
+		
+		<div class="confirm-btn btn_area">
+		
+			<a class="btn btn-default btn btn_join llog submit_btn" href="${pageContext.request.contextPath }/jhr/login">로그인</a>
+			<a class="btn btn-default btn btn_join llog submit_btn" href="${pageContext.request.contextPath }/" style="margin-left:20px;">홈</a>
+			
 		</div>
+		
+		
+		
 	</div>
 </div>
 

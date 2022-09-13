@@ -402,6 +402,19 @@ span.point_color.ex {
 	padding: 100px 0;
 }
 
+.findid_container h3{
+	font-size:40px;
+}
+
+.findid_container .confirm-btn.btn_area {
+    display: flex;
+} 
+
+.findid_container .confirm-btn.btn_area a {
+    line-height:45px;
+} 
+
+    
 .toparea {
 	display: block;
 	box-sizing: border-box;

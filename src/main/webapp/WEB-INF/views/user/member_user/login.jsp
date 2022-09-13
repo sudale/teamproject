@@ -38,7 +38,7 @@
 							<div class="flied-input">
 								<label for="userId"> <input type="text" name="mid"
 									id="userId" class="login_id llog" maxlength="50" lang="en"
-									placeholder="아이디 또는 이메일을 입력해 주세요.">
+									placeholder="아이디를 입력해 주세요.">
 								</label>
 							</div>
 
@@ -62,8 +62,9 @@
 							<div class="login_menu">
 								<a href="${pageContext.request.contextPath }/jhr/join">회원가입</a>
 								<a href="${pageContext.request.contextPath }/jhr/findid">아이디
-									찾기</a> <a href="${pageContext.request.contextPath }/jhr/checkpw">비밀번호
-									재설정</a>
+									찾기</a> 
+								<%-- <a href="${pageContext.request.contextPath }/jhr/checkpw">비밀번호
+									재설정</a> --%>
 							</div>
 						</div>
 					</div>
