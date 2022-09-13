@@ -7,7 +7,7 @@
 <head>
 <meta charset="UTF-8">
 <title>공지사항</title>
-<link rel="stylesheet" href="${pageContext.request.contextPath}/resources/css/board_all.css">
+
 
 <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
 
@@ -17,11 +17,16 @@
 <link rel="stylesheet" href="${pageContext.request.contextPath}/resources/css/reset.css">
 <link rel="stylesheet" href="${pageContext.request.contextPath}/resources/css/header.css">
 <link rel="stylesheet" href="${pageContext.request.contextPath}/resources/css/layout.css">
+<link rel="stylesheet" href="${pageContext.request.contextPath}/resources/css/board_all.css">
 <link rel="stylesheet" href="${pageContext.request.contextPath}/resources/css/footer.css">
 
 
 
 <style type="text/css">
+
+.writebtn{}
+
+
 #sidebar-wrapper {
     position: fixed;
     height: 625px;
@@ -56,24 +61,34 @@
 				
 	<!-- 글쓰기버튼 -->
 	<div class="other_content">
-			<input type="button" onclick="clickForm()" value="글쓰기" class="btn btn-default writebtn">
+			<input type="button" onclick="clickForm()" value="글쓰기" class="btn writebtn">
 			
 	</div>
 		
 		
 		<table class="table">
+		<colgroup>
+		<col width="30%">
+		<col width="50%">
+		<col width="15%">
+		
+	</colgroup>
+	
 			<tr class="table_title">
-				<th class="table_date" >작성일</th>
-				<th>글제목</th>
+				
+				
 				<th class="table_writer">작성자</th>
+				<th>글제목</th>
+				<th class="table_date" >작성일</th>
 			</tr>
 			
 			<c:forEach var="vo" items="${list }">
 				<tr class="table_content" lang="en">
-					<fmt:formatDate value="${vo.brdate }" pattern="YY-MM-dd" var="brdate"/>
-					<td class="tdalign" lang="en">${brdate }</td>
+					<fmt:formatDate value="${vo.brdate }" pattern="YY-MM-dd" var="brdate"/>	
+					
+					<td lang="en"  class="">${vo.mid }</td>
 					<td><a href="/project/hjy/board/detail?bid=${vo.bid }" lang="en">${vo.btitle }</a></td>
-					<td lang="en"  class="tdalign">${vo.mid }</td>
+					<td class="" lang="en">${brdate }</td>
 				</tr>
 			</c:forEach>
 		</table>
@@ -86,7 +101,7 @@
 					<option value="bcontent" <c:if test="${field=='bcontent' }">selected</c:if>>내용</option>
 				</select>
 				<input type="text" name ="keyword" value="${keyword }" class="form-control box_margin">
-				<input type="submit" value="검색" class="btn btn-default submitbtn">
+				<input type="submit" value="검색" class="btn btn-default">
 			</form>
 		</div>
 		

@@ -6,20 +6,30 @@
 <head>
 <meta charset="UTF-8">
 <title>Insert title here</title>
-<link rel="shortcut icon" type="image/x-icon" href="${pageContext.request.contextPath}/resources/images/logo/favicon.ico" />
+<link rel="shortcut icon" type="image/x-icon"
+	href="${pageContext.request.contextPath}/resources/images/logo/favicon.ico" />
 
-<link rel="stylesheet" href="${pageContext.request.contextPath}/resources/css/reset.css">
-<link rel="stylesheet" href="${pageContext.request.contextPath}/resources/css/header.css">
-<link rel="stylesheet" href="${pageContext.request.contextPath}/resources/css/content.css">
-<link rel="stylesheet" href="${pageContext.request.contextPath}/resources/css/layout.css">
-<link rel="stylesheet" href="${pageContext.request.contextPath}/resources/css/footer.css">
+<link rel="stylesheet"
+	href="${pageContext.request.contextPath}/resources/css/reset.css">
+<link rel="stylesheet"
+	href="${pageContext.request.contextPath}/resources/css/header.css">
+<link rel="stylesheet"
+	href="${pageContext.request.contextPath}/resources/css/content.css">
+<link rel="stylesheet"
+	href="${pageContext.request.contextPath}/resources/css/layout.css">
+<link rel="stylesheet"
+	href="${pageContext.request.contextPath}/resources/css/footer.css">
 
+<link rel="stylesheet"
+	href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
+	type="text/css" />
 
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" type="text/css" />
-
-<link rel="stylesheet" href="${pageContext.request.contextPath}/resources/css/jquery-ui.min.css">
-<script type="text/javascript" src="${pageContext.request.contextPath}/resources/js/jquery-3.6.0.min.js"></script>
-<script type="text/javascript" src="${pageContext.request.contextPath}/resources/js/jquery-ui.min.js"></script>
+<link rel="stylesheet"
+	href="${pageContext.request.contextPath}/resources/css/jquery-ui.min.css">
+<script type="text/javascript"
+	src="${pageContext.request.contextPath}/resources/js/jquery-3.6.0.min.js"></script>
+<script type="text/javascript"
+	src="${pageContext.request.contextPath}/resources/js/jquery-ui.min.js"></script>
 
 
 
@@ -49,8 +59,6 @@
 
 
 <style type="text/css">
-
-
 @media screen and (min-width: 768px) {
 	#adv-search {
 		width: 500px;
@@ -861,257 +869,269 @@ function outMoveAfter(){ //버튼 클릭시 다음날로 이동
 </head>
 <body>
 	<div class="header">
-		<jsp:include page="../includes/header.jsp" flush="true"/>
+		<jsp:include page="../includes/header.jsp" flush="true" />
 	</div>
-	
-	
-
-
-<div class="sub_content">
-
-	<div class="top_container">
-		<div class="search_container">
-			<form class="search_content" method="post"
-				action="${pageContext.request.contextPath }/lhjcjyhjy/firstsearch">
 
 
 
-				<div class="search_insert_container">
 
-                 <div class="search_insert city">
-						<div class="search_city_display">
-							<i class="fa-sharp fa-solid fa-magnifying-glass"></i>
-							<div class="city_text">
-								<input type="text" id="searchHotel" name="searchHotel"
-									value="${aaddress}" />
-							</div>
-						</div>
-					</div>
-					
-					
-		
+	<div class="sub_content">
 
-					<div class="search_insert date">
-						<div class="search_date_display">
-							<div class="date_check">
-								<div class="date_text">
+		<div class="top_container">
+			<div class="search_container">
+				<form class="search_content" method="post"
+					action="${pageContext.request.contextPath }/lhjcjyhjy/firstsearch">
 
-									<div class="date_innertext">
-										<input type="date" id="checkin" name="checkin"
-											value="${rcheckin }">
-									</div>
+
+
+					<div class="search_insert_container">
+
+						<div class="search_insert city">
+							<div class="search_city_display">
+								<i class="fa-sharp fa-solid fa-magnifying-glass"></i>
+								<div class="city_text">
+									<input type="text" id="searchHotel" name="searchHotel"
+										value="${aaddress}" />
 								</div>
-								<button class="date_btn_before" type="button">
-									<svg viewBox="0 0 8 5">
-														<path d="M7 1.053L4.027 4 1 1" stroke="currentColor"
-											fill="none" style="user-select: auto;"></path>
-													</svg>
-								</button>
-								<button class="date_btn_after" type="button">
-									<svg viewBox="0 0 8 5">
-														<path d="M7 1.053L4.027 4 1 1" stroke="currentColor"
-											fill="none" style="user-select: auto;"></path>
-													</svg>
-								</button>
 							</div>
-							<div class="date_sep"></div>
-							<div class="date_check">
-								<div class="date_text">
-									<div class="date_innertext">
-										<input type="date" id="checkout" name="checkout"
-											value="${rcheckout }">
+						</div>
+
+
+
+
+						<div class="search_insert date">
+							<div class="search_date_display">
+								<div class="date_check">
+									<div class="date_text">
+
+										<div class="date_innertext">
+											<input type="date" id="checkin" name="checkin"
+												value="${rcheckin }">
+										</div>
 									</div>
+									<button class="date_btn_before" type="button">
+										<svg viewBox="0 0 8 5">
+														<path d="M7 1.053L4.027 4 1 1" stroke="currentColor"
+												fill="none" style="user-select: auto;"></path>
+													</svg>
+									</button>
+									<button class="date_btn_after" type="button">
+										<svg viewBox="0 0 8 5">
+														<path d="M7 1.053L4.027 4 1 1" stroke="currentColor"
+												fill="none" style="user-select: auto;"></path>
+													</svg>
+									</button>
 								</div>
-								<button class="date_btn_before_a" type="button">
-									<svg viewBox="0 0 8 5">
+								<div class="date_sep"></div>
+								<div class="date_check">
+									<div class="date_text">
+										<div class="date_innertext">
+											<input type="date" id="checkout" name="checkout"
+												value="${rcheckout }">
+										</div>
+									</div>
+									<button class="date_btn_before_a" type="button">
+										<svg viewBox="0 0 8 5">
 														<path d="M7 1.053L4.027 4 1 1" stroke="currentColor"
-											fill="none" style="user-select: auto;"></path>
+												fill="none" style="user-select: auto;"></path>
 													</svg>
-								</button>
-								<button class="date_btn_after_a" type="button">
-									<svg viewBox="0 0 8 5">
+									</button>
+									<button class="date_btn_after_a" type="button">
+										<svg viewBox="0 0 8 5">
 														<path d="M7 1.053L4.027 4 1 1" stroke="currentColor"
-											fill="none" style="user-select: auto;"></path>
+												fill="none" style="user-select: auto;"></path>
 													</svg>
-								</button>
+									</button>
+								</div>
 							</div>
 						</div>
-					</div>
 
-					<!-- date end -->
+						<!-- date end -->
 
-					<div class="search_insert countRoom">
-						<div class="search_room_display">
-							<i class="fa-regular fa-bell"></i>
+						<div class="search_insert countRoom">
+							<div class="search_room_display">
+								<i class="fa-regular fa-bell"></i>
 
 
-							<div class="room_text">
-								<input type="number" min="1" id="countRoom" name="countRoom"
-									value="${countRoom }" />
+								<div class="room_text">
+									<input type="number" min="1" id="countRoom" name="countRoom"
+										value="${countRoom }" />
+								</div>
+
 							</div>
-
 						</div>
-					</div>
-					<div class="search_insert countPeople">
-						<div class="search_people_display">
-							<i class="fa-regular fa-face-smile"></i>
+						<div class="search_insert countPeople">
+							<div class="search_people_display">
+								<i class="fa-regular fa-face-smile"></i>
 
-							<div class="people_text">
-								
+								<div class="people_text">
+
 									<input type="number" min="1" id="countPeople"
-												name="countPeople" value="${rimaxper }" />
-												
-							</div>
+										name="countPeople" value="${rimaxper }" />
 
+								</div>
+
+							</div>
+						</div>
+						<div class="search_insert button_container">
+							<button class="search_insert_button" type="submit" id="search">
+								<span class="search_icon_container"> <span
+									class="search_icon"> <i
+										class="fa-sharp fa-solid fa-magnifying-glass"></i>
+								</span>
+								</span>
+							</button>
 						</div>
 					</div>
-					<div class="search_insert button_container">
-						<button class="search_insert_button" type="submit" id="search">
-							<span class="search_icon_container"> <span
-								class="search_icon"> <i
-									class="fa-sharp fa-solid fa-magnifying-glass"></i>
-							</span>
-							</span>
-						</button>
-					</div>
-				</div>
-			</form>
+				</form>
 
 
+			</div>
 		</div>
-	</div>
-	<!-- top_container end -->
-	
-	
-	
-	
-	
-	
-	<!--검색 결과나오는  콘텐츠 부분  -->
-	
-	
-	<div class="mb-5 room_content">
-		
-				<div class="col-md-9 view_Rlist_wrap" id="list">
+		<!-- top_container end -->
 
-					<c:choose>
-						<c:when test="${list.size()==0}">
-							<h3>${nullmsg}</h3>
-						</c:when>
-						<c:otherwise>
-							<c:forEach var="vo" items="${list }" varStatus="status">
-								<div class="row mb-3 view_Rlist">
-									
-										<!-- <div class="card">
+
+
+
+
+
+		<!--검색 결과나오는  콘텐츠 부분  -->
+
+
+		<div class="mb-5 room_content">
+
+			<div class="col-md-9 view_Rlist_wrap" id="list">
+
+				<c:choose>
+					<c:when test="${list.size()==0}">
+						<h3>${nullmsg}</h3>
+					</c:when>
+					<c:otherwise>
+						<c:forEach var="vo" items="${list }" varStatus="status">
+							<div class="row mb-3 view_Rlist">
+
+								<!-- <div class="card">
 											<div class="card-body"> -->
-												
-													<div class="col-md-3 view_Rimg">
-														<c:choose>
-															<c:when test="${vo.amainimg eq null or vo.amainimg==''}">
-																<img
-																	src="${pageContext.request.contextPath }/resources/images/accommodations/220i0z000000mulfw433F_Z_1080_808_R5_D.jpg"
-																	>
-															</c:when>
-															<c:otherwise>
-																<img
-																	src="${pageContext.request.contextPath }/resources/images/accommodations/${vo.amainimg }"
-																	>
-															</c:otherwise>
-														</c:choose>
-													</div>
-													
-													
-													<div class="col-md-6 view_Rinfo">
-														
-														<div class="room_Listtop">
-														
-														<h3 class="view_Rtitle">${vo.aname }</h3>
-														<c:if test="${vo.agrade!=null}">
-															<h3 class="view_Rgrade">${vo.agrade}성급</h3>
-														</c:if>
-														
-													
-														 <c:choose>
-                                             <c:when test="${vo.agrade == 5}">
-                                             
-                                             
-                                                <span class="agrade_star">
-                                                
-                                                <img class="star" src="${pageContext.request.contextPath}/resources/images/room_info/star.svg">
-                                                <img class="star" src="${pageContext.request.contextPath}/resources/images/room_info/star.svg">
-                                                <img class="star" src="${pageContext.request.contextPath}/resources/images/room_info/star.svg">
-                                                <img class="star" src="${pageContext.request.contextPath}/resources/images/room_info/star.svg">
-                                                <img class="star" src="${pageContext.request.contextPath}/resources/images/room_info/star.svg">
-                                                </span>
-                                             </c:when>
-                                             <c:when test="${vo.agrade == 4}">
-                                                <!-- <span class="star">★★★★☆</span> -->
-                                                <img class="star" src="${pageContext.request.contextPath}/resources/images/room_info/star.svg">
-                                                <img class="star" src="${pageContext.request.contextPath}/resources/images/room_info/star.svg">
-                                                <img class="star" src="${pageContext.request.contextPath}/resources/images/room_info/star.svg">
-                                             </c:when>
-                                             <c:when test="${vo.agrade==3 }">
-                                                <img class="star" src="${pageContext.request.contextPath}/resources/images/room_info/star.svg">
-                                                <img class="star" src="${pageContext.request.contextPath}/resources/images/room_info/star.svg">
-                                                <img class="star" src="${pageContext.request.contextPath}/resources/images/room_info/star.svg">
-                                             </c:when>
-                                             <c:when test="${vo.agrade==2 }">
-                                                <img class="star" src="${pageContext.request.contextPath}/resources/images/room_info/star.svg">
-                                                <img class="star" src="${pageContext.request.contextPath}/resources/images/room_info/star.svg">
-                                             </c:when>
-                                             <c:when test="${vo.agrade==1 }">
-                                                <img class="star" src="${pageContext.request.contextPath}/resources/images/room_info/star.svg">
-                                                
-                                             </c:when>
-                                             <c:when test="${vo.agrade==0 }">
-                                                <img class="star" src="${pageContext.request.contextPath}/resources/images/room_info/star.svg">
-                                             </c:when>
-                                             <c:otherwise>
-                                                <span>☆☆☆☆☆test1</span>
-                                             </c:otherwise>
-                                          </c:choose>
-                                          
-														
-									
-														
-														
-														<h3 class="view_Radress" lang="en">${vo.aaddress }</h3>
-														
-													
-													</div>
-													
-													
-													<div class="room_Listbottom">
-													
-													
-														<h4 class="view_Rprice" lang="en">${vo.amountsum}원</h4>
-														<button class="btn btn-outline-primary"
-															onclick="location.href='${pageContext.request.contextPath }/user/kjy/room_info?aid=${vo.aid}&riid=${vo.riid }&person=${rimaxper}&roomnum=${countRoom}&startday=${rcheckin}&endday=${rcheckout}'">예약하기</button>
-													</div>
-													
-													</div>
-													
-										
 
-												</div>
-										<!-- 	</div>
+								<div class="col-md-3 view_Rimg">
+									<c:choose>
+										<c:when test="${vo.amainimg eq null or vo.amainimg==''}">
+											<img
+												src="${pageContext.request.contextPath }/resources/images/accommodations/220i0z000000mulfw433F_Z_1080_808_R5_D.jpg">
+										</c:when>
+										<c:otherwise>
+											<img
+												src="${pageContext.request.contextPath }/resources/images/accommodations/${vo.amainimg }">
+										</c:otherwise>
+									</c:choose>
+								</div>
+
+
+								<div class="col-md-6 view_Rinfo">
+
+									<div class="room_Listtop">
+
+										<h3 class="view_Rtitle">${vo.aname }</h3>
+										<c:if test="${vo.agrade!=null}">
+											<h3 class="view_Rgrade" lang="en">${vo.agrade}성급
+												<c:choose>
+													<c:when test="${vo.agrade == 5}">
+
+
+														<span class="agrade_star"> <img class="star"
+															src="${pageContext.request.contextPath}/resources/images/room_info/star.svg">
+															<img class="star"
+															src="${pageContext.request.contextPath}/resources/images/room_info/star.svg">
+															<img class="star"
+															src="${pageContext.request.contextPath}/resources/images/room_info/star.svg">
+															<img class="star"
+															src="${pageContext.request.contextPath}/resources/images/room_info/star.svg">
+															<img class="star"
+															src="${pageContext.request.contextPath}/resources/images/room_info/star.svg">
+														</span>
+													</c:when>
+													<c:when test="${vo.agrade == 4}">
+														<!-- <span class="star">★★★★☆</span> -->
+														<img class="star"
+															src="${pageContext.request.contextPath}/resources/images/room_info/star.svg">
+														<img class="star"
+															src="${pageContext.request.contextPath}/resources/images/room_info/star.svg">
+														<img class="star"
+															src="${pageContext.request.contextPath}/resources/images/room_info/star.svg">
+													</c:when>
+													<c:when test="${vo.agrade==3 }">
+														<img class="star"
+															src="${pageContext.request.contextPath}/resources/images/room_info/star.svg">
+														<img class="star"
+															src="${pageContext.request.contextPath}/resources/images/room_info/star.svg">
+														<img class="star"
+															src="${pageContext.request.contextPath}/resources/images/room_info/star.svg">
+													</c:when>
+													<c:when test="${vo.agrade==2 }">
+														<img class="star"
+															src="${pageContext.request.contextPath}/resources/images/room_info/star.svg">
+														<img class="star"
+															src="${pageContext.request.contextPath}/resources/images/room_info/star.svg">
+													</c:when>
+													<c:when test="${vo.agrade==1 }">
+														<img class="star"
+															src="${pageContext.request.contextPath}/resources/images/room_info/star.svg">
+
+													</c:when>
+													<c:when test="${vo.agrade==0 }">
+														<img class="star"
+															src="${pageContext.request.contextPath}/resources/images/room_info/star.svg">
+													</c:when>
+													<c:otherwise>
+														<span>☆☆☆☆☆test1</span>
+													</c:otherwise>
+												</c:choose>
+
+
+
+											</h3>
+										</c:if>
+
+
+
+
+
+										<h3 class="view_Radress" lang="en">
+											<i class="fa-solid fa-location-dot"></i>${vo.aaddress }</h3>
+
+
+									</div>
+
+
+									<div class="room_Listbottom">  
+										<h4 class="view_Rprice" lang="en"><span lang="en">₩</span> ${vo.amountsum}원</h4>
+										<button class="btn btn-primary"
+											onclick="location.href='${pageContext.request.contextPath }/user/kjy/room_info?aid=${vo.aid}&riid=${vo.riid }&person=${rimaxper}&roomnum=${countRoom}&startday=${rcheckin}&endday=${rcheckout}'">예약하기</button>
+									</div>
+
+								</div>
+
+
+
+							</div>
+							<!-- 	</div>
 										</div> -->
-								
-							</c:forEach>
-						</c:otherwise>
-					</c:choose>
-				</div>
-		
-	
+
+						</c:forEach>
+					</c:otherwise>
+				</c:choose>
+			</div>
+
+
 		</div>
 
 
 
 	</div>
 	<!-- content end -->
-	
+
 	<div class="footer">
-		<jsp:include page="../includes/footer.jsp" flush="true"/>
+		<jsp:include page="../includes/footer.jsp" flush="true" />
 	</div>
 </body>
 </html>

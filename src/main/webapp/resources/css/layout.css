@@ -30,6 +30,12 @@
 	color: #ffffff;
 }
 
+.btn-default{
+    width: 150px;
+    background: #191919;
+    flex: 2;	
+}
+
 /*=========================== 회원가입, 아이디찾기, 비밀번호 찾기 공통 =============================*/
 
 /* 로그인 */
@@ -126,6 +132,8 @@
 .confirm-btn {
 	padding-top: 15px;
 	text-align: center;
+	width: 30%;
+	margin: 0 auto;
 }
 
 .confirm-btn .btn_login {
@@ -276,6 +284,7 @@ span.point_color.ex {
 
 .join1 ul li input.btn_pwd {
 	background: none;
+	border-radius: 0;
 }
 
 .join_col1 {
@@ -632,15 +641,18 @@ span.point_color.ex {
 }
 
 .view_Rimg img {
-	width: 100%;
+	/* width: 85%; */
+	width: 510px;
+	height: 382px;
 	border-radius: 5px;
+	height: 382px;
 }
 
 .view_Rinfo {
 	width: 40%;
 	display: flex;
 	flex-direction: column;
-	justify-content: space-between;
+	justify-content: space-evenly;
 }
 
 .view_Rinfo .room_Listtop>* {
@@ -649,83 +661,343 @@ span.point_color.ex {
 
 .view_Rinfo .room_Listbottom {
 	border-top: 2px solid #eee;
-	padding: 40px 0;
-}
-
-.view_Rinfo .view_Rtitle {
-	font-size: 30px;
-}
-
-.view_Rinfo .view_Rgrade {
-	font-size: 17px;
-}
-
-.view_Rinfo .view_Rprice {
-	font-size: 35px;
 	padding: 20px 0;
 }
 
+.view_Rinfo .room_Listbottom .btn-primary {
+	height: 60px;
+	font-size: 19px;
+}
+
+.view_Rinfo .view_Rtitle {
+	font-size: 23px;
+}
+
+.view_Rinfo .view_Rgrade {
+	font-size: 19px;
+}
+
+.view_Rinfo .view_Rprice {
+	font-size: 25px;
+	padding: 15px 0;
+}
+
 .view_Radress {
-	font-size: 15px;
+	font-size: 17px;
 }
 
+.call_back {
+	padding: 10px 0;
+	margin-top: 30px;
+	background: #191919;
+	color: #fff;
+	border-radius: 6px;
+	width: 50%;
+	margin: 30px auto 0;
+}
+
+.call_back a {
+	color: #fff;
+}
 /*=================================숙소 상세보기 ======================================*/
-.roomdetail_content{
-	max-width:1200px;
-	margin:0 auto;
+.roomdetail_content {
+	max-width: 1200px;
+	margin: 0 auto;
 }
+
 .detailbox {
-
-}
-.room_detailMap_wrap{
-	position: relative;
-}
-
-.detail_info {
-   margin: 40px auto;
-}
-/* 이미지박스 */
-
-
-.largeimgbox {
-	position: relative;
-	display: flex;
 	
 }
 
+.room_detailMap_wrap {
+	position: relative;
+	padding-bottom: 75px;
+}
+
+.room_detailMap_wrap .aadress {
+	font-size: 21px;
+	margin-bottom: 39px;
+}
+
+.detail_info {
+	padding: 50px 0;
+	display: flex;
+	justify-content: space-between;
+}
+
+.view_title_wrap {
+	width: 50%;
+}
+
+/* 이미지박스 */
+.largeimgbox {
+	position: relative;
+	display: flex;
+}
+
+.largeimg {
+	width: 100%;
+	height: 621px;
+	margin-right: 10px;
+}
+
+.largeimg img {
+	width: 100%;
+	height: 100%;
+	border-radius: 10px;
+}
+
 .imgbox {
-	position: relative;	
-}
-.imgbox img {border-radius: 10px;}
-
-
-.smallImg{
- width: 272px;
-	      margin-top: 8px;
-    min-height: 185px;
-}
-#smallimg1 {width: 560px;}
-#smallimg2 {margin-right:10px;}
-#smallimg3 {}
-
-.view_rest_form{
-	position: fixed;
-	right:0;
-	top:0;	
-}
-.person_wrap{
-	display:flex;
+	position: relative;
 }
 
+.imgbox img {
+	border-radius: 10px;
+}
+
+.smallImg {
+	width: 272px;
+	margin-top: 8px;
+	height: 185px;
+}
+
+#smallimg1 {
+	width: 560px;
+}
+
+#smallimg2 {
+	margin-right: 10px;
+}
+
+#smallimg3 {
+	
+}
+
+.view_title_wrap .person_wrap {
+	display: flex;
+	justify-content: space-between;
+	width: 61%;
+	font-size: 19px;
+}
+
+.view_title_wrap  .anme {
+	font-size: 35px;
+	font-weight: bold;
+}
+
+.view_title_wrap .adetail {
+	font-size: 20px;
+	padding: 20px 0;
+}
+
+.view_title_wrap .agrade {
+	font-size: 19px;
+	padding-top: 20px;
+}
+
+.view_title_wrap .agrade .star {
+	/* width: 5%;
+    vertical-align: middle; */
+	
+}
+
+.view_title_wrap .aadress {
+	font-size: 15px;
+	font-weight: bold;
+}
+
+.view_title_wrap .search_info>* {
+	font-size: 18px;
+	padding: 20px 0;
+	border-top: 1px dashed #cfcfcf;
+	color: #484747;
+}
+
+.view_title_wrap .search_info .name>i {
+	padding-right: 20px;
+}
+
+.view_title_wrap .search_info .subname>i {
+	padding-right: 20px;
+}
 
 .price_wrap {
-    position: absolute;
-    top: 0;
-    right: 0;
-    border: 1px solid rgb(221, 221, 221);
-    border-radius: 12px;
-    padding: 24px;
-    box-shadow: rgb(0 0 0 / 12%) 0px 6px 16px;
-    
+	width: 40%;
+	height: 100%;
+	border: 1px solid rgb(221, 221, 221);
+	border-radius: 12px;
+	padding: 24px;
+	box-shadow: rgb(0 0 0/ 12%) 0px 6px 16px;
 }
 
+.price_wrap .price {
+	padding: 30px 0;
+	font-size: 20px;
+}
+
+.price_wrap .person_wrap {
+	display: flex;
+	justify-content: space-between;
+	width: 65%;
+	font-size: 16px;
+	padding: 15px 0;
+}
+
+.person_wrap>* {
+	color: #0008;
+}
+
+.price_wrap .sumprice {
+	font-size: 25px;
+	padding: 25px 0;
+	border-top: 1px solid #dbdbdb;
+}
+
+.price_wrap .sumprice span {
+	font-size: 19px;
+}
+
+.price_wrap .btn-primary {
+	height: 60px;
+	font-size: 21px;
+}
+/*============================== 예약페이지 진행 페이지 ======================================*/
+.reservation_wrap {
+	max-width: 1200px;
+	display: block;
+	box-sizing: border-box;
+	margin: 0 auto;
+	padding: 60px 0;
+}
+
+.reser_title {
+	font-size: 19px;
+	font-weight: 500;
+}
+
+.reservation_form {
+	display: flex;
+	padding-top: 70px;
+}
+
+.reservation_form ul li {
+	position: relative;
+	width: 100%;
+	justify-content: flex-start;
+	padding: 20px 0;
+	margin: 10px auto;
+	display: flex;
+	align-items: center;
+}
+
+.reservation_form ul li label {
+	flex: 1;
+	max-width: 123px;
+	font-weight: 400;
+}
+
+.reservation_form ul li input {
+	display: block;
+	border: 1px solid #adadad;
+	padding: 10px;
+	color: #191919;
+	width: 100%;
+	height: 50px;
+	font-size: 14px;
+	flex: 2;
+}
+
+.reservation_form>div {
+	border: 1px solid #eee;
+	padding: 20px;
+	border-radius: 6px;
+	margin-right: 1%;
+}
+
+.reser_box {
+	width: 50%;
+}
+
+.speci_add>p {
+	padding: 20px 0;
+}
+
+.speci_add .cancel>span {
+	color: #ff346e;
+	border: 1px solid #ff346e;
+	padding: 10px 30px;
+	display: block;
+	margin: 20px 0 10px;
+	border-radius: 20px;
+	width: 47%;
+	font-weight: 500;
+	font-size: 13px;
+	text-align: center;
+}
+
+.totalinfo {
+	width: 50%;
+}
+
+.totalinfo .reservation_room>table>tr {
+	border-bottom: 1px solid #191919;
+}
+
+.totalinfo .reservation_room {
+	padding: 20px 0;
+	margin: 10px auto;
+}
+
+/*============================== 최종 결제진행중 보여주는 페이지 ======================================*/
+.pay_content {
+	max-width: 1200px;
+	display: block;
+	box-sizing: border-box;
+	margin: 0 auto;
+	padding: 60px 0;
+}
+
+.pay_btn {
+	text-align: center;
+	display: flex;
+	align-items: center;
+	flex-direction: column;
+}
+
+.pay_btn span {
+	padding-bottom: 40px;
+	display: block;
+}
+
+/*============================== 결제완료 ======================================*/
+.res_completion {
+	max-width: 1200px;
+	display: block;
+	box-sizing: border-box;
+	margin: 0 auto;
+	padding: 60px 0;
+	text-align:center;
+}
+
+.res_comp_tit {
+	font-size: 30px;
+}
+.res_comp_tit strong {
+    font-weight: 700;
+}
+
+
+.res_comp_tit img {
+	display: inline-block;
+	vertical-align: middle;
+}
+.res_comp_midtit {
+	padding-top:10px;
+    
+}
+.res_comp_midtit .mypagehref a{
+	font-size: 20px;
+        color: #ff346e;
+    text-decoration: underline;
+	font-weight:500;
+}

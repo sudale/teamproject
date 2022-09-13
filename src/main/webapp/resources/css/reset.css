@@ -52,7 +52,7 @@ html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p,
 	text-decoration: none;
 	font-family: "Noto Sans KR", "Montserrat", sans-serif, "맑은 고딕",
 		"Nanum Gothic", "나눔 고딕", "돋움", dotum, sans-serif;
-	font-weight: 400;
+	font-weight: 300;
 	line-height: 1.4;
 	word-break: keep-all;
 	box-sizing: border-box;
@@ -105,17 +105,20 @@ button {
 	appearance: none;
 }
 
+
+      
+      
 input[type="button"] {
 	/* 생략 */
 	margin: 0;
 	padding: 0.5rem 1rem;
 	font-family: "Noto Sans KR", sans-serif;
-	font-size: 1rem;
+	/* font-size: 1rem; */
 	font-weight: 400;
 	text-align: center;
 	text-decoration: none;
 	display: inline-block;
-	width: auto;
+	/* width: auto; */
 	border: none;
 	cursor: pointer;
 	border-radius: 4px;
@@ -174,13 +177,13 @@ input[type="file"] {  파일 필드 숨기기
 }
  */
 input::placeholder {
-	font-size: 13px;
+	font-size: 15px;
 	font-weight: 300;
 }
 
 textarea::placeholder {
-	color: blue;
-	font-weight: bold;
+	font-size: 15px;
+	font-weight: 300;
 }
 
 textarea {

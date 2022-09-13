@@ -40,8 +40,7 @@
 		<div class="join1" style="margin-bottom: 10px !important;">
 			<ul>
 
-				<img id="profileimg" onerror="this.style.display='none'"
-					style="max-width: 400px; max-height: 300px; box-sizing: border-box; margin-bottom: 10px;">
+				<img id="profileimg" onerror="this.style.display='none'" style="max-width: 400px; max-height: 300px; box-sizing: border-box; margin-bottom: 10px;">
 
 			
 
@@ -102,8 +101,7 @@
 						
 			</ul>
 		</div>
-		<!-- <input type="submit" value="수정" class="submit_btn" id="submit_btn" style="margin-top:40px;">
-      -->
+	
 		<div class="confirm-btn">
 			<input type="submit" class="btn_join llog submit_btn" id="submit_btn"
 				value="수정">
