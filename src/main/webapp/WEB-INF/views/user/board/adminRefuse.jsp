@@ -8,6 +8,13 @@
 <meta charset="UTF-8">
 <title> 관리자 권한 필요</title>
 
+<!-- 파비콘 이미지 -->
+<link rel="shortcut icon" type="image/x-icon" href="${pageContext.request.contextPath}/resources/images/logo/favicon.ico" />
+
+<link rel="stylesheet" href="${pageContext.request.contextPath}/resources/css/reset.css">
+<link rel="stylesheet" href="${pageContext.request.contextPath}/resources/css/header.css">
+<link rel="stylesheet" href="${pageContext.request.contextPath}/resources/css/content.css">
+<link rel="stylesheet" href="${pageContext.request.contextPath}/resources/css/footer.css">
 
 
 </head>
