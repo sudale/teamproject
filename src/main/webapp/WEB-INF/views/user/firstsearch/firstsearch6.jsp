@@ -1022,7 +1022,7 @@ function outMoveAfter(){ //버튼 클릭시 다음날로 이동
 										</c:when>
 										<c:otherwise>
 											<img
-												src="${pageContext.request.contextPath }/resources/images/room_info/${vo.amainimg }">
+												src="${pageContext.request.contextPath }/resources/images/accommodations/${vo.amainimg }">
 										</c:otherwise>
 									</c:choose>
 								</div>
