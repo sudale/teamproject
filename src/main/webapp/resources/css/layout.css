@@ -746,11 +746,12 @@ span.point_color.ex {
 .largeimgbox {
 	position: relative;
 	display: flex;
+	max-height: 620px;
 }
 
 .largeimg {
 	width: 100%;
-	height: 621px;
+	
 	margin-right: 10px;
 }
 
