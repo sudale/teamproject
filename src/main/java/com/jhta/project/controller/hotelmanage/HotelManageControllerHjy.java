@@ -65,12 +65,16 @@ public class HotelManageControllerHjy {
 	Period_tempService_hjy period_tempservice;
 	@Autowired
 	Additional_fee_tempService_hjy additional_fee_tempservice;
+	
+	
+	//스프링기능
 	@Autowired
 	ServletContext sc;
 
 	
+	//jsp에서 서블릿으로  받아오라고 하는거
+	@GetMapping("hjy/hotelForm") //호출이 되면 이 hotelInsertForm 메서드를 실행시킨다
 	
-	@GetMapping("hjy/hotelForm")
 	public String hotelInsertForm(String type) {
 		return "user/hotelManage/form";
 	}
@@ -84,9 +88,9 @@ public class HotelManageControllerHjy {
 	public String hotelAllow(String aid,Model model) {
 //		찐db에 저장하기
 		// 숙소테이블
-		AccommodationsVo accommodationsVo = accommodations_tempservice.find(Integer.parseInt(aid));
+		AccommodationsVo accommodationsVo = accommodations_tempservice.find(Integer.parseInt(aid)); 
 		int n = accommodationsservice.insert(accommodationsVo);
-		int aidSave = accommodationsservice.seq();
+		int aidSave = accommodationsservice.seq(); //시퀀스
 
 		// 파일 경로 옮기기 temp->찐으로
 		String hotelpath_temp = sc.getRealPath("/resources/hjy/hotelmain_temp");
@@ -105,6 +109,9 @@ public class HotelManageControllerHjy {
 		// 객실세부정보
 		List<Room_InfoVo> Room_info_tempVoList = roomInfo_tempservice.find(Integer.parseInt(aid));
 		System.out.println(Room_info_tempVoList);
+		
+		
+		//배열 for문
 		for (Room_InfoVo roomInfoVo : Room_info_tempVoList) {
 			roomInfoVo.setAid(aidSave);
 			int n1 = roomInfoservice.insert(roomInfoVo);
@@ -116,11 +123,13 @@ public class HotelManageControllerHjy {
 			String roomdstFile = roommainpath + "//" + roomInfoVo.getRimainimg();
 			File roomsrc = new File(roomsrcFile);
 			File roomdst = new File(roomdstFile);
+			
 			try {
 				FileUtils.moveFile(roomsrc, roomdst);
 			} catch (Exception e) {
 				e.printStackTrace();
 			}
+			
 			String roomexpath_temp = sc.getRealPath("/resources/hjy/roomextra_temp");
 			String roomexsrcFile = roomexpath_temp + "//" + roomInfoVo.getRiextraimg1();
 			String roomexpath = sc.getRealPath("/resources/images/room_info");
@@ -132,6 +141,7 @@ public class HotelManageControllerHjy {
 			} catch (Exception e) {
 				e.printStackTrace();
 			}
+			
 			String roomex2srcFile = roomexpath_temp + "//" + roomInfoVo.getRiextraimg2();
 			String roomex2dstFile = roomexpath + "//" + roomInfoVo.getRiextraimg2();
 			File roomex2src = new File(roomex2srcFile);
@@ -141,6 +151,7 @@ public class HotelManageControllerHjy {
 			} catch (Exception e) {
 				e.printStackTrace();
 			}
+			
 
 			// 임시테이블의 riid번호
 			int riid = roomInfoVo.getRiid();
@@ -151,6 +162,7 @@ public class HotelManageControllerHjy {
 			System.out.println("@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@     "+riid);
 			Additional_feeVo additional_feeVo = additional_fee_tempservice.find(riid);
 			System.out.println("@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@     "+additional_feeVo);
+			
 			//additional_feeVo.setRiid(rid);
 			int n2 = additional_feeservice.insert(additional_feeVo);
 			additional_fee_tempservice.delete(riid);
@@ -237,7 +249,12 @@ public class HotelManageControllerHjy {
 	 * @return
 	 */
 	
+	
+	
+	
 	@RequestMapping(value = "hjy/hotelreq", method = RequestMethod.POST)
+	//호텔요청 했을때, 호텔등록했을시
+	//매개변수를 타입을적어줘야되니까, 두 가지(타입,변수명)가 들어가는거같음 // 숙소정보, 추가정보, 시즌정보, 룸정보, 이미지, 파일업로드
 	public String hotelRequest(AccommodationsVo accommodationsVo, Additional_feeVo additional_feeVoList,
 			PeriodVo periodVoList, Room_InfoVo roomInfoVoList, MultipartHttpServletRequest mtfRequest) {
 		
@@ -377,7 +394,7 @@ public class HotelManageControllerHjy {
 
 		String subject = "[숙소등록]";
 		String fromEmail = "hodob76@gmail.com";
-		String fromUsername = "J6 MANAGER";
+		String fromUsername = "ILUVJEJU";
 		String toEmail = "hodob76@gmail.com, wjdgh7578@naver.com, peekaboo2189@gmail.com" ; // 콤마(,)로 여러개 나열, peekaboo2189@gmail.com
 
 		final String username = "hodob76@gmail.com";

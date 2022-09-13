@@ -31,6 +31,7 @@ public class AccommodationsControllerlhj {
 	@Autowired private AccommodationsServicelhj acservice;
 	@Autowired ServletContext sc;
 	
+	//컨트롤러와 맴핑
 	@RequestMapping(value = "admin/lhj/accommlist", produces = {MediaType.APPLICATION_JSON_VALUE}) //숙소 목록 불러오기
 	public HashMap<String, Object> accommlist() {
 		HashMap<String, Object> map = new HashMap<String, Object>();
@@ -122,6 +123,7 @@ public class AccommodationsControllerlhj {
 	public HashMap<String, Object> roomUpdate(Room_infoVo2 vo, MultipartHttpServletRequest mfRequest){
 		HashMap<String, Object> map = new HashMap<String, Object>();
 		List<MultipartFile> fileList = mfRequest.getFiles("file");
+		//getOriginalFilename()내장함수
 		System.out.println("메인이미지: "+fileList.get(0).getOriginalFilename());
 		System.out.println("추가이미지1: "+fileList.get(1).getOriginalFilename());
 		System.out.println("추가이미지2: "+fileList.get(2).getOriginalFilename());
@@ -141,7 +143,7 @@ public class AccommodationsControllerlhj {
 				is.close();
 				fos.close();
 				// 1. 기존 파일 삭제
-				File file = null;
+				File file = null; //객체초기화
 				if(i==0) {
 					file = new File(rpath + "//" + rvo.getRimainimg());
 					if (file.exists()) {
