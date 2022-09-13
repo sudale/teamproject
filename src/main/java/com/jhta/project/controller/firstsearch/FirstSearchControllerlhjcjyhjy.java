@@ -52,7 +52,7 @@ public class FirstSearchControllerlhjcjyhjy {
 			hs.put("rcheckout", checkout1);
 			hs.put("rimaxper", countPeople);
 			hs.put("countRoom", countRoom);
-			
+			System.out.println(hs+"@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@");
 			mv.addObject("aaddress", searchHotel);
 			mv.addObject("rcheckin", checkin);
 			mv.addObject("rcheckout", checkout);
@@ -67,6 +67,7 @@ public class FirstSearchControllerlhjcjyhjy {
 			
 			mv.addObject("nullmsg","조건에 맞는 호텔이 없습니다");
 			RangeSlider_GetMinMaxVolhjcjy minmax=service.rangeSlider_getMinMax(hs);
+			System.out.println(minmax+"@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@");
 			mv.addObject("minmax", minmax);
 			mv.addObject("list", list);
 		}catch(Exception e) {

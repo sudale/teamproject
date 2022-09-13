@@ -222,10 +222,7 @@ input {
 
 
 					<div class="speci_add">
-						<h2 class="reser_title">특별 요청하기</h2>
-						<div class="cancel">
-							<span>부담 제로 - 예약 무료 취소 가능!</span>
-							</div>
+
 						<p>
 							특별 요청 사항 반영 여부는 숙소 여건에 따라 달라질 수 있습니다.
 							<span>예약 완료 즉시 요청 사항을 숙소/호스트에게 전달 하겠습니다.</span>
