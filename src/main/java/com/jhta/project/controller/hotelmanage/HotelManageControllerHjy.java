@@ -50,7 +50,7 @@ import com.jhta.project.vo.Room_InfoVo;
 @Controller
 public class HotelManageControllerHjy {
 	@Autowired
-	AccommodationsServiceHjy accommodationsservice;
+	AccommodationsServiceHjy accommodationsservice; //숙소정보
 	@Autowired
 	Room_infoService_hjy roomInfoservice;
 	@Autowired
@@ -68,6 +68,8 @@ public class HotelManageControllerHjy {
 	@Autowired
 	ServletContext sc;
 
+	
+	
 	@GetMapping("hjy/hotelForm")
 	public String hotelInsertForm(String type) {
 		return "user/hotelManage/form";
