@@ -5,10 +5,12 @@ import java.util.HashMap;
 import javax.servlet.http.HttpSession;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.MediaType;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestMapping;
 
 import com.jhta.project.service.member_user.MembersService;
 import com.jhta.project.vo.MembersVo;
@@ -18,9 +20,11 @@ public class ResetPwControllerjhr {
 	@Autowired private MembersService service;
 	@GetMapping("/member_user/checkpw")
 	public String loginForm() {
-		return "user/jhr/checkpw";
+		return "user/jhr/checkpw"; 
 	}
-	@PostMapping("/jhr/checkpw")
+	
+	//@PostMapping("/jhr/checkpw")
+	@RequestMapping(value = "/jhr/checkpw") //숙소 목록 불러오기
 	public String findid(String mid, String mname, String mphone, String memail, String mbirth, Model model) {
 		HashMap<String, String> map=new HashMap<String, String>();
 		map.put("mid",mid);

@@ -16,7 +16,7 @@
 	<jsp:include page="../includes/header.jsp" flush="true"/>
 </div>
 
-<div class="findid">
+<div class="findid"> 
 	<div class="findid_container">
 		<form method="post" action="${pageContext.request.contextPath }/jhr/checkpw" class="find_id" onsubmit="return check()">
 			<div class="toparea">
