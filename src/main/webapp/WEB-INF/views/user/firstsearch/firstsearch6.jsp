@@ -633,6 +633,7 @@ function list(facilities,minprice,maxprice,sort,xcoordi,ycoordi,distance,agrade,
 										html+="<img src='${pageContext.request.contextPath }/resources/images/accommodations/"+data.list[i].amainimg+"'width='300' height='250'>";
 									}
 									html+="</div>";
+									
 									html+="<div class='col-md-6'>";
 									html+="<h3>"+data.list[i].aname+"</h3>";
 									html+="<small>"+data.list[i].aaddress+"</small>";
@@ -1013,15 +1014,15 @@ function outMoveAfter(){ //버튼 클릭시 다음날로 이동
 								<!-- <div class="card">
 											<div class="card-body"> -->
 
-								<div class="col-md-3 view_Rimg">
+								<div class=" view_Rimg">
 									<c:choose>
 										<c:when test="${vo.amainimg eq null or vo.amainimg==''}">
 											<img
-												src="${pageContext.request.contextPath }/resources/images/accommodations/220i0z000000mulfw433F_Z_1080_808_R5_D.jpg">
+												src="${pageContext.request.contextPath }/resources/images/room_info/220i0z000000mulfw433F_Z_1080_808_R5_D.jpg">
 										</c:when>
 										<c:otherwise>
 											<img
-												src="${pageContext.request.contextPath }/resources/images/accommodations/${vo.amainimg }">
+												src="${pageContext.request.contextPath }/resources/images/room_info/${vo.amainimg }">
 										</c:otherwise>
 									</c:choose>
 								</div>

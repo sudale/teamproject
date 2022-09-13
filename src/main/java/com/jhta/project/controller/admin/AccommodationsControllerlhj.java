@@ -19,11 +19,13 @@ import org.springframework.web.multipart.MultipartFile;
 import org.springframework.web.multipart.MultipartHttpServletRequest;
 
 import com.jhta.project.service.hotelmanage.AccommodationsServicelhj;
+//import com.jhta.project.vo.AccommodationsVo;
 import com.jhta.project.vo.AccommodationsVo2;
 import com.jhta.project.vo.Room_infoVo2;
 
 
 
+//데이터만 보여주기
 @RestController
 public class AccommodationsControllerlhj {
 	@Autowired private AccommodationsServicelhj acservice;
@@ -168,11 +170,11 @@ public class AccommodationsControllerlhj {
 			}else{
 				System.out.println("진입");
 				if(i==0) {
-					vo.setRimainimg(rvo.getRimainimg());
+					vo.setRimainimg(vo.getRimainimg());
 				}else if(i==1) {
-					vo.setRiextraimg1(rvo.getRiextraimg1());
+					vo.setRiextraimg1(vo.getRiextraimg1());
 				}else if(i==2) {
-					vo.setRiextraimg2(rvo.getRiextraimg2());
+					vo.setRiextraimg2(vo.getRiextraimg2());
 				}
 			}
 		}	

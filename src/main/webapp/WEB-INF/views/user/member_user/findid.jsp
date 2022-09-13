@@ -58,7 +58,7 @@
 							
 							<li class="join-field"><label for=""> 
 							이메일
-						</label> <input type="text" name="memail" class="" maxlength="15"
+						</label> <input type="text" name="memail" class="" 
 							lang="en" placeholder="한글 또는 영문으로 입력해주세요.">
 						
 												
