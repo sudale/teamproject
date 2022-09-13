@@ -13,7 +13,7 @@ import com.jhta.project.vo.PeriodVo;
 @Service
 public class PeriodService_hjy {
 	@Autowired PeriodMapperHjy mapper;
-	public int seq() {
+	public int seq() { //시퀀스
 		return mapper.seq();
 	}
 	public int insert(PeriodVo vo) {

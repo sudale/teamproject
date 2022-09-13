@@ -239,11 +239,11 @@ public class HotelManageControllerHjy {
 	public String hotelRequest(AccommodationsVo accommodationsVo, Additional_feeVo additional_feeVoList,
 			PeriodVo periodVoList, Room_InfoVo roomInfoVoList, MultipartHttpServletRequest mtfRequest) {
 		
-		System.out.println(accommodationsVo+" : accommodationsVo 입니다@@@@@@@@@@@@@@@@");
-		System.out.println(additional_feeVoList+" : additional_feeVoList 입니다@@@@@@@@@@@@@@@@");
-		System.out.println(periodVoList+" : periodVoList 입니다@@@@@@@@@@@@@@@@");
-		System.out.println(roomInfoVoList+" : roomInfoVoList 입니다@@@@@@@@@@@@@@@@");
-		System.out.println(mtfRequest+" : mtfRequest 입니다@@@@@@@@@@@@@@@@");
+		System.out.println(accommodationsVo+" : accommodationsVo 입니다");
+		System.out.println(additional_feeVoList+" : additional_feeVoList 입니다");
+		System.out.println(periodVoList+" : periodVoList 입니다");
+		System.out.println(roomInfoVoList+" : roomInfoVoList 입니다");
+		System.out.println(mtfRequest+" : mtfRequest 입니다");
 		
 		
 		// temp 테이블에 저장하기
@@ -277,7 +277,7 @@ public class HotelManageControllerHjy {
 		// 객실세부정보
 		for (int i = 0; i < roomInfoVoList.getRoom_InfoVo().size(); i++) {
 			int fileNum = i + 1;
-			Room_InfoVo roomInfoVo = roomInfoVoList.getRoom_InfoVo().get(i);
+			Room_InfoVo roomInfoVo = roomInfoVoList.getRoom_InfoVo().get(i); //Room_InfoVo.java에 설정
 			if (roomInfoVo.getRiroomtype() != null) {
 				roomInfoVo.setAid(aidseq);
 				// 파일 업로드,상세방db에저장하기

@@ -153,14 +153,17 @@ public class BoardControllerHjy {
 		List<BoardVo> list = boardService.list(map);
 		
 		System.out.println(list);
-		ModelAndView mv=new ModelAndView("user/board/board_all");
+		ModelAndView mv=new ModelAndView("user/board/board_all"); //객체생성
 		
 		mv.addObject("list", list);
 		mv.addObject("pu", pu);
 		mv.addObject("field", field);
 		mv.addObject("keyword", keyword);
 		mv.addObject("bcate","all");
-		return mv;
+		
+		return mv; 
+		
+		
 	}
 	@GetMapping("hjy/board/review")
 	public ModelAndView boardReview(@RequestParam(value = "pageNum", defaultValue = "1") int pageNum,
