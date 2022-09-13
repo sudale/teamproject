@@ -25,6 +25,8 @@ public class FindIdControllerjhr {
 		map.put("memail",memail);
 		MembersVo vo=service.findId(map);
 		if(vo!=null) { 
+			
+			model.addAttribute("findName", vo.getMname()); // 사용자이름추가
 			model.addAttribute("findidResult", vo.getMid());
 			return "user/member_user/findidresult";
 		} else {

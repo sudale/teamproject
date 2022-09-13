@@ -401,19 +401,33 @@ span.point_color.ex {
 	margin: 0 auto;
 	padding: 100px 0;
 }
+.findid_container .title{
+	border-bottom:1px solid #eee;
+}
 
 .findid_container h3{
 	font-size:40px;
+	padding: 40px 0;
+    text-align: center;
 }
 
 .findid_container .confirm-btn.btn_area {
     display: flex;
+   
 } 
 
-.findid_container .confirm-btn.btn_area a {
+a.btn.btn_default {
     line-height:45px;
 } 
+.findid_container .btn.btn_default.home{
+	background:#191919;
+}
 
+
+.findidresult{
+	font-size:40px;
+	font-weight:500;
+}
     
 .toparea {
 	display: block;

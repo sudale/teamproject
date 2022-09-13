@@ -55,7 +55,7 @@
 											<h2>
 									</c:otherwise>
 									</c:choose>
-									<br> <a href="javascript:self.close()">창 닫기</a>
+									<!-- <br> <a href="javascript:self.close()">창 닫기</a> -->
 								</div>
 							</div>
 						</div>

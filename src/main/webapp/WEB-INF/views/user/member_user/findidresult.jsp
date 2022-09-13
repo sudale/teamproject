@@ -24,22 +24,23 @@
 	<jsp:include page="../includes/header.jsp" flush="true"/>
 </div>
 
+<div class="sub_content">
 <div class="findid">
 	<div class="findid_container">
 		<h2 class="title">아이디 찾기 결과</h2>
-		<h3 lang="en">${findidResult }</h3>
+		<h3 lang="en">${findName} 님의 아이디는 
+		 <span class="findidresult">${findidResult}</span> 입니다. </h3>
 		
 		
 		<div class="confirm-btn btn_area">
 		
-			<a class="btn btn-default btn btn_join llog submit_btn" href="${pageContext.request.contextPath }/jhr/login">로그인</a>
-			<a class="btn btn-default btn btn_join llog submit_btn" href="${pageContext.request.contextPath }/" style="margin-left:20px;">홈</a>
+			<a class="btn btn_default" href="${pageContext.request.contextPath }/jhr/login">로그인</a>
+			<a class="btn btn_default home" href="${pageContext.request.contextPath }/" style="margin-left:20px;">홈</a>
 			
-		</div>
-		
-		
+		</div>	
 		
 	</div>
+</div>
 </div>
 
 <div class="footer">

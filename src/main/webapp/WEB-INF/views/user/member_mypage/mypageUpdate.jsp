@@ -88,7 +88,7 @@
 					value="${vo.memail}"></li>
 					
 	
-						<li class="join-field">
+						<%-- <li class="join-field">
 						<label for=""><span class="point_color">*</span>비밀번호 변경</label> 
 			
 							<div class="ui_input2">
@@ -96,7 +96,7 @@
 									type="button" value="비밀번호 변경" class="btn_pwd"></a>
 							</div>
 								
-						</li>
+						</li> --%>
 						
 						
 			</ul>

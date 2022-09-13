@@ -64,12 +64,15 @@ public class BoardControllerHjy {
 	}
 	@PostMapping("phj/board/update")
 	public String update(Model model,BoardVo_phj vo,MultipartHttpServletRequest mtfRequest) {
+		
 		HashMap<String, Object> map = new HashMap<String, Object>();
 		List<MultipartFile> fileList = mtfRequest.getFiles("file");
+		
 		System.out.println("메인이미지: "+fileList.get(0).getOriginalFilename());
 		System.out.println("추가이미지1: "+fileList.get(1).getOriginalFilename());
 		System.out.println("추가이미지2: "+fileList.get(2).getOriginalFilename());
 		String path = sc.getRealPath("/resources/images/board");
+		
 		vo = boardService.detail(vo.getBid());
 		for (int i = 0; i < fileList.size(); i++) {
 			//i번째 파일을 수정했을때
@@ -148,8 +151,10 @@ public class BoardControllerHjy {
 		map.put("startRow", pu.getStartRow());
 		map.put("endRow", pu.getEndRow());
 		List<BoardVo> list = boardService.list(map);
+		
 		System.out.println(list);
 		ModelAndView mv=new ModelAndView("user/board/board_all");
+		
 		mv.addObject("list", list);
 		mv.addObject("pu", pu);
 		mv.addObject("field", field);

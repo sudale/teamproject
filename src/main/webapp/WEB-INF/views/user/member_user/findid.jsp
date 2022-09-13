@@ -29,6 +29,10 @@
 		<jsp:include page="../includes/header.jsp" flush="true" />
 	</div>
 
+
+<div class="sub_content">
+
+
 	<div class="findid">
 		<div class="findid_container">
 
@@ -77,6 +81,8 @@
 			</form>
 		</div>
 	</div>
+</div>
+
 
 	<div class="footer">
 		<jsp:include page="../includes/footer.jsp" flush="true" />

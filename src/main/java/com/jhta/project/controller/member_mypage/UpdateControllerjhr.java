@@ -51,6 +51,7 @@ public class UpdateControllerjhr {
 				fos.close();
 				//2. 기존파일 삭제
 				MembersVo m=service.find(vo.getMid());
+				
 				File f=new File(dir+"\\" + m.getMprofile());
 				f.delete();
 				//3. db에서 업데이트

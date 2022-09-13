@@ -28,7 +28,7 @@ public class AccommodationsController_kjy {
 	
 	@RequestMapping(value="/user/kjy/accommodations", method= RequestMethod.GET)
 	public ModelAndView AccommodationsForm() {
-		ModelAndView mv=new ModelAndView("user/kjy/accommodations");
+		ModelAndView mv= new ModelAndView("user/kjy/accommodations");
 		return mv;
 	}
 	
