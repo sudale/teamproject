@@ -70,7 +70,7 @@
 				</div> -->
 
 				<div class="confirm-btn">
-					<input type="submit" class="btn_join llog" value="확인">
+					<input type="submit" class="btn btn_join" value="확인">
 				</div>
 
 

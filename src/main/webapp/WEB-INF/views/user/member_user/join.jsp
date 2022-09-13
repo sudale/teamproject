@@ -127,7 +127,7 @@
 				
 				
 				<div class="confirm-btn">
-					<input type="submit" class="btn_join llog" value="가입">
+					<input type="submit" class="btn btn_join" value="가입">
 				</div>
 							
 							

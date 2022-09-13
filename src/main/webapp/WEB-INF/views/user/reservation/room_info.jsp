@@ -9,6 +9,10 @@
 <!-- 파비콘 이미지 -->
 <link rel="shortcut icon" type="image/x-icon"
 	href="${pageContext.request.contextPath}/resources/images/logo/favicon.ico" />
+	
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" type="text/css" />
+	
+	
 
 <link rel="stylesheet"
 	href="${pageContext.request.contextPath}/resources/css/reset.css">
@@ -28,234 +32,7 @@
 
 
 </head>
-<style>
-.largeimg {
-	border-radius: 10px;
-	margin-right: 10px;
-}
 
-.amainimg {
-	width: 100%;
-	height: 100%;
-	z-index: 1;
-	border-radius: 10px;
-}
-
-.anme {
-	font-size: 30px;
-	font-weight: bold;
-}
-
-.agrade {
-	font-size: 23px;
-	font-weight: bold;
-}
-
-.aadress {
-	font-size: 15px;
-	font-weight: bold;
-}
-
-.adetail {
-	font-size: 20px;
-}
-
-.search_title {
-	position: absolute;
-	top: 700px;
-	left: 400px;
-	font-size: 25px;
-	font-weight: bold;
-}
-
-.room_title {
-	position: absolute;
-	top: 1030px;
-	left: 400px;
-	font-size: 25px;
-	font-weight: bold;
-}
-
-#search_info {
-	position: relative;
-}
-
-/* 전체테두리 */
-#room_info {
-	position: relative;
-	width: 1000px;
-	top: 220px;
-	left: 400px;
-	height: 235px;
-	border: 1px solid blue;
-	margin-bottom: 40px;
-	border-radius: 10px;
-	box-shadow: 5px 5px 5px gray;
-}
-
-#romm_name {
-	
-}
-
-.serv {
-	
-}
-
-.subname {
-	
-}
-
-.sumprice {
-	
-}
-
-.price {
-	
-}
-
-.btn {
-	
-}
-
-/* 맨우측 인원표시 */
-.maxpersonimg {
-	
-}
-
-.maxperson {
-	
-}
-
-.minpersonimg {
-	
-}
-
-.minperson {
-	
-}
-
-.personimg {
-	
-}
-
-.person {
-	
-}
-
-#reviewbox {
-	position: relative;
-	width: 1000px;
-	margin-top: 400px;
-	margin-bottom: 20px;
-	left: 400px;
-	border-top: 1px solid gray;
-}
-
-.reviewtitle {
-	position: absolute;
-	top: 30px;
-	font-size: 25px;
-	font-weight: bold;
-}
-
-#starbox {
-	position: relative;
-	height: 150px;
-}
-
-.sumstart {
-	position: absolute;
-	top: 80px;
-	font-size: 15px;
-	font-weight: bold;
-}
-
-#totalreview {
-	position: relative;
-}
-
-#review {
-	position: relative;
-	width: 1000px;
-	height: 150px;
-	padding: 0px;
-	background: #FFFFFF;
-	-webkit-border-radius: 31px;
-	-moz-border-radius: 31px;
-	border-radius: 31px;
-	border: #5347C0 solid 2px;
-	margin-bottom: 50px;
-	box-shadow: 5px 5px 5px gray;
-}
-
-#review:after {
-	content: '';
-	position: absolute;
-	border-style: solid;
-	border-width: 20px 6px 0;
-	border-color: #FFFFFF transparent;
-	display: block;
-	width: 0;
-	z-index: 1;
-	bottom: -20px;
-	left: 100px;
-}
-
-#review:before {
-	content: '';
-	position: absolute;
-	border-style: solid;
-	border-width: 21px 7px 0;
-	border-color: #5347C0 transparent;
-	display: block;
-	width: 0;
-	z-index: 0;
-	bottom: -23px;
-	left: 99px;
-}
-
-.retitle {
-	position: absolute;
-	top: 10px;
-	left: 10px;
-	font-size: 20px;
-	font-weight: bold;
-}
-
-.reviewid {
-	position: absolute;
-	top: 42px;
-	left: 10px;
-	font-size: 12px;
-	font-weight: bold;
-}
-
-.recontent {
-	position: absolute;
-	top: 70px;
-	left: 10px;
-	width: 800px;
-	height: 70px;
-	font-size: 15px;
-	font-weight: bold;
-}
-
-.restar {
-	position: absolute;
-	top: 15px;
-	right: 10px;
-	font-size: 15px;
-	font-weight: bold;
-}
-
-#page {
-	position: relative;
-	left: 450px;
-	width: 100px;
-	height: 50px;
-	font-size: 25px;
-}
-</style>
 <div class="header">
 	<jsp:include page="../includes/header.jsp" />
 </div>
@@ -319,141 +96,166 @@
 
 		<div class="detail_info">
 
-			<p class="anme">${accvo.aname}</p>
-			<p class="adetail">${accvo.adetail}</p>
-			<c:forEach var="vo" items="${list }" varStatus="status">
-				<input type="hidden" value="${vo.aid }" id="aid">
-			 <c:if test="${riid eq vo.riid}">
-			 <div class="person_wrap">
-						  
-							<p class="maxperson">최대&nbsp;${vo.rimaxper}인</p>
-							<p class="minperson">최소&nbsp;${vo.riminper}인</p>
-
-							<p class="person">현재&nbsp;${person}인</p>
-							</div>
-							
-			</c:if>
-			</c:forEach>			
-							
-			<p class="agrade">${accvo.agrade}등급
-				<c:choose>
-					<c:when test="${accvo.agrade == 5}">
+			<div class="view_title_wrap">
 
 
-						<span class="agrade_star"> <img class="star"
-							src="${pageContext.request.contextPath}/resources/images/room_info/star.svg">
+				<p class="anme">${accvo.aname}</p>
+				<p class="agrade" lang="en">${accvo.agrade}등급
+					<c:choose>
+						<c:when test="${accvo.agrade == 5}">
+
+							<span class="agrade_star"> <img class="star"
+								src="${pageContext.request.contextPath}/resources/images/room_info/star.svg">
+								<img class="star"
+								src="${pageContext.request.contextPath}/resources/images/room_info/star.svg">
+								<img class="star"
+								src="${pageContext.request.contextPath}/resources/images/room_info/star.svg">
+								<img class="star"
+								src="${pageContext.request.contextPath}/resources/images/room_info/star.svg">
+								<img class="star"
+								src="${pageContext.request.contextPath}/resources/images/room_info/star.svg">
+							</span>
+						</c:when>
+						
+						<c:when test="${accvo.agrade == 4}">
+							<!-- <span class="star">★★★★☆</span> -->
 							<img class="star"
-							src="${pageContext.request.contextPath}/resources/images/room_info/star.svg">
+								src="${pageContext.request.contextPath}/resources/images/room_info/star.svg">
 							<img class="star"
-							src="${pageContext.request.contextPath}/resources/images/room_info/star.svg">
+								src="${pageContext.request.contextPath}/resources/images/room_info/star.svg">
 							<img class="star"
-							src="${pageContext.request.contextPath}/resources/images/room_info/star.svg">
+								src="${pageContext.request.contextPath}/resources/images/room_info/star.svg">
+						</c:when>
+						<c:when test="${accvo.agrade==3 }">
 							<img class="star"
-							src="${pageContext.request.contextPath}/resources/images/room_info/star.svg">
-						</span>
-					</c:when>
-					<c:when test="${accvo.agrade == 4}">
-						<!-- <span class="star">★★★★☆</span> -->
-						<img class="star"
-							src="${pageContext.request.contextPath}/resources/images/room_info/star.svg">
-						<img class="star"
-							src="${pageContext.request.contextPath}/resources/images/room_info/star.svg">
-						<img class="star"
-							src="${pageContext.request.contextPath}/resources/images/room_info/star.svg">
-					</c:when>
-					<c:when test="${accvo.agrade==3 }">
-						<img class="star"
-							src="${pageContext.request.contextPath}/resources/images/room_info/star.svg">
-						<img class="star"
-							src="${pageContext.request.contextPath}/resources/images/room_info/star.svg">
-						<img class="star"
-							src="${pageContext.request.contextPath}/resources/images/room_info/star.svg">
-					</c:when>
-					<c:when test="${accvo.agrade==2 }">
-						<img class="star"
-							src="${pageContext.request.contextPath}/resources/images/room_info/star.svg">
-						<img class="star"
-							src="${pageContext.request.contextPath}/resources/images/room_info/star.svg">
-					</c:when>
-					<c:when test="${accvo.agrade==1 }">
-						<img class="star"
-							src="${pageContext.request.contextPath}/resources/images/room_info/star.svg">
+								src="${pageContext.request.contextPath}/resources/images/room_info/star.svg">
+							<img class="star"
+								src="${pageContext.request.contextPath}/resources/images/room_info/star.svg">
+							<img class="star"
+								src="${pageContext.request.contextPath}/resources/images/room_info/star.svg">
+						</c:when>
+						<c:when test="${accvo.agrade==2 }">
+							<img class="star"
+								src="${pageContext.request.contextPath}/resources/images/room_info/star.svg">
+							<img class="star"
+								src="${pageContext.request.contextPath}/resources/images/room_info/star.svg">
+						</c:when>
+						<c:when test="${accvo.agrade==1 }">
+							<img class="star"
+								src="${pageContext.request.contextPath}/resources/images/room_info/star.svg">
 
-					</c:when>
-					<c:when test="${accvo.agrade==0 }">
-						<img class="star"
-							src="${pageContext.request.contextPath}/resources/images/room_info/star.svg">
-					</c:when>
-					<c:otherwise>
-						<span>☆☆☆☆☆test1</span>
-					</c:otherwise>
-				</c:choose>
+						</c:when>
+						<c:when test="${accvo.agrade==0 }">
+							<img class="star"
+								src="${pageContext.request.contextPath}/resources/images/room_info/star.svg">
+						</c:when>
+						<c:otherwise>
+							<span>☆☆☆☆☆test1</span>
+						</c:otherwise>
+					</c:choose>
+				</p>
+
+				<p class="adetail">${accvo.adetail}</p>
+				
 
 
+				<c:forEach var="vo" items="${list }" varStatus="status">
+					<input type="hidden" value="${vo.aid }" id="aid">
+					<c:if test="${riid eq vo.riid}">
+						<div class="search_info">
 
-			</p>
+							<h2 class="name"><i class="fa-solid fa-bed"></i></span> ${vo.riroomtype}</h2>
 
-
-
-			<c:forEach var="vo" items="${list }" varStatus="status">
-				<input type="hidden" value="${vo.aid }" id="aid">
-				<c:if test="${riid eq vo.riid}">
-					<div id="search_info">
-					
-
-						<div id="romm_name">
-							<h2 class="name">${vo.riroomtype}</h2>
-
-							<p class="serv">부가서비스</p>
-							<p class="subname">${vo.riservice}</p>
 							
-							
-							<div class="price_wrap">
-							<p class="sumprice">₩&nbsp;${vo.sum}</p>
-							
-							<p class="price">
-								<a href="javascript:void(0);" title="${vo.price}">요금세부정보</a>
-							</p>
-							
-						  
-							<!-- session에 id가 있는지 확인후 없을경우 로그인페이지로 -->
-							<c:choose>
-								<c:when test="${empty sessionScope.mid }">
-									<input type="button" class="btn btn-primary" class="btn"
-										value="바로예약" onclick="loginpage()">
-								</c:when>
-								<c:otherwise>
-									<input type="button" class="btn btn-primary" class="btn"
-										value="바로예약"
-										onclick="location.href='${pageContext.request.contextPath }/phj/reservation?aid=${vo.aid}&riid=${vo.riid}&startday=${startday}&endday=${endday}&ramount=${person }&sum=${vo.sum }&roomnum=${roomnum}'">
-								</c:otherwise>
-							</c:choose>
-							
-							</div>
-							
+							<p class="subname"><i class="fa-solid fa-bell"></i><span class="serv">부가서비스</span>${vo.riservice}</p>
+
 						</div>
-					</div>
-				</c:if>
-				
-				
-			</c:forEach>
+					</c:if>
+
+
+				</c:forEach>
+			</div>
+
+
+
+
+			<div class="price_wrap">
+
+				<c:forEach var="vo" items="${list }" varStatus="status">
+					<input type="hidden" value="${vo.aid }" id="aid">
+				   
+				     <c:if test="${riid eq vo.riid}">
+						
+						<div class="person_wrap">
+
+							<p class="maxperson" lang="en"><i class="fa-solid fa-user-group"></i> 최대&nbsp;${vo.rimaxper}인</p>
+							<p class="minperson" lang="en"><i class="fa-solid fa-user-large"></i>최소&nbsp;${vo.riminper}인</p>
+
+							<p class="person" lang="en"><i class="fa-solid fa-user-check"></i> 현재&nbsp;${person}인</p>
+						</div>
+
+					</c:if>
+				</c:forEach>
+
+
+				<c:forEach var="vo" items="${list }" varStatus="status">
+					<input type="hidden" value="${vo.aid }" id="aid">
+					<c:if test="${riid eq vo.riid}">
+
+
+						<p class="price" lang="en">
+							요금세부정보 : ${vo.price} 
+							<%-- <a href="javascript:void(0);" title="${vo.price}">요금세부정보</a> --%>
+						</p>
+
+
+						<p class="sumprice" lang="en">
+							<span lang="en">₩</span>&nbsp;${vo.sum}
+						</p>
+
+
+
+
+						<!-- session에 id가 있는지 확인후 없을경우 로그인페이지로 -->
+						<c:choose>
+							<c:when test="${empty sessionScope.mid }">
+							
+								<input type="button" class="btn btn-primary" class="btn"
+									value="바로예약" onclick="loginpage()">
+							
+							</c:when>
+							<c:otherwise>
+								<input type="button" class="btn btn-primary" class="btn"
+									value="바로예약"
+									onclick="location.href='${pageContext.request.contextPath }/phj/reservation?aid=${vo.aid}&riid=${vo.riid}&startday=${startday}&endday=${endday}&ramount=${person }&sum=${vo.sum }&roomnum=${roomnum}'">
+							</c:otherwise>
+						</c:choose>
+
+
+					</c:if>
+				</c:forEach>
+			</div>
+			<!-- price_wrap  -->
+
+
 		</div>
+		<!--detial info -->
 
 
 
 
 
 
-		<%-- 지도 부분 잠시주석
-<div class="room_detailMap_wrap">
-<p class="aadress">${accvo.aaddress}</p>
-	
-	 <div id="map" style="width: 50%; height: 400px;">
-            <input type="text" name="aycoordi" id=${accvo.axcoordi }> 
-            <input type="text" name="axcoordi" id=${accvo.aycoordi }>
-</div> 
-	
-</div> --%>
+		<div class="room_detailMap_wrap">
+		
+			<p class="aadress" lang="en"><i class="fa-solid fa-location-dot"></i> ${accvo.aaddress}</p>
+
+			<div id="map" style="width: 100%; height: 400px;">
+				<input type="text" name="aycoordi" id=${accvo.axcoordi }> <input
+					type="text" name="axcoordi" id=${accvo.aycoordi }>
+			</div>
+
+		</div>
 
 
 
@@ -470,6 +272,9 @@
 <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
 <script
 	src="${pageContext.request.contextPath }/resources/js/jquery-ui.js"></script>
+
+
+
 <script type="text/javascript">
 	$(function(){
 		list(1);
@@ -508,30 +313,11 @@
 		});
 	
 		//툴팁효과
-		$(".price").tooltip();
+		$(".price").tooltip(); 
 	
 	});
 
-	/* //구글 지도	
-	function initMap() {
-		var googlename=$("#googlename").val();//호텔 이름
-		var googlex=$("#googlex").val(); //경도
-		var googley=$("#googley").val(); //위도
-		var xy = { 
-			lat:+googlex, 
-			lng:+googley
-		};//위치
-		var map = new google.maps.Map(
-		document.getElementById('googlemap'), {
-  		zoom: 16,//줌화면크기
-  		center: xy
-		});
-		new google.maps.Marker({
-   		 position: xy,//좌표에 마커찍기
-   		 map: map,
-   		 label:googlename
-		});
-	} */
+	
 	
 	//리뷰 총점
 	var aid=$("#aid").val();

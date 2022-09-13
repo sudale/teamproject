@@ -1,50 +1,76 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
-    pageEncoding="UTF-8"%>
+	pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
 <head>
 <meta charset="UTF-8">
 <title>결제완료</title>
-<script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
+
+<!-- 파비콘 이미지 -->
+<link rel="shortcut icon" type="image/x-icon"
+	href="${pageContext.request.contextPath}/resources/images/logo/favicon.ico" />
+
+<link rel="stylesheet"
+	href="${pageContext.request.contextPath}/resources/css/reset.css">
+<link rel="stylesheet"
+	href="${pageContext.request.contextPath}/resources/css/header.css">
+<link rel="stylesheet"
+	href="${pageContext.request.contextPath}/resources/css/layout.css">
+<link rel="stylesheet"
+	href="${pageContext.request.contextPath}/resources/css/footer.css">
+
+
+
+
 </head>
-<body >
+<body>
 	<div class="header">
-		<jsp:include page="../includes/header.jsp" flush="true"/>
+		<jsp:include page="../includes/header.jsp" flush="true" />
 	</div>
-	<div style="text-align: center;">
-	<br>
-	<img src="${pageContext.request.contextPath }/resources/images/accommodations/approval.png" style="width:30%;height: 30%;">
-	<br>
-	<br>
-	<table class="table">
-		<tr>
-			<th style="font-size: 20px;text-align: center; background-color: #EAEAEA; color:#4C4C4C;">${mid }님의 <img src="${pageContext.request.contextPath }/resources/images/accommodations/logonukki.png" style="width:10%;height: 10%;"> 에서의 예약이 완료되었습니다!</th>
-		</tr>
-		<tr>
-			<td style="font-size: 17px;text-align: center;"><br>예약 확인은 <a href="${pageContext.request.contextPath }/user/kjy/mypage">마이페이지</a>에서 해주세요!<br></td>
-		</tr>
-	</table>
+
+
+	<div class="sub_content">
+
+		<div class="res_completion">
+
+			<%-- <img src="${pageContext.request.contextPath }/resources/images/accommodations/approval.png" style="width:30%;height: 30%;">
+	 --%>
+
+
+			<h2 class="res_comp_tit"><strong lang="en">${mid }님</strong>️👋 예약이 완료되었습니다!</h2>
+			<h3 class="res_comp_midtit">
+				예약 확인은 <span class="mypagehref"><a href="${pageContext.request.contextPath }/user/kjy/mypage">마이페이지</a></span>에서 해주세요!
+			</h3>
+			<img src="${pageContext.request.contextPath }/resources/images/accommodations/approval2.svg">
+			
+
+
+
+
+
 		</div>
-	<div class="footer" style="clear:both;">
-		<jsp:include page="../includes/footer.jsp" flush="true"/>
+
+	</div>
+
+	<div class="footer" style="clear: both;">
+		<jsp:include page="../includes/footer.jsp" flush="true" />
 	</div>
 </body>
 <script type="text/javascript">
-/*	$(document).ready(function(){
-		var mid=$("#mid").val();
-		$.ajax({
-			url:"/project/phj/checkReservation/"+mid,
-			dataType:"json",			
-			success:function(e){
-				let info="";
-				info +=e.rordernum
+	/*	$(document).ready(function(){
+	 var mid=$("#mid").val();
+	 $.ajax({
+	 url:"/project/phj/checkReservation/"+mid,
+	 dataType:"json",			
+	 success:function(e){
+	 let info="";
+	 info +=e.rordernum
 
-				$('#rnum').html(info);
-			}
-		})
-	})
-	rrodernum
-	*/
+	 $('#rnum').html(info);
+	 }
+	 })
+	 })
+	 rrodernum
+	 */
 </script>
 </html>
