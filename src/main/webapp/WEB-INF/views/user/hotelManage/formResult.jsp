@@ -5,20 +5,15 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>호텔등록 확인페이지</title>
+<title>호텔신청 확인페이지</title>
 
 <!-- 파비콘 이미지 -->
-<link rel="shortcut icon" type="image/x-icon"
-	href="${pageContext.request.contextPath}/resources/images/logo/favicon.ico" />
+<link rel="shortcut icon" type="image/x-icon" href="${pageContext.request.contextPath}/resources/images/logo/favicon.ico" />
+<link rel="stylesheet" href="${pageContext.request.contextPath}/resources/css/reset.css">
+<link rel="stylesheet" href="${pageContext.request.contextPath}/resources/css/header.css">
+<link rel="stylesheet" href="${pageContext.request.contextPath}/resources/css/layout.css">
+<link rel="stylesheet" href="${pageContext.request.contextPath}/resources/css/footer.css">
 
-<link rel="stylesheet"
-	href="${pageContext.request.contextPath}/resources/css/reset.css">
-<link rel="stylesheet"
-	href="${pageContext.request.contextPath}/resources/css/header.css">
-<link rel="stylesheet"
-	href="${pageContext.request.contextPath}/resources/css/layout.css">
-<link rel="stylesheet"
-	href="${pageContext.request.contextPath}/resources/css/footer.css">
 
 
 
@@ -42,7 +37,6 @@
 								<div class="login_inner">
 									<div class="login_box">
 										<div class="login_title" style="text-align: center;">
-
 
 											<h2>신청이 완료되었습니다.</h2>
 											<h3 lang="en">빠른 시일내에 승인 처리 해드리겠습니다. 조금만 기다려주세요. 🎈</h3>

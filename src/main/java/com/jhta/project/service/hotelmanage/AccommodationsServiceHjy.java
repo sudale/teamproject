@@ -16,8 +16,8 @@ public class AccommodationsServiceHjy {
 	public int seq() {
 		return mapper.seq();
 	}
-	//vo에 담아준다는
+	//숙소정보
 	public int insert(AccommodationsVo vo) {
-		return mapper.insert(vo);
+		return mapper.insert(vo); //vo로 값을 담아준다.
 	}
 }

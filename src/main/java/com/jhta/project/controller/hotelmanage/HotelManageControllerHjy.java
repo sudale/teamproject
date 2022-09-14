@@ -47,24 +47,24 @@ import com.jhta.project.vo.Additional_feeVo;
 import com.jhta.project.vo.PeriodVo;
 import com.jhta.project.vo.Room_InfoVo;
 
-@Controller
+@Controller 
 public class HotelManageControllerHjy {
 	@Autowired
 	AccommodationsServiceHjy accommodationsservice; //숙소정보
 	@Autowired
-	Room_infoService_hjy roomInfoservice;
+	Room_infoService_hjy roomInfoservice;// 방정보
 	@Autowired
-	PeriodService_hjy periodservice;
+	PeriodService_hjy periodservice; //시즌정보
 	@Autowired
-	Additional_feeService_hjy additional_feeservice;
+	Additional_feeService_hjy additional_feeservice; //추가 요금서비스
 	@Autowired
 	AccommodationsTempServiceHjy accommodations_tempservice;
 	@Autowired
-	Room_info_tempService_hjy roomInfo_tempservice;
+	Room_info_tempService_hjy roomInfo_tempservice;  //방정보 임시저장소
 	@Autowired
-	Period_tempService_hjy period_tempservice;
+	Period_tempService_hjy period_tempservice; //시즌정보 임시저장소
 	@Autowired
-	Additional_fee_tempService_hjy additional_fee_tempservice;
+	Additional_fee_tempService_hjy additional_fee_tempservice; //방정보 임시저장소
 	
 	
 	//스프링기능
@@ -72,8 +72,8 @@ public class HotelManageControllerHjy {
 	ServletContext sc;
 
 	
-	//jsp에서 서블릿으로  받아오라고 하는거
-	@GetMapping("hjy/hotelForm") //호출이 되면 이 hotelInsertForm 메서드를 실행시킨다
+	//jsp에서 서블릿으로  받아오는거
+	@GetMapping("hjy/hotelForm") //호출이되면 이 hotelInsertForm 메서드를 실행시킨다
 	
 	public String hotelInsertForm(String type) {
 		return "user/hotelManage/form";
@@ -84,8 +84,9 @@ public class HotelManageControllerHjy {
 	 * 메일에서 등록버튼 눌렀을때 수행
 	 * @param aid
 	 */
+	
 	@GetMapping("hjy/ok")
-	public String hotelAllow(String aid,Model model) {
+	public String hotelAllow(String aid, Model model) {
 //		찐db에 저장하기
 		// 숙소테이블
 		AccommodationsVo accommodationsVo = accommodations_tempservice.find(Integer.parseInt(aid)); 
@@ -313,7 +314,7 @@ public class HotelManageControllerHjy {
 					fos.close();
 					// 2. 업로드된 파일정보 DB에 저장하기
 					roomInfoVo.setRimainimg(roomsavefilename);
-				} catch (Exception e) {
+				}   catch (Exception e) {
 					e.printStackTrace();
 				}
 
@@ -323,13 +324,13 @@ public class HotelManageControllerHjy {
 				String roomexorgfilename1 = fileList.get(fileNum).getOriginalFilename();// 전송된 파일명
 				String roomexsavefilename1 = UUID.randomUUID() + "_" + roomexorgfilename1;// 저장할 파일명(중복되지 않는 이름으로 만들기)
 				try {
-//					// 1. 파일 업로드하기
+					// 1. 파일 업로드하기
 					InputStream is = fileList.get(fileNum).getInputStream();
 					FileOutputStream fos = new FileOutputStream(roomexpath1 + "//" + roomexsavefilename1);
 					FileCopyUtils.copy(is, fos);
 					is.close();
 					fos.close();
-//					// 2. 업로드된 파일정보 DB에 저장하기
+					// 2. 업로드된 파일정보 DB에 저장하기
 					roomInfoVo.setRiextraimg1(roomexsavefilename1);
 				} catch (Exception e) {
 					e.printStackTrace();
@@ -341,7 +342,6 @@ public class HotelManageControllerHjy {
 				String roomexsavefilename2 = UUID.randomUUID() + "_" + roomexorgfilename2;// 저장할 파일명(중복되지 않는 이름으로 만들기)
 				try {
 					// 1. 파일 업로드하기
-					
 					InputStream is = fileList.get(fileNum).getInputStream();
 					FileOutputStream fos = new FileOutputStream(roomexpath1 + "//" + roomexsavefilename2);
 					FileCopyUtils.copy(is, fos);

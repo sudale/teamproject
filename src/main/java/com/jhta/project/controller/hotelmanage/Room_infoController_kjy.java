@@ -25,21 +25,25 @@ import com.jhta.project.vo.Room_infoVo_kjy;
 
 @Controller
 public class Room_infoController_kjy {
+	
 	@Autowired private Room_infoService_kjy service;
 	@Autowired private PeriodService_kjy peservice;
 	@Autowired private AccommodationsService_kjy accservice;
 	
+	
+	//value는 요청받을 url을 설정, method는 get으로 요청
 	@RequestMapping(value="/user/kjy/room_info", method= RequestMethod.GET)
 	public ModelAndView Room_infoForm(@RequestParam("aid")String aid, @RequestParam("person")String person,
 			@RequestParam("roomnum")String roomnum, @RequestParam("startday")String startday,  
 			@RequestParam("endday")String endday,@RequestParam("riid")String riid,
 			HttpServletRequest request) {
-		ModelAndView mv=new ModelAndView("user/reservation/room_info");
-		try {
-			
+		    ModelAndView mv= new ModelAndView("user/reservation/room_info");
+		    
+		try {	
 			//객실세부정보
 			//person(사람수),startday(시작),endday(끝), roomnum(예약할 개수)
-			int aid1=Integer.parseInt(aid);
+			int aid1=Integer.parseInt(aid);//int타입으로 변환해주는
+			
 			DateFormat df1=new SimpleDateFormat("yyyyMMdd");
 			String startday1=startday.replace("-", "");
 			String endday1=endday.replace("-", "");
@@ -49,6 +53,7 @@ public class Room_infoController_kjy {
 			hs.put("startday", startday1);
 			hs.put("endday", endday1);
 			hs.put("person", person);
+			//자바 리스트
 			List<Room_infoVo_kjy> alllist=service.list(hs);
 			System.out.println(alllist);
 			//list가 비었을경우 result 페이지로 이동
@@ -78,6 +83,7 @@ public class Room_infoController_kjy {
 			c1.setTime(d1);//calendar 타입으로 변경, add메소드로 1일씩 추가해 주기위해 셋팅
 			c2.setTime(d2);
 			//시작날짜와 끝 날짜를 비교해, 시작날짜가 작거나 같은 경우 출력
+			
 			while( c1.compareTo( c2 ) !=1 ){
 				HashMap<String, Object> daymap=new HashMap<String, Object>();
 				//비수기,성수기,준성수기 확인

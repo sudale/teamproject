@@ -23,19 +23,32 @@ import com.jhta.project.vo.ReservationVo2;
 public class ReservationController_phj {
 	@Autowired private ReservationServicephj service;
 	@Autowired private MembersService memberService;
+	
 	@GetMapping("phj/pay")
 	public String payForm() {
 		return "user/payment/pay";
 	}
 	
-	@RequestMapping(value="phj/checkReservation/{mid}",produces = {MediaType.APPLICATION_JSON_VALUE})
-	public @ResponseBody HashMap<String, Object> checkRes(@PathVariable("mid")String mid){
-		ReservationVo2 vo=service.selectRes(mid);
-		HashMap<String, Object> map=new HashMap<String, Object>();
-		map.put("mid", vo.getMid());
-		map.put("rordernum", vo.getRordernum());
-		return map;
-	}
+/*
+ * 
+ * JSON 정보를 받을 변수를 Map 형태로 선언하고 
+ * @RequestBody를 붙여주면 컨트롤러로 전송된 JSON 정보가 자동으로 Map으로 변환되어 해당 변수에 저장됩니다. 
+ * (변수명은 아무렇게나 지어도 상관없습니다.)
+ * 
+ * */
+	
+	
+	
+	
+	/* 이부분이 지금 안먹힘
+	 * @RequestMapping(value="phj/checkReservation/{mid}",produces =
+	 * {MediaType.APPLICATION_JSON_VALUE}) public @ResponseBody HashMap<String,
+	 * Object> checkRes(@PathVariable("mid")String mid){ ReservationVo2
+	 * vo=service.selectRes(mid); HashMap<String, Object> map=new HashMap<String,
+	 * Object>(); map.put("mid", vo.getMid()); map.put("rordernum",
+	 * vo.getRordernum()); return map; }
+	 */
+	
 	
 	@RequestMapping(value="phj/reservation",method=RequestMethod.GET)
 	public ModelAndView ReservationInfo(String riid, String startday, String endday, String ramount, String mid, 
