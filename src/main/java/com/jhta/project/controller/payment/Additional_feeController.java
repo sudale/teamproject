@@ -22,6 +22,7 @@ public class Additional_feeController {
 		System.out.println(riid);
 		System.out.println("{riid}");
 		System.out.println("@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@");
+		
 		Additional_FeeVo_phj vo=service.selectFee(riid);
 		HashMap<String, Object> map=new HashMap<String, Object>();
 		map.put("personfee", vo.getAfpersonnel());

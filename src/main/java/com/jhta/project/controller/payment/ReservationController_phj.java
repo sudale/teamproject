@@ -37,6 +37,8 @@ public class ReservationController_phj {
 		return map;
 	}
 	
+	
+	
 	@RequestMapping(value="phj/reservation",method=RequestMethod.GET)
 	public ModelAndView ReservationInfo(String riid, String startday, String endday, String ramount, String mid, 
 			String sum,int aid,int roomnum) {
@@ -51,6 +53,8 @@ public class ReservationController_phj {
 		mv.addObject("rroomnum",roomnum);
 		return mv;
 	}
+	
+	
 	@RequestMapping(value="phj/reservationOk",method=RequestMethod.GET)
 	public ModelAndView ReservationInsert(ReservationVo2 vo,String sum,int rexperson,int rexbed,int rexbreaknum,
 			String breakfastfee,String bedfee,String personfee,String totalbedfee,String totalbreakfee) {
@@ -71,6 +75,7 @@ public class ReservationController_phj {
 		mv.addObject("mid", vo.getMid());
 		mv.addObject("riid", vo.getRiid());
 		mv.addObject("rordernum", vo.getRordernum());
+		
 		MembersVo membersVo = memberService.checkId( vo.getMid());
 		mv.addObject("membersVo", membersVo);
 		mv.addObject("rexperson", rexperson);
@@ -83,13 +88,21 @@ public class ReservationController_phj {
 		mv.addObject("totalbreakfee", totalbreakfee);
 		mv.addObject("code","success");
 		mv.addObject("code","fail");
+		
 		return mv;
 	}
 	
+	
+	//JSON 정보를 받을 변수를 Map 형태로 선언하고 
+	//@RequestBody를 붙여주면 컨트롤러로 전송된 JSON 정보가 자동으로 Map으로 변환되어 해당 변수에 저장
+	
 	@RequestMapping(value="phj/insert",produces = {MediaType.APPLICATION_JSON_VALUE})
+	
+	
 	public @ResponseBody HashMap<String, Object> insert(
 			@RequestBody ReservationVo2 vo) {
-		HashMap<String, Object> map=new HashMap<String, Object>();
+		HashMap<String, Object> map =new HashMap<String, Object>();
+	
 		try {
 			service.insertRes(vo);
 			map.put("rid",vo.getRid());
@@ -101,4 +114,5 @@ public class ReservationController_phj {
 		}
 		return map;
 	}
+	
 }

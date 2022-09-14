@@ -116,19 +116,23 @@
 							<th></th>
 							<td lang="en" id="totalsum"></td>
 						</tr> -->
-						<tr>
-							<th>인원 추가 비용</th>
-							<td lang="en" id="totalpersonfee1"></td>
-						</tr>
+						
 						<tr>
 							<th>조식 추가 비용</th>
-							<td lang="en" id="totalbreakfee1"></td>
+							<td lang="en" id="totalbreakfee1">${totalbreakfee1}</td>
 						</tr>
 						<tr>
 							<th>침대 추가 비용</th>
 
 							<td lang="en" id="totalbedfee1">${totalbedfee}</td>
 						</tr>
+						
+						<tr>
+							<th>인원 추가 비용</th>
+							<td lang="en" id="totalpersonfee1">${totalpersonfee1}</td>
+						</tr>
+						
+						
 						<tr>
 							<th>체크인 / 체크아웃</th>
 							<td lang="en" id="totalcheck">${rcheckin }-${rcheckout }</td>
@@ -169,6 +173,8 @@
 
 
 </body>
+
+
 <script type="text/javascript">
 	$(document).ready(
 			function() {
@@ -187,8 +193,7 @@
 				$('#daytotal1').text(daytotal1);
 
 				console.log(sum * rroomnum * 1000);
-				var total = (sum * rroomnum * 1000 * (rcheckout - rcheckin))
-						+ totalpersonfee + totalbreakfee + totalbedfee;
+				var total = (sum * rroomnum * 1000 * (rcheckout - rcheckin)) + totalpersonfee + totalbreakfee + totalbedfee;
 				$('input[name=totalFee]')
 						.attr('value', numberWithCommas(total));
 				$('#totalFee1').text(numberWithCommas(total));

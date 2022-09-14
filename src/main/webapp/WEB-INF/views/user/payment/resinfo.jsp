@@ -98,30 +98,48 @@ input {
 
 			<form class="reservation_form" id="insertOk"
 				action="${pageContext.request.contextPath }/phj/reservationOk">
+				
 				<input type="hidden" id="rroomnum" name="rroomnum"
-					value="${rroomnum }"> <input type="hidden" name="sum"
-					value="${sum }"> <input type="hidden" id="ramount"
-					name="ramount" value="${ramount }"> <input type="hidden"
-					id="mid" name="mid" value="${mid }"> <input type="hidden"
-					id="riid" name="riid" value="${riid }"> <input
-					type="hidden" id="rcheckin" name="rcheckin" value="${startday } ">
+					value="${rroomnum }"> 
+				<input type="hidden" name="sum"
+					value="${sum }"> 
+					
+				<input type="hidden" id="ramount" name="ramount" value="${ramount }"> 
+					<input type="hidden" id="mid" name="mid" value="${mid }"> 
+					<input type="hidden" id="riid" name="riid" value="${riid }"> 
+					<input type="hidden" id="rcheckin" name="rcheckin" value="${startday } ">
+				
+				
 				<input type="hidden" id="rcheckout" name="rcheckout"
-					value="${endday }"> <input type="hidden" id="rcancel"
-					name="rcancel" value="N"> <input type="hidden" id="aid"
-					name="aid" value="${aid }"> <input type="hidden"
-					id="rimaxper" name="rimaxper" value="rimaxper"> <input
+					value="${endday }"> 
+					
+			    <input type="hidden" id="rcancel"
+					name="rcancel" value="N"> 
+					<input type="hidden" id="aid"
+					name="aid" value="${aid }"> 
+					
+					<input type="hidden"
+					id="rimaxper" name="rimaxper" value="rimaxper"> 
+					
+					<input
 					type="hidden" name="breakfastfee" value="breakfastfee"
-					style="border: none"> <input type="hidden" name="bedfee"
-					value="bedfee" style="border: none"> <input type="hidden"
-					name="totalbreakfee" value="0"> <input type="hidden"
-					name="totalbedfee" value="0"> <input type="hidden"
-					id="personfee" name="personfee" value="personfee"
-					style="border: none"> <input type="hidden"
-					id="breakfastfee" name="breakfastfee" value="0"
-					style="border: none"> <input type="hidden" id="bedfee"
-					name="bedfee" value="0" style="border: none">
+					style="border: none"> 
+					
+					<input type="hidden" name="bedfee"
+					value="bedfee" style="border: none"> 
+					
+					<input type="hidden"
+					name="totalbreakfee" value="0"> 
+					
+					<input type="hidden"
+					name="totalbedfee" value="0"> 
+					
+					
+					 <input type="hidden" id="breakfastfee" name="breakfastfee" value="0" style="border: none">
+					 <input type="hidden" id="bedfee" name="bedfee" value="0" style="border: none">
 
-
+                  <input type="hidden" id="personfee" name="personfee" value="personfee" style="border: none">
+					
 
 				<div class="totalinfo">
 					<h2 id="hotelInfo" class="reser_title">숙소 정보️🏠</h2>
@@ -163,10 +181,13 @@ input {
 							<th>침대추가요금</th>
 							<td lang="en" id="totalbedfee">0</td>
 						</tr>
+						
 						<tr>
 							<th>인원추가요금</th>
-							<td ><input type="text" name="personfee" value="personfee" lang="en"
-								style="border: none"></td>
+							<td lang="en" id="totalbedfee">0</td>
+							<!-- <td><input type="text" name="personfee" value="personfee" lang="en"
+								style="border: none">
+								</td> -->
 						</tr>
 					</table>
 					</div>
@@ -205,17 +226,19 @@ input {
 
 						<div>추가사항</div>
 
+<!-- 입력폼 -->
 						<li class="join-field"><label for=""> 조식 추가 </label> <input 
 							style="width: 60px;" type="number" name="rexbreaknum" lang="en"
-							id="rexbreaknum" value="0" min="0" max="rexperson"></li>
+							id="rexbreaknum" value="0" min="0"></li>
 
 						<li class="join-field"><label for=""> 침대 추가 </label> <input
 							style="width: 60px;" type="number" name="rexbed" id="rexbed" lang="en"
 							value="0" min="0" max="1"></li>
 
 						<li class="join-field"><label for=""> 인원추가 </label> <input
-							style="width: 60px; border: none;" type="text" name="rexperson" lang="en"
-							id="rexperson" value="0">
+							style="width: 60px; border: none;" type="text" name="rexperson" id="rexperson" lang="en"
+							 value="0">
+							
 							<p style="color: #BDBDBD;">*검색 기준 현재 추가 인원</p></li>
 
 					</ul>
@@ -232,7 +255,6 @@ input {
 						</p>
 						
 
-						
 							<input
 								type="submit" value="마지막 단계로 이동하기" class="btn btn_join"  id="resOk"><br>
 						
@@ -281,63 +303,48 @@ input {
 			alert("이메일형식에 맞게 입력하세요."); 
 		}
 	});
-
+ 
+	//조식추가
 	$('#rexbreaknum').on('change', function(){
 		var rexbreaknum=$("#rexbreaknum").val();
 		var breakfastfee=$("#breakfastfee").val();
 		var totalbreakfastfee=rexbreaknum*breakfastfee;
 		$('#totalbreakfee').text(totalbreakfastfee);
 		$('input[name=totalbreakfee]').attr('value',totalbreakfastfee);
-		console.log("체인지");
+		console.log("조식추가 >체인지");
 		console.log(breakfastfee);
 		console.log(${breakfastfee });
 	});
 	
+	//침대추가
 	$('#rexbed').on('change', function(){
 		var rexbed=$("#rexbed").val();
 		var bedfee=$("#bedfee").val();
 		var totalbedfee=rexbed*bedfee;
 		$('#totalbedfee').text(totalbedfee);
 		$('input[name=totalbedfee]').attr('value',totalbedfee);
+		console.log("침대추가 >체인지");
+		console.log(bedfee);
+		console.log(${bedfee });
+		
 	});
 	
 	
+	//인원추가요금 
+	/* $('#rexperson').on('change', function(){
+		var rexperson=$("#rexperson").val();
+		var personfee=$("#personfee").val();
+		var totalbreakfastfee=rexbreaknum*breakfastfee;
+		$('#totalbreakfee').text(totalbreakfastfee);
+		$('input[name=totalbreakfee]').attr('value',totalbreakfastfee);
+		console.log("조식추가 >체인지");
+		console.log(breakfastfee);
+		console.log(${breakfastfee });
+	}); */
+	
+
 	$(document).ready(function(){
-/*		$('#insertOk').submit(function(e){
-			e.preventDefault();
-			var rid=0;
-			var ramount=parseInt($("#ramount").val());
-			var rcheckin=parseInt($("#rcheckin").val());
-			var rcheckout=parseInt($("#rcheckout").val());
-			var rresname=$("#engName").val();
-			var rresemail=$("#emailcheck").val();
-			var rresphone=$("#rresphone").val();
-			var rexbreaknum=$("#rexbreaknum").val();
-			var rexbed=$("#rexbed").val();
-			var rexperson=$("#rexperson").val();
-			var rcancel=$("#rcancel").val();
-			var mid=$("#mid").val();
-			var riid=parseInt($("#riid").val());
-			var rordernum=0;
-			console.log("눌렸냐");
-			$.ajax({
-				url:'/project/phj/reservation',
-				data:JSON.stringify({"rid":rid,"rordernum":rordernum,"ramount":ramount,"rcheckin":rcheckin,"rcheckout":rcheckout,
-					"rresname":rresname,"rresphone":rresphone,"rresemail":rresemail,"rexbreaknum":rexbreaknum,
-					"rexbed":rexbed,"rexperson":rexperson,"rcancel":rcancel,"mid":mid,"riid":riid}),
-				type:"post",
-				dataType:"json",
-				contentType:'application/json',
-				success:function(data){
-					console.log(data);
-					if(data.code=='success'){
-						console.log(data.code);
-					}else{
-						alert("실패");
-					}
-				}
-			})
-		}) */
+
 		var aid=parseInt($("#aid").val());
 		$.ajax({
 			url:"/project/phj/accoinfo/"+aid,
@@ -370,6 +377,7 @@ input {
 				$('input[name=rimaxper]').attr('value',data.rimaxper);
 				$('input[name=rexperson]').attr('max',rexperson);
 				$('input[name=rexperson]').attr('value',extraperson < 0 ? 0 : extraperson);
+				
 				$('input[name=rexbreaknum]').attr('max',ramount);
 				$('#roomtype').text(data.riroomtype);
 				$('#service').text(data.riservice);
@@ -379,13 +387,15 @@ input {
 			url:"/project/phj/addfee/"+riid,
 			dataType:"json",			
 			success:function(e){
-				console.log("인원추가 : "+e.personfee);
+				
 				console.log("침대추가 : "+e.bedfee);
 				console.log("조식추가 : "+e.breakfastfee);
+				console.log("인원추가 : "+e.personfee);
 				var rexperson=$("#rexperson").val();
-				$('input[name=personfee]').attr('value',e.personfee*rexperson);
+				
 				$('input[name=bedfee]').attr('value',e.bedfee);
 				$('input[name=breakfastfee]').attr('value',e.breakfastfee);
+				$('input[name=personfee]').attr('value',e.personfee*rexperson);
 			}
 		})
 	})

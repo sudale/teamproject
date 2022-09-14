@@ -10,17 +10,17 @@ import lombok.NoArgsConstructor;
 @Data
 public class ReservationVo2 {
 	private int rid;
-	private int rordernum;
-	private int ramount;
-	private int rroomnum;
+	private int rordernum; // 객실예약번호
+	private int ramount; // 인원
+	private int rroomnum; // 방 개수
 	private String rcheckin;
 	private String rcheckout;
-	private String rresname;
+	private String rresname; //예약자이름
 	private String rresphone;
 	private String rresemail;
-	private int rexbreaknum;
-	private int rexbed;
-	private int rexperson;
+	private int rexbreaknum; //조식추가
+	private int rexbed; //침대추가 
+	private int rexperson; // 인원추가 
 	private String rcancel;
 	private String mid;
 	private int riid;
