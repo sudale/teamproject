@@ -57,20 +57,20 @@
 	</div>
 </body>
 <script type="text/javascript">
-	/*	$(document).ready(function(){
-	 var mid=$("#mid").val();
-	 $.ajax({
-	 url:"/project/phj/checkReservation/"+mid,
-	 dataType:"json",			
-	 success:function(e){
-	 let info="";
-	 info +=e.rordernum
 
-	 $('#rnum').html(info);
-	 }
-	 })
-	 })
-	 rrodernum
-	 */
+	$(document).ready(function() {
+		var mid = $("#mid").val();
+		$.ajax({
+			url : "/project/phj/checkReservation/" + mid,
+			dataType : "json",
+			success : function(e) {
+				let info = "";
+				info += e.rordernum
+
+				$('#rnum').html(info);
+			}
+		})
+	})
+	rrodernum
 </script>
 </html>

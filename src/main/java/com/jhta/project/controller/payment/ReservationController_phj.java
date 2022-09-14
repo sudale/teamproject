@@ -39,6 +39,7 @@ public class ReservationController_phj {
 	
 	
 	
+	
 	@RequestMapping(value="phj/reservation",method=RequestMethod.GET)
 	public ModelAndView ReservationInfo(String riid, String startday, String endday, String ramount, String mid, 
 			String sum,int aid,int roomnum) {
