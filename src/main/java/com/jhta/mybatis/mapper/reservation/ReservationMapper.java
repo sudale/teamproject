@@ -6,3 +6,4 @@ public interface ReservationMapper {
 	int insertRes(ReservationVo2 vo);
 	ReservationVo2 selectRes(String mid);
 }
+

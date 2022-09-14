@@ -50,13 +50,13 @@ import com.jhta.project.vo.Room_InfoVo;
 @Controller
 public class HotelManageControllerHjy {
 	@Autowired
-	AccommodationsServiceHjy accommodationsservice;
+	AccommodationsServiceHjy accommodationsservice; //숙소정보
+	@Autowired 
+	Room_infoService_hjy roomInfoservice; //방 정보
 	@Autowired
-	Room_infoService_hjy roomInfoservice;
+	PeriodService_hjy periodservice; //객실 세부정보 
 	@Autowired
-	PeriodService_hjy periodservice;
-	@Autowired
-	Additional_feeService_hjy additional_feeservice;
+	Additional_feeService_hjy additional_feeservice; //추가정보
 	@Autowired
 	AccommodationsTempServiceHjy accommodations_tempservice;
 	@Autowired
@@ -78,6 +78,7 @@ public class HotelManageControllerHjy {
 	 * 메일에서 등록버튼 눌렀을때 수행
 	 * @param aid
 	 */
+	
 	@GetMapping("hjy/ok")
 	public String hotelAllow(String aid,Model model) {
 //		찐db에 저장하기

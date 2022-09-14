@@ -14,6 +14,7 @@ import com.jhta.project.vo.RoominfoVo_phj;
 
 @Controller
 public class RoominfoController_phj {
+	
 	@Autowired private RoominfoService_phj service;
 
 	@GetMapping(value="/phj/roominfo/{riid}",produces = {MediaType.APPLICATION_JSON_VALUE})
@@ -21,9 +22,9 @@ public class RoominfoController_phj {
 		RoominfoVo_phj vo=service.select(riid);
 		HashMap<String, Object> map=new HashMap<String, Object>();
 		map.put("riroomtype",vo.getRiroomtype());
-		map.put("rimaxper", vo.getRimaxper());
-		map.put("riminper", vo.getRiminper());
-		map.put("riservice", vo.getRiservice());
+		map.put("rimaxper", vo.getRimaxper()); //숙박최대인원
+		map.put("riminper", vo.getRiminper()); //숙박가능인원
+		map.put("riservice", vo.getRiservice()); //부가서비스
 		return map;
 	}
 }

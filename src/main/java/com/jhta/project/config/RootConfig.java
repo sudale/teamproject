@@ -16,6 +16,7 @@ import org.springframework.context.annotation.FilterType;
 @ComponentScan(basePackages = {"com.jhta.project.service"}, excludeFilters = @ComponentScan.Filter(type = FilterType.ASPECTJ, pattern = "com.jhta.controller.*"))
 
 public class RootConfig {
+	
 	@Bean
 	public BasicDataSource dataSource() {
 		BasicDataSource datasource = new BasicDataSource();
