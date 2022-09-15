@@ -6,7 +6,11 @@ import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
-@Data
+
+
+//getter,setter 를 동시에 할수잇는 어노케이션 Data
+//객채생성페이지
+@Data   
 @AllArgsConstructor
 @NoArgsConstructor
 public class AccommodationsVo {

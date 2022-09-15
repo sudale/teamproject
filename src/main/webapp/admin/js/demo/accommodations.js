@@ -84,7 +84,7 @@ $(document).ready(function(){
 	     }
  	}
 	
-	<!-- html에서 파라미터 받아오는방법 -->
+	// html에서 파라미터 받아오는방법
 	var Request = function() {  
 	    this.getParameter = function(name) {  
 	        var rtnval = '';  

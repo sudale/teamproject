@@ -10,14 +10,19 @@
 		 select * from accommodations_temp where aid = #{aid}
 	<!-- 	select * from accommodations_temp where aid = 44 -->
 	</select>
+  	
+  	<!-- 숙소정보  -->
   	<insert id="insert" parameterType="com.jhta.project.vo.AccommodationsVo">
   		  		insert into accommodations_temp (aid,acate,aname,aaddress,aphone,axcoordi,aycoordi,atotalroom,agrade,adetail,amainimg,aregdate,aisdel) 
   		values(seq_accommodations_temp.nextval,#{acate},#{aname},#{aaddress},#{aphone},#{axcoordi},#{aycoordi},#{atotalroom},#{agrade},#{adetail},#{amainimg},sysdate,null)
   	</insert>
+  	
+  	<!--  -->
   	<insert id="insert2" parameterType="com.jhta.project.vo.AccommodationsVo">
   		insert into accommodations_temp (aid,acate,aname,aaddress,aphone,atotalroom,agrade,adetail,amainimg,aregdate,aisdel) 
   		values(seq_accommodations_temp.nextval,#{acate},#{aname},#{aaddress},#{aphone},#{atotalroom},#{agrade},#{adetail},#{amainimg},sysdate,null)
   	</insert>
+  	
   	<delete id="delete" parameterType="int">
 		delete from accommodations_temp where aid = #{aid}
 	</delete>

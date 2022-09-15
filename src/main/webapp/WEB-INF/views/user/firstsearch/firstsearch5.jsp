@@ -144,6 +144,7 @@ $(function(){
 	</div>
 </form>
 <div class="accommList">
+<!-- EL표기법 -->
 	<c:forEach var="vo" items="${list }">
 		<div class="eachList">
 		    <div class="card">

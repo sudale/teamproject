@@ -408,7 +408,11 @@ function gomapchange(facilities,minprice,maxprice,sort,axcoordi,aycoordi,distanc
 			fac+=",";
 		}
 	}
+<<<<<<< HEAD
 
+=======
+	
+>>>>>>> 1234
 		  var markerList = [];
 		  for (var i=0, ii=latlngs.length; i<ii; i++) {
 	          let marker = new naver.maps.Marker({

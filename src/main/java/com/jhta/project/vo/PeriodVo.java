@@ -10,6 +10,8 @@ import lombok.NoArgsConstructor;
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
+
+//시즌
 public class PeriodVo {
 	private int peid;
 	private String peseason;
